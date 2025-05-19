@@ -1,0 +1,34 @@
+project:
+  type: book
+  output-dir: docs
+
+execute:
+  freeze: auto
+
+lang: pt 
+
+book:
+  title: "Dados Sociodemográficos e Ambientais de Interesse para a Saúde"
+  author: "Raphael de Freitas Saldanha"
+  isbn: ""
+  date: today
+  search: true
+  # downloads: [pdf, epub]
+  google-analytics: 
+    tracking-id: G-2M7VLSRDCB
+    anonymize-ip: false
+  chapters:
+    - index.qmd
+
+bibliography: references.bib
+csl: abnt.csl
+
+format:
+  html:
+    theme:
+      light: journal
+      dark: darkly
+  #pdf:
+  #  documentclass: scrreprt
+  #epub: 
+  #  toc: true
