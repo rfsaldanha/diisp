@@ -6,7 +6,7 @@ format:
 
 # Bem-vindo {.unnumbered}
 
-
+Este *e-book* busca apresentar as principais fontes de dados sóciodemográficas e ambientais de interesse para estudos em Saúde Pública. 
 
 # Como citar este material?
 

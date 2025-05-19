@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Raphael de Freitas Saldanha">
 
-<title>Dados Sociodemográficos e Ambientais de Interesse para a Saúde</title>
+<title>4&nbsp; Dados climáticos e atmosféricos – Dados Sociodemográficos e Ambientais de Interesse para a Saúde</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./inter.html" rel="next">
+<link href="./ambi.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -86,7 +86,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 
 </head>
 
-<body class="nav-sidebar floating fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -257,7 +257,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Bem-vindo</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./clima.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Dados climáticos e atmosféricos</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -287,7 +287,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bem-vindo</span></a>
   </div>
 </li>
@@ -311,7 +311,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./clima.html" class="sidebar-item-text sidebar-link">
+  <a href="./clima.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Dados climáticos e atmosféricos</span></span></a>
   </div>
 </li>
@@ -326,33 +326,37 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#precipitação" id="toc-precipitação" class="nav-link active" data-scroll-target="#precipitação"><span class="header-section-number">4.1</span> Precipitação</a></li>
+  <li><a href="#temperatura" id="toc-temperatura" class="nav-link" data-scroll-target="#temperatura"><span class="header-section-number">4.2</span> Temperatura</a></li>
+  <li><a href="#umidade-do-ar" id="toc-umidade-do-ar" class="nav-link" data-scroll-target="#umidade-do-ar"><span class="header-section-number">4.3</span> Umidade do ar</a></li>
+  <li><a href="#vento" id="toc-vento" class="nav-link" data-scroll-target="#vento"><span class="header-section-number">4.4</span> Vento</a></li>
+  <li><a href="#poluição" id="toc-poluição" class="nav-link" data-scroll-target="#poluição"><span class="header-section-number">4.5</span> Poluição</a>
+  <ul class="collapse">
+  <li><a href="#material-particulado" id="toc-material-particulado" class="nav-link" data-scroll-target="#material-particulado"><span class="header-section-number">4.5.1</span> Material particulado</a></li>
+  <li><a href="#elementos-poluidores" id="toc-elementos-poluidores" class="nav-link" data-scroll-target="#elementos-poluidores"><span class="header-section-number">4.5.2</span> Elementos poluidores</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Dados Sociodemográficos e Ambientais de Interesse para a Saúde</h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Dados climáticos e atmosféricos</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor</div>
-    <div class="quarto-title-meta-contents">
-             <p>Raphael de Freitas Saldanha </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Data de Publicação</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">19 de maio de 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -362,25 +366,28 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </header>
 
 
-<section id="bem-vindo" class="level1 unnumbered">
-<h1 class="unnumbered">Bem-vindo</h1>
-<p>Este <em>e-book</em> busca apresentar as principais fontes de dados sóciodemográficas e ambientais de interesse para estudos em Saúde Pública.</p>
+<section id="precipitação" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="precipitação"><span class="header-section-number">4.1</span> Precipitação</h2>
 </section>
-<section id="como-citar-este-material" class="level1">
-<h1>Como citar este material?</h1>
-<blockquote class="blockquote">
-<p>SALDANHA, Raphael de Freitas. <strong>Dados Sociodemográficos e Ambientais de Interesse para a Saúde</strong>. E-book. Disponível em <a href="https://rfsaldanha.github.io/dsais/" class="uri">https://rfsaldanha.github.io/dsais/</a>. ISBN:</p>
-</blockquote>
+<section id="temperatura" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="temperatura"><span class="header-section-number">4.2</span> Temperatura</h2>
 </section>
-<section id="sobre-o-autor" class="level1">
-<h1>Sobre o autor</h1>
-<p>Raphael Saldanha é geógrafo, especialista em Métodos Estatísticos Computacionais, Mestre em Saúde Coletiva pela Universidade Federal de Juiz de Fora e Doutor em Informação e Comunicação em Saúde pela Fundação Oswaldo Cruz.</p>
+<section id="umidade-do-ar" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="umidade-do-ar"><span class="header-section-number">4.3</span> Umidade do ar</h2>
 </section>
-<section id="sugestões-e-contato" class="level1">
-<h1>Sugestões e contato</h1>
-<pre><code>raphael.saldanha@fiocruz.br</code></pre>
+<section id="vento" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="vento"><span class="header-section-number">4.4</span> Vento</h2>
+</section>
+<section id="poluição" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="poluição"><span class="header-section-number">4.5</span> Poluição</h2>
+<section id="material-particulado" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="material-particulado"><span class="header-section-number">4.5.1</span> Material particulado</h3>
+</section>
+<section id="elementos-poluidores" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="elementos-poluidores"><span class="header-section-number">4.5.2</span> Elementos poluidores</h3>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -798,10 +805,13 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./ambi.html" class="pagination-link" aria-label="Dados ambientais">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dados ambientais</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link" aria-label="Introdução">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./inter.html" class="pagination-link" aria-label="Dados da Internet e redes sociais">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Dados da Internet e redes sociais</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

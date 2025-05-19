@@ -1,0 +1,4 @@
+# Introdução
+
+-  Conceito de saúde e necessidade de dados de contexto
+-  Usos de dados sociodemográficos em estudos de saúde pública.

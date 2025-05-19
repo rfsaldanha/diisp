@@ -1,0 +1,147 @@
+# Dados sociodemográficos
+
+## População
+
+Dados sobre o contingente populacional são utilizados em análises de saúde para refletir e relativizar a quantidade observada ou estimada de um determinado evento de saúde em relação a população à qual este evento está relacionado. Em geral, o quantitativo populacional é utilizado na preparação de indicadores, como taxas populacionais.
+
+::: callout-note
+Evento de saúde referem-se a ocorrências que podem acontecer no ciclo de vida do cidadão e impactar, direta ou indiretamente, sua saúde. Alguns exemplos: nascimento, atendimento ambulatorial, internação hospitalar, profilaxias e óbito.
+:::
+
+No cálculo de uma taxa populacional de saúde, o numerador representa algum evento de saúde e o denominador representa o contingente populacional na qual o evento de saúde está inserido. De forma geral, uma taxa populacional pode ser definida como
+
+$$
+t_{i,j} = \frac{c_{i,j}}{p_{i,j}}
+$$
+
+Onde $t_{i,j}$ é a taxa para uma determinada região geográfica $i$ e período de tempo $j$, $c_{i,j}$ é quantidade de eventos de saúde observados na região geográfica e no período de tempo e $p_{i,j}$ é o contingente populacional para a região geográfica e período de tempo.
+
+Desta forma, para o cálculo de uma taxa sobre novos casos de uma doença, por exemplo, utiliza-se o quantitativo populacional que tem real risco de contrair a doença.
+
+::: callout-tip
+No cálculo de uma taxa, é necessário pensar sobre qual ;é a população de referência. Eventos de saúde podem ser exclusivos para um ou mais fatores como sexo (gravidez), faixa etária e raça, dentre outros.
+:::
+
+### Faixa etária
+
+A contingente populacional pode ser repartido em faixas etárias, possibilitando o cálculo de indicadores que reflitam condições específicas sobre fases da vida, como infância, adolescência, vida adulta e idosa, por exemplo.
+
+A seguir, algumas classificações de faixas etárias comumente utilizados em estudos de saúde:
+
+| Faixa etária 1  | Faixa etária 2  |
+|-----------------|-----------------|
+| Menor de 1 ano  | Menor de 1 ano  |
+| De 1 a 4 anos   | De 1 a 4 anos   |
+| De 5 a 9 anos   | De 5 a 9 anos   |
+| De 10 a 14 anos | De 10 a 14 anos |
+| De 15 a 19 anos | De 15 a 19 anos |
+| De 20 a 29 anos | De 20 a 24 anos |
+|                 | De 25 a 29 anos |
+| De 30 a 39 anos | De 30 a 34 anos |
+|                 | De 35 a 39 anos |
+| De 40 a 49 anos | De 40 a 44 anos |
+|                 | De 45 a 49 anos |
+| De 50 a 59 anos | De 50 a 54 anos |
+|                 | De 55 a 59 anos |
+| De 60 a 69 anos | De 60 a 64 anos | 
+|                 | De 65 a 69 anos |
+| De 70 a 79 anos | De 70 a 74 anos |
+|                 | De 75 a 79 anos |
+| 80 anos ou mais | 80 anos ou mais |
+
+: Faixas etárias do DataSUS
+
+| Faixa etária     | Classificação            |
+|------------------|--------------------------|
+| De 0 a 6 dias    | Período neonatal precoce |
+| De 7 a 27 dias   | Período neonatal tardio  |
+| De 28 a 364 dias | Período pós-neonatal     |
+
+: Faixas etárias para menores de 1 ano de idade
+
+
+::: callout-tip
+A Organização Mundial da Saúde adota como referência para população idosa a idade de 65 anos. No Brasil, o [Estatuto da Pessoa Idosa](https://www.gov.br/mdh/pt-br/assuntos/noticias/2022/eleicoes-2022-periodo-eleitoral/estatuto-do-idoso-assegura-direitos-de-pessoas-com-60-anos-ou-mais#:~:text=De%20acordo%20com%20a%20lei,ou%20superior%20a%2060%20anos.) utiliza a idade de 60 anos como referência. Existe um [projeto de lei](https://www.camara.leg.br/noticias/846128-proposta-eleva-para-65-anos-a-idade-de-classificacao-como-pessoa-idosa/#:~:text=Proposta%20eleva%20para%2065%20anos%20a%20idade%20de%20classificação%20como%20pessoa%20idosa,-Autor%20do%20projeto&text=O%20Projeto%20de%20Lei%205628,a%20Lei%20do%20Atendimento%20Prioritário.) visando alterar a idade de referência de 60 para 65 anos no Brasil.
+:::
+
+### Sexo
+
+O sexo do indivíduo é um importante classificador da população. A princípio, o sexo se refere a características biológicas, como cromossomas, órgãos genitais e hormonas.
+
+Por outro lado, classificações de gênero dão conta de uma maior complexidade de situações. A seguir, algumas classificações de gênero:
+
+-  Cisgênero: identidade de gênero corresponde ao sexo que lhe foi atribuído ao nascer em uma classificação binária (masculino ou feminino).
+-  Transgênero: identidade de gênero não corresponde ao sexo que lhe foi atribuído ao nascer.
+-  Não binário: pessoas que não se identificam como exclusivamente homem ou mulher, podendo se identificar com ambos, nenhum ou um terceiro gênero.
+-  Intersexual: pessoas com características sexuais que não se encaixam perfeitamente nas categorias típicas de masculino ou feminino, podendo ter uma combinação de características sexuais ou uma combinação incomum de cromossomos
+
+### Raça e cor
+
+A classificação utilizada pelo Instituto Brasileiro de Geografia e Estatística (IBGE) para cor/raça é a seguinte:
+
+-  Preta
+-  Parda
+-  Branca
+-  Amarela
+-  Indígena
+
+::: {.callout-important}
+A raça/cor de uma pessoa não se relaciona apenas a sua cor da pele (colorismo), mas também a fatores sociais e de identidade. Em geral, a raça/cor deve ser **autodeclarada**.
+:::
+
+### Urbano e rural
+
+O recorte do contingente populacional como rural ou urbano permite a comparação da saúde de populações que vivem em contextos sociais, econômicos e de acesso à saúde distintos.
+
+O cálculo do contingente populacional urbano é realizado pelo IBGE à partir de definições territoriais de distritos sede nos municípios brasileiros. A população residente nos distritos sede é definida como urbana, e a população restante é definida como rural. Saiba mais sobre a metodologia do IBGE [aqui](https://www.ibge.gov.br/geociencias/organizacao-do-territorio/tipologias-do-territorio/15790-classificacao-rural-e-urbana.html).
+
+::: {.callout-tip}
+A delimitação dos distritos sedes é realizada pelos próprios municípios e enviada para o IBGE. Em geral, esta delimitação pode ser afetada por interesses econômicos para a cobrança de taxas municipais. Propriedades em áreas urbanas pagam o Imposto sobre a Propriedade Predial e Territorial Urbana (IPTU), enquanto propriedades rurais pagam o Imposto Territorial Rural (ITR), que é, em geral, de menor valor.
+
+Assim, é importante pensar sobre diferenças entre o urbano e o urbanizado, como neste [estudo](https://books.scielo.org/id/df6bv/pdf/lopes-9788599662823-05.pdf).
+:::
+
+## Renda
+
+A renda é um importante fator de classificação populacional, podendo atuar como fator de proteção ou de risco em uma série de doenças e agravos. 
+
+Faixas de renda são utilizadas para dividir o contigente populacional em classes sociais, utilizando a **renda familiar mensal** como referência.
+
+Em 2022, o IBGE dividiu a população em sete classes de rendimento:
+
+| Número de salários mínimos | Renda familiar (R$)   |
+|----------------------------|-----------------------|
+| Acima de 25                | 30.300,01 ou mais     |
+| De 15 a 25                 | 18.180,01 a 30.300,00 |
+| De 10 a 15                 | 12.120,01 a 18.180,00 |
+| De 6 a 10                  | 7.272,01 a 12.120,00  |
+| De 3 a 6                   | 3.636,01 a 7.272,00   |
+| De 2 a 3                   | 2.424,01 a 3.636,00   |
+| Até 2                      | Até 2.424,00          |
+
+Já a Associação Brasileira de Empresas de Pesquisa (Abep) propõe uma classificação denominada "[Critério Brasil](https://abep.org/criterio-brasil/)", que é calculada em um sistema de pontos dado pelo grau de instrução, acesso a serviços públicos e acesso a uma série de características do domicilio (número de banheiros, por dentro outros) e a bens duráveis (número de automóveis e aparelhos de TV, dentro outros). O Critério Brasil apresenta a seguinte correspondência com a renda familiar média:
+
+| Estrato socioeconômico | Renda média  |
+|------------------------|--------------|
+| A                      | R$ 26.811,68 |
+| B1                     | R$ 12.683,34 |
+| B2                     | R$ 7.017,64  |
+| C1                     | R$ 3.980,38  |
+| C2                     | R$ 2.403,04  |
+| DE                     | R$ 1.087,77  |
+
+## Educação
+
+Anos de escolaridade, classes e compatibilidades.
+
+## Domicílios e entorno
+
+## Trabalho e emprego
+
+## Migração
+
+## Qualidade de vida
+
+## Segurança pública
+
+## Fontes de dados sociodemográficos

@@ -4,9 +4,209 @@
     "href": "index.html",
     "title": "Dados Sociodemográficos e Ambientais de Interesse para a Saúde",
     "section": "",
-    "text": "Bem-vindo\n\n\nComo citar este material?\n\nSALDANHA, Raphael de Freitas. Dados Sociodemográficos e Ambientais de Interesse para a Saúde. E-book. Disponível em https://rfsaldanha.github.io/dsais/. ISBN:\n\n\n\nSobre o autor\nRaphael Saldanha é geógrafo, especialista em Métodos Estatísticos Computacionais, Mestre em Saúde Coletiva pela Universidade Federal de Juiz de Fora e Doutor em Informação e Comunicação em Saúde pela Fundação Oswaldo Cruz.\n\n\nSugestões e contato\nraphael.saldanha@fiocruz.br",
+    "text": "Bem-vindo\nEste e-book busca apresentar as principais fontes de dados sóciodemográficas e ambientais de interesse para estudos em Saúde Pública.\n\n\nComo citar este material?\n\nSALDANHA, Raphael de Freitas. Dados Sociodemográficos e Ambientais de Interesse para a Saúde. E-book. Disponível em https://rfsaldanha.github.io/dsais/. ISBN:\n\n\n\nSobre o autor\nRaphael Saldanha é geógrafo, especialista em Métodos Estatísticos Computacionais, Mestre em Saúde Coletiva pela Universidade Federal de Juiz de Fora e Doutor em Informação e Comunicação em Saúde pela Fundação Oswaldo Cruz.\n\n\nSugestões e contato\nraphael.saldanha@fiocruz.br",
     "crumbs": [
       "Bem-vindo"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introdução",
+    "section": "",
+    "text": "Conceito de saúde e necessidade de dados de contexto\nUsos de dados sóciodemográficos em estudos de saúde pública.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "socio.html",
+    "href": "socio.html",
+    "title": "2  Dados sociodemográficos",
+    "section": "",
+    "text": "2.1 População\nDados sobre o contingente populacional são utilizados em análises de saúde para refletir e relativizar a quantidade observada ou estimada de um determinado evento de saúde em relação a população à qual este evento está relacionado. Em geral, o quantitativo populacional é utilizado na preparação de indicadores, como taxas populacionais.\nNo cálculo de uma taxa populacional de saúde, o numerador representa algum evento de saúde e o denominador representa o contingente populacional na qual o evento de saúde está inserido. De forma geral, uma taxa populacional pode ser definida como\n\\[\nt_{i,j} = \\frac{c_{i,j}}{p_{i,j}}\n\\]\nOnde \\(t_{i,j}\\) é a taxa para uma determinada região geográfica \\(i\\) e período de tempo \\(j\\), \\(c_{i,j}\\) é quantidade de eventos de saúde observados na região geográfica e no período de tempo e \\(p_{i,j}\\) é o contingente populacional para a região geográfica e período de tempo.\nDesta forma, para o cálculo de uma taxa sobre novos casos de uma doença, por exemplo, utiliza-se o quantitativo populacional que tem real risco de contrair a doença.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados sociodemográficos</span>"
+    ]
+  },
+  {
+    "objectID": "socio.html#população",
+    "href": "socio.html#população",
+    "title": "2  Dados sociodemográficos",
+    "section": "",
+    "text": "Nota\n\n\n\nEvento de saúde referem-se a ocorrências que podem acontecer no ciclo de vida do cidadão e impactar, direta ou indiretamente, sua saúde. Alguns exemplos: nascimento, atendimento ambulatorial, internação hospitalar, profilaxias e óbito.\n\n\n\n\n\n\n\n\n\n\n\n\nDica\n\n\n\nNo cálculo de uma taxa, é necessário pensar sobre qual ;é a população de referência. Eventos de saúde podem ser exclusivos para um ou mais fatores como sexo (gravidez), faixa etária e raça, dentre outros.\n\n\n\n2.1.1 Faixa etária\nA contingente populacional pode ser repartido em faixas etárias, possibilitando o cálculo de indicadores que reflitam condições específicas sobre fases da vida, como infância, adolescência, vida adulta e idosa, por exemplo.\nA seguir, algumas classificações de faixas etárias comumente utilizados em estudos de saúde:\n\nFaixas etárias do DataSUS\n\n\nFaixa etária 1\nFaixa etária 2\n\n\n\n\nMenor de 1 ano\nMenor de 1 ano\n\n\nDe 1 a 4 anos\nDe 1 a 4 anos\n\n\nDe 5 a 9 anos\nDe 5 a 9 anos\n\n\nDe 10 a 14 anos\nDe 10 a 14 anos\n\n\nDe 15 a 19 anos\nDe 15 a 19 anos\n\n\nDe 20 a 29 anos\nDe 20 a 24 anos\n\n\n\nDe 25 a 29 anos\n\n\nDe 30 a 39 anos\nDe 30 a 34 anos\n\n\n\nDe 35 a 39 anos\n\n\nDe 40 a 49 anos\nDe 40 a 44 anos\n\n\n\nDe 45 a 49 anos\n\n\nDe 50 a 59 anos\nDe 50 a 54 anos\n\n\n\nDe 55 a 59 anos\n\n\nDe 60 a 69 anos\nDe 60 a 64 anos\n\n\n\nDe 65 a 69 anos\n\n\nDe 70 a 79 anos\nDe 70 a 74 anos\n\n\n\nDe 75 a 79 anos\n\n\n80 anos ou mais\n80 anos ou mais\n\n\n\n\nFaixas etárias para menores de 1 ano de idade\n\n\nFaixa etária\nClassificação\n\n\n\n\nDe 0 a 6 dias\nPeríodo neonatal precoce\n\n\nDe 7 a 27 dias\nPeríodo neonatal tardio\n\n\nDe 28 a 364 dias\nPeríodo pós-neonatal\n\n\n\n\n\n\n\n\n\nDica\n\n\n\nA Organização Mundial da Saúde adota como referência para população idosa a idade de 65 anos. No Brasil, o Estatuto da Pessoa Idosa utiliza a idade de 60 anos como referência. Existe um projeto de lei visando alterar a idade de referência de 60 para 65 anos no Brasil.\n\n\n\n\n2.1.2 Sexo\nO sexo do indivíduo é um importante classificador da população. A princípio, o sexo se refere a características biológicas, como cromossomas, órgãos genitais e hormonas.\nPor outro lado, classificações de gênero dão conta de uma maior complexidade de situações. A seguir, algumas classificações de gênero:\n\nCisgênero: identidade de gênero corresponde ao sexo que lhe foi atribuído ao nascer em uma classificação binária (masculino ou feminino).\nTransgênero: identidade de gênero não corresponde ao sexo que lhe foi atribuído ao nascer.\nNão binário: pessoas que não se identificam como exclusivamente homem ou mulher, podendo se identificar com ambos, nenhum ou um terceiro gênero.\nIntersexual: pessoas com características sexuais que não se encaixam perfeitamente nas categorias típicas de masculino ou feminino, podendo ter uma combinação de características sexuais ou uma combinação incomum de cromossomos\n\n\n\n2.1.3 Raça e cor\nA classificação utilizada pelo Instituto Brasileiro de Geografia e Estatística (IBGE) para cor/raça é a seguinte:\n\nPreta\nParda\nBranca\nAmarela\nIndígena\n\n\n\n\n\n\n\nImportante\n\n\n\nA raça/cor de uma pessoa não se relaciona apenas a sua cor da pele (colorismo), mas também a fatores sociais e de identidade. Em geral, a raça/cor deve ser autodeclarada.\n\n\n\n\n2.1.4 Urbano e rural\nO recorte do contingente populacional como rural ou urbano permite a comparação da saúde de populações que vivem em contextos sociais, econômicos e de acesso à saúde distintos.\nO cálculo do contingente populacional urbano é realizado pelo IBGE à partir de definições territoriais de distritos sede nos municípios brasileiros. A população residente nos distritos sede é definida como urbana, e a população restante é definida como rural. Saiba mais sobre a metodologia do IBGE aqui.\n\n\n\n\n\n\nDica\n\n\n\nA delimitação dos distritos sedes é realizada pelos próprios municípios e enviada para o IBGE. Em geral, esta delimitação pode ser afetada por interesses econômicos para a cobrança de taxas municipais. Propriedades em áreas urbanas pagam o Imposto sobre a Propriedade Predial e Territorial Urbana (IPTU), enquanto propriedades rurais pagam o Imposto Territorial Rural (ITR), que é, em geral, de menor valor.\nAssim, é importante pensar sobre diferenças entre o urbano e o urbanizado, como neste estudo.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados sociodemográficos</span>"
+    ]
+  },
+  {
+    "objectID": "socio.html#renda",
+    "href": "socio.html#renda",
+    "title": "2  Dados sociodemográficos",
+    "section": "2.2 Renda",
+    "text": "2.2 Renda\nA renda é um importante fator de classificação populacional, podendo atuar como fator de proteção ou de risco em uma série de doenças e agravos.\nFaixas de renda são utilizadas para dividir o contigente populacional em classes sociais, utilizando a renda familiar mensal como referência.\nEm 2022, o IBGE dividiu a população em sete classes de rendimento:\n\n\n\nNúmero de salários mínimos\nRenda familiar (R$)\n\n\n\n\nAcima de 25\n30.300,01 ou mais\n\n\nDe 15 a 25\n18.180,01 a 30.300,00\n\n\nDe 10 a 15\n12.120,01 a 18.180,00\n\n\nDe 6 a 10\n7.272,01 a 12.120,00\n\n\nDe 3 a 6\n3.636,01 a 7.272,00\n\n\nDe 2 a 3\n2.424,01 a 3.636,00\n\n\nAté 2\nAté 2.424,00\n\n\n\nJá a Associação Brasileira de Empresas de Pesquisa (Abep) propõe uma classificação denominada “Critério Brasil”, que é calculada em um sistema de pontos dado pelo grau de instrução, acesso a serviços públicos e acesso a uma série de características do domicilio (número de banheiros, por dentro outros) e a bens duráveis (número de automóveis e aparelhos de TV, dentro outros). O Critério Brasil apresenta a seguinte correspondência com a renda familiar média:\n\n\n\nEstrato socioeconômico\nRenda média\n\n\n\n\nA\nR$ 26.811,68\n\n\nB1\nR$ 12.683,34\n\n\nB2\nR$ 7.017,64\n\n\nC1\nR$ 3.980,38\n\n\nC2\nR$ 2.403,04\n\n\nDE\nR$ 1.087,77",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados sociodemográficos</span>"
+    ]
+  },
+  {
+    "objectID": "socio.html#educação",
+    "href": "socio.html#educação",
+    "title": "2  Dados sociodemográficos",
+    "section": "2.3 Educação",
+    "text": "2.3 Educação\nAnos de escolaridade, classes e compatibilidades.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados sociodemográficos</span>"
+    ]
+  },
+  {
+    "objectID": "socio.html#domicílios-e-entorno",
+    "href": "socio.html#domicílios-e-entorno",
+    "title": "2  Dados sociodemográficos",
+    "section": "2.4 Domicílios e entorno",
+    "text": "2.4 Domicílios e entorno",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados sociodemográficos</span>"
+    ]
+  },
+  {
+    "objectID": "socio.html#trabalho-e-emprego",
+    "href": "socio.html#trabalho-e-emprego",
+    "title": "2  Dados sociodemográficos",
+    "section": "2.5 Trabalho e emprego",
+    "text": "2.5 Trabalho e emprego",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados sociodemográficos</span>"
+    ]
+  },
+  {
+    "objectID": "socio.html#migração",
+    "href": "socio.html#migração",
+    "title": "2  Dados sociodemográficos",
+    "section": "2.6 Migração",
+    "text": "2.6 Migração",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados sociodemográficos</span>"
+    ]
+  },
+  {
+    "objectID": "socio.html#qualidade-de-vida",
+    "href": "socio.html#qualidade-de-vida",
+    "title": "2  Dados sociodemográficos",
+    "section": "2.7 Qualidade de vida",
+    "text": "2.7 Qualidade de vida",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados sociodemográficos</span>"
+    ]
+  },
+  {
+    "objectID": "socio.html#segurança-pública",
+    "href": "socio.html#segurança-pública",
+    "title": "2  Dados sociodemográficos",
+    "section": "2.8 Segurança pública",
+    "text": "2.8 Segurança pública",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados sociodemográficos</span>"
+    ]
+  },
+  {
+    "objectID": "socio.html#fontes-de-dados-sociodemográficos",
+    "href": "socio.html#fontes-de-dados-sociodemográficos",
+    "title": "2  Dados sociodemográficos",
+    "section": "2.9 Fontes de dados sociodemográficos",
+    "text": "2.9 Fontes de dados sociodemográficos",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados sociodemográficos</span>"
+    ]
+  },
+  {
+    "objectID": "ambi.html",
+    "href": "ambi.html",
+    "title": "3  Dados ambientais",
+    "section": "",
+    "text": "3.1 Uso e ocupação do solo",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dados ambientais</span>"
+    ]
+  },
+  {
+    "objectID": "ambi.html#condições-do-solo",
+    "href": "ambi.html#condições-do-solo",
+    "title": "3  Dados ambientais",
+    "section": "3.2 Condições do solo",
+    "text": "3.2 Condições do solo\n\n3.2.1 Umidade\n\n\n3.2.2 Vegetação",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dados ambientais</span>"
+    ]
+  },
+  {
+    "objectID": "clima.html",
+    "href": "clima.html",
+    "title": "4  Dados climáticos e atmosféricos",
+    "section": "",
+    "text": "4.1 Precipitação",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Dados climáticos e atmosféricos</span>"
+    ]
+  },
+  {
+    "objectID": "clima.html#temperatura",
+    "href": "clima.html#temperatura",
+    "title": "4  Dados climáticos e atmosféricos",
+    "section": "4.2 Temperatura",
+    "text": "4.2 Temperatura",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Dados climáticos e atmosféricos</span>"
+    ]
+  },
+  {
+    "objectID": "clima.html#umidade-do-ar",
+    "href": "clima.html#umidade-do-ar",
+    "title": "4  Dados climáticos e atmosféricos",
+    "section": "4.3 Umidade do ar",
+    "text": "4.3 Umidade do ar",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Dados climáticos e atmosféricos</span>"
+    ]
+  },
+  {
+    "objectID": "clima.html#vento",
+    "href": "clima.html#vento",
+    "title": "4  Dados climáticos e atmosféricos",
+    "section": "4.4 Vento",
+    "text": "4.4 Vento",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Dados climáticos e atmosféricos</span>"
+    ]
+  },
+  {
+    "objectID": "clima.html#poluição",
+    "href": "clima.html#poluição",
+    "title": "4  Dados climáticos e atmosféricos",
+    "section": "4.5 Poluição",
+    "text": "4.5 Poluição\n\n4.5.1 Material particulado\n\n\n4.5.2 Elementos poluidores",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Dados climáticos e atmosféricos</span>"
+    ]
+  },
+  {
+    "objectID": "inter.html",
+    "href": "inter.html",
+    "title": "5  Dados da Internet e redes sociais",
+    "section": "",
+    "text": "5.1 Volume de pesquisas em ferramentas de busca",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dados da Internet e redes sociais</span>"
+    ]
+  },
+  {
+    "objectID": "inter.html#menções-em-postagens-de-redes-sociais",
+    "href": "inter.html#menções-em-postagens-de-redes-sociais",
+    "title": "5  Dados da Internet e redes sociais",
+    "section": "5.2 Menções em postagens de redes sociais",
+    "text": "5.2 Menções em postagens de redes sociais",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dados da Internet e redes sociais</span>"
     ]
   }
 ]
