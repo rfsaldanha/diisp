@@ -145,3 +145,9 @@ Anos de escolaridade, classes e compatibilidades.
 ## Segurança pública
 
 ## Fontes de dados sociodemográficos
+
+### IBGE
+
+### IPEA Data
+
+### PNUD
