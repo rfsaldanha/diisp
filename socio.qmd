@@ -132,22 +132,206 @@ Já a Associação Brasileira de Empresas de Pesquisa (Abep) propõe uma classif
 
 ## Educação
 
-Anos de escolaridade, classes e compatibilidades.
+A classificação da população segundo a educação em estudos de saúde possibilita observar como o acesso ao conhecimento possibilita melhores condições de vida e bem-estar para o indivíduo e sua família.
+
+Este fator costuma ser classificado por níveis de escolaridade ou anos de estudo. Os níveis de escolaridade remetem as divisões educacionais como Educação Infantil, Ensino Fundamental, Ensino Médio, Ensino Superior e Pós-Graduação. Estas classes ainda podem ser subdivididas como "completo" e "incompleto" (ainda cursando ou suspenso). Contudo, a depender da época do levantamento do dado, estas classes podem ter diferentes nomenclaturas e não necessariamente compatíveis.
+
+Outra forma de se classificar o acesso à educação é através da medida de anos de estudo, que é menos objetiva mas não enfrenta problemas de compatibilidade acima mencionados.
+
+A seguir, uma comparação entre níveis de escolaridade e anos de estudo:
+
+Antes da Reforma de 1971:
+
+-  Pré-escola – Duração de 3 anos / De 4 a 6 anos
+-  Escola primária – Duração de 4 anos / De 7 a 10 anos
+-  Ginásio – Duração de 4 anos / De 11 a 14 anos
+-  Colégio – Duração de 3 anos / De 15 a 17 anos
+-  Ensino Superior – Duração variável / Acima de 18 anos
+
+Após a reforma de 1971:
+
+-  Pré-escola – Duração de 3 anos / De 4 a 6 anos
+-  1º grau obrigatório – Duração de 8 anos / De 7 a 14 anos
+-  2º grau obrigatório – Duração de 3 anos / De 15 a 17 anos
+-  Ensino Superior – Variável / Acima de 17 anos
+
+Após a LDB 9.394/96:
+
+-  Educação Básica
+   -  Educação Infantil
+      -  Creche – Duração de 4 anos / De 0 a 3 anos
+      -  Pré-escola – Duração de 3 anos / De 4 a 6 anos
+   -  Ensino Fundamental (obrigatório) – Duração de 9 anos / De 6 a 14 anos
+   -  Ensino Médio – Duração de 3 anos / De 15 a 17 anos
+-  Educação Superior
+   -  Cursos por área – Duração variável / Acima de 17 anos
 
 ## Domicílios e entorno
 
-## Trabalho e emprego
+A classificação da população segundo características do domicílio em que vivem e de seu entorno permite que estudos se aprofundem nas condições de vida da população. 
 
-## Migração
+A seguir, características do domicílio e entorno levantadas no Censo 2022 do IBGE.
+
+Tipo de domicílio:
+
+-  Casa
+-  Casa de vila ou em condomínio
+-  Apartamento
+-  Habitação em casa de cômodos ou cortiço
+-  Habitação indígena sem paredes ou maloca
+-  Estrutura residencial permanente degradada ou inacabada
+
+Ligação à rede geral de distribuição de água e principal forma de abastecimento de água:
+
+-  Possui ligação à rede geral e a utiliza como forma principal
+-  Possui ligação à rede geral, mas utiliza principalmente outra forma
+-  Possui ligação à rede geral, mas utiliza principalmente outra forma 
+   -  Poço profundo ou artesiano	
+   -  Poço raso, freático ou cacimba
+   -  Fonte, nascente ou mina
+   -  Carro-pipa
+   -  Água da chuva armazenada	
+   -  Rios, açudes, córregos, lagos e igarapés
+   -  Outra	
+-  Não possui ligação com a rede geral
+   -  Poço profundo ou artesiano
+   -  Poço raso, freático ou cacimba
+   -  Fonte, nascente ou mina
+   -  Carro-pipa
+   -  Água da chuva armazenada
+   -  Rios, açudes, córregos, lagos e igarapés
+   -  Outra
+
+Canalização de água e principal forma de abastecimento de água:
+
+-  Rede geral de distribuição
+   -  Canalizada até dentro da casa, apartamento ou habitação
+   -  Canalizada, mas apenas no terreno
+   -  Sem água canalizada
+-  Poço profundo ou artesiano
+   -  Canalizada até dentro da casa, apartamento ou habitação
+   -  Canalizada, mas apenas no terreno
+   -  Sem água canalizada
+-  Poço raso, freático ou cacimba
+   -  Canalizada até dentro da casa, apartamento ou habitação
+   -  Canalizada, mas apenas no terreno
+   -  Sem água canalizada
+-  Fonte, nascente ou mina
+   -  Canalizada até dentro da casa, apartamento ou habitação
+   -  Canalizada, mas apenas no terreno
+   -  Sem água canalizada
+-  Carro-pipa
+   -  Canalizada até dentro da casa, apartamento ou habitação
+   -  Canalizada, mas apenas no terreno
+   -  Sem água canalizada
+-  Água da chuva armazenada
+   -  Canalizada até dentro da casa, apartamento ou habitação
+   -  Canalizada, mas apenas no terreno
+   -  Sem água canalizada
+-  Rios, açudes, córregos, lagos e igarapés
+   -  Canalizada até dentro da casa, apartamento ou habitação
+   -  Canalizada, mas apenas no terreno
+   -  Sem água canalizada
+-  Outra
+   -  Canalizada até dentro da casa, apartamento ou habitação
+   -  Canalizada, mas apenas no terreno
+   -  Sem água canalizada
+
+Esgotamento sanitário:
+
+-  Rede geral, rede pluvial ou fossa ligada à rede
+-  Rede geral ou pluvial
+-  Fossa séptica ou fossa filtro ligada à rede
+-  Fossa séptica ou fossa filtro não ligada à rede
+-  Fossa rudimentar ou buraco
+-  Vala
+-  Rio, lago, córrego ou mar
+-  Outra forma
+-  Não tinham banheiro nem sanitário
+
+Destino do lixo:
+
+-  Coletado
+-  Coletado no domicílio por serviço de limpeza
+-  Depositado em caçamba de serviço de limpeza
+-  Queimado na propriedade
+-  Enterrado na propriedade
+-  Jogado em terreno baldio, encosta ou área pública
+-  Outro destino
+
+Características do entorno do domicílio:
+
+-  Capacidade máxima de circulação da via 
+   -  Caminhão ou ônibus
+   -  Carro ou van
+   -  Motocicletas, bicicletas e pedestres
+   -  Aquavias
+   -  Não declarado
+-  Via pavimentada
+-  Existência de bueiro / boca de lobo
+-  Existência de iluminação pública
+-  Existência de ponto de ônibus / van
+-  Existência de via sinalizada para bicicleta
+-  Existência de calçada / passeio
+-  Existência de obstáculo na calçada
+-  Existência de rampa para cadeirante
+-  Arborização
+   -  Sem árvores
+   -  De 1 a 2 árvores
+   -  De 3 a 4 árvores
+   -  5 ou mais árvores
+   -  Não declarado
+
+## Mercado de trabalho
+
+O contingente populacional pode ser subdivido em diversos níveis hierárquicos de trabalho e emprego. A seguir, a classificação utilizada pelo IBGE em suas pesquisas:
+
+![Divisões do mercado de trabalho do IBGE](assets/img/class_trabalho.png)
+
+Fonte: IBGE
+
+Definições:
+
+-  Ocupados: empregados (do setor público ou privado, com ou sem carteira de trabalho assinada, ou estatutários), trabalhadores por conta própria, empregadores, trabalhadores domésticos (com ou sem carteira de trabalho assinada), e trabalhadores familiares auxiliares (pessoas que ajudam no trabalho de seus familiares sem remuneração).
+-  Subocupados por insuficiência de horas trabalhadas: trabalhadores que têm jornada de trabalho inferior a 40 horas semanais, mas gostariam de trabalhar mais horas e estão disponíveis para trabalhar
+-  Desocupados: pessoas que não estão trabalhando, porém tomaram alguma providência efetiva para encontrar trabalho e estão disponíveis para assumi-lo, caso encontrem.
+-  Força de trabalho potencial: Pessoas que não estão na força de trabalho, mas possuem um potencial para serem integradas a esta força.
+-   Fora da força de trabalho potencial: Dentre as pessoas que estão fora da força de trabalho, estão as donas de casa que não trabalham fora, adolescentes em idade escolar, aposentados e outras pessoas que não têm interesse ou condições de trabalhar.
+-  Desalentados: pessoas que gostariam de trabalhar e estariam disponíveis, porém não procuraram trabalho por acharem que não encontrariam.
 
 ## Qualidade de vida
 
-## Segurança pública
+A Organização Mundial da Saúde define qualidade de vida como "a percepção do indivíduo de sua inserção na vida, no contexto da cultura e sistemas de valores nos quais ele vive e em relação aos seus objetivos, expectativas, padrões e preocupações". Apesar de ser uma definição subjetiva, existem métodos objetivos para mensura-lá, como o Índice de Qualidade de Vida (IDH).
+
+O IDH é uma medida resumida (média geométrica) de três dimensões básicas da qualidade de vida (saúde, educação e renda) que varia de 0 a 1. A dimensão saúde é medida pela expectativa de vida ao nascer, a educação é medida pela  média de anos de escolaridade para adultos com mais de 25 anos ou mais e pela expectativa de anos de escolaridade para crianças em idade de ingresso na escola, já a dimensão renda é medida pela renda per capta.
+
+O IDH pode ser utilizado para classificar a população em quatro categorias ordinais:
+
+-  Baixa qualidade de vida: de 0 a 0,554
+-  Média qualidade de vida: 0,555 a 0,699
+-  Alta qualidade de vida: 0,700 a 0,799
+-  Muito alta qualidade de vida: 0,800 a 1
+
+Observe que o IDH não mede a qualidade de vida do indivíduo, mas do contexto social onde ele está inserido. Assim, o IDH é geralmente calculado para países, regiões e municípios.
 
 ## Fontes de dados sociodemográficos
 
 ### IBGE
 
+O Instituto Brasileiro de Geografia e Estatística (IBGE) é o principal produtor de dados sociodemográficos brasileiro, sendo responsável pela condução de diversas pesquisas como o Censo Demográfico, Pesquisa Nacional por Amostragem de Domicílios (PNAD) e Pesquisa de Orçamento Familiar (POF), dentre várias outras.
+
+A principal forma de divulgação de dados do IBGE é através do sistema [SIDRA (Sistema IBGE de Recuperação Automática)](https://sidra.ibge.gov.br).
+
+A seguir, links para as principais pesquisas do IBGE com dados sociodemográficos de interesse para a saúde:
+
+-  [Censo demográfico](https://sidra.ibge.gov.br/pesquisa/censo-demografico)
+-  [Estatísticas do registro civil](https://sidra.ibge.gov.br/pesquisa/registro-civil)
+-  [Estimativas populacionais](https://sidra.ibge.gov.br/pesquisa/estimapop)
+
 ### IPEA Data
 
+O Instituto de Pesquisa Econômica Aplicada (IPEA) mantêm a plataforma [IpeaData](http://www.ipeadata.gov.br), que disponibiliza diversos indicadores sócio-demográficos em três níveis básicos: macroeconômico, regional e social.
+
 ### PNUD
+
+O Programa das Nações Unidas para o Desenvolvimento (PNUD) mantêm o projeto [Atlas Brasil](http://www.atlasbrasil.org.br/), disponibilizando o cálculo do IDH para os municípios brasileiros. 
