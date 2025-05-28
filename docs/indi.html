@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Raphael de Freitas Saldanha">
 
-<title>Dados e Indicadores de Interesse para Saúde Pública</title>
+<title>2&nbsp; Dados e indicadores – Dados e Indicadores de Interesse para Saúde Pública</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 1em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -31,7 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./socio.html" rel="next">
+<link href="./intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,10 +103,39 @@ gtag('js', new Date());
 gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-sidebar floating fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -257,7 +306,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Bem-vindo</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./indi.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Dados e indicadores</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -287,7 +336,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bem-vindo</span></a>
   </div>
 </li>
@@ -299,7 +348,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./indi.html" class="sidebar-item-text sidebar-link">
+  <a href="./indi.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Dados e indicadores</span></span></a>
   </div>
 </li>
@@ -338,33 +387,37 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#conceitos-e-definições" id="toc-conceitos-e-definições" class="nav-link active" data-scroll-target="#conceitos-e-definições"><span class="header-section-number">2.1</span> Conceitos e definições</a></li>
+  <li><a href="#classificação-de-indicadores" id="toc-classificação-de-indicadores" class="nav-link" data-scroll-target="#classificação-de-indicadores"><span class="header-section-number">2.2</span> Classificação de indicadores</a></li>
+  <li><a href="#propriedades-dos-indicadores" id="toc-propriedades-dos-indicadores" class="nav-link" data-scroll-target="#propriedades-dos-indicadores"><span class="header-section-number">2.3</span> Propriedades dos indicadores</a></li>
+  <li><a href="#métodos-mais-comuns-de-cálculo-de-indicadores" id="toc-métodos-mais-comuns-de-cálculo-de-indicadores" class="nav-link" data-scroll-target="#métodos-mais-comuns-de-cálculo-de-indicadores"><span class="header-section-number">2.4</span> Métodos mais comuns de cálculo de indicadores</a>
+  <ul class="collapse">
+  <li><a href="#indicadores-de-base-populacionais" id="toc-indicadores-de-base-populacionais" class="nav-link" data-scroll-target="#indicadores-de-base-populacionais"><span class="header-section-number">2.4.1</span> Indicadores de base populacionais</a></li>
+  <li><a href="#indicadores-de-razão" id="toc-indicadores-de-razão" class="nav-link" data-scroll-target="#indicadores-de-razão"><span class="header-section-number">2.4.2</span> Indicadores de razão</a></li>
+  <li><a href="#outros-métodos" id="toc-outros-métodos" class="nav-link" data-scroll-target="#outros-métodos"><span class="header-section-number">2.4.3</span> Outros métodos</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Dados e Indicadores de Interesse para Saúde Pública</h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Dados e indicadores</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor</div>
-    <div class="quarto-title-meta-contents">
-             <p>Raphael de Freitas Saldanha </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Data de Publicação</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">28 de maio de 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -374,25 +427,227 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </header>
 
 
-<section id="bem-vindo" class="level1 unnumbered">
-<h1 class="unnumbered">Bem-vindo</h1>
-<p>Este <em>e-book</em> busca apresentar as principais fontes de dados sóciodemográficas e ambientais de interesse para estudos em Saúde Pública.</p>
+<section id="conceitos-e-definições" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="conceitos-e-definições"><span class="header-section-number">2.1</span> Conceitos e definições</h2>
+<p>Uma importante distinção precisa ser feita entre dado e indicador. Os dados são obtidos diretamente pela mensuração do fenômeno estudado, são registros básicos que buscam caracterizar algo.</p>
+<p>Os dados são comumente coletados a partir de entrevistas com formulários e fichas que, após digitados e sistematizados, são apresentados em tabelas e planilhas. Os dados são, geralmente, estruturados de forma que cada linha na tabela represente uma unidade observada (uma pessoa, um caso de doença, um município, etc.) e cada coluna apresenta valores para diferentes características dessas unidades (variáveis como sexo, idade, local de nascimento, etc.). Uma fonte comum de dados são as estatísticas públicas, como o Censo Demográfico e outros inquéritos populacionais <span class="citation" data-cites="jannuzziIndicadoresSociaisNo2006">(<a href="referencias.html#ref-jannuzziIndicadoresSociaisNo2006" role="doc-biblioref">JANNUZZI, 2006</a>)</span>.</p>
+<p>A tabela <a href="#tbl-exemplo-dados" class="quarto-xref">Tabela&nbsp;<span>2.1</span></a> apresenta um exemplo simples. A primeira coluna (id) é um código identificador da linha que não se repete, sendo atrelado diretamente ao individuo. As colunas seguintes são compostas por duas variáveis qualitativas nominais (nome e sexo) e uma variável quantitativa discreta (idade).</p>
+<div id="tbl-exemplo-dados" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-exemplo-dados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabela&nbsp;2.1: Exemplo de uma tabela de dados
+</figcaption>
+<div aria-describedby="tbl-exemplo-dados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>id</th>
+<th>Nome</th>
+<th>Sexo</th>
+<th>Idade</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Nathalia</td>
+<td>Feminino</td>
+<td>25</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Silvania</td>
+<td>Feminino</td>
+<td>45</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Dirce</td>
+<td>Feminino</td>
+<td>32</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Antonio</td>
+<td>Masculino</td>
+<td>65</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As variáveis de uma tabela de dados podem ser classificadas da seguinte forma:</p>
+<ul>
+<li>Variáveis quantitativas: características que podem ser medidas em uma escala quantitativa, aporesentando valores numéricos.
+<ul>
+<li>Variáveis discretas: podem assumir o valor de um número inteiro, como contagens.</li>
+<li>Variáveis contínuas: podem assumir o valor de uma escala contínua (um número real), onde valores fracionais fazem sentido. São geralmente medidas por instrumentos ou resultado de cálculo.</li>
+</ul></li>
+<li>Variáveis qualitativas (ou categóricas): características que são representadas por categorias ou rótulos
+<ul>
+<li>Variáveis nominais: não existe ordenação entre as categorias, como em sexo e município de residência</li>
+<li>Variáveis ordinais: existe ordenação entre as categorias, como renda, faixa etária e educação.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dica
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Observe que uma variável pode apresentar números mas ser, por definição, uma variável categórica. Exemplos: número do CPF, número do RG, código do município, código da UF.</p>
+</div>
+</div>
+<p>Importante notar que os dados não tem um significado ou interpretação intrísica, eles são a simples medida de algo. Já os indicadores são construídos a partir dos dados visando atender um objetivo conceitual <span class="citation" data-cites="fronesTheorizingIndicatorsIndicators2007">(<a href="referencias.html#ref-fronesTheorizingIndicatorsIndicators2007" role="doc-biblioref">FRØNES, 2007</a>)</span>. Desta forma, um indicador é uma ferramenta conceitual que operacionaliza um objetivo representacional.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Um objetivo representacional é o aspecto específico de um contexto que se quer observar.</p>
+</div>
+</div>
+<p>Desta forma, um indicador é imbuído de um objetivo e um conceito adjacente, que é operacionalizado pelo seu método de cálculo <span class="citation" data-cites="franceschiniMeasurementTheoryIndicator2019">(<a href="referencias.html#ref-franceschiniMeasurementTheoryIndicator2019" role="doc-biblioref">FRANCESCHINI; GALETTO; MAISANO, 2019</a>)</span>.</p>
+<p>Por exemplo, um indicador sobre pobreza tem por objetivo medir um conceito abstrato de uma população. O que é pobreza? Diversas definições e conceitos podem coexistir sobre esse fenômeno e um indicador irá adotar uma delas, operacionalizando em termos práticos essa definição por meio de um método de cálculo usando dados específicos. A operacionalização de um indicaodor é, de forma geral, limitada e incompleta. A pobreza, por exemplo, é um fenômeno complexo que se estende em várias dimensões humanas. Assim, um indicador que observe apenas a renda da população como elemento caracterizador da pobreza, irá ignorar outros aspectos com qualidade de vida e saúde. Por outro lado, ao se considerar diversos aspectos para caracterizar um objetivo representacional, o indicador se torna mais complexo de se calcular e interpretar.</p>
+<p>Alguns indicadores podem ser operacionalizados de forma muito simples, usando até mesmo o próprio valor de algum dado. Já outros indicadores, com objetivos representacionais mais complexos, podem usar diversos dados e até mesmo outros indicadores em sua operacionalização, como indicadores para pobreza e qualidade de vida.</p>
+<p>Com o estudo e interpretação de indicadores, acompanhado do conhecimento teórico e prático sobre os fenômenos, a sociedade e o ambiente, novas informações são geradas e, por fim, um novo conhecimento pode ser solidificado.</p>
 </section>
-<section id="como-citar-este-material" class="level1">
-<h1>Como citar este material?</h1>
-<blockquote class="blockquote">
-<p>SALDANHA, Raphael de Freitas. <strong>Dados Sociodemográficos e Ambientais de Interesse para a Saúde</strong>. E-book. Disponível em <a href="https://rfsaldanha.github.io/dsais/" class="uri">https://rfsaldanha.github.io/dsais/</a>. ISBN:</p>
-</blockquote>
+<section id="classificação-de-indicadores" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="classificação-de-indicadores"><span class="header-section-number">2.2</span> Classificação de indicadores</h2>
+<p>Os indicadores podem ser classificados de diversas formas, conforme sugere <span class="citation" data-cites="jannuzziIndicadoresSociaisNo2006">JANNUZZI (<a href="referencias.html#ref-jannuzziIndicadoresSociaisNo2006" role="doc-biblioref">2006</a>)</span>. Uma possível classificação de indicadores é “objetivos/quantitativos” e “sujetivos/qualitativos”. Os indicadores objetivos se referem a uma realidade concreta que está sendo medida, como o percentual de pessoas de uma faixa etária ou a taxa de desemprego. Já os indicadores subjetivos se referem a uma realidade abstrata e conceitualmente definida, como pobreza ou qualidade de vida.</p>
+<p>Outra forma de classificação de indicadores é “descritivos” e “normativos”. Um indicador descritivo simplesmente descreve um aspecto da realidade sem juízo de valor, como uma taxa de incidência de uma doença. Já os indicadores normativos contêm explicitamente um juízo de valor, como a proporção de pobres, que apresenta de forma adjacente um conjunto de definições sobre o que é pobreza e suas consequências na vida e na sociedade.</p>
+<p>Uma terceira forma de se classificar indicadores é pela sua complexidade de operacionalização, onde os indicadores podem ser classificados como “simples” ou “compostos/sintéticos”. Um indicador simples é derivado diretamente de um dado, como a idade obtida à partir da data de nascimento. Já os indicadores compostos congregam dois ou mais indicadores, que em geral dizem respeito a diversos aspectos complementares, com métodos de cálculos mais avançados para sua obtenção. Um exemplo de indicador composto/sintético é Índice de Desenvolvimento Humano (IDH), que é internamente composto por indicadores de renda, saúde e educação.</p>
+<p>Enquanto indicadores simples são mais rápidos de serem obtidos e explicados, indicadores compostos/sintéticos são mais complexos de serem calculados e explicados. <span class="citation" data-cites="jannuzziIndicadoresSociaisNo2006">JANNUZZI (<a href="referencias.html#ref-jannuzziIndicadoresSociaisNo2006" role="doc-biblioref">2006</a>)</span> apresenta outras formas de clasificação de indicadores que podem ser de interesse.</p>
 </section>
-<section id="sobre-o-autor" class="level1">
-<h1>Sobre o autor</h1>
-<p>Raphael Saldanha é geógrafo, especialista em Métodos Estatísticos Computacionais, Mestre em Saúde Coletiva pela Universidade Federal de Juiz de Fora e Doutor em Informação e Comunicação em Saúde pela Fundação Oswaldo Cruz.</p>
+<section id="propriedades-dos-indicadores" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="propriedades-dos-indicadores"><span class="header-section-number">2.3</span> Propriedades dos indicadores</h2>
+<p>Indicadores podem ser caracterizados segundo um conjuntode propriedades desejáveis, que são influenciadas pelo método de cálculo e dados utilizados, entre outros fatores. A seguir, são descritas algumas dessas características <span class="citation" data-cites="jannuzziIndicadoresSociaisNo2006 OPAS2008 ministeriodasaudeAbordagensEspaciaisNa2007">(<a href="referencias.html#ref-jannuzziIndicadoresSociaisNo2006" role="doc-biblioref">JANNUZZI, 2006</a>; <a href="referencias.html#ref-ministeriodasaudeAbordagensEspaciaisNa2007" role="doc-biblioref">MINISTÉRIO DA SAÚDE, 2007</a>; <a href="referencias.html#ref-OPAS2008" role="doc-biblioref">REDE INTERAGENCIAL DE INFORMAÇÃO PARA A SAÚDE, 2008</a>)</span>.</p>
+<ul>
+<li>Relevância: um indicador deve ser de interesse da sociedade, tendo utilidade prática para seu uso.</li>
+<li>Validade: capacidade de medir o que ele objetiva medir.</li>
+<li>Confiabilidade: capacidade de produzir os mesmos resultados em condições similares.</li>
+<li>Sensibilidade: capacidade de detectar o fenômeno analisado</li>
+<li>Especificidade: capacidade de detectar somente o fenômeno analisado.</li>
+<li>Mensurabilidade: basear-se em dados já disponíveis ou com facilidade de obtenção.</li>
+<li>Custo-efetividade: os resultados do uso do indicador devem justificar o tempo e custos empregados para sua obtenção.</li>
+<li>Comunicabilidade: capacidade de ser analisado e interpretado com facilidade e compreensível por um público diverso.</li>
+<li>Historicidade: capacidade de ser atualizado de forma periódica.</li>
+</ul>
 </section>
-<section id="sugestões-e-contato" class="level1">
-<h1>Sugestões e contato</h1>
-<pre><code>raphael.saldanha@fiocruz.br</code></pre>
+<section id="métodos-mais-comuns-de-cálculo-de-indicadores" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="métodos-mais-comuns-de-cálculo-de-indicadores"><span class="header-section-number">2.4</span> Métodos mais comuns de cálculo de indicadores</h2>
+<p>A seguir são apresentados os métodos de cálculo de indicadores mais comuns.</p>
+<section id="indicadores-de-base-populacionais" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="indicadores-de-base-populacionais"><span class="header-section-number">2.4.1</span> Indicadores de base populacionais</h3>
+<p>Diversos indicadores necessitam relativizar uma contagem em relação a uma população de referência, pois a simples contagem não dá idea sobre a sua magnitude. Estes indicadores são denominados como de “base populacional” pois usam no deminador de seu cálculo um valor populacional e são geralmente referidos como “taxas”.</p>
+<p>Um exemplo é a taxa de analfabetismo. O valor nominal de pessoas analfabetas em uma determinada região e espaço de tempo não é capaz, de forma isolada, de retratar a realidade educacional de uma população. Mas, ao se relativizar a quantidade de pessoas analfabetas em relação com a quantidade de pessoas em idade para serem alfabetizadas, se tem uma real da gravidade do problema. Segue abaixo o método de cálculo da taxa de analfabestismo.</p>
+<p><span class="math display">\[
+\text{Tx. de analfabetismo} = \frac{\text{Indivíduos analfabetos}}{\text{População com 15 anos ou mais}} \times 100
+\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Importante notar que, como no exemplo acima, nem sempre se usa a população total, mas uma fração da população que guarda relação com o numerador. Neste exemplo, se fosse utilizada a população total como denominador, a taxa de analfabetismo seria artificialmente menor.</p>
+</div>
+</div>
+<p>De forma geral, um indicador de base populacional segue uma formulação de cálculo geral:</p>
+<p><span class="math display">\[
+t_{i,j} = \frac{c_{i,j}}{p_{i,j}} \times m
+\]</span></p>
+<p>Onde <span class="math inline">\(t_{i,j}\)</span> é a taxa para uma determinada região geográfica <span class="math inline">\(i\)</span> e período de tempo <span class="math inline">\(j\)</span>, <span class="math inline">\(c_{i,j}\)</span> é quantidade de indivíduos que atendem um determinado critério na região geográfica e no período de tempo e <span class="math inline">\(p_{i,j}\)</span> é o contingente populacional de relevância para a mesma região geográfica e período de tempo. Já <span class="math inline">\(m\)</span> é o multiplicador da taxa.</p>
+<p>O multiplicador <span class="math inline">\(m\)</span> altera a leitura do valor da taxa. Quando <span class="math inline">\(m=100\)</span>, o valor da taxa é lido como um percentual (ou seja, em 100 pessoas). Quando <span class="math inline">\(m=1000\)</span> (ou algum outro valor) o valor da taxa é lido como em 1000 pessoas, por exemplo.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ao se comparar alguns indicadores de base populacional entre diferentes regiões, deve-se atentar para a composição etária e de sexo das populações, caso estes fatores tenham alguma relação com o indicador, o que pode enviesar a sua comparação.</p>
+<p>Existem possibilidade de cálculo de indicadores de base populacionais que incorporam métodos de padronização por idade e/ou sexo <span class="citation" data-cites="medronhoEpidemiologia2009">(<a href="referencias.html#ref-medronhoEpidemiologia2009" role="doc-biblioref">MEDRONHO et al., 2009</a>)</span>.</p>
+</div>
+</div>
+</section>
+<section id="indicadores-de-razão" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="indicadores-de-razão"><span class="header-section-number">2.4.2</span> Indicadores de razão</h3>
+<p>Indicadores de razão tem por objetivo, em geral, relativizar quantidades dicotômicas e complementares. Ou seja, ao se dividir a população em dois grupos complementares, pode-se calcular um indicador de razão.</p>
+<p>Um exemplo é a razão de sexos. Neste indicador a população é dividida segundo o sexo (masculino e feminino):</p>
+<p><span class="math display">\[
+\text{Razão do sexo masculino} = \frac{\text{População masculina}}{\text{População feminina}}
+\]</span></p>
+<p>Neste exemplo, se o contigente populacional masculino e feminino forem iguais, a razão é igual 1. Se a população masculina por maior que a feminina, a razão é maior que 1. Se a população feminina for menor que a masculina, a razão é menor que 1.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note que indicadores de razão são adimensioanis, ou seja eles não tem uma dimensão ou unidade de medida.</p>
+</div>
+</div>
+</section>
+<section id="outros-métodos" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="outros-métodos"><span class="header-section-number">2.4.3</span> Outros métodos</h3>
+<p>Outros métodos de cálculo podem ser empregados para o cálculo de indicadores, principalmente em indicadores sintéticos. O IDH por exemplo, é obtido pela média geométrica de três indicadores normalisados.</p>
 
 
+<div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list" style="display: none">
+<div id="ref-franceschiniMeasurementTheoryIndicator2019" class="csl-entry" role="listitem">
+FRANCESCHINI, F.; GALETTO, M.; MAISANO, D. <a href="https://doi.org/10.1007/978-3-030-01192-5_3">From <span>Measurement Theory</span> to <span>Indicator Theory</span></a>. Em: FRANCESCHINI, F.; GALETTO, M.; MAISANO, D. <strong>Designing <span>Performance Measurement Systems</span></strong>. Cham: Springer International Publishing, 2019. p. 49–83.
+</div>
+<div id="ref-fronesTheorizingIndicatorsIndicators2007" class="csl-entry" role="listitem">
+FRØNES, I. <a href="https://doi.org/10.1007/s11205-006-9061-7">Theorizing Indicators: <span>On Indicators</span>, <span>Signs</span> and <span>Trends</span></a>. <strong>Social Indicators Research</strong>, v. 83, n. 1, p. 5–23, ago. 2007.
+</div>
+<div id="ref-jannuzziIndicadoresSociaisNo2006" class="csl-entry" role="listitem">
+JANNUZZI, P. DE M. <strong>Indicadores Sociais No <span>Brasil</span>: Conceitos, Fontes de Dados e Aplicações</strong>. 3. ed. [s.l.] Alínea, 2006.
+</div>
+<div id="ref-medronhoEpidemiologia2009" class="csl-entry" role="listitem">
+MEDRONHO, R. et al. (EDS.). <strong>Epidemiologia</strong>. 2. ed. São Paulo: Atheneu, 2009.
+</div>
+<div id="ref-ministeriodasaudeAbordagensEspaciaisNa2007" class="csl-entry" role="listitem">
+MINISTÉRIO DA SAÚDE. <strong>Abordagens Espaciais Na Saúde Pública</strong>. [s.l: s.n.]. v. 1
+</div>
+<div id="ref-OPAS2008" class="csl-entry" role="listitem">
+REDE INTERAGENCIAL DE INFORMAÇÃO PARA A SAÚDE. <strong>Indicadores Básicos Para a Saúde No <span>Brasil</span>: Conceitos e Aplicações</strong>. Brasília: Organização Pan-Americana da Saúde, 2008.
+</div>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -810,10 +1065,13 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./intro.html" class="pagination-link" aria-label="Introdução">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link" aria-label="Introdução">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./socio.html" class="pagination-link" aria-label="Sociodemográficos">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Sociodemográficos</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

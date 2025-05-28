@@ -8,7 +8,7 @@ execute:
 lang: pt 
 
 book:
-  title: "Dados Sociodemográficos e Ambientais de Interesse para a Saúde"
+  title: "Dados e Indicadores de Interesse para Saúde Pública"
   author: "Raphael de Freitas Saldanha"
   isbn: ""
   date: today
@@ -20,10 +20,12 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
+    - indi.qmd
     - socio.qmd # Sociodemográficos
     - ambi.qmd  # Ambientais (cobertura e uso do solo)
     - clima.qmd # Climáticos e atmosféricos
     - inter.qmd # Dados da internet e redes sociais
+    - referencias.qmd
   # appendices: 
     # - malhas.qmd # Malhas territoriais, DTB
 
