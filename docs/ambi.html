@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 1em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -83,6 +103,35 @@ gtag('js', new Date());
 gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -318,7 +367,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./clima.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Climáticos e atmosféricos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Climáticos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -343,11 +392,32 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#uso-e-ocupação-do-solo" id="toc-uso-e-ocupação-do-solo" class="nav-link active" data-scroll-target="#uso-e-ocupação-do-solo"><span class="header-section-number">4.1</span> Uso e ocupação do solo</a></li>
-  <li><a href="#condições-do-solo" id="toc-condições-do-solo" class="nav-link" data-scroll-target="#condições-do-solo"><span class="header-section-number">4.2</span> Condições do solo</a>
+  <li><a href="#uso-e-ocupação-do-solo" id="toc-uso-e-ocupação-do-solo" class="nav-link active" data-scroll-target="#uso-e-ocupação-do-solo"><span class="header-section-number">4.1</span> Uso e ocupação do solo</a>
   <ul class="collapse">
-  <li><a href="#umidade" id="toc-umidade" class="nav-link" data-scroll-target="#umidade"><span class="header-section-number">4.2.1</span> Umidade</a></li>
-  <li><a href="#vegetação" id="toc-vegetação" class="nav-link" data-scroll-target="#vegetação"><span class="header-section-number">4.2.2</span> Vegetação</a></li>
+  <li><a href="#taxa-de-densidade-populacional" id="toc-taxa-de-densidade-populacional" class="nav-link" data-scroll-target="#taxa-de-densidade-populacional"><span class="header-section-number">4.1.1</span> Taxa de Densidade Populacional</a></li>
+  <li><a href="#índice-de-permeabilização" id="toc-índice-de-permeabilização" class="nav-link" data-scroll-target="#índice-de-permeabilização"><span class="header-section-number">4.1.2</span> Índice de Permeabilização</a></li>
+  <li><a href="#uso-do-solo-por-categoria" id="toc-uso-do-solo-por-categoria" class="nav-link" data-scroll-target="#uso-do-solo-por-categoria"><span class="header-section-number">4.1.3</span> Uso do solo por categoria</a></li>
+  <li><a href="#cobertura-do-solo-por-categoria" id="toc-cobertura-do-solo-por-categoria" class="nav-link" data-scroll-target="#cobertura-do-solo-por-categoria"><span class="header-section-number">4.1.4</span> Cobertura do solo por categoria</a></li>
+  </ul></li>
+  <li><a href="#seca" id="toc-seca" class="nav-link" data-scroll-target="#seca"><span class="header-section-number">4.2</span> Seca</a>
+  <ul class="collapse">
+  <li><a href="#índice-de-precipitação-padronizado" id="toc-índice-de-precipitação-padronizado" class="nav-link" data-scroll-target="#índice-de-precipitação-padronizado"><span class="header-section-number">4.2.1</span> Índice de Precipitação Padronizado</a></li>
+  <li><a href="#índice-de-severidade-de-seca-de-palmer" id="toc-índice-de-severidade-de-seca-de-palmer" class="nav-link" data-scroll-target="#índice-de-severidade-de-seca-de-palmer"><span class="header-section-number">4.2.2</span> Índice de Severidade de Seca de Palmer</a></li>
+  <li><a href="#índice-integrao-de-seca" id="toc-índice-integrao-de-seca" class="nav-link" data-scroll-target="#índice-integrao-de-seca"><span class="header-section-number">4.2.3</span> Índice Integrao de Seca</a></li>
+  </ul></li>
+  <li><a href="#vegetação" id="toc-vegetação" class="nav-link" data-scroll-target="#vegetação"><span class="header-section-number">4.3</span> Vegetação</a>
+  <ul class="collapse">
+  <li><a href="#ndvi-normalized-difference-vegetation-index" id="toc-ndvi-normalized-difference-vegetation-index" class="nav-link" data-scroll-target="#ndvi-normalized-difference-vegetation-index"><span class="header-section-number">4.3.1</span> NDVI – Normalized Difference Vegetation Index</a></li>
+  <li><a href="#evi-enhanced-vegetation-index" id="toc-evi-enhanced-vegetation-index" class="nav-link" data-scroll-target="#evi-enhanced-vegetation-index"><span class="header-section-number">4.3.2</span> EVI – Enhanced Vegetation Index</a></li>
+  <li><a href="#gvi-green-view-index" id="toc-gvi-green-view-index" class="nav-link" data-scroll-target="#gvi-green-view-index"><span class="header-section-number">4.3.3</span> GVI – Green View Index</a></li>
+  </ul></li>
+  <li><a href="#poluição-do-ar" id="toc-poluição-do-ar" class="nav-link" data-scroll-target="#poluição-do-ar"><span class="header-section-number">4.4</span> Poluição do ar</a>
+  <ul class="collapse">
+  <li><a href="#indicador" id="toc-indicador" class="nav-link" data-scroll-target="#indicador"><span class="header-section-number">4.4.1</span> Indicador</a></li>
+  </ul></li>
+  <li><a href="#qualidade-da-água" id="toc-qualidade-da-água" class="nav-link" data-scroll-target="#qualidade-da-água"><span class="header-section-number">4.5</span> Qualidade da água</a>
+  <ul class="collapse">
+  <li><a href="#indicador-1" id="toc-indicador-1" class="nav-link" data-scroll-target="#indicador-1"><span class="header-section-number">4.5.1</span> Indicador</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -375,18 +445,705 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </header>
 
 
+<p>Indicadores ambientais são de grande importância para análises de saúde pública, pois permitem a identificação e o monitoramento de fatores ambientais que influenciam diretamente o bem-estar das populações. Esses indicadores, que incluem variáveis como uso e ocupação do solo, umidade e seca, vegetação e poluição do ar e da água, fornecem subsídios para a formulação de políticas públicas e intervenções preventivas mais eficazes. Ao correlacionar indicadores ambientais com eventos de saúde, é possível realizar ações direcionadas para a redução de riscos e promoção da saúde. Dessa forma, o uso sistemático e integrado de indicadores ambientais fortalece a vigilância em saúde, contribui para a equidade no acesso a ambientes saudáveis e subsidia decisões baseadas em evidências científicas.</p>
 <section id="uso-e-ocupação-do-solo" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="uso-e-ocupação-do-solo"><span class="header-section-number">4.1</span> Uso e ocupação do solo</h2>
+<p>Análises sobre o uso e ocupação do solo permitem determinar quais as condições ambientais que as populações estão expostas, evidenciando questões como adensamento urbano, ocupação desordenada, vulnerabilidade a desastres e escassez de áreas verdes. Estes fatores tem grande influencia na saúde humana, afertando a qualidade do ar e do solo, o conforto térmico e o bem-estar psicológico.</p>
+<section id="taxa-de-densidade-populacional" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="taxa-de-densidade-populacional"><span class="header-section-number">4.1.1</span> Taxa de Densidade Populacional</h3>
+<section id="conceituação" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação">Conceituação</h4>
+<p>Relação entre o número de habitantes e a área geográfica ocupada, expressa geralmente em habitantes por quilômetro quadrado (hab/km²).</p>
 </section>
-<section id="condições-do-solo" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="condições-do-solo"><span class="header-section-number">4.2</span> Condições do solo</h2>
-<section id="umidade" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="umidade"><span class="header-section-number">4.2.1</span> Umidade</h3>
+<section id="interpretação" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação">Interpretação</h4>
+<p>A densidade populacional está associada à demanda por serviços de saúde, infraestrutura, saneamento e transporte. Altas densidades podem favorecer a propagação de doenças transmissíveis, aumentar a poluição e reduzir a qualidade de vida, enquanto baixas densidades podem dificultar o acesso a serviços básicos.</p>
 </section>
-<section id="vegetação" class="level3" data-number="4.2.2">
-<h3 data-number="4.2.2" class="anchored" data-anchor-id="vegetação"><span class="header-section-number">4.2.2</span> Vegetação</h3>
+<section id="usos" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos">Usos</h4>
+<p>Utilizando no planejamento urbano e regional, alocação de recursos públicos, análise de risco epidemiológico, vigilância em saúde e políticas de habitação.</p>
+</section>
+<section id="limitações" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações">Limitações</h4>
+<ul>
+<li>O indicador não considera características do território, como áreas não-habitáveis (corpos d’água e florestas e montanhas protegidas pela legislação ambiental).</li>
+<li>Uma alta ou baixa densidade não está relacionado, necessariamente, a uma maior ou menor qualidade de vida.</li>
+</ul>
+</section>
+<section id="fonte-de-dados" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados">Fonte de dados</h4>
+<p>Censos populacionais, estimativas populacionais e dados geográficos de instituições oficiais, como o IBGE (Brasil).</p>
+</section>
+<section id="método-de-cálculo" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo">Método de cálculo</h4>
+<p><span class="math display">\[
+\text{Densidade populacional} =
+\frac{\text{População total}}{\text{Área territorial}}
+\]</span></p>
+</section>
+<section id="categorias-sugeridas-para-análise" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise">Categorias sugeridas para análise</h4>
+<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+</section>
+</section>
+<section id="índice-de-permeabilização" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="índice-de-permeabilização"><span class="header-section-number">4.1.2</span> Índice de Permeabilização</h3>
+<section id="conceituação-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-1">Conceituação</h4>
+<p>Representa a proporção da superfície de um terreno ou área urbana que permite a infiltração de água no solo, em relação à sua área total.</p>
+</section>
+<section id="interpretação-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-1">Interpretação</h4>
+<p>O índice de permeabilização está diretamente relacionado ao controle do escoamento superficial, prevenção de enchentes e melhoria da qualidade da água. Superfícies permeáveis permitem a recarga de aquíferos, reduzem o acúmulo de águas pluviais e contribuem para o equilíbrio térmico urbano. Sua baixa presença pode aumentar a incidência de doenças relacionadas à água contaminada, como leptospirose e diarreias, além de agravar problemas respiratórios e ocorrência de ilhas de calor.</p>
+</section>
+<section id="usos-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-1">Usos</h4>
+<ul>
+<li>Planejamento urbano e ambiental.</li>
+<li>Elaboração de políticas de uso e ocupação do solo.</li>
+<li>Avaliação de riscos hidrológicos e climáticos.</li>
+<li>Projetos de drenagem urbana sustentável.</li>
+<li>Gestão de áreas verdes e infraestrutura verde.</li>
+</ul>
+</section>
+<section id="limitações-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-1">Limitações</h4>
+<ul>
+<li>Pode não refletir a capacidade real de infiltração, pois desconsidera características do solo como compactação e tipo de cobertura vegetal.</li>
+<li>Acurácia limitada em áreas com ocupação irregular ou mudanças rápidas de uso do solo.</li>
+</ul>
+</section>
+<section id="fonte-de-dados-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-1">Fonte de dados</h4>
+<ul>
+<li>Imagens de satélite.</li>
+<li>Cadastros urbanos e mapas de uso e cobertura do solo.</li>
+</ul>
+</section>
+<section id="método-de-cálculo-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-1">Método de cálculo</h4>
+<p><span class="math display">\[
+\text{Índice de Permeabilização} = \frac{\text{Área permeável}}{\text{Área total}} \times 100
+\]</span></p>
+<p>Onde a área permeável corresponde à superfície do solo que permite a infiltração de água (jardins, áreas verdes, solo exposto).</p>
+</section>
+<section id="categorias-sugeridas-para-análise-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-1">Categorias sugeridas para análise</h4>
+<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+</section>
+</section>
+<section id="uso-do-solo-por-categoria" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="uso-do-solo-por-categoria"><span class="header-section-number">4.1.3</span> Uso do solo por categoria</h3>
+<section id="conceituação-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-2">Conceituação</h4>
+<p>Classificação e quantificação das diferentes formas de utilização da superfície terrestre por atividades humanas, como moradia, agricultura, indústria, comércio, áreas verdes, infraestrutura e áreas institucionais. Ele permite identificar como os espaços são organizados e utilizados dentro de uma área geográfica específica.</p>
+</section>
+<section id="interpretação-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-2">Interpretação</h4>
+<p>O uso do solo influencia diretamente as condições ambientais e sanitárias de uma região. Ocupações inadequadas podem resultar em exposição a riscos como contaminação por resíduos, poluição atmosférica, alagamentos, e proliferação de vetores de doenças. O acesso a áreas verdes, serviços públicos e infraestrutura adequada, refletido no uso do solo, está associado a melhores condições de saúde física e mental.</p>
+</section>
+<section id="usos-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-2">Usos</h4>
+<ul>
+<li>Planejamento urbano e ordenamento territorial.</li>
+<li>Avaliação de impactos ambientais.</li>
+<li>Gestão de recursos naturais e infraestrutura.</li>
+<li>Formulação de políticas públicas de saúde, habitação e mobilidade.</li>
+<li>Monitoramento da expansão urbana e uso sustentável do território.</li>
+</ul>
+</section>
+<section id="limitações-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-2">Limitações</h4>
+<ul>
+<li>Pode não refletir a qualidade do uso ou a intensidade da atividade (ex: área residencial subutilizada ou superlotada)</li>
+<li>Classificações podem variar conforme a metodologia adotada.</li>
+<li>Nem sempre identifica usos mistos ou informais do solo (como moradia em áreas industriais ou invasões).</li>
+</ul>
+</section>
+<section id="fonte-de-dados-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-2">Fonte de dados</h4>
+<ul>
+<li>Imagens de satélite.</li>
+<li>Cadastros urbanos.</li>
+</ul>
+</section>
+<section id="método-de-cálculo-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-2">Método de cálculo</h4>
+<p>O indicador de uso do solo pode ser expresso em termos percentuais ou absolutos da área ocupada por cada tipo de uso em relação à área total analisada. O cálculo é feito com base em classificação de imagens de satélite, por meio de técnicas de sensoriamento remoto e análise multiespectral.</p>
+<p><span class="math display">\[
+\text{Uso do solo} = \frac{\text{Área de uso específico}}{\text{Área total}} \times 100
+\]</span></p>
+<p>As principais categorias mensuradas são:</p>
+<ul>
+<li>Uso residencial</li>
+<li>Uso comercial</li>
+<li>Uso industrial</li>
+<li>Uso institucional</li>
+<li>Uso agrícola ou rural</li>
+<li>Uso de lazer e recreação</li>
+<li>Áreas verdes ou vegetadas</li>
+<li>Infraestrutura, como sistemas de transporte e saneamento</li>
+<li>Corpos d’água</li>
+<li>Uso indefinido, como lotes vagos ou em transição</li>
+</ul>
+</section>
+<section id="categorias-sugeridas-para-análise-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-2">Categorias sugeridas para análise</h4>
+<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+</section>
+</section>
+<section id="cobertura-do-solo-por-categoria" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="cobertura-do-solo-por-categoria"><span class="header-section-number">4.1.4</span> Cobertura do solo por categoria</h3>
+<section id="conceituação-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-3">Conceituação</h4>
+<p>Descrição da superfície terrestre com base nos elementos físicos e biológicos visíveis, como vegetação natural, corpos d’água, edificações, solo exposto e superfícies impermeáveis. Diferentemente do uso do solo, que está ligado à atividade humana, a cobertura do solo representa o que efetivamente recobre o terreno, independentemente de sua função.</p>
+</section>
+<section id="interpretação-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-3">Interpretação</h4>
+<p>A cobertura do solo influencia diretamente a qualidade ambiental e, consequentemente, a saúde da população. A presença de áreas verdes, por exemplo, está associada à melhora da qualidade do ar, redução de ilhas de calor, promoção da atividade física e bem-estar mental. Por outro lado, superfícies impermeáveis e solo exposto podem aumentar o risco de enchentes, poluição e propagação de vetores de doenças.</p>
+</section>
+<section id="usos-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-3">Usos</h4>
+<ul>
+<li>Monitoramento ambiental e urbano.</li>
+<li>Planejamento e gestão territorial.</li>
+<li>Avaliação de impactos ambientais.</li>
+<li>Estudos sobre mudanças climáticas e eventos extremos.</li>
+<li>Identificação de áreas de risco para intervenções em saúde pública.</li>
+</ul>
+</section>
+<section id="limitações-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-3">Limitações</h4>
+<ul>
+<li>A distinção entre tipos de cobertura pode ser dificultada por limitações na resolução de imagens ou interferência de nuvens e sombras.</li>
+<li>Pode não refletir a dinâmica sazonal da vegetação (ex: áreas agrícolas variam ao longo do ano).</li>
+</ul>
+</section>
+<section id="fonte-de-dados-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-3">Fonte de dados</h4>
+<ul>
+<li>Imagens de satélite.</li>
+<li>Cadastros urbanos.</li>
+</ul>
+</section>
+<section id="método-de-cálculo-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-3">Método de cálculo</h4>
+<p>O indicador pode ser expressado em termos percentuais ou absolutos da área ocupada por cada tipo de cobertura. O cálculo é feito com base em classificação de imagens de satélite, por meio de técnicas de sensoriamento remoto e análise multiespectral.</p>
+<p><span class="math display">\[
+\text{Cobertura do solo} = \frac{\text{Área de uma classe de cobertura}}{\text{Área total}} \times 100
+\]</span></p>
+<p>As principais classes mensuradas são:</p>
+<ul>
+<li>Vegetação natural</li>
+<li>Reflorestamento e silvicultura</li>
+<li>Áreas urbanizadas</li>
+<li>Solo exposto</li>
+<li>Agricultura</li>
+<li>Pastagem</li>
+<li>Corpos d’água</li>
+<li>Áreas úmidas e várzeas</li>
+</ul>
+</section>
+<section id="categorias-sugeridas-para-análise-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-3">Categorias sugeridas para análise</h4>
+<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+</section>
+</section>
+</section>
+<section id="seca" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="seca"><span class="header-section-number">4.2</span> Seca</h2>
+<p>Indicadores sobre seca ajudam a antecipar, monitorar e mitigar uma série de impactos diretos e indiretos que a escassez de água pode provocar na população, impactando na transmissão de doenças, na segurança alimentar, em problemas respiratórios, doenças crônicas e na saúde mental.</p>
+<section id="índice-de-precipitação-padronizado" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="índice-de-precipitação-padronizado"><span class="header-section-number">4.2.1</span> Índice de Precipitação Padronizado</h3>
+<p>(SPI – Standardized Precipitation Index)</p>
+<p>Fonte: <span class="citation" data-cites="mckee_doesken_kleist_1993">MCKEE; DOESKEN; KLEIST (<a href="referencias.html#ref-mckee_doesken_kleist_1993" role="doc-biblioref">1993</a>)</span></p>
+<section id="conceituação-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-4">Conceituação</h4>
+<p>Quantifica desvios da precipitação observada em relação à média histórica, em escalas temporais diversas (1, 3, 6, 12, até 48 meses).</p>
+</section>
+<section id="interpretação-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-4">Interpretação</h4>
+<p>O SPI permite identificar secas meteorológicas que podem ter efeitos diretos e indiretos sobre a saúde pública. O estresse hídrico pode aumentar a vulnerabilidade de populações já em risco social, dificultando o acesso a saneamento básico e serviços de saúde.</p>
+<p>Ele é padronizado com média zero e desvio padrão um, permitindo comparações entre regiões e períodos distintos, independentemente do clima local.</p>
+</section>
+<section id="usos-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-4">Usos</h4>
+<ul>
+<li>Monitoramento de secas meteorológicas em sistemas de alerta precoce.</li>
+<li>Planejamento de recursos hídricos e agrícolas.</li>
+<li>Estudos de impacto climático em saúde, agricultura e segurança hídrica.</li>
+<li>Classificação da severidade da seca (leve, moderada, severa e extrema).</li>
+<li>Subsídio à elaboração de políticas públicas e ações de mitigação.</li>
+</ul>
+</section>
+<section id="limitações-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-4">Limitações</h4>
+<ul>
+<li>Não considera a temperatura ou a evapotranspiração, o que pode superestimar a umidade disponível em regiões quentes.</li>
+<li>Baseia-se exclusivamente em precipitação, podendo não refletir diretamente o estresse hídrico no solo ou vegetação.</li>
+<li>Requer séries históricas longas e consistentes para maior confiabilidade.</li>
+</ul>
+</section>
+<section id="fonte-de-dados-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-4">Fonte de dados</h4>
+<ul>
+<li>Estações pluviométricas do INMET, ANA, CEMADEN e outras redes estaduais.</li>
+<li>Produtos de reanálise climática (como ERA5) ou dados de satélite calibrados.</li>
+<li>Bases globais como CHIRPS, GPCC, CRU e GPCP para escalas continentais ou globais.</li>
+</ul>
+</section>
+<section id="método-de-cálculo-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-4">Método de cálculo</h4>
+<ol type="1">
+<li>Coleta da série histórica de precipitação em uma escala de tempo (ex: acumulado de 3 meses).</li>
+<li>Ajuste da série a uma distribuição estatística (normalmente a distribuição gama).</li>
+<li>Transformação da distribuição para uma normal padrão, com média zero e desvio padrão igual a um.</li>
+<li>Cálculo do SPI como o valor <span class="math inline">\(z\)</span> correspondente à precipitação observada.</li>
+</ol>
+<p>O SPI pode ser classificado em categorias:</p>
+<table class="caption-top table">
+<caption>Classificação do SPI</caption>
+<thead>
+<tr class="header">
+<th>SPI</th>
+<th>Categoria de seca</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&gt; +2,0</td>
+<td>Extremamente úmido</td>
+</tr>
+<tr class="even">
+<td>0 a +1,0</td>
+<td>Condições normais</td>
+</tr>
+<tr class="odd">
+<td>-1,0 a -1,49</td>
+<td>Seca moderada</td>
+</tr>
+<tr class="even">
+<td>-1,5 a -1,99</td>
+<td>Seca severa</td>
+</tr>
+<tr class="odd">
+<td>&lt; -2,0</td>
+<td>Seca extrema</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="categorias-sugeridas-para-análise-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-4">Categorias sugeridas para análise</h4>
+<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+</section>
+</section>
+<section id="índice-de-severidade-de-seca-de-palmer" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="índice-de-severidade-de-seca-de-palmer"><span class="header-section-number">4.2.2</span> Índice de Severidade de Seca de Palmer</h3>
+<p>(PDSI – Palmer Drought Severity Index)</p>
+<p>Fonte: <span class="citation" data-cites="palmer_1965">PALMER (<a href="referencias.html#ref-palmer_1965" role="doc-biblioref">1965</a>)</span></p>
+<section id="conceituação-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-5">Conceituação</h4>
+<p>Estima o balanço hídrico de uma região, combinando precipitação, evapotranspiração potencial (<span class="math inline">\(ET_0\)</span>), capacidade de armazenamento de água no solo e recarga hídrica.</p>
+</section>
+<section id="interpretação-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-5">Interpretação</h4>
+<p>O PDSI apresenta uma série padronizada em que valores negativos indicam seca (–1 = seca moderada; –3 = seca severa; ≤ –4 = seca extrema) e valores positivos indicam condições úmidas.</p>
+</section>
+<section id="usos-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-5">Usos</h4>
+<ul>
+<li>Monitoramento operacional de secas em serviços meteorológicos e sistemas de alerta precoce.</li>
+<li>Gestão de recursos hídricos (reservatórios, irrigação, hidroeletricidade).</li>
+<li>Estudos epidemiológicos que relacionam eventos de seca a eventos de saúde.</li>
+</ul>
+</section>
+<section id="limitações-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-5">Limitações</h4>
+<ul>
+<li>Utiliza coeficientes empíricos calibrados para regiões dos EUA (modelo original), podendo exigir recalibração para outros climas.</li>
+<li>Sensível ao tipo de solo e profundidade radicular assumidos; erros nesses parâmetros afetam o resultado.</li>
+<li>Requer longas séries contínuas de precipitação e temperatura; falhas comprometem a confiabilidade. Responde lentamente a eventos curtos (veranicos), pois foca no balanço de longo prazo.</li>
+</ul>
+</section>
+<section id="fonte-de-dados-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-5">Fonte de dados</h4>
+<ul>
+<li>Séries pluviométricas e termométricas de redes nacionais (INMET, ANA, CEMADEN) ou dados globais (CRU, GPCC, CHIRPS).</li>
+<li>Reanálises climáticas (ERA5, MERRA-2) para regiões com escassez de estações.</li>
+<li>Bases de solos (FAO, SoilGrids) para estimar capacidade de campo e água disponível.</li>
+</ul>
+</section>
+<section id="método-de-cálculo-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-5">Método de cálculo</h4>
+<ol type="1">
+<li>Conversão da temperatura média mensal em evapotranspiração potencial (<span class="math inline">\(ET_0\)</span>) via equação de Thornthwaite ou Penman-Monteith simplificada.</li>
+<li>Cálculo do balanço hídrico mensal, estimando:
+<ul>
+<li>Água disponível após <span class="math inline">\(ET_0\)</span></li>
+<li>Recarga e escoamento superficial</li>
+<li>Alteração do armazenamento de água no solo.</li>
+</ul></li>
+<li>Determinação das variáveis de deficiência/excesso hídrico (<span class="math inline">\(d\)</span>, <span class="math inline">\(D\)</span>, <span class="math inline">\(Z\)</span>) segundo Palmer.</li>
+<li>Cálculo iterativo do índice PDSI que reflete anomalias acumuladas, com coeficientes <span class="math inline">\(K\)</span> de escalonamento sazonal.</li>
+<li>Classificação da severidade com base em limiares padronizados</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dica
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Versões modernas incluem o Self-Calibrating PDSI (sc-PDSI), que ajusta automaticamente os coeficientes K à variabilidade climática local, melhorando a comparabilidade inter-regional.</p>
+</div>
+</div>
+</section>
+<section id="categorias-sugeridas-para-análise-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-5">Categorias sugeridas para análise</h4>
+<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+</section>
+</section>
+<section id="índice-integrao-de-seca" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="índice-integrao-de-seca"><span class="header-section-number">4.2.3</span> Índice Integrao de Seca</h3>
+<p>(CDI – Combined Drought Indicator)</p>
+<p>Fonte: <span class="citation" data-cites="sepulcre_canto_2012_cdi">SEPULCRE-CANTÓ et al. (<a href="referencias.html#ref-sepulcre_canto_2012_cdi" role="doc-biblioref">2012</a>)</span></p>
+<section id="conceituação-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-6">Conceituação</h4>
+<p>O CDI combina, numa única métrica, diferentes dimensões da seca: meteorológica (chuva), agrícola (umidade do solo e vegetação) e hidrológica (vazão ou armazenamento de água).</p>
+</section>
+<section id="interpretação-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-6">Interpretação</h4>
+<p>O indicador é classificado em classes de severidade, como por exemplo: Normal, Seca Moderada, Seca Severa, Seca Extrema.</p>
+</section>
+<section id="usos-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-6">Usos</h4>
+<ul>
+<li>Sistemas nacionais e regionais de alerta precoce (ex.: Monitor de Secas – ANA/FUNCEME).</li>
+<li>Planejamento intersetorial (saúde, agricultura, defesa civil, recursos hídricos).</li>
+<li>Modelagem de impacto em epidemiologia climática.</li>
+<li>Relatórios de risco para concessionárias de energia e abastecimento urbano.</li>
+</ul>
+</section>
+<section id="limitações-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-6">Limitações</h4>
+<ol type="1">
+<li>Dependência de múltiplas bases de dados.</li>
+<li>Escolha dos pesos e limiares é subjetiva; metodologias diferentes geram mapas distintos.</li>
+<li>Uso de Diferentes escalas temporais podem complicar a interpretação.</li>
+<li>Atraso de resposta: indicadores hidrológicos reagem mais lentamente que os meteorológicos.</li>
+</ol>
+</section>
+<section id="fonte-de-dados-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-6">Fonte de dados</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 39%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimensão</th>
+<th>Fontes típicas no Brasil</th>
+<th>Alternativas globais / remotas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Precipitação</td>
+<td>Rede pluviométrica INMET, ANA, CEMADEN</td>
+<td>CHIRPS, ERA5, GPM</td>
+</tr>
+<tr class="even">
+<td>Umidade do solo</td>
+<td>Sondas in-situ (ANA, EMBRAPA)</td>
+<td>SMAP, SMOS, ERA5-Land</td>
+</tr>
+<tr class="odd">
+<td>Vegetação (NDVI/VHI)</td>
+<td>Satélite CBERS-4A, IBGE MOD13Q1</td>
+<td>MODIS, VIIRS, Sentinel-2</td>
+</tr>
+<tr class="even">
+<td>Vazão / reservatórios</td>
+<td>Hidroweb-ANA, ONS</td>
+<td>Reanálises hidrológicas (GLDAS), GRACE</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="método-de-cálculo-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-6">Método de cálculo</h4>
+<ol type="1">
+<li>Seleção dos sub-índices representativos de cada dimensão .</li>
+<li>Padronização de cada série para média zero e desvio-padrão um.</li>
+<li>Reclassificação em categorias (Normal, Moderada, Severa, Extrema) usando limiares fixos ou percentis.</li>
+<li>Integração espacial:
+<ul>
+<li>Método por consenso: seca é declarada se pelo menos dois sub-índices indicam seca.</li>
+<li>Método de ponderação: pesos definidos por regressão ou por especialistas.</li>
+</ul></li>
+<li>Validação com registros de impacto (perdas agrícolas, nível de reservatórios, declarações de emergência).</li>
+<li>Atualização operacional mensal ou quinzenal; publicação de mapas com classes de severidade.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dica
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O Self-Calibrating CDI (sc-CDI), adotado pelo Monitor de Secas, ajusta automaticamente limiares de cada pixel à climatologia local, aumentando consistência entre biomas (Amazônia vs.&nbsp;Semiárido).</p>
+</div>
+</div>
+</section>
+<section id="categorias-sugeridas-para-análise-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-6">Categorias sugeridas para análise</h4>
+<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+</section>
+</section>
+</section>
+<section id="vegetação" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="vegetação"><span class="header-section-number">4.3</span> Vegetação</h2>
+<section id="ndvi-normalized-difference-vegetation-index" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="ndvi-normalized-difference-vegetation-index"><span class="header-section-number">4.3.1</span> NDVI – Normalized Difference Vegetation Index</h3>
+<p>Fonte: <span class="citation" data-cites="Tucker1979">TUCKER (<a href="referencias.html#ref-Tucker1979" role="doc-biblioref">1979</a>)</span></p>
+<section id="conceituação-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-7">Conceituação</h4>
+<p>Trata-se de um índice espectral calculado a partir da reflectância no infravermelho-próximo (NIR) e na banda vermelha de sensores remotos orbitais ou aerotransportados. Varia de <span class="math inline">\(–1\)</span> (água/turbidez) a <span class="math inline">\(+1\)</span> (vegetação densa), representando o “verdor” ou a atividade fotossintética da cobertura vegetal.</p>
+</section>
+<section id="interpretação-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-7">Interpretação</h4>
+<p>Serve como proxy objetiva da exposição a áreas verdes, cujo aumento já foi relacionado a menores mortalidade por todas as causas e cardiovascular, menor incidência de doenças respiratórias, melhor saúde mental, redução do peso ao nascer e mitigação de ilhas de calor urbanas. Assim, o NDVI apoia avaliações de risco ambiental, vigilância epidemiológica e planejamento de cidades mais saudáveis.</p>
+</section>
+<section id="usos-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-7">Usos</h4>
+<ul>
+<li>Classificação de cenários de “alto” e “baixo” verde em estudos de coorte.</li>
+<li>Modelagem de habitats de vetores (malária, dengue, leishmaniose).</li>
+<li>Monitoramento de ondas de calor e planejamento de arborização</li>
+<li>Avaliação de efetividade de intervenções urbanas (parques, corredores verdes).</li>
+<li>Estudos de poluição atmosférica (vegetação como barreira física).</li>
+</ul>
+</section>
+<section id="limitações-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-7">Limitações</h4>
+<ul>
+<li>Saturação em florestas muito densas.</li>
+<li>Influência de solo exposto, neve ou umidade.</li>
+<li>Sensibilidade a variações atmosféricas e ângulo solar.</li>
+<li>Não distingue tipos de vegetação nem informa estrutura vertical.</li>
+<li>Diferenças entre sensores exigem harmonização.</li>
+</ul>
+</section>
+<section id="fonte-de-dados-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-7">Fonte de dados</h4>
+<ul>
+<li>Satélites Landsat, MODIS e Sentinel-2.</li>
+</ul>
+</section>
+<section id="método-de-cálculo-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-7">Método de cálculo</h4>
+<p><span class="math display">\[
+\text{NDVI} = \frac{\rho_{\mathrm{NIR}} - \rho_{\mathrm{Red}}}{\rho_{\mathrm{NIR}} + \rho_{\mathrm{Red}}}
+\]</span></p>
+</section>
+<section id="categorias-sugeridas-para-análise-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-7">Categorias sugeridas para análise</h4>
+<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+</section>
+</section>
+<section id="evi-enhanced-vegetation-index" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="evi-enhanced-vegetation-index"><span class="header-section-number">4.3.2</span> EVI – Enhanced Vegetation Index</h3>
+<p>Fonte: <span class="citation" data-cites="Huete2002">HUETE et al. (<a href="referencias.html#ref-Huete2002" role="doc-biblioref">2002</a>)</span></p>
+<section id="conceituação-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-8">Conceituação</h4>
+<p>Trata-se de um índice espectral desenvolvido para maximizar a sensibilidade a vegetação em áreas de biomassa alta, reduzindo efeitos de partículas atmosféricas e do fundo de solo. Ele combina reflectâncias no infravermelho-próximo (NIR), vermelho e azul, aplicando fatores de ganho e de correção atmosférica que estabilizam o sinal em comparação ao NDVI.</p>
+</section>
+<section id="interpretação-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-8">Interpretação</h4>
+<p>Os valores típicos variam de –1 a +1, com vegetação densa acima de ~0,6.</p>
+</section>
+<section id="usos-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-8">Usos</h4>
+<ul>
+<li>Avaliação de intervenções de arborização urbana e parques.</li>
+<li>Análises de inequidades ambientais (distribuição de verde vs.&nbsp;renda).</li>
+</ul>
+</section>
+<section id="limitações-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-8">Limitações</h4>
+<ul>
+<li>Necessita da banda azul, ausente em sensores mais antigos.</li>
+<li>Coeficientes podem variar em adaptações, reduzindo comparabilidade;</li>
+<li>Sensível a resíduos de correção atmosférica inadequada (aerossóis fortes);</li>
+<li>Menor disponibilidade de séries temporais de longa duração do que o NDVI.</li>
+<li>Desempenho reduzido em áreas com cobertura de neve e solos muito brilhantes.</li>
+</ul>
+</section>
+<section id="fonte-de-dados-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-8">Fonte de dados</h4>
+<ul>
+<li>MODIS, VIIRS, Sentinel-2, Landsat 8-9.</li>
+</ul>
+</section>
+<section id="método-de-cálculo-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-8">Método de cálculo</h4>
+<p><span class="math display">\[
+\text{EVI} = G \times \frac{\rho_{\mathrm{NIR}} - \rho_{\mathrm{Red}}}{\rho_{\mathrm{NIR}} + C_1\,\rho_{\mathrm{Red}} - C_2\,\rho_{\mathrm{Blue}} + L}
+\]</span></p>
+<p>Onde <span class="math inline">\(rho\)</span> são reflectâncias de superfície corrigidas; <span class="math inline">\(G = 2,5\)</span> é o ganho; <span class="math inline">\(C_1 = 6\)</span> e <span class="math inline">\(C_2 = 7,5\)</span> corrigem aerossóis e <span class="math inline">\(L = 1\)</span> compensa fundo de solo.</p>
+</section>
+<section id="categorias-sugeridas-para-análise-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-8">Categorias sugeridas para análise</h4>
+<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+</section>
+</section>
+<section id="gvi-green-view-index" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="gvi-green-view-index"><span class="header-section-number">4.3.3</span> GVI – Green View Index</h3>
+<p>Fonte: <span class="citation" data-cites="Li2015">LI et al. (<a href="referencias.html#ref-Li2015" role="doc-biblioref">2015</a>)</span></p>
+<section id="conceituação-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-9">Conceituação</h4>
+<p>Quantifica a proporção de vegetação visível a partir do ponto de vista de um pedestre, usualmente obtida de panoramas como o <em>Google Street View</em> ou plataformas semelhantes.</p>
+</section>
+<section id="interpretação-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-9">Interpretação</h4>
+<p>Varia de 0 a 1 (ou 0 %–100 %), sendo 0 ausência total de “verde” no campo visual e 1 total ocupação por vegetação. A métrica captura a percepção humana do verde, algo que índices de satélite não conseguem representar.</p>
+</section>
+<section id="usos-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-9">Usos</h4>
+<ul>
+<li>Avaliar desigualdades na distribuição de áreas verdes no nível local.</li>
+<li>Modelar indicadores com base em percepção de vegetação.</li>
+<li>Investigar relações entre exposição diária ao verde e desfechos de saúde mental.</li>
+<li>Monitorar resultados de programas de arborização urbana.</li>
+<li>Priorizar rotas “mais verdes” em aplicativos de mapas e rotas.</li>
+</ul>
+</section>
+<section id="limitações-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-9">Limitações</h4>
+<ul>
+<li>Dependência da cobertura e da atualização das imagens, com lacunas em regiões periféricas ou rurais.</li>
+<li>Sazonalidade e horários diferentes das capturas podem sub ou superestimar o indicador</li>
+<li>Oclusões por veículos, fachadas e sinalização reduzem a visão.</li>
+<li>Processamento exige rotulagem semântica automática (redes neurais) ou cromaticidade, suscetíveis a erros;</li>
+<li>Restrições de termos de uso e privacidade de alguns provedores de imagens.</li>
+</ul>
+</section>
+<section id="fonte-de-dados-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-9">Fonte de dados</h4>
+<ul>
+<li>Google Street View</li>
+<li>Mapillary, KartaView e plataformas colaborativas (com API aberta).</li>
+<li>Imagens coletadas por câmeras 360° montadas em veículos.</li>
+</ul>
+</section>
+<section id="método-de-cálculo-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-9">Método de cálculo</h4>
+<ol type="1">
+<li>Amostragem espacial: escolher pontos a cada <span class="math inline">\(n\)</span> metros ao longo da via.</li>
+<li>Coleta de panoramas (imagens) em quatro direções (0 °, 90 °, 180 °, 270 °).</li>
+<li>Segmentação semântica para classificar pixels como“vegetação”.</li>
+<li>Cálculo por imagem do GVI:</li>
+</ol>
+<p><span class="math display">\[
+GVI = \frac{P_{verde}}{P_{total}}
+\]</span></p>
+<p>Onde <span class="math inline">\(P_P{verde}\)</span> é o total de pixels classificados como vegeração.</p>
+<ol start="5" type="1">
+<li>Agregação: média das quatro direções ou de todos os pontos.</li>
+</ol>
+</section>
+<section id="categorias-sugeridas-para-análise-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-9">Categorias sugeridas para análise</h4>
+<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+</section>
+</section>
+</section>
+<section id="poluição-do-ar" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="poluição-do-ar"><span class="header-section-number">4.4</span> Poluição do ar</h2>
+<p>PM2.5 Poluidores</p>
+<section id="indicador" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="indicador"><span class="header-section-number">4.4.1</span> Indicador</h3>
+<section id="conceituação-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-10">Conceituação</h4>
+</section>
+<section id="interpretação-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-10">Interpretação</h4>
+</section>
+<section id="usos-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-10">Usos</h4>
+</section>
+<section id="limitações-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-10">Limitações</h4>
+</section>
+<section id="fonte-de-dados-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-10">Fonte de dados</h4>
+</section>
+<section id="método-de-cálculo-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-10">Método de cálculo</h4>
+</section>
+<section id="categorias-sugeridas-para-análise-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-10">Categorias sugeridas para análise</h4>
+<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+</section>
+</section>
+</section>
+<section id="qualidade-da-água" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="qualidade-da-água"><span class="header-section-number">4.5</span> Qualidade da água</h2>
+<section id="indicador-1" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="indicador-1"><span class="header-section-number">4.5.1</span> Indicador</h3>
+<section id="conceituação-11" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-11">Conceituação</h4>
+</section>
+<section id="interpretação-11" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-11">Interpretação</h4>
+</section>
+<section id="usos-11" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-11">Usos</h4>
+</section>
+<section id="limitações-11" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-11">Limitações</h4>
+</section>
+<section id="fonte-de-dados-11" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-11">Fonte de dados</h4>
+</section>
+<section id="método-de-cálculo-11" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-11">Método de cálculo</h4>
+</section>
+<section id="categorias-sugeridas-para-análise-11" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-11">Categorias sugeridas para análise</h4>
+<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
 
 
+<div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list" style="display: none">
+<div id="ref-Huete2002" class="csl-entry" role="listitem">
+HUETE, A. R. et al. <a href="https://doi.org/10.1016/S0034-4257(02)00096-2">Overview of the Radiometric and Biophysical Performance of the MODIS Vegetation Indices</a>. <strong>Remote Sensing of Environment</strong>, v. 83, n. 1–2, p. 195–213, 2002.
+</div>
+<div id="ref-Li2015" class="csl-entry" role="listitem">
+LI, X. et al. <a href="https://doi.org/10.1016/j.ufug.2015.06.006">Assessing Street-Level Urban Greenery Using Google Street View and a Modified Green View Index</a>. <strong>Urban Forestry &amp; Urban Greening</strong>, v. 14, p. 675–685, 2015.
+</div>
+<div id="ref-mckee_doesken_kleist_1993" class="csl-entry" role="listitem">
+MCKEE, T. B.; DOESKEN, N. J.; KLEIST, J. <strong>The Relationship of Drought Frequency and Duration to Time Scales</strong>. Proceedings of the 8<sup>th</sup> Conference on Applied Climatology. <strong>Anais</strong>...Anaheim, CA: American Meteorological Society, 1993.
+</div>
+<div id="ref-palmer_1965" class="csl-entry" role="listitem">
+PALMER, W. C. <strong>Meteorological Drought</strong>. Washington, D.C.: U.S. Weather Bureau, 1965. Disponível em: &lt;<a href="https://www.droughtmanagement.info/literature/USWB_Meteorological_Drought_1965.pdf">https://www.droughtmanagement.info/literature/USWB_Meteorological_Drought_1965.pdf</a>&gt;. Acesso em: 28 mai. 2025.
+</div>
+<div id="ref-sepulcre_canto_2012_cdi" class="csl-entry" role="listitem">
+SEPULCRE-CANTÓ, G. et al. <a href="https://doi.org/10.5194/nhess-12-3519-2012">Development of a Combined Drought Indicator to Detect Agricultural Drought in Europe</a>. <strong>Natural Hazards and Earth System Sciences</strong>, v. 12, n. 11, p. 3519–3531, 2012.
+</div>
+<div id="ref-Tucker1979" class="csl-entry" role="listitem">
+TUCKER, C. J. <a href="https://doi.org/10.1016/0034-4257(79)90013-0">Red and Photographic Infrared Linear Combinations for Monitoring Vegetation</a>. <strong>Remote Sensing of Environment</strong>, v. 8, n. 2, p. 127–150, 1979.
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -810,8 +1567,8 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./clima.html" class="pagination-link" aria-label="Climáticos e atmosféricos">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Climáticos e atmosféricos</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./clima.html" class="pagination-link" aria-label="Climáticos">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Climáticos</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,9 +1,566 @@
 # Ambientais
 
+Indicadores ambientais são de grande importância para análises de saúde pública, pois permitem a identificação e o monitoramento de fatores ambientais que influenciam diretamente o bem-estar das populações. Esses indicadores, que incluem variáveis como uso e ocupação do solo, umidade e seca, vegetação e poluição do ar e da água, fornecem subsídios para a formulação de políticas públicas e intervenções preventivas mais eficazes. Ao correlacionar indicadores ambientais com eventos de saúde, é possível realizar ações direcionadas para a redução de riscos e promoção da saúde. Dessa forma, o uso sistemático e integrado de indicadores ambientais fortalece a vigilância em saúde, contribui para a equidade no acesso a ambientes saudáveis e subsidia decisões baseadas em evidências científicas.
+
 ## Uso e ocupação do solo
 
-## Condições do solo
+Análises sobre o uso e ocupação do solo permitem determinar quais as condições ambientais que as populações estão expostas, evidenciando questões como adensamento urbano, ocupação desordenada, vulnerabilidade a desastres e escassez de áreas verdes. Estes fatores tem grande influencia na saúde humana, afertando a qualidade do ar e do solo, o conforto térmico e o bem-estar psicológico.
 
-### Umidade
+### Taxa de Densidade Populacional
 
-### Vegetação
+#### Conceituação {.unnumbered}
+
+Relação entre o número de habitantes e a área geográfica ocupada, expressa geralmente em habitantes por quilômetro quadrado (hab/km²).
+
+#### Interpretação {.unnumbered}
+
+A densidade populacional está associada à demanda por serviços de saúde, infraestrutura, saneamento e transporte. Altas densidades podem favorecer a propagação de doenças transmissíveis, aumentar a poluição e reduzir a qualidade de vida, enquanto baixas densidades podem dificultar o acesso a serviços básicos.
+
+#### Usos {.unnumbered}
+
+Utilizando no planejamento urbano e regional, alocação de recursos públicos, análise de risco epidemiológico, vigilância em saúde e políticas de habitação.
+
+#### Limitações {.unnumbered}
+
+-  O indicador não considera características do território, como áreas não-habitáveis (corpos d'água e florestas e montanhas protegidas pela legislação ambiental).
+-  Uma alta ou baixa densidade não está relacionado, necessariamente, a uma maior ou menor qualidade de vida.
+
+#### Fonte de dados {.unnumbered}
+
+Censos populacionais, estimativas populacionais e dados geográficos de instituições oficiais, como o IBGE (Brasil).
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Densidade populacional} = 
+\frac{\text{População total}}{\text{Área territorial}}
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
+### Índice de Permeabilização
+
+#### Conceituação {.unnumbered}
+
+Representa a proporção da superfície de um terreno ou área urbana que permite a infiltração de água no solo, em relação à sua área total.
+
+#### Interpretação {.unnumbered}
+
+O índice de permeabilização está diretamente relacionado ao controle do escoamento superficial, prevenção de enchentes e melhoria da qualidade da água. Superfícies permeáveis permitem a recarga de aquíferos, reduzem o acúmulo de águas pluviais e contribuem para o equilíbrio térmico urbano. Sua baixa presença pode aumentar a incidência de doenças relacionadas à água contaminada, como leptospirose e diarreias, além de agravar problemas respiratórios e ocorrência de ilhas de calor.
+
+#### Usos {.unnumbered}
+
+-  Planejamento urbano e ambiental.
+-  Elaboração de políticas de uso e ocupação do solo.
+-  Avaliação de riscos hidrológicos e climáticos.
+-  Projetos de drenagem urbana sustentável.
+-  Gestão de áreas verdes e infraestrutura verde.
+
+#### Limitações {.unnumbered}
+
+-  Pode não refletir a capacidade real de infiltração, pois desconsidera características do solo como compactação e tipo de cobertura vegetal.
+-  Acurácia limitada em áreas com ocupação irregular ou mudanças rápidas de uso do solo.
+
+#### Fonte de dados {.unnumbered}
+
+-  Imagens de satélite.
+-  Cadastros urbanos e mapas de uso e cobertura do solo.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Índice de Permeabilização} = \frac{\text{Área permeável}}{\text{Área total}} \times 100
+$$
+
+Onde a área permeável corresponde à superfície do solo que permite a infiltração de água (jardins, áreas verdes, solo exposto).
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
+### Uso do solo por categoria
+
+#### Conceituação {.unnumbered}
+
+Classificação e quantificação das diferentes formas de utilização da superfície terrestre por atividades humanas, como moradia, agricultura, indústria, comércio, áreas verdes, infraestrutura e áreas institucionais. Ele permite identificar como os espaços são organizados e utilizados dentro de uma área geográfica específica.
+
+#### Interpretação {.unnumbered}
+
+O uso do solo influencia diretamente as condições ambientais e sanitárias de uma região. Ocupações inadequadas podem resultar em exposição a riscos como contaminação por resíduos, poluição atmosférica, alagamentos, e proliferação de vetores de doenças. O acesso a áreas verdes, serviços públicos e infraestrutura adequada, refletido no uso do solo, está associado a melhores condições de saúde física e mental.
+
+#### Usos {.unnumbered}
+
+-  Planejamento urbano e ordenamento territorial.
+-  Avaliação de impactos ambientais.
+-  Gestão de recursos naturais e infraestrutura.
+-  Formulação de políticas públicas de saúde, habitação e mobilidade.
+-  Monitoramento da expansão urbana e uso sustentável do território.
+
+#### Limitações {.unnumbered}
+
+-  Pode não refletir a qualidade do uso ou a intensidade da atividade (ex: área residencial subutilizada ou superlotada)
+-  Classificações podem variar conforme a metodologia adotada.
+-  Nem sempre identifica usos mistos ou informais do solo (como moradia em áreas industriais ou invasões).
+
+#### Fonte de dados {.unnumbered}
+
+-  Imagens de satélite.
+-  Cadastros urbanos.
+
+#### Método de cálculo {.unnumbered}
+
+O indicador de uso do solo pode ser expresso em termos percentuais ou absolutos da área ocupada por cada tipo de uso em relação à área total analisada. O cálculo é feito com base em classificação de imagens de satélite, por meio de técnicas de sensoriamento remoto e análise multiespectral.
+
+$$
+\text{Uso do solo} = \frac{\text{Área de uso específico}}{\text{Área total}} \times 100
+$$
+
+As principais categorias mensuradas são:
+
+-  Uso residencial
+-  Uso comercial
+-  Uso industrial
+-  Uso institucional
+-  Uso agrícola ou rural
+-  Uso de lazer e recreação
+-  Áreas verdes ou vegetadas
+-  Infraestrutura, como sistemas de transporte e saneamento
+-  Corpos d'água
+-  Uso indefinido, como lotes vagos ou em transição
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
+### Cobertura do solo por categoria
+
+#### Conceituação {.unnumbered}
+
+Descrição da superfície terrestre com base nos elementos físicos e biológicos visíveis, como vegetação natural, corpos d’água, edificações, solo exposto e superfícies impermeáveis. Diferentemente do uso do solo, que está ligado à atividade humana, a cobertura do solo representa o que efetivamente recobre o terreno, independentemente de sua função.
+
+#### Interpretação {.unnumbered}
+
+A cobertura do solo influencia diretamente a qualidade ambiental e, consequentemente, a saúde da população. A presença de áreas verdes, por exemplo, está associada à melhora da qualidade do ar, redução de ilhas de calor, promoção da atividade física e bem-estar mental. Por outro lado, superfícies impermeáveis e solo exposto podem aumentar o risco de enchentes, poluição e propagação de vetores de doenças.
+
+#### Usos {.unnumbered}
+
+-  Monitoramento ambiental e urbano.
+-  Planejamento e gestão territorial.
+-  Avaliação de impactos ambientais.
+-  Estudos sobre mudanças climáticas e eventos extremos.
+-  Identificação de áreas de risco para intervenções em saúde pública.
+
+#### Limitações {.unnumbered}
+
+-  A distinção entre tipos de cobertura pode ser dificultada por limitações na resolução de imagens ou interferência de nuvens e sombras.
+-  Pode não refletir a dinâmica sazonal da vegetação (ex: áreas agrícolas variam ao longo do ano).
+
+#### Fonte de dados {.unnumbered}
+
+-  Imagens de satélite.
+-  Cadastros urbanos.
+
+#### Método de cálculo {.unnumbered}
+
+O indicador pode ser expressado em termos percentuais ou absolutos da área ocupada por cada tipo de cobertura. O cálculo é feito com base em classificação de imagens de satélite, por meio de técnicas de sensoriamento remoto e análise multiespectral.
+
+$$
+\text{Cobertura do solo} = \frac{\text{Área de uma classe de cobertura}}{\text{Área total}} \times 100
+$$
+
+As principais classes mensuradas são:
+
+-  Vegetação natural
+-  Reflorestamento e silvicultura
+-  Áreas urbanizadas
+-  Solo exposto
+-  Agricultura
+-  Pastagem
+-  Corpos d'água
+-  Áreas úmidas e várzeas
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
+## Seca
+
+Indicadores sobre seca ajudam a antecipar, monitorar e mitigar uma série de impactos diretos e indiretos que a escassez de água pode provocar na população, impactando na transmissão de doenças, na segurança alimentar, em problemas respiratórios, doenças crônicas e na saúde mental.
+
+### Índice de Precipitação Padronizado
+
+(SPI – Standardized Precipitation Index)
+
+Fonte: @mckee_doesken_kleist_1993
+
+#### Conceituação {.unnumbered}
+
+Quantifica desvios da precipitação observada em relação à média histórica, em escalas temporais diversas (1, 3, 6, 12, até 48 meses).
+
+#### Interpretação {.unnumbered}
+
+O SPI permite identificar secas meteorológicas que podem ter efeitos diretos e indiretos sobre a saúde pública. O estresse hídrico pode aumentar a vulnerabilidade de populações já em risco social, dificultando o acesso a saneamento básico e serviços de saúde.
+
+Ele é padronizado com média zero e desvio padrão um, permitindo comparações entre regiões e períodos distintos, independentemente do clima local.
+
+
+#### Usos {.unnumbered}
+
+-  Monitoramento de secas meteorológicas em sistemas de alerta precoce.
+-  Planejamento de recursos hídricos e agrícolas.
+-  Estudos de impacto climático em saúde, agricultura e segurança hídrica.
+-  Classificação da severidade da seca (leve, moderada, severa e extrema).
+-  Subsídio à elaboração de políticas públicas e ações de mitigação.
+
+#### Limitações {.unnumbered}
+
+-  Não considera a temperatura ou a evapotranspiração, o que pode superestimar a umidade disponível em regiões quentes.
+-  Baseia-se exclusivamente em precipitação, podendo não refletir diretamente o estresse hídrico no solo ou vegetação.
+-  Requer séries históricas longas e consistentes para maior confiabilidade.
+
+#### Fonte de dados {.unnumbered}
+
+-  Estações pluviométricas do INMET, ANA, CEMADEN e outras redes estaduais.
+-  Produtos de reanálise climática (como ERA5) ou dados de satélite calibrados.
+-  Bases globais como CHIRPS, GPCC, CRU e GPCP para escalas continentais ou globais.
+
+#### Método de cálculo {.unnumbered}
+
+1.  Coleta da série histórica de precipitação em uma escala de tempo (ex: acumulado de 3 meses).
+2.  Ajuste da série a uma distribuição estatística (normalmente a distribuição gama).
+3.  Transformação da distribuição para uma normal padrão, com média zero e desvio padrão igual a um.
+4.  Cálculo do SPI como o valor $z$ correspondente à precipitação observada.
+
+O SPI pode ser classificado em categorias:
+
+| SPI          | Categoria de seca      |
+|--------------|------------------------|
+| > +2,0       | Extremamente úmido     |
+| 0 a +1,0     | Condições normais      |
+| -1,0 a -1,49 | Seca moderada          |
+| -1,5 a -1,99 | Seca severa            |
+| < -2,0       | Seca extrema           |
+
+: Classificação do SPI
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
+### Índice de Severidade de Seca de Palmer
+
+(PDSI – Palmer Drought Severity Index)
+
+Fonte: @palmer_1965
+
+#### Conceituação {.unnumbered}
+
+Estima o balanço hídrico de uma região, combinando precipitação, evapotranspiração potencial ($ET_0$), capacidade de armazenamento de água no solo e recarga hídrica.
+
+#### Interpretação {.unnumbered}
+
+O PDSI apresenta uma série padronizada em que valores negativos indicam seca (–1 = seca moderada; –3 = seca severa; ≤ –4 = seca extrema) e valores positivos indicam condições úmidas.
+
+#### Usos {.unnumbered}
+
+-  Monitoramento operacional de secas em serviços meteorológicos e sistemas de alerta precoce.
+-  Gestão de recursos hídricos (reservatórios, irrigação, hidroeletricidade).
+-  Estudos epidemiológicos que relacionam eventos de seca a eventos de saúde.
+
+#### Limitações {.unnumbered}
+
+-  Utiliza coeficientes empíricos calibrados para regiões dos EUA (modelo original), podendo exigir recalibração para outros climas.
+-  Sensível ao tipo de solo e profundidade radicular assumidos; erros nesses parâmetros afetam o resultado.
+-  Requer longas séries contínuas de precipitação e temperatura; falhas comprometem a confiabilidade.
+Responde lentamente a eventos curtos (veranicos), pois foca no balanço de longo prazo.
+
+#### Fonte de dados {.unnumbered}
+
+-  Séries pluviométricas e termométricas de redes nacionais (INMET, ANA, CEMADEN) ou dados globais (CRU, GPCC, CHIRPS).
+-  Reanálises climáticas (ERA5, MERRA-2) para regiões com escassez de estações.
+-  Bases de solos (FAO, SoilGrids) para estimar capacidade de campo e água disponível.
+
+#### Método de cálculo {.unnumbered}
+
+1.  Conversão da temperatura média mensal em evapotranspiração potencial ($ET_0$) via equação de Thornthwaite ou Penman-Monteith simplificada.
+2.  Cálculo do balanço hídrico mensal, estimando:
+    -  Água disponível após $ET_0$
+    -  Recarga e escoamento superficial
+    -  Alteração do armazenamento de água no solo.
+3.  Determinação das variáveis de deficiência/excesso hídrico ($d$, $D$, $Z$) segundo Palmer.
+4.  Cálculo iterativo do índice PDSI que reflete anomalias acumuladas, com coeficientes $K$ de escalonamento sazonal.
+5.  Classificação da severidade com base em limiares padronizados
+
+::: {.callout-tip}
+Versões modernas incluem o Self-Calibrating PDSI (sc-PDSI), que ajusta automaticamente os coeficientes K à variabilidade climática local, melhorando a comparabilidade inter-regional.
+:::
+
+
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
+### Índice Integrao de Seca
+
+(CDI – Combined Drought Indicator)
+
+Fonte: @sepulcre_canto_2012_cdi
+
+#### Conceituação {.unnumbered}
+
+O CDI combina, numa única métrica, diferentes dimensões da seca: meteorológica (chuva), agrícola (umidade do solo e vegetação) e hidrológica (vazão ou armazenamento de água). 
+
+#### Interpretação {.unnumbered}
+
+O indicador é classificado em classes de severidade, como  por exemplo: Normal, Seca Moderada, Seca Severa, Seca Extrema.
+
+#### Usos {.unnumbered}
+
+-  Sistemas nacionais e regionais de alerta precoce (ex.: Monitor de Secas – ANA/FUNCEME).
+-  Planejamento intersetorial (saúde, agricultura, defesa civil, recursos hídricos).
+-  Modelagem de impacto em epidemiologia climática.
+-  Relatórios de risco para concessionárias de energia e abastecimento urbano.
+
+#### Limitações {.unnumbered}
+
+1.  Dependência de múltiplas bases de dados.
+2.  Escolha dos pesos e limiares é subjetiva; metodologias diferentes geram mapas distintos.
+3.  Uso de Diferentes escalas temporais podem complicar a interpretação.
+4.  Atraso de resposta: indicadores hidrológicos reagem mais lentamente que os meteorológicos.
+
+#### Fonte de dados {.unnumbered}
+
+| Dimensão                | Fontes típicas no Brasil                   | Alternativas globais / remotas            |
+|-------------------------|--------------------------------------------|-------------------------------------------|
+| Precipitação            | Rede pluviométrica INMET, ANA, CEMADEN     | CHIRPS, ERA5, GPM                         |
+| Umidade do solo         | Sondas in-situ (ANA, EMBRAPA)              | SMAP, SMOS, ERA5-Land                     |
+| Vegetação (NDVI/VHI)    | Satélite CBERS-4A, IBGE MOD13Q1            | MODIS, VIIRS, Sentinel-2                  |
+| Vazão / reservatórios   | Hidroweb-ANA, ONS                          | Reanálises hidrológicas (GLDAS), GRACE    |
+
+
+#### Método de cálculo {.unnumbered}
+
+1.  Seleção dos sub-índices representativos de cada dimensão .
+2.  Padronização de cada série para média zero e desvio-padrão um.
+3.  Reclassificação em categorias (Normal, Moderada, Severa, Extrema) usando limiares fixos ou percentis.
+4.  Integração espacial:
+    -  Método por consenso: seca é declarada se pelo menos dois sub-índices indicam seca.
+    -  Método de ponderação: pesos definidos por regressão ou por especialistas.
+5.  Validação com registros de impacto (perdas agrícolas, nível de reservatórios, declarações de emergência).
+6.  Atualização operacional mensal ou quinzenal; publicação de mapas com classes de severidade.
+
+::: {.callout-tip}
+O Self-Calibrating CDI (sc-CDI), adotado pelo Monitor de Secas, ajusta automaticamente limiares de cada pixel à climatologia local, aumentando consistência entre biomas (Amazônia vs. Semiárido).
+:::
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
+## Vegetação
+
+### NDVI -- Normalized Difference Vegetation Index
+
+Fonte: @Tucker1979
+
+#### Conceituação {.unnumbered}
+
+Trata-se de um índice espectral calculado a partir da reflectância no infravermelho-próximo (NIR) e na banda vermelha de sensores remotos orbitais ou aerotransportados. Varia de $–1$ (água/turbidez) a $+1$ (vegetação densa), representando o “verdor” ou a atividade fotossintética da cobertura vegetal.
+
+#### Interpretação {.unnumbered}
+
+Serve como proxy objetiva da exposição a áreas verdes, cujo aumento já foi relacionado a menores mortalidade por todas as causas e cardiovascular, menor incidência de doenças respiratórias, melhor saúde mental, redução do peso ao nascer e mitigação de ilhas de calor urbanas. Assim, o NDVI apoia avaliações de risco ambiental, vigilância epidemiológica e planejamento de cidades mais saudáveis.
+
+#### Usos {.unnumbered}
+
+-  Classificação de cenários de "alto" e "baixo" verde em estudos de coorte.
+-  Modelagem de habitats de vetores (malária, dengue, leishmaniose).
+-  Monitoramento de ondas de calor e planejamento de arborização
+-  Avaliação de efetividade de intervenções urbanas (parques, corredores verdes).
+-  Estudos de poluição atmosférica (vegetação como barreira física).
+
+#### Limitações {.unnumbered}
+
+-  Saturação em florestas muito densas.
+-  Influência de solo exposto, neve ou umidade.
+-  Sensibilidade a variações atmosféricas e ângulo solar.
+-  Não distingue tipos de vegetação nem informa estrutura vertical.
+-  Diferenças entre sensores exigem harmonização.
+
+#### Fonte de dados {.unnumbered}
+
+-  Satélites Landsat, MODIS e Sentinel-2.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{NDVI} = \frac{\rho_{\mathrm{NIR}} - \rho_{\mathrm{Red}}}{\rho_{\mathrm{NIR}} + \rho_{\mathrm{Red}}}
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
+### EVI -- Enhanced Vegetation Index
+
+Fonte: @Huete2002
+
+#### Conceituação {.unnumbered}
+
+Trata-se de um índice espectral desenvolvido para maximizar a sensibilidade a vegetação em áreas de biomassa alta, reduzindo efeitos de partículas atmosféricas e do fundo de solo. Ele combina reflectâncias no infravermelho-próximo (NIR), vermelho e azul, aplicando fatores de ganho e de correção atmosférica que estabilizam o sinal em comparação ao NDVI. 
+
+#### Interpretação {.unnumbered}
+
+Os valores típicos variam de –1 a +1, com vegetação densa acima de ~0,6.
+
+#### Usos {.unnumbered}
+
+-  Avaliação de intervenções de arborização urbana e parques.
+-  Análises de inequidades ambientais (distribuição de verde vs. renda).
+
+#### Limitações {.unnumbered}
+
+-  Necessita da banda azul, ausente em sensores mais antigos.
+-  Coeficientes podem variar em adaptações, reduzindo comparabilidade;
+-  Sensível a resíduos de correção atmosférica inadequada (aerossóis fortes);
+-  Menor disponibilidade de séries temporais de longa duração do que o NDVI.
+-  Desempenho reduzido em áreas com cobertura de neve e solos muito brilhantes.
+
+#### Fonte de dados {.unnumbered}
+
+-  MODIS, VIIRS, Sentinel-2, Landsat 8-9.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{EVI} = G \times \frac{\rho_{\mathrm{NIR}} - \rho_{\mathrm{Red}}}{\rho_{\mathrm{NIR}} + C_1\,\rho_{\mathrm{Red}} - C_2\,\rho_{\mathrm{Blue}} + L}
+$$
+
+Onde $rho$ são reflectâncias de superfície corrigidas; $G = 2,5$ é o ganho; $C_1 = 6$ e $C_2 = 7,5$ corrigem aerossóis e $L = 1$ compensa fundo de solo.
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
+### GVI -- Green View Index
+
+Fonte: @Li2015
+
+#### Conceituação {.unnumbered}
+
+Quantifica a proporção de vegetação visível a partir do ponto de vista de um pedestre, usualmente obtida de panoramas como o *Google Street View* ou plataformas semelhantes. 
+
+#### Interpretação {.unnumbered}
+
+Varia de 0 a 1 (ou 0 %–100 %), sendo 0 ausência total de "verde" no campo visual e 1 total ocupação por vegetação. A métrica captura a percepção humana do verde, algo que índices de satélite não conseguem representar.
+
+#### Usos {.unnumbered}
+
+-  Avaliar desigualdades na distribuição de áreas verdes no nível local.
+-  Modelar indicadores com base em percepção de vegetação.
+-  Investigar relações entre exposição diária ao verde e desfechos de saúde mental.
+-  Monitorar resultados de programas de arborização urbana.
+-  Priorizar rotas "mais verdes" em aplicativos de mapas e rotas.
+
+#### Limitações {.unnumbered}
+
+-   Dependência da cobertura e da atualização das imagens, com lacunas em regiões periféricas ou rurais.
+-  Sazonalidade e horários diferentes das capturas podem sub ou superestimar o indicador
+-  Oclusões por veículos, fachadas e sinalização reduzem a visão.
+-  Processamento exige rotulagem semântica automática (redes neurais) ou cromaticidade, suscetíveis a erros;
+-  Restrições de termos de uso e privacidade de alguns provedores de imagens.
+
+#### Fonte de dados {.unnumbered}
+
+-  Google Street View
+-  Mapillary, KartaView e plataformas colaborativas (com API aberta).
+-  Imagens coletadas por câmeras 360° montadas em veículos.
+
+#### Método de cálculo {.unnumbered}
+
+1.  Amostragem espacial: escolher pontos a cada $n$ metros ao longo da via.
+2.  Coleta de panoramas (imagens) em quatro direções (0 °, 90 °, 180 °, 270 °).
+3.  Segmentação semântica para classificar pixels como“vegetação”.
+4.  Cálculo por imagem do GVI:
+
+$$
+GVI = \frac{P_{verde}}{P_{total}}
+$$
+
+Onde $P_P{verde}$ é o total de pixels classificados como vegeração.
+
+5.  Agregação: média das quatro direções ou de todos os pontos.
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
+## Poluição do ar
+
+PM2.5
+Poluidores
+
+### Indicador
+
+#### Conceituação {.unnumbered}
+
+
+
+#### Interpretação {.unnumbered}
+
+
+
+#### Usos {.unnumbered}
+
+
+
+#### Limitações {.unnumbered}
+
+
+
+#### Fonte de dados {.unnumbered}
+
+
+
+#### Método de cálculo {.unnumbered}
+
+
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
+## Qualidade da água
+
+### Indicador
+
+#### Conceituação {.unnumbered}
+
+
+
+#### Interpretação {.unnumbered}
+
+
+
+#### Usos {.unnumbered}
+
+
+
+#### Limitações {.unnumbered}
+
+
+
+#### Fonte de dados {.unnumbered}
+
+
+
+#### Método de cálculo {.unnumbered}
+
+
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
