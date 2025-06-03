@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -52,20 +52,17 @@ div.csl-indent {
 <meta name="quarto:offset" content="./">
 <link href="./ambi.html" rel="next">
 <link href="./indi.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-18c5b0e850f6e65b3e9be25fe9abf802.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7a339148c3b2635d23d0fec43941109e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-18c5b0e850f6e65b3e9be25fe9abf802.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e4ea28479856be32da2cd34abc1803e5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-2dc885ef84a7fe6e18dbdf906f418a61.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -135,169 +132,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-      window.dispatchEvent(new Event('resize'));
-    };
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -429,22 +264,25 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#grau-de-urbanização" id="toc-grau-de-urbanização" class="nav-link" data-scroll-target="#grau-de-urbanização"><span class="header-section-number">3.6.1</span> Grau de urbanização</a></li>
   </ul></li>
-  <li><a href="#indicadores-de-qualidade-de-vida" id="toc-indicadores-de-qualidade-de-vida" class="nav-link" data-scroll-target="#indicadores-de-qualidade-de-vida"><span class="header-section-number">3.7</span> Indicadores de qualidade de vida</a>
+  <li><a href="#indicadores-sintéticos" id="toc-indicadores-sintéticos" class="nav-link" data-scroll-target="#indicadores-sintéticos"><span class="header-section-number">3.7</span> Indicadores sintéticos</a>
   <ul class="collapse">
   <li><a href="#índice-de-desenvolvimento-humano-idh" id="toc-índice-de-desenvolvimento-humano-idh" class="nav-link" data-scroll-target="#índice-de-desenvolvimento-humano-idh"><span class="header-section-number">3.7.1</span> Índice de Desenvolvimento Humano (IDH)</a></li>
+  <li><a href="#índice-de-vulnerabilidade-social-ivs" id="toc-índice-de-vulnerabilidade-social-ivs" class="nav-link" data-scroll-target="#índice-de-vulnerabilidade-social-ivs"><span class="header-section-number">3.7.2</span> Índice de Vulnerabilidade Social (IVS)</a></li>
+  <li><a href="#índice-de-progresso-social-ips" id="toc-índice-de-progresso-social-ips" class="nav-link" data-scroll-target="#índice-de-progresso-social-ips"><span class="header-section-number">3.7.3</span> Índice de Progresso Social (IPS)</a></li>
   </ul></li>
   <li><a href="#fontes-de-dados-e-indicadores-sociodemográficos-calculados" id="toc-fontes-de-dados-e-indicadores-sociodemográficos-calculados" class="nav-link" data-scroll-target="#fontes-de-dados-e-indicadores-sociodemográficos-calculados"><span class="header-section-number">3.8</span> Fontes de dados e indicadores sociodemográficos calculados</a>
   <ul class="collapse">
   <li><a href="#ibge" id="toc-ibge" class="nav-link" data-scroll-target="#ibge"><span class="header-section-number">3.8.1</span> IBGE</a></li>
   <li><a href="#ipea-data" id="toc-ipea-data" class="nav-link" data-scroll-target="#ipea-data"><span class="header-section-number">3.8.2</span> IPEA Data</a></li>
   <li><a href="#pnud" id="toc-pnud" class="nav-link" data-scroll-target="#pnud"><span class="header-section-number">3.8.3</span> PNUD</a></li>
+  <li><a href="#ipea" id="toc-ipea" class="nav-link" data-scroll-target="#ipea"><span class="header-section-number">3.8.4</span> Ipea</a></li>
+  <li><a href="#ips-brasil" id="toc-ips-brasil" class="nav-link" data-scroll-target="#ips-brasil"><span class="header-section-number">3.8.5</span> IPS Brasil</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
-
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -477,7 +315,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>Populações podem ser caracterizadas de diversas formas, incluindo características do contigente populacional, da sua renda, educação, domicílios e entorno, mercado de trabalho e condições de vida. Estas caracterizações básicas são utilizadas nas definições de indicadores sociodemográficos e são apresentadas a seguir.</p>
+<p>Populações podem ser caracterizadas de diversas formas, incluindo características do contingente populacional, da sua renda, educação, domicílios e entorno, mercado de trabalho e condições de vida. Estas caracterizações básicas são utilizadas nas definições de indicadores sociodemográficos e são apresentadas a seguir.</p>
 <section id="caracterização-da-população" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="caracterização-da-população"><span class="header-section-number">3.1</span> Caracterização da população</h2>
 <section id="contigente-populacional" class="level3" data-number="3.1.1">
@@ -1599,8 +1437,8 @@ r = \left[ \sqrt[n]{\frac{P_t}{P_0}} \times 100 \right]
 </section>
 </section>
 </section>
-<section id="indicadores-de-qualidade-de-vida" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="indicadores-de-qualidade-de-vida"><span class="header-section-number">3.7</span> Indicadores de qualidade de vida</h2>
+<section id="indicadores-sintéticos" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="indicadores-sintéticos"><span class="header-section-number">3.7</span> Indicadores sintéticos</h2>
 <section id="índice-de-desenvolvimento-humano-idh" class="level3" data-number="3.7.1">
 <h3 data-number="3.7.1" class="anchored" data-anchor-id="índice-de-desenvolvimento-humano-idh"><span class="header-section-number">3.7.1</span> Índice de Desenvolvimento Humano (IDH)</h3>
 <p>O IDH foi proposto em 1990, pelo economista Mahbub ul Haq em colaboração com o economista Amartya Sen.&nbsp;A motivação do índice reside na necessidade mensurar o desenvolvimento humano não apenas pela renda, mas também considerando outros aspectos de importância para a vida, como educação e saúde.</p>
@@ -1674,6 +1512,309 @@ r = \left[ \sqrt[n]{\frac{P_t}{P_0}} \times 100 \right]
 <p>Países, regiões, UFs e municípios.</p>
 </section>
 </section>
+<section id="índice-de-vulnerabilidade-social-ivs" class="level3" data-number="3.7.2">
+<h3 data-number="3.7.2" class="anchored" data-anchor-id="índice-de-vulnerabilidade-social-ivs"><span class="header-section-number">3.7.2</span> Índice de Vulnerabilidade Social (IVS)</h3>
+<p>Este índice é calculado pelo Instituto de Pesquisas Econômicas Aplicadas (Ipea) e integra o <a href="https://ivs.ipea.gov.br">Atlas da Vulnerabilidade Social</a>.</p>
+<section id="conceituação-14" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-14">Conceituação</h4>
+<p>O IVS é um índice sintético que agrega um total de 16 indicadores de três categorias para mensurar a <em>vulnerabilidade social</em> <span class="citation" data-cites="costaVulnerabilidadeSocialNo2018">(<a href="referencias.html#ref-costaVulnerabilidadeSocialNo2018" role="doc-biblioref">COSTA et al., 2018</a>)</span>.</p>
+<p>Dimensão infra-estrutura urbana</p>
+<ul>
+<li>Coleta de lixo</li>
+<li>Água e esgoto inadequados</li>
+<li>Tempo de deslocamento casa-trabalho</li>
+</ul>
+<p>Dimensão capital humano</p>
+<ul>
+<li>Mortalidade infantil</li>
+<li>Crianças de 0 a 5 anos de idade fora da escola</li>
+<li>Crianças de 6 a 14 anos de idade fora da escola</li>
+<li>Não estudam, não trabalham e baixa renda</li>
+<li>Mães jovens (de 10 a 17 anos)</li>
+<li>Mães sem ensino fundamental com filhos até 15 anos de idade</li>
+<li>Analfabetismo</li>
+<li>Criançcas em domicĩlios em que ninguém tem o ensino fundamental completo</li>
+</ul>
+<p>Dimensão renda e trabalho</p>
+<ul>
+<li>Renda menor ou igual a R$ 255</li>
+<li>Baixa renda e dependente de idosos</li>
+<li>Desocupação</li>
+<li>Trabalho infantil</li>
+<li>Ocupação informal sem ensino fundamental</li>
+</ul>
+</section>
+<section id="interpretação-14" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-14">Interpretação</h4>
+<p>O IVS varia de 0 a 1, podendo ser classificado da seguinte forma:</p>
+<ul>
+<li>0 a 0,2: Muito baixa</li>
+<li>0,2 a 0,3: Baixa</li>
+<li>0,3 a 0,4: Média</li>
+<li>0,4 a 0,5: Alta</li>
+<li>0,5 a 1: Muito alta</li>
+</ul>
+</section>
+<section id="usos-14" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-14">Usos</h4>
+<p>O IVS pode ser utilizado na comparação de municípios e regiões metropolitanas, em pesquisas e na orientação de políticas públicas.</p>
+</section>
+<section id="limitações-14" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-14">Limitações</h4>
+<ul>
+<li>O conceito de vulnerabilidade social é diversificado e o IVS adota uma perspectiva dentre as disponíveis</li>
+<li>O índice é calculado com base nos dados censitários, atualizados decenalmente</li>
+</ul>
+</section>
+<section id="fonte-de-dados-14" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-14">Fonte de dados</h4>
+<ul>
+<li>Censo Demográfico</li>
+</ul>
+</section>
+<section id="método-de-cálculo-13" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-13">Método de cálculo</h4>
+<p>Os 16 indicadores base são normalizados entre 0 e 1 e cada indicador recebe um peso específico, conforme a tabela abaixo:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 42%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimensão</th>
+<th>Indicador</th>
+<th>Peso</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>IVS infraestrutura urbana</td>
+<td>Percentual de pessoas em domicílios com abastecimento de água e esgotamento sanitário inadequados</td>
+<td>0,300</td>
+</tr>
+<tr class="even">
+<td>IVS infraestrutura urbana</td>
+<td>Percentual da população que vive em domicílios urbanos sem serviço de coleta de lixo</td>
+<td>0,300</td>
+</tr>
+<tr class="odd">
+<td>IVS infraestrutura urbana</td>
+<td>Percentual de pessoas que vivem em domicílios com renda per capita inferior a meio salário mínimo e que gastam mais de uma hora até o trabalho no total de pessoas ocupadas, vulneráveis e que retornam diariamente do trabalho</td>
+<td>0,400</td>
+</tr>
+<tr class="even">
+<td>IVS capital humano</td>
+<td>Mortalidade até 1 ano de idade</td>
+<td>0,125</td>
+</tr>
+<tr class="odd">
+<td>IVS capital humano</td>
+<td>Percentual de crianças de 0 a 5 anos que não frequentam a escola</td>
+<td>0,125</td>
+</tr>
+<tr class="even">
+<td>IVS capital humano</td>
+<td>Percentual de pessoas de 6 a 14 anos que não frequentam a escola</td>
+<td>0,125</td>
+</tr>
+<tr class="odd">
+<td>IVS capital humano</td>
+<td>Percentual de mulheres de 10 a 17 anos de idade que tiveram filhos</td>
+<td>0,125</td>
+</tr>
+<tr class="even">
+<td>IVS capital humano</td>
+<td>Percentual de mães chefes de família sem fundamental completo e com pelo menos um filho menor de 15 anos de idade, no total de mães chefes de família</td>
+<td>0,125</td>
+</tr>
+<tr class="odd">
+<td>IVS capital humano</td>
+<td>Taxa de analfabetismo da população de 15 anos ou mais de idade</td>
+<td>0,125</td>
+</tr>
+<tr class="even">
+<td>IVS capital humano</td>
+<td>Percentual de crianças que vivem em domicílios em que nenhum dos moradores tem o ensino fundamental completo</td>
+<td>0,125</td>
+</tr>
+<tr class="odd">
+<td>IVS capital humano</td>
+<td>Percentual de pessoas de 15 a 24 anos que não estudam, não trabalham e possuem renda domiciliar per capita igual ou inferior a meio salário mínimo (2010), na população total dessa faixa etária</td>
+<td>0,125</td>
+</tr>
+<tr class="even">
+<td>IVS renda e trabalho</td>
+<td>Proporção de pessoas com renda domiciliar per capita igual ou inferior a meio salário mínimo (2010)</td>
+<td>0,200</td>
+</tr>
+<tr class="odd">
+<td>IVS renda e trabalho</td>
+<td>Taxa de desocupação da população de 18 anos ou mais de idade</td>
+<td>0,200</td>
+</tr>
+<tr class="even">
+<td>IVS renda e trabalho</td>
+<td>Percentual de pessoas de 18 anos ou mais sem fundamental completo e em ocupação informal</td>
+<td>0,200</td>
+</tr>
+<tr class="odd">
+<td>IVS renda e trabalho</td>
+<td>Percentual de pessoas em domicílios com renda per capita inferior a meio salário mínimo (de 2010) e dependentes de idosos</td>
+<td>0,200</td>
+</tr>
+<tr class="even">
+<td>IVS renda e trabalho</td>
+<td>Taxa de atividade das pessoas de 10 a 14 anos de idade</td>
+<td>0,200</td>
+</tr>
+</tbody>
+</table>
+<p>Fonte: <span class="citation" data-cites="costaVulnerabilidadeSocialNo2018">COSTA et al. (<a href="referencias.html#ref-costaVulnerabilidadeSocialNo2018" role="doc-biblioref">2018</a>)</span></p>
+</section>
+</section>
+<section id="índice-de-progresso-social-ips" class="level3" data-number="3.7.3">
+<h3 data-number="3.7.3" class="anchored" data-anchor-id="índice-de-progresso-social-ips"><span class="header-section-number">3.7.3</span> Índice de Progresso Social (IPS)</h3>
+<p>O <a href="https://ipsbrasil.org.br">Índice de Progresso Social (IPS)</a> é calculado pelo Instituto do Homem e Meio Ambiente da Amazônia (Imazon), tendo sido inicialmente proposto pela <em>Social Progress Imperative</em> (SPI).</p>
+<section id="conceituação-15" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-15">Conceituação</h4>
+<p>O IPS visa medir o desempenho social e ambiental considerando 57 indicadores sociais e ambientais – sem a inclusão de indicadores econômicos –, divididos em três dimensões e componentes <span class="citation" data-cites="ipsbrasilIndiceProgressoSocial2025">(<a href="referencias.html#ref-ipsbrasilIndiceProgressoSocial2025" role="doc-biblioref">IPS BRASIL, 2025</a>)</span>:</p>
+<ul>
+<li>Necessidades humanas básicas
+<ul>
+<li>Nutrição e cuidados médicos básicos
+<ul>
+<li>Cobertura vacinal (poliomelite)</li>
+<li>Hospitalizações por condições sensíveis à atenção primária</li>
+<li>Mortalidade ajustada por condições sensíveis à atenção primária</li>
+<li>Mortalidade infantil até 5 anos de idade</li>
+<li>Subnutrição</li>
+</ul></li>
+<li>Água e saneamento
+<ul>
+<li>Abastecimento de água via rede de distribuição</li>
+<li>Esgotamento sanitário adequado</li>
+<li>Índice de abastecimento de água</li>
+<li>Índice de perdas de água na distribuição</li>
+</ul></li>
+<li>Moradia
+<ul>
+<li>Domicílios com coleta de resíduos adequada</li>
+<li>Domicílios com iluminação elétrica adequada</li>
+<li>Domicílios com paredes adequadas</li>
+<li>Domicílios com pisos adequados</li>
+</ul></li>
+<li>Segurança pessoal
+<ul>
+<li>Assassinatos de jovens</li>
+<li>Assassinatos de mulheres</li>
+<li>Homicídios</li>
+<li>Mortes por acidentes de transporte</li>
+</ul></li>
+</ul></li>
+<li>Fundamentos do bem-estar
+<ul>
+<li>Acesso ao conhecimento básico
+<ul>
+<li>Abandono do ensino fundamental</li>
+<li>Abandono do ensino médio</li>
+<li>Evasão do ensino médio</li>
+<li>Distorção idade-série no ensino médio</li>
+<li>Ideb ensino fundamental</li>
+<li>Reprovação escolar no ensino médio</li>
+</ul></li>
+<li>Acesso à informação e comunicação
+<ul>
+<li>Cobertura de Internet móvel (4G/5G)</li>
+<li>Densidade de Internet banda larga fixa</li>
+<li>Densidade de telefonia móvel</li>
+<li>Qualidade de Internet móvel</li>
+</ul></li>
+<li>Saúde e bem-estar
+<ul>
+<li>Consumo de alimentos ultraprocessados</li>
+<li>Expectativa de vida</li>
+<li>Mortalidade entre 15 e 50 anos</li>
+<li>Mortalidade por doenças crônicas não transmissíveis</li>
+<li>Obesidade</li>
+<li>Suicídios</li>
+</ul></li>
+<li>Qualidade do meio ambiente
+<ul>
+<li>Áreas verdes urbanas</li>
+<li>Emissões de <span class="math inline">\(CO_2\)</span> por habitante</li>
+<li>Focos de calor</li>
+<li>Índice de vulnerabilidade climática dos municípios</li>
+<li>Supressão da vegetação primária e secundária</li>
+</ul></li>
+</ul></li>
+<li>Oportunidades
+<ul>
+<li>Direitos individuais
+<ul>
+<li>Acesso a programas de direitos humanos</li>
+<li>Existência de ações para direitos de minorias</li>
+<li>Índice de atendimetno à demanda de justiça</li>
+<li>Resposta a processos familiares</li>
+<li>Resposta a processos previdenciários</li>
+<li>Taxa de congestionamento líquida de processos</li>
+</ul></li>
+<li>Liberdades individuais e de escolha
+<ul>
+<li>Acesso à cultura, lazer e esporte</li>
+<li>Gravidez na adolescência (menor que 19 anos de idade)</li>
+<li>Índice de vulnerabilidade das famílias do Cadastro Único</li>
+<li>Praças e parques em áreas urbanas</li>
+</ul></li>
+<li>Inclusão social
+<ul>
+<li>Famílias em situação de rua</li>
+<li>Paridade de gênero na Câmara Municipal</li>
+<li>Paridade de negros na Câmara Municipal</li>
+<li>Violência contra indígenas</li>
+<li>Violência contra mulheres</li>
+<li>Violência contra negros</li>
+</ul></li>
+<li>Acesso à educação superior
+<ul>
+<li>Empregados com ensino superior</li>
+<li>Mulheres empregadas com ensino superior</li>
+<li>Nota mediana o Enem</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="interpretação-15" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-15">Interpretação</h4>
+<p>O IPS apresenta valores de 0 a 100. Quanto mais próximo de 100, melhor o desempenho.</p>
+</section>
+<section id="usos-15" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-15">Usos</h4>
+<p>O IPS pode ser utilizado na comparação de municípios, em pesquisas e na orientação de políticas públicas.</p>
+</section>
+<section id="limitações-15" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-15">Limitações</h4>
+<ul>
+<li>O conceito de progresso social é diversificado e o IPS adota uma perspectiva dentre as disponíveis</li>
+<li>O índice é calculado com base nos dados censitários, atualizados decenalmente</li>
+</ul>
+</section>
+<section id="fonte-de-dados-15" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-15">Fonte de dados</h4>
+<ul>
+<li>Censo Demográfico</li>
+</ul>
+</section>
+<section id="método-de-cálculo-14" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-14">Método de cálculo</h4>
+<ul>
+<li>O IPS é calculado com a média simples das notas das três dimensões.</li>
+<li>As notas das três dimensões são calculadas pela média simples dos resultados de seus componentes, respectivamente.</li>
+<li>As notas dos componentes é obtida pelo método de Análise de Componentes Principais (ACP).</li>
+</ul>
+</section>
+</section>
 </section>
 <section id="fontes-de-dados-e-indicadores-sociodemográficos-calculados" class="level2" data-number="3.8">
 <h2 data-number="3.8" class="anchored" data-anchor-id="fontes-de-dados-e-indicadores-sociodemográficos-calculados"><span class="header-section-number">3.8</span> Fontes de dados e indicadores sociodemográficos calculados</h2>
@@ -1695,11 +1836,25 @@ r = \left[ \sqrt[n]{\frac{P_t}{P_0}} \times 100 \right]
 <section id="pnud" class="level3" data-number="3.8.3">
 <h3 data-number="3.8.3" class="anchored" data-anchor-id="pnud"><span class="header-section-number">3.8.3</span> PNUD</h3>
 <p>O Programa das Nações Unidas para o Desenvolvimento (PNUD) mantêm o projeto <a href="http://www.atlasbrasil.org.br/">Atlas Brasil</a>, disponibilizando o cálculo do IDH para os municípios brasileiros.</p>
+</section>
+<section id="ipea" class="level3" data-number="3.8.4">
+<h3 data-number="3.8.4" class="anchored" data-anchor-id="ipea"><span class="header-section-number">3.8.4</span> Ipea</h3>
+<p>O Ipea disponibiliza o cálculo do IVS para os municípios brasileiros <a href="https://ivs.ipea.gov.br/">aqui</a>.</p>
+</section>
+<section id="ips-brasil" class="level3" data-number="3.8.5">
+<h3 data-number="3.8.5" class="anchored" data-anchor-id="ips-brasil"><span class="header-section-number">3.8.5</span> IPS Brasil</h3>
+<p>O IPS Brasil pode ser acessado <a href="https://ipsbrasil.org.br/">aqui</a>.</p>
 
 
 <div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list" style="display: none">
 <div id="ref-bussSaudeSeusDeterminantes2007" class="csl-entry" role="listitem">
 BUSS, P. M.; PELLEGRINI FILHO, A. <a href="https://doi.org/10.1590/S0103-73312007000100006">A saúde e seus determinantes sociais</a>. <strong>Physis: Revista de Saúde Coletiva</strong>, v. 17, n. 1, p. 77–93, abr. 2007.
+</div>
+<div id="ref-costaVulnerabilidadeSocialNo2018" class="csl-entry" role="listitem">
+COSTA, M. A. et al. <strong>Vulnerabilidade social no Brasil: Conceitos, métodos e primeiros resultados para municípios e regiões metropolitanas brasileiras</strong>. Rio de Janeiro: Ipea, 2018.
+</div>
+<div id="ref-ipsbrasilIndiceProgressoSocial2025" class="csl-entry" role="listitem">
+IPS BRASIL. <strong>Índice de <span>Progresso Social Brasil</span> 2025: <span>Qualidade</span> de Vida Nos 5.570 Municípios Do <span>Brasil</span></strong>. Belém: Instituto do Homem e Meio Ambiente da Amazônia, 2025.
 </div>
 <div id="ref-jannuzziIndicadoresSociaisNo2006" class="csl-entry" role="listitem">
 JANNUZZI, P. DE M. <strong>Indicadores Sociais No <span>Brasil</span>: Conceitos, Fontes de Dados e Aplicações</strong>. 3. ed. [s.l.] Alínea, 2006.
@@ -1713,255 +1868,380 @@ REDE INTERAGENCIAL DE INFORMAÇÃO PARA A SAÚDE. <strong>Indicadores Básicos P
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
     }
-    setColorSchemeToggle(hasAlternateSentinel())
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
         }
       }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
       return false;
     }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copiada");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copiada");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
       }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
     }
-    const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
-        }
-        return codeEl.innerText;
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
     }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
         }
       }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
-        },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
     }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
-      });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
     }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
-        }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
-            }
-          }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
-          }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
-          }
-          return note.innerHTML;
-        }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
       } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
         }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
-        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
       }
     }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
-        }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
-            }
-          } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
-            });
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
           }
         } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
+          // See if we can fetch this
+          fetch(url.split('#')[0])
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
+            const note = htmlDoc.getElementById(id);
             if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
+              const html = processXRef(id, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1969,161 +2249,185 @@ REDE INTERAGENCIAL DE INFORMAÇÃO PARA A SAÚDE. <strong>Indicadores Básicos P
             instance.show();
           });
         }
-      }, function(instance) {
-      });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
-            }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
       } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
             }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
         });
       }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
     }
-  });
-  </script>
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./indi.html" class="pagination-link" aria-label="Dados e indicadores">

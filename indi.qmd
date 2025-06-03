@@ -32,7 +32,7 @@ As variáveis de uma tabela de dados podem ser classificadas da seguinte forma:
 Observe que uma variável pode apresentar números mas ser, por definição, uma variável categórica. Exemplos: número do CPF, número do RG, código do município, código da UF.
 :::
 
-Importante notar que os dados não tem um significado ou interpretação intrísica, eles são a simples medida de algo. Já os indicadores são construídos a partir dos dados visando atender um objetivo conceitual [@fronesTheorizingIndicatorsIndicators2007]. Desta forma, um indicador é uma ferramenta conceitual que operacionaliza um objetivo representacional. 
+Importante notar que os dados não tem um significado ou interpretação intrínsica, eles são a simples medida de algo. Já os indicadores são construídos a partir dos dados visando atender um objetivo conceitual [@fronesTheorizingIndicatorsIndicators2007]. Desta forma, um indicador é uma ferramenta conceitual que operacionaliza um objetivo representacional. 
 
 ::: {.callout-important}
 Um objetivo representacional é o aspecto específico de um contexto que se quer observar. 
@@ -48,17 +48,17 @@ Com o estudo e interpretação de indicadores, acompanhado do conhecimento teór
 
 ## Classificação de indicadores
 
-Os indicadores podem ser classificados de diversas formas, conforme sugere @jannuzziIndicadoresSociaisNo2006. Uma possível classificação de indicadores é "objetivos/quantitativos" e "sujetivos/qualitativos". Os indicadores objetivos se referem a uma realidade concreta que está sendo medida, como o percentual de pessoas de uma faixa etária ou a taxa de desemprego. Já os indicadores subjetivos se referem a uma realidade abstrata e conceitualmente definida, como pobreza ou qualidade de vida.
+Os indicadores podem ser classificados de diversas formas, conforme sugere @jannuzziIndicadoresSociaisNo2006. Uma possível classificação de indicadores é "objetivos/quantitativos" e "subjetivos/qualitativos". Os indicadores objetivos se referem a uma realidade concreta que está sendo medida, como o percentual de pessoas de uma faixa etária ou a taxa de desemprego. Já os indicadores subjetivos se referem a uma realidade abstrata e conceitualmente definida, como pobreza ou qualidade de vida.
 
 Outra forma de classificação de indicadores é "descritivos" e "normativos". Um indicador descritivo simplesmente descreve um aspecto da realidade sem juízo de valor, como uma taxa de incidência de uma doença. Já os indicadores normativos contêm explicitamente um juízo de valor, como a proporção de pobres, que apresenta de forma adjacente um conjunto de definições sobre o que é pobreza e suas consequências na vida e na sociedade.
 
 Uma terceira forma de se classificar indicadores é pela sua complexidade de operacionalização, onde os indicadores podem ser classificados como "simples" ou "compostos/sintéticos". Um indicador simples é derivado diretamente de um dado, como a idade obtida à partir da data de nascimento. Já os indicadores compostos congregam dois ou mais indicadores, que em geral dizem respeito a diversos aspectos complementares, com métodos de cálculos mais avançados para sua obtenção. Um exemplo de indicador composto/sintético é Índice de Desenvolvimento Humano (IDH), que é internamente composto por indicadores de renda, saúde e educação.
 
-Enquanto indicadores simples são mais rápidos de serem obtidos e explicados, indicadores compostos/sintéticos são mais complexos de serem calculados e explicados. @jannuzziIndicadoresSociaisNo2006 apresenta outras formas de clasificação de indicadores que podem ser de interesse.
+Enquanto indicadores simples são mais rápidos de serem obtidos e explicados, indicadores compostos/sintéticos são mais complexos de serem calculados e explicados. @jannuzziIndicadoresSociaisNo2006 apresenta outras formas de classificação de indicadores que podem ser de interesse.
 
 ## Propriedades dos indicadores
 
-Indicadores podem ser caracterizados segundo um conjuntode propriedades desejáveis, que são influenciadas pelo método de cálculo e dados utilizados, entre outros fatores. A seguir, são descritas algumas dessas características [@jannuzziIndicadoresSociaisNo2006; @OPAS2008; @ministeriodasaudeAbordagensEspaciaisNa2007].
+Indicadores podem ser caracterizados segundo um conjunto de propriedades desejáveis, que são influenciadas pelo método de cálculo e dados utilizados, entre outros fatores. A seguir, são descritas algumas dessas características [@jannuzziIndicadoresSociaisNo2006; @OPAS2008; @ministeriodasaudeAbordagensEspaciaisNa2007].
 
 -  Relevância: um indicador deve ser de interesse da sociedade, tendo utilidade prática para seu uso.
 -  Validade: capacidade de medir o que ele objetiva medir.
@@ -74,11 +74,11 @@ Indicadores podem ser caracterizados segundo um conjuntode propriedades desejáv
 
 A seguir são apresentados os métodos de cálculo de indicadores mais comuns.
 
-### Indicadores de base populacionais
+### Indicadores de base populacional
 
 Diversos indicadores necessitam relativizar uma contagem em relação a uma população de referência, pois a simples contagem não dá idea sobre a sua magnitude. Estes indicadores são denominados como de "base populacional" pois usam no deminador de seu cálculo um valor populacional e são geralmente referidos como "taxas".
 
-Um exemplo é a taxa de analfabetismo. O valor nominal de pessoas analfabetas em uma determinada região e espaço de tempo não é capaz, de forma isolada, de retratar a realidade educacional de uma população. Mas, ao se relativizar a quantidade de pessoas analfabetas em relação com a quantidade de pessoas em idade para serem alfabetizadas, se tem uma real da gravidade do problema. Segue abaixo o método de cálculo da taxa de analfabestismo.
+Um exemplo é a taxa de analfabetismo. O valor nominal de pessoas analfabetas em uma determinada região e espaço de tempo não é capaz, de forma isolada, de retratar a realidade educacional de uma população. Mas, ao se relativizar a quantidade de pessoas analfabetas em relação com a quantidade de pessoas em idade para serem alfabetizadas, se tem uma real da gravidade do problema. Segue abaixo o método de cálculo da taxa de analfabetismo.
 
 $$
 \text{Tx. de analfabetismo} = \frac{\text{Indivíduos analfabetos}}{\text{População com 15 anos ou mais}} \times 100
@@ -114,12 +114,12 @@ $$
 \text{Razão do sexo masculino} = \frac{\text{População masculina}}{\text{População feminina}}
 $$
 
-Neste exemplo, se o contigente populacional masculino e feminino forem iguais, a razão é igual 1. Se a população masculina por maior que a feminina, a razão é maior que 1. Se a população feminina for menor que a masculina, a razão é menor que 1. 
+Neste exemplo, se o contingente populacional masculino e feminino forem iguais, a razão é igual 1. Se a população masculina por maior que a feminina, a razão é maior que 1. Se a população feminina for menor que a masculina, a razão é menor que 1. 
 
 ::: {.callout-important}
-Note que indicadores de razão são adimensioanis, ou seja eles não tem uma dimensão ou unidade de medida. 
+Note que indicadores de razão são adimensionais, ou seja eles não têm uma dimensão ou unidade de medida. 
 :::
 
 ### Outros métodos
 
-Outros métodos de cálculo podem ser empregados para o cálculo de indicadores, principalmente em indicadores sintéticos. O IDH por exemplo, é obtido pela média geométrica de três indicadores normalisados.
+Outros métodos de cálculo podem ser empregados para o cálculo de indicadores, principalmente em indicadores sintéticos. O IDH por exemplo, é obtido pela média geométrica de três indicadores normalizados.

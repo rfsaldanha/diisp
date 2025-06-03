@@ -8,7 +8,7 @@ Os Determinantes Sociais da Saúde (DSS) são definidos pela Organização Mundi
 Uma discussão mais aprofundada sobre os DSS pode ser encontrada em @bussSaudeSeusDeterminantes2007.
 :::
 
-Populações podem ser caracterizadas de diversas formas, incluindo características do contigente populacional, da sua renda, educação, domicílios e entorno, mercado de trabalho e condições de vida. Estas caracterizações básicas são utilizadas nas definições de indicadores sociodemográficos e são apresentadas a seguir.
+Populações podem ser caracterizadas de diversas formas, incluindo características do contingente populacional, da sua renda, educação, domicílios e entorno, mercado de trabalho e condições de vida. Estas caracterizações básicas são utilizadas nas definições de indicadores sociodemográficos e são apresentadas a seguir.
 
 ## Caracterização da população
 
@@ -853,7 +853,7 @@ $$
 
 Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas.
 
-## Indicadores de qualidade de vida
+## Indicadores sintéticos
 
 ### Índice de Desenvolvimento Humano (IDH)
 
@@ -926,6 +926,195 @@ Onde:
 
 Países, regiões, UFs e municípios.
 
+### Índice de Vulnerabilidade Social (IVS)
+
+Este índice é calculado pelo Instituto de Pesquisas Econômicas Aplicadas (Ipea) e integra o [Atlas da Vulnerabilidade Social](https://ivs.ipea.gov.br).
+
+#### Conceituação {.unnumbered}
+
+O IVS é um índice sintético que agrega um total de 16 indicadores de três categorias para mensurar a *vulnerabilidade social* [@costaVulnerabilidadeSocialNo2018].
+
+Dimensão infra-estrutura urbana
+
+-  Coleta de lixo
+-  Água e esgoto inadequados
+-  Tempo de deslocamento casa-trabalho
+
+Dimensão capital humano
+
+-  Mortalidade infantil
+-  Crianças de 0 a 5 anos de idade fora da escola
+-  Crianças de 6 a 14 anos de idade fora da escola
+-  Não estudam, não trabalham e baixa renda
+-  Mães jovens (de 10 a 17 anos)
+-  Mães sem ensino fundamental com filhos até 15 anos de idade
+-  Analfabetismo
+- Criançcas em domicĩlios em que ninguém tem o ensino fundamental completo
+
+Dimensão renda e trabalho
+
+-  Renda menor ou igual a R$ 255
+-  Baixa renda e dependente de idosos
+-  Desocupação
+-  Trabalho infantil
+-  Ocupação informal sem ensino fundamental
+
+#### Interpretação {.unnumbered}
+
+O IVS varia de 0 a 1, podendo ser classificado da seguinte forma: 
+
+-  0 a 0,2: Muito baixa
+-  0,2 a 0,3: Baixa
+-  0,3 a 0,4: Média
+-  0,4 a 0,5: Alta
+-  0,5 a 1: Muito alta
+
+
+#### Usos {.unnumbered}
+
+O IVS pode ser utilizado na comparação de municípios e regiões metropolitanas, em pesquisas e na orientação de políticas públicas.
+
+#### Limitações {.unnumbered}
+
+-  O conceito de vulnerabilidade social é diversificado e o IVS adota uma perspectiva dentre as disponíveis
+-  O índice é calculado com base nos dados censitários, atualizados decenalmente
+
+#### Fonte de dados {.unnumbered}
+
+-  Censo Demográfico
+
+#### Método de cálculo {.unnumbered}
+
+Os 16 indicadores base são normalizados entre 0 e 1 e cada indicador recebe um peso específico, conforme a tabela abaixo:
+
+Dimensão | Indicador | Peso
+---------|-----------|------
+IVS infraestrutura urbana | Percentual de pessoas em domicílios com abastecimento de água e esgotamento sanitário inadequados | 0,300  
+IVS infraestrutura urbana | Percentual da população que vive em domicílios urbanos sem serviço de coleta de lixo | 0,300
+IVS infraestrutura urbana | Percentual de pessoas que vivem em domicílios com renda per capita inferior a meio salário mínimo e que gastam mais de  uma hora até o trabalho no total de pessoas ocupadas, vulneráveis e que retornam diariamente do trabalho | 0,400  
+IVS capital humano | Mortalidade até 1 ano de idade | 0,125
+IVS capital humano | Percentual de crianças de 0 a 5 anos que não frequentam a escola | 0,125
+IVS capital humano | Percentual de pessoas de 6 a 14 anos que não frequentam a escola | 0,125
+IVS capital humano | Percentual de mulheres de 10 a 17 anos de idade que tiveram filhos | 0,125
+IVS capital humano | Percentual de mães chefes de família sem fundamental completo e com pelo menos um filho menor de 15 anos de idade, no total de mães chefes de família | 0,125
+IVS capital humano | Taxa de analfabetismo da população de 15 anos ou mais de idade | 0,125
+IVS capital humano | Percentual de crianças que vivem em domicílios em que nenhum dos moradores tem o ensino fundamental completo | 0,125
+IVS capital humano | Percentual de pessoas de 15 a 24 anos que não estudam, não trabalham e possuem renda domiciliar per capita igual ou inferior a meio salário mínimo (2010), na população total dessa faixa etária | 0,125 
+IVS renda e trabalho | Proporção de pessoas com renda domiciliar per capita igual ou inferior a meio salário mínimo (2010) | 0,200 
+IVS renda e trabalho | Taxa de desocupação da população de 18 anos ou mais de idade | 0,200
+IVS renda e trabalho | Percentual de pessoas de 18 anos ou mais sem fundamental completo e em ocupação informal | 0,200
+IVS renda e trabalho | Percentual de pessoas em domicílios com renda per capita inferior a meio salário mínimo (de 2010) e dependentes de idosos | 0,200
+IVS renda e trabalho | Taxa de atividade das pessoas de 10 a 14 anos de idade | 0,200
+
+Fonte: @costaVulnerabilidadeSocialNo2018
+
+
+
+### Índice de Progresso Social (IPS)
+
+O [Índice de Progresso Social (IPS)](https://ipsbrasil.org.br) é calculado pelo Instituto do Homem e Meio Ambiente da Amazônia (Imazon), tendo sido inicialmente proposto pela *Social Progress Imperative* (SPI).
+
+#### Conceituação {.unnumbered}
+
+O IPS visa medir o desempenho social e ambiental considerando 57 indicadores sociais e ambientais -- sem a inclusão de indicadores econômicos --, divididos em três dimensões e componentes [@ipsbrasilIndiceProgressoSocial2025]:
+
+-  Necessidades humanas básicas
+   -  Nutrição e cuidados médicos básicos
+      - Cobertura vacinal (poliomelite)
+      -  Hospitalizações por condições sensíveis à atenção primária
+      -  Mortalidade ajustada por condições sensíveis à atenção primária
+      -  Mortalidade infantil até 5 anos de idade
+      -  Subnutrição
+   -  Água e saneamento
+      -  Abastecimento de água via rede de distribuição
+      -  Esgotamento sanitário adequado
+      -  Índice de abastecimento de água
+      -  Índice de perdas de água na distribuição
+   -  Moradia
+      -  Domicílios com coleta de resíduos adequada
+      -  Domicílios com iluminação elétrica adequada
+      -  Domicílios com paredes adequadas
+      -  Domicílios com pisos adequados
+   -  Segurança pessoal
+      -  Assassinatos de jovens
+      -  Assassinatos de mulheres
+      -  Homicídios
+      -  Mortes por acidentes de transporte
+-  Fundamentos do bem-estar
+   -  Acesso ao conhecimento básico
+      -  Abandono do ensino fundamental
+      -  Abandono do ensino médio
+      -  Evasão do ensino médio
+      -  Distorção idade-série no ensino médio
+      -  Ideb ensino fundamental
+      -  Reprovação escolar no ensino médio
+   -  Acesso à informação e comunicação
+      -  Cobertura de Internet móvel (4G/5G)
+      -  Densidade de Internet banda larga fixa
+      -  Densidade de telefonia móvel
+      -  Qualidade de Internet móvel
+   -  Saúde e bem-estar
+      -  Consumo de alimentos ultraprocessados
+      -  Expectativa de vida
+      -  Mortalidade entre 15 e 50 anos
+      -  Mortalidade por doenças crônicas não transmissíveis
+      -  Obesidade
+      -  Suicídios
+   -  Qualidade do meio ambiente
+      -  Áreas verdes urbanas
+      -  Emissões de $CO_2$ por habitante
+      -  Focos de calor
+      -  Índice de vulnerabilidade climática dos municípios
+      -  Supressão da vegetação primária e secundária
+-  Oportunidades
+   -  Direitos individuais
+      -  Acesso a programas de direitos humanos
+      -  Existência de ações para direitos de minorias
+      -  Índice de atendimetno à demanda de justiça
+      -  Resposta a processos familiares
+      -  Resposta a processos previdenciários
+      -  Taxa de congestionamento líquida de processos
+   -  Liberdades individuais e de escolha
+      -  Acesso à cultura, lazer e esporte
+      -  Gravidez na adolescência (menor que 19 anos de idade)
+      -  Índice de vulnerabilidade das famílias do Cadastro Único
+      -  Praças e parques em áreas urbanas
+   -  Inclusão social
+      -  Famílias em situação de rua
+      -  Paridade de gênero na Câmara Municipal
+      -  Paridade de negros na Câmara Municipal
+      -  Violência contra indígenas
+      -  Violência contra mulheres
+      -  Violência contra negros
+   -  Acesso à educação superior
+      -  Empregados com ensino superior
+      -  Mulheres empregadas com ensino superior
+      -  Nota mediana o Enem
+
+
+#### Interpretação {.unnumbered}
+
+O IPS apresenta valores de 0 a 100. Quanto mais próximo de 100, melhor o desempenho.
+
+#### Usos {.unnumbered}
+
+O IPS pode ser utilizado na comparação de municípios, em pesquisas e na orientação de políticas públicas.
+
+#### Limitações {.unnumbered}
+
+-  O conceito de progresso social é diversificado e o IPS adota uma perspectiva dentre as disponíveis
+-  O índice é calculado com base nos dados censitários, atualizados decenalmente
+
+#### Fonte de dados {.unnumbered}
+
+-  Censo Demográfico
+
+#### Método de cálculo {.unnumbered}
+
+-  O IPS é calculado com a média simples das notas das três dimensões.
+-  As notas das três dimensões são calculadas pela média simples dos resultados de seus componentes, respectivamente.
+-  As notas dos componentes é obtida pelo método de Análise de Componentes Principais (ACP).
+
 ## Fontes de dados e indicadores sociodemográficos calculados
 
 ### IBGE
@@ -947,3 +1136,11 @@ O Instituto de Pesquisa Econômica Aplicada (IPEA) mantêm a plataforma [IpeaDat
 ### PNUD
 
 O Programa das Nações Unidas para o Desenvolvimento (PNUD) mantêm o projeto [Atlas Brasil](http://www.atlasbrasil.org.br/), disponibilizando o cálculo do IDH para os municípios brasileiros. 
+
+### Ipea
+
+O Ipea disponibiliza o cálculo do IVS para os municípios brasileiros [aqui](https://ivs.ipea.gov.br/).
+
+### IPS Brasil
+
+O IPS Brasil pode ser acessado [aqui](https://ipsbrasil.org.br/).
