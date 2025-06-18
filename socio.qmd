@@ -1132,9 +1132,11 @@ A seguir, links para as principais pesquisas do IBGE com dados sociodemográfico
 -  [Estatísticas do registro civil](https://sidra.ibge.gov.br/pesquisa/registro-civil)
 -  [Estimativas populacionais](https://sidra.ibge.gov.br/pesquisa/estimapop)
 
-### IPEA Data
+### IPEA
 
-O Instituto de Pesquisa Econômica Aplicada (IPEA) mantêm a plataforma [IpeaData](http://www.ipeadata.gov.br), que disponibiliza diversos indicadores sócio-demográficos em três níveis básicos: macroeconômico, regional e social.
+O Instituto de Pesquisa Econômica Aplicada (IPEA) disponibiliza o cálculo do IVS para os municípios brasileiros [aqui](https://ivs.ipea.gov.br/). 
+
+O IPEA também mantêm a plataforma [IpeaData](http://www.ipeadata.gov.br), que disponibiliza diversos indicadores sócio-demográficos em três níveis básicos: macroeconômico, regional e social.
 
 ### PNUD
 

@@ -500,38 +500,116 @@ Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regi�
 
 ## Poluição do ar
 
-PM2.5
-Poluidores
+### Material particulado fino ($\text{PM}_{2,5}$)
 
-### Indicador
+Fonte: @who2021aqg
 
 #### Conceituação {.unnumbered}
 
-
+Este indicador quantifica a presença de partículas sólidas e gotículas líquidas no ar com diâmetro aerodinâmico menor ou igual a 2,5 $\mu m$, incluindo sulfatos, nitratos, carbôno, metais, poeira e outros elementos.
 
 #### Interpretação {.unnumbered}
 
+O material particulado deste diâmetro penetra profundamente nos alvéolos pulmonares, podendo alcançar a corrente sanguínea. Este indicador está associado a aumento de mortalidade por doenças cardiovasculares e respiratórias, câncer de pulmão, AVC, diabetes e desfechos adversos na gestação.
 
+O indicador é lido como a concentração média de material particulado no ar por metro cúbico.
 
 #### Usos {.unnumbered}
 
-
+-  Vigilância da qualidade do ar
+-  Estudos epidemiológicos
+-  Avaliação de políticas públicas de controle de emissões
+-  Sistemas de alerta precoce
 
 #### Limitações {.unnumbered}
 
-
+-  Alta variabilidade espacial: poucas estações podem subestimar ou superestimar exposições reais
+-  Equipamentos de referência são caros e exigem manutenção
+-  Sensores de baixo custo requerem calibração frequente e correção por temperatura/umidade
+-  Impossibilidade de se determinar a fonte emissora do material (como tráfego, queima de biomassa, indústria, entre outros)
+-  A composição química não é capturada pelo valor de massa
 
 #### Fonte de dados {.unnumbered}
 
-
-
-#### Método de cálculo {.unnumbered}
-
-
+Este indicador pode ser calculado diretamente a partir de sensores ou estimado por sensoriamento remoto.
 
 #### Categorias sugeridas para análise {.unnumbered}
 
 Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
+### Dióxido de nitrogênio ($\text{NO}_{2}$)
+
+Fonte: @who2021aqg
+
+#### Conceituação {.unnumbered}
+
+O dióxido de nitrogênio ($\text{NO}_{2}$) é um gás formado principalmente na combustão de combustíveis fósseis (veículos, termelétricas e processos industriais, entre outros). Concentra-se sobretudo em áreas urbanas e corredores de tráfego de veículos intenso. 
+
+#### Interpretação {.unnumbered}
+
+A exposição contínua ao $\text{NO}_{2}$ está associada a redução do desenvolvimento da função pulmonar, aumento de exacerbações asmáticas, hospitalizações por doenças respiratórias e mortalidade cardiovascular.
+
+O indicador é lido como a concentração média no ar por metro cúbico.
+
+#### Usos {.unnumbered}
+
+-  Vigilância da qualidade do ar e elaboração de inventários de emissões de tráfego.
+-  Estudos epidemiológicos
+-  Apoio à modelagem de exposição
+-  Subsídio para políticas públicas de de controle de emissões veiculares
+-  Indicador em índices compostos sobre a qualidade do ar
+
+#### Limitações {.unnumbered}
+
+-  Forte gradiente vertical: concentrações podem variar verticalmente nas ruas, sendo mais densa em menores alturas
+-  Concentrações de pico relevantes para saúde são difíceis de capturar com poucos sensores
+-  Influência meteorológica (vento, inversão térmica) gera variabilidade diária
+-  Interferência de outros gases oxidantes em alguns sensores eletroquímicos de baixo custo
+-  Relação não linear entre $\text{NO}_{2}$ e tráfego sob presença de catalisadores modernos de exaustão (níveis podem diminuir embora tráfego aumente)
+
+#### Fonte de dados {.unnumbered}
+
+Este indicador pode ser calculado diretamente a partir de sensores ou estimado por sensoriamento remoto.
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
+### Monóxido de carbono ($\text{CO}$)
+
+Fonte: @who2021aqg
+
+#### Conceituação {.unnumbered}
+
+O $\text{CO}$ é um gás incolor, inodoro e insípido (sem sabor) gerado pela combustão incompleta de combustíveis fósseis, biomassa (vegetação) e por processos industriais.
+
+#### Interpretação {.unnumbered}
+
+Exposições agudas podem causar hipóxia, alterações neurológicas e morte. Exposições contínuas podem agravar doenças cardiovasculares e provocar complicações na gestação. O $\text{CO}$ também é marcador de emissões veiculares e de incêndios florestais (queimadas), ocorrendo em conjunto com outros poluentes do ar.
+
+O indicador é lido como a concentração média no ar por metro cúbico.
+
+#### Usos {.unnumbered}
+
+-  Vigilância da qualidade do ar
+-  Estudos epidemiológicos
+-  Indicador de eficiência de combustão em inventários de emissões.
+-  Sensoriamento de queimadas e transporte de plumas (por imagem de satélite)
+
+#### Limitações {.unnumbered}
+
+-  Curto tempo de vida atmosférico (de 1 a 2 meses) dificulta capturar picos locais e transporte regional
+-  Sensores eletroquímicos de baixo custo apresentam interferência por hidrogênio e efeito temperatura/umidade.
+-  A exposição individual nem sempre se reflete nos valores ambientais dos sensores
+
+#### Fonte de dados {.unnumbered}
+
+Este indicador pode ser calculado diretamente a partir de sensores ou estimado por sensoriamento remoto.
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
 
 ## Qualidade da água
 
