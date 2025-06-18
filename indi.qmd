@@ -6,7 +6,7 @@ Uma importante distinção precisa ser feita entre dado e indicador. Os dados s�
 
 Os dados são comumente coletados a partir de entrevistas com formulários e fichas que, após digitados e sistematizados, são apresentados em tabelas e planilhas. Os dados são, geralmente, estruturados de forma que cada linha na tabela represente uma unidade observada (uma pessoa, um caso de doença, um município, etc.) e cada coluna apresenta valores para diferentes características dessas unidades (variáveis como sexo, idade, local de nascimento, etc.). Uma fonte comum de dados são as estatísticas públicas, como o Censo Demográfico e outros inquéritos populacionais [@jannuzziIndicadoresSociaisNo2006].
 
-A tabela @tbl-exemplo-dados apresenta um exemplo simples. A primeira coluna (id) é um código identificador da linha que não se repete, sendo atrelado diretamente ao individuo. As colunas seguintes são compostas por duas variáveis qualitativas nominais (nome e sexo) e uma variável quantitativa discreta (idade).
+A tabela @tbl-exemplo-dados apresenta um exemplo simples. A primeira coluna ("id") é um código identificador da linha que não se repete, sendo atrelado diretamente ao individuo. As colunas seguintes são compostas por duas variáveis qualitativas nominais ("nome" e "sexo") e uma variável quantitativa discreta ("idade").
 
 | id  | Nome     | Sexo      | Idade |
 |-----|----------|-----------|-------|
@@ -18,7 +18,7 @@ A tabela @tbl-exemplo-dados apresenta um exemplo simples. A primeira coluna (id)
 : Exemplo de uma tabela de dados {#tbl-exemplo-dados}
 
 ::::: {.callout-note}
-As variáveis de uma tabela de dados podem ser classificadas da seguinte forma:
+Variáveis podem ser classificadas da seguinte forma:
 
 -  Variáveis quantitativas: características que podem ser medidas em uma escala quantitativa, aporesentando valores numéricos.
    -  Variáveis discretas: podem assumir o valor de um número inteiro, como contagens.
@@ -29,10 +29,10 @@ As variáveis de uma tabela de dados podem ser classificadas da seguinte forma:
 :::
 
 ::: {.callout-tip}
-Observe que uma variável pode apresentar números mas ser, por definição, uma variável categórica. Exemplos: número do CPF, número do RG, código do município, código da UF.
+Observe que uma variável pode apresentar números mas ser, por definição, uma variável categórica. Exemplos: número do CPF, número do RG, código do município, código da UF, entre outras.
 :::
 
-Importante notar que os dados não tem um significado ou interpretação intrínsica, eles são a simples medida de algo. Já os indicadores são construídos a partir dos dados visando atender um objetivo conceitual [@fronesTheorizingIndicatorsIndicators2007]. Desta forma, um indicador é uma ferramenta conceitual que operacionaliza um objetivo representacional. 
+Importante notar que os dados não tem um significado ou interpretação intrínseca, eles são a simples medida de algo. Já os indicadores são construídos a partir dos dados visando atender um objetivo conceitual [@fronesTheorizingIndicatorsIndicators2007]. Desta forma, um indicador é uma ferramenta conceitual que operacionaliza um objetivo representacional. 
 
 ::: {.callout-important}
 Um objetivo representacional é o aspecto específico de um contexto que se quer observar. 
@@ -40,19 +40,19 @@ Um objetivo representacional é o aspecto específico de um contexto que se quer
 
 Desta forma, um indicador é imbuído de um objetivo e um conceito adjacente, que é operacionalizado pelo seu método de cálculo [@franceschiniMeasurementTheoryIndicator2019].
 
-Por exemplo, um indicador sobre pobreza tem por objetivo medir um conceito abstrato de uma população. O que é pobreza? Diversas definições e conceitos podem coexistir sobre esse fenômeno e um indicador irá adotar uma delas, operacionalizando em termos práticos essa definição por meio de um método de cálculo usando dados específicos. A operacionalização de um indicaodor é, de forma geral, limitada e incompleta. A pobreza, por exemplo, é um fenômeno complexo que se estende em várias dimensões humanas. Assim, um indicador que observe apenas a renda da população como elemento caracterizador da pobreza, irá ignorar outros aspectos com qualidade de vida e saúde. Por outro lado, ao se considerar diversos aspectos para caracterizar um objetivo representacional, o indicador se torna mais complexo de se calcular e interpretar.
+Por exemplo, um indicador sobre pobreza tem por objetivo medir um conceito abstrato de uma população. O que é pobreza? Diversas definições e conceitos podem coexistir sobre esse fenômeno e um indicador irá adotar uma delas, operacionalizando em termos práticos essa definição por meio de um método de cálculo usando dados específicos. A operacionalização de um indicador é, de forma geral, limitada e incompleta. A pobreza, por exemplo, é um fenômeno complexo que se estende em várias dimensões. Assim, um indicador que observe apenas a renda da população como elemento caracterizador da pobreza, irá ignorar outros aspectos como qualidade de vida e saúde. Por outro lado, ao se considerar diversos aspectos para caracterizar um objetivo representacional, o indicador se torna mais complexo de se calcular e de se interpretar.
 
 Alguns indicadores podem ser operacionalizados de forma muito simples, usando até mesmo o próprio valor de algum dado. Já outros indicadores, com objetivos representacionais mais complexos, podem usar diversos dados e até mesmo outros indicadores em sua operacionalização, como indicadores para pobreza e qualidade de vida.
 
-Com o estudo e interpretação de indicadores, acompanhado do conhecimento teórico e prático sobre os fenômenos, a sociedade e o ambiente, novas informações são geradas e, por fim, um novo conhecimento pode ser solidificado. 
+A partir do estudo e interpretação de indicadores, acompanhado do conhecimento teórico e prático sobre os fenômenos, a sociedade e o ambiente, novas informações são geradas e, por fim, um novo conhecimento pode ser solidificado. 
 
 ## Classificação de indicadores
 
-Os indicadores podem ser classificados de diversas formas, conforme sugere @jannuzziIndicadoresSociaisNo2006. Uma possível classificação de indicadores é "objetivos/quantitativos" e "subjetivos/qualitativos". Os indicadores objetivos se referem a uma realidade concreta que está sendo medida, como o percentual de pessoas de uma faixa etária ou a taxa de desemprego. Já os indicadores subjetivos se referem a uma realidade abstrata e conceitualmente definida, como pobreza ou qualidade de vida.
+Os indicadores podem ser classificados de diversas formas, conforme sugere @jannuzziIndicadoresSociaisNo2006. Uma possível classificação de indicadores é entre "objetivos/quantitativos" e "subjetivos/qualitativos". Os indicadores objetivos se referem a uma realidade concreta que está sendo medida, como o percentual de pessoas de uma faixa etária ou a taxa de desemprego. Já os indicadores subjetivos se referem a uma realidade abstrata e conceitualmente definida, como pobreza ou qualidade de vida.
 
-Outra forma de classificação de indicadores é "descritivos" e "normativos". Um indicador descritivo simplesmente descreve um aspecto da realidade sem juízo de valor, como uma taxa de incidência de uma doença. Já os indicadores normativos contêm explicitamente um juízo de valor, como a proporção de pobres, que apresenta de forma adjacente um conjunto de definições sobre o que é pobreza e suas consequências na vida e na sociedade.
+Outra forma de classificação de indicadores é entre "descritivos" e "normativos". Um indicador descritivo simplesmente descreve um aspecto da realidade sem juízo de valor, como uma taxa de incidência de uma doença. Já os indicadores normativos contêm explicitamente um juízo de valor, como a proporção de pobres, que apresenta de forma adjacente um conjunto de definições sobre o que é pobreza e suas consequências na vida e na sociedade.
 
-Uma terceira forma de se classificar indicadores é pela sua complexidade de operacionalização, onde os indicadores podem ser classificados como "simples" ou "compostos/sintéticos". Um indicador simples é derivado diretamente de um dado, como a idade obtida à partir da data de nascimento. Já os indicadores compostos congregam dois ou mais indicadores, que em geral dizem respeito a diversos aspectos complementares, com métodos de cálculos mais avançados para sua obtenção. Um exemplo de indicador composto/sintético é Índice de Desenvolvimento Humano (IDH), que é internamente composto por indicadores de renda, saúde e educação.
+Uma terceira forma de se classificar indicadores é pela sua complexidade de operacionalização, onde os indicadores podem ser classificados como "simples" ou "compostos/sintéticos". Um indicador simples é derivado diretamente de um dado, como a idade obtida à partir da data de nascimento de uma pessoa. Já os indicadores compostos congregam dois ou mais indicadores, que em geral dizem respeito a aspectos complementares que ajudam a descrever um fenômeno (como a pobreza). Estes indicadores utilizando métodos de cálculos mais avançados para sua obtenção. Um exemplo de indicador composto/sintético é Índice de Desenvolvimento Humano (IDH), que é internamente composto por indicadores de renda, saúde e educação.
 
 Enquanto indicadores simples são mais rápidos de serem obtidos e explicados, indicadores compostos/sintéticos são mais complexos de serem calculados e explicados. @jannuzziIndicadoresSociaisNo2006 apresenta outras formas de classificação de indicadores que podem ser de interesse.
 
@@ -60,25 +60,25 @@ Enquanto indicadores simples são mais rápidos de serem obtidos e explicados, i
 
 Indicadores podem ser caracterizados segundo um conjunto de propriedades desejáveis, que são influenciadas pelo método de cálculo e dados utilizados, entre outros fatores. A seguir, são descritas algumas dessas características [@jannuzziIndicadoresSociaisNo2006; @OPAS2008; @ministeriodasaudeAbordagensEspaciaisNa2007].
 
--  Relevância: um indicador deve ser de interesse da sociedade, tendo utilidade prática para seu uso.
--  Validade: capacidade de medir o que ele objetiva medir.
--  Confiabilidade: capacidade de produzir os mesmos resultados em condições similares.
--  Sensibilidade: capacidade de detectar o fenômeno analisado
--  Especificidade: capacidade de detectar somente o fenômeno analisado.
--  Mensurabilidade: basear-se em dados já disponíveis ou com facilidade de obtenção.
--  Custo-efetividade: os resultados do uso do indicador devem justificar o tempo e custos empregados para sua obtenção.
--  Comunicabilidade: capacidade de ser analisado e interpretado com facilidade e compreensível por um público diverso.
--  Historicidade: capacidade de ser atualizado de forma periódica.
+-  **Relevância**: um indicador deve ser de interesse da sociedade, tendo utilidade prática para seu uso.
+-  **Validade**: capacidade de medir o que ele objetiva medir.
+-  **Confiabilidade**: capacidade de produzir os mesmos resultados em condições similares.
+-  **Sensibilidade**: capacidade de detectar o fenômeno analisado
+-  **Especificidade**: capacidade de detectar somente o fenômeno analisado.
+-  **Mensurabilidade**: basear-se em dados já disponíveis ou com facilidade de obtenção.
+-  **Custo-efetividade**: os resultados do uso do indicador devem justificar o tempo e custos empregados para sua obtenção.
+-  **Comunicabilidade**: capacidade de ser analisado e interpretado com facilidade e compreensível por um público diverso.
+-  **Historicidade**: capacidade de ser atualizado de forma periódica.
 
-## Métodos mais comuns de cálculo de indicadores
+## Métodos de cálculo de indicadores
 
-A seguir são apresentados os métodos de cálculo de indicadores mais comuns.
+A seguir são apresentados os métodos de cálculo mais comuns para indicadores.
 
 ### Indicadores de base populacional
 
-Diversos indicadores necessitam relativizar uma contagem em relação a uma população de referência, pois a simples contagem não dá idea sobre a sua magnitude. Estes indicadores são denominados como de "base populacional" pois usam no deminador de seu cálculo um valor populacional e são geralmente referidos como "taxas".
+Indicadores podem necessitar relativizar uma contagem de casos em relação a uma população de referência, pois a simples contagem não dá idea sobre a sua magnitude em relação a população. Estes indicadores são denominados como de "base populacional" pois usam no denominador  de seu cálculo um valor populacional e são geralmente referidos como "taxas".
 
-Um exemplo é a taxa de analfabetismo. O valor nominal de pessoas analfabetas em uma determinada região e espaço de tempo não é capaz, de forma isolada, de retratar a realidade educacional de uma população. Mas, ao se relativizar a quantidade de pessoas analfabetas em relação com a quantidade de pessoas em idade para serem alfabetizadas, se tem uma real da gravidade do problema. Segue abaixo o método de cálculo da taxa de analfabetismo.
+Um exemplo de indicador de base populacional é a taxa de analfabetismo. O valor nominal de pessoas analfabetas observado em uma determinada região e momento não é capaz, de forma isolada, de retratar a realidade educacional de uma população. Mas, ao se relativizar a quantidade de pessoas analfabetas com a quantidade de pessoas em idade para serem alfabetizadas, se tem uma real da gravidade do problema. Segue abaixo o método de cálculo da taxa de analfabetismo.
 
 $$
 \text{Tx. de analfabetismo} = \frac{\text{Indivíduos analfabetos}}{\text{População com 15 anos ou mais}} \times 100
@@ -101,14 +101,14 @@ O multiplicador $m$ altera a leitura do valor da taxa. Quando $m=100$, o valor d
 ::: {.callout-note}
 Ao se comparar alguns indicadores de base populacional entre diferentes regiões, deve-se atentar para a composição etária e de sexo das populações, caso estes fatores tenham alguma relação com o indicador, o que pode enviesar a sua comparação.
 
-Existem possibilidade de cálculo de indicadores de base populacionais que incorporam métodos de padronização por idade e/ou sexo [@medronhoEpidemiologia2009]. 
+Existem possibilidades de cálculo de indicadores de base populacionais que incorporam métodos de padronização por idade e/ou sexo [@medronhoEpidemiologia2009]. 
 :::
 
 ### Indicadores de razão
 
 Indicadores de razão tem por objetivo, em geral, relativizar quantidades dicotômicas e complementares. Ou seja, ao se dividir a população em dois grupos complementares, pode-se calcular um indicador de razão.
 
-Um exemplo é a razão de sexos. Neste indicador a população é dividida segundo o sexo (masculino e feminino):
+Um exemplo é a razão de sexos. Neste indicador a população é dividida em dois grupos complementares segundo o sexo (masculino e feminino):
 
 $$
 \text{Razão do sexo masculino} = \frac{\text{População masculina}}{\text{População feminina}}

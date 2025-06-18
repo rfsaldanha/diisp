@@ -1,24 +1,24 @@
 # Sociodemográficos
 
-Indicadores socioeconômicos desempenham um papel fundamental nas pesquisas de saúde pública, pois possibilitam uma compreensão mais abrangente dos determinantes sociais da saúde, das desigualdades sociais e suas repercussões na saúde das populações. Esses indicadores, que incluem variáveis como renda, escolaridade, ocupação e condições de moradia, são essenciais para identificar grupos vulneráveis, orientar políticas públicas e alocar recursos de forma mais equitativa. A utilização de indicadores socioeconômicos fortalece a abordagem multidimensional da saúde, promovendo uma análise dos determinantes sociais que influenciam o bem-estar coletivo.
+Indicadores socioeconômicos desempenham um papel fundamental nas pesquisas de Saúde Pública, pois possibilitam uma compreensão mais abrangente dos determinantes sociais da saúde, das desigualdades sociais e suas repercussões na saúde das populações. Esses indicadores, que incluem variáveis como renda, escolaridade, ocupação, trabalho e moradia, são essenciais para identificar grupos vulneráveis, orientar políticas públicas e alocar recursos de forma mais equitativa. A utilização de indicadores socioeconômicos fortalece a abordagem multidimensional da saúde, promovendo uma análise dos determinantes sociais que influenciam o bem-estar coletivo.
 
 ::: {.callout}
 Os Determinantes Sociais da Saúde (DSS) são definidos pela Organização Mundial da Saúde (OMS) como as condições em que as pessoas nascem, crescem, vivem, trabalham e envelhecem, e o acesso das pessoas ao poder, dinheiro e recursos.
 
-Uma discussão mais aprofundada sobre os DSS pode ser encontrada em @bussSaudeSeusDeterminantes2007.
+Uma discussão mais aprofundada sobre os DSS pode ser encontrada em @breilh2006epidemiologia.
 :::
 
 Populações podem ser caracterizadas de diversas formas, incluindo características do contingente populacional, da sua renda, educação, domicílios e entorno, mercado de trabalho e condições de vida. Estas caracterizações básicas são utilizadas nas definições de indicadores sociodemográficos e são apresentadas a seguir.
 
 ## Caracterização da população
 
-### Contigente populacional
+### Contingente populacional
 
-Dados sobre o contingente populacional são utilizados em análises de saúde para refletir e relativizar a quantidade observada ou estimada de um determinado evento de saúde em relação a população à qual este evento está relacionado. Em geral, o quantitativo populacional é utilizado na preparação de indicadores, como taxas populacionais.
+Dados sobre o contingente populacional são utilizados em análises de saúde para refletir e relativizar a quantidade observada ou estimada de um determinado evento de saúde em relação a população à qual este evento está relacionado, como nos indicadores de base populacional. Em geral, o quantitativo populacional é utilizado na preparação de indicadores, como taxas populacionais.
 
 #### Faixa etária
 
-A contingente populacional pode ser repartido em faixas etárias, possibilitando o cálculo de indicadores que reflitam condições específicas sobre fases da vida, como infância, adolescência, vida adulta e idosa, por exemplo.
+O contingente populacional pode ser repartido em faixas etárias, possibilitando o cálculo de indicadores que reflitam condições específicas sobre fases da vida, como infância, adolescência, vida adulta e idosa, por exemplo.
 
 A seguir, algumas classificações de faixas etárias comumente utilizados em estudos de saúde:
 
@@ -71,37 +71,40 @@ Por outro lado, classificações de gênero dão conta de uma maior complexidade
 
 #### Raça e cor
 
-A classificação utilizada pelo Instituto Brasileiro de Geografia e Estatística (IBGE) para cor/raça é a seguinte:
+A classificação utilizada pelo Instituto Brasileiro de Geografia e Estatística (IBGE) para cor/raça da população brasileira é a seguinte:
 
--  Preta
--  Parda
+-  Negra
+   -  Preta
+   -  Parda
 -  Branca
 -  Amarela
 -  Indígena
 
 ::: {.callout-important}
-A raça/cor de uma pessoa não se relaciona apenas a sua cor da pele (colorismo), mas também a fatores sociais e de identidade. Em geral, a raça/cor deve ser **autodeclarada**.
+A raça/cor de uma pessoa não se relaciona apenas a sua cor da pele (colorismo), mas também a fatores sociais e de identidade. Em geral, a raça/cor é uma característica **autodeclarada** pelo indivíduo pesquisado.
 :::
+
+Interessante notar que essa classificação pode ou não funcionar em populações de outros países e contextos, a depender dos grupos étnicos mais presentes na população. Por exemplo, em uma população com forte ascendência indígena, essa categoria pode ser melhor subdividida. 
 
 #### Urbano e rural
 
 O recorte do contingente populacional como rural ou urbano permite a comparação da saúde de populações que vivem em contextos sociais, econômicos e de acesso à saúde distintos.
 
-O cálculo do contingente populacional urbano é realizado pelo IBGE à partir de definições territoriais de distritos sede nos municípios brasileiros. A população residente nos distritos sede é definida como urbana, e a população restante é definida como rural. Saiba mais sobre a metodologia do IBGE [aqui](https://www.ibge.gov.br/geociencias/organizacao-do-territorio/tipologias-do-territorio/15790-classificacao-rural-e-urbana.html).
+O cálculo do contingente populacional urbano é realizado pelo IBGE no Brasil à partir de definições territoriais de distritos sede nos municípios brasileiros. A população residente nos distritos sede é definida como urbana e a população restante é definida como rural. Saiba mais sobre a metodologia utilizada pelo IBGE [aqui](https://www.ibge.gov.br/geociencias/organizacao-do-territorio/tipologias-do-territorio/15790-classificacao-rural-e-urbana.html).
 
 ::: {.callout-tip}
-A delimitação dos distritos sedes é realizada pelos próprios municípios e enviada para o IBGE. Em geral, esta delimitação pode ser afetada por interesses econômicos para a cobrança de taxas municipais. Propriedades em áreas urbanas pagam o Imposto sobre a Propriedade Predial e Territorial Urbana (IPTU), enquanto propriedades rurais pagam o Imposto Territorial Rural (ITR), que é, em geral, de menor valor.
+A delimitação dos distritos sedes é realizada pelos próprios municípios e enviada para o IBGE. Em geral, esta delimitação pode ser afetada por interesses econômicos para a cobrança de taxas municipais. Propriedades em áreas urbanas pagam o Imposto sobre a Propriedade Predial e Territorial Urbana (IPTU), enquanto propriedades rurais pagam o Imposto Territorial Rural (ITR), que é, em geral, de menor valor. Isto produz uma pressão para que áreas rurais sejam declaradas como urbanas, ainda que não apresentem sinais claros de urbanização.
 
 Assim, é importante pensar sobre diferenças entre o urbano e o urbanizado, como neste [estudo](https://books.scielo.org/id/df6bv/pdf/lopes-9788599662823-05.pdf).
 :::
 
 ### Renda
 
-A renda é um importante fator de classificação populacional, podendo atuar como fator de proteção ou de risco em uma série de doenças e agravos. 
+A renda é um importante fator de classificação populacional, podendo atuar como fator de proteção ou de risco em uma série de doenças e agravos, por exemplo. 
 
-Faixas de renda são utilizadas para dividir o contigente populacional em classes sociais, utilizando a **renda familiar mensal** como referência.
+Faixas de renda são utilizadas para dividir o contingente populacional em classes sociais, utilizando a **renda familiar mensal** como referência.
 
-Em 2022, o IBGE dividiu a população em sete classes de rendimento:
+No Censo de 2022, o IBGE dividiu a população em sete classes de rendimento:
 
 | Número de salários mínimos | Renda familiar (R$)   |
 |----------------------------|-----------------------|
@@ -128,7 +131,7 @@ Já a Associação Brasileira de Empresas de Pesquisa (Abep) propõe uma classif
 
 A classificação da população segundo a educação em estudos de saúde possibilita observar como o acesso ao conhecimento possibilita melhores condições de vida e bem-estar para o indivíduo e sua família.
 
-Este fator costuma ser classificado por níveis de escolaridade ou anos de estudo. Os níveis de escolaridade remetem as divisões educacionais como Educação Infantil, Ensino Fundamental, Ensino Médio, Ensino Superior e Pós-Graduação. Estas classes ainda podem ser subdivididas como "completo" e "incompleto" (ainda cursando ou suspenso). Contudo, a depender da época do levantamento do dado, estas classes podem ter diferentes nomenclaturas e não necessariamente compatíveis.
+Este fator costuma ser classificado por níveis de escolaridade ou anos de estudo. Os níveis de escolaridade remetem as divisões educacionais como Educação Infantil, Ensino Fundamental, Ensino Médio, Ensino Superior e Pós-Graduação. Estas classes ainda podem ser subdivididas como "completo" e "incompleto" (ainda cursando ou suspenso). Contudo, a depender da época do levantamento do dado, estas classes podem ter diferentes nomenclaturas e não serão necessariamente compatíveis.
 
 Outra forma de se classificar o acesso à educação é através da medida de anos de estudo, que é menos objetiva mas não enfrenta problemas de compatibilidade acima mencionados.
 
@@ -344,7 +347,7 @@ $$
 #### Categorias sugeridas para análise {.unnumbered}
 
 -  Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal, regiões metropolitanas e municípios das capitais.
--  Faixa etária: menor de 1 ano, 1 a 4 e, a partir desta faixa etária, agregações qüinqüenais até 79 anos, finalizando com o grupo de 80 e mais anos de idade.
+-  Faixa etária: menor de 1 ano, 1 a 4 e, a partir desta faixa etária, agregações quinquenais até 79 anos, finalizando com o grupo de 80 e mais anos de idade.
 -  Situação do domicílio: urbana e rural.
 
 ### Taxa de crescimento da população
@@ -886,7 +889,7 @@ O IDH é utilizado amplamente na comparação entre países e regiões, na formu
 
 #### Limitações {.unnumbered}
 
--  O IDH resume o desenvolvimento em apenas três dimensões, não considerando outros fatores como desigualde, segurança pública e ambiente.
+-  O IDH resume o desenvolvimento em apenas três dimensões, não considerando outros fatores como desigualdade, segurança pública e ambiente.
 -  A renda *per capita* utilizada no cálculo índice não reflete distorções na distribuição de renda.
 -  As três dimensões do IDH apresentam o mesmo peso em seu cálculo.
 
@@ -914,7 +917,7 @@ O IDH é utilizado amplamente na comparação entre países e regiões, na formu
 
 Onde:
 
--  $IEV$: Índice de Expecativa de Vida 
+-  $IEV$: Índice de Expectativa de Vida 
 -  $EV$: Expectativa de Vida ao Nascer
 -  $IE$: Índice de educação
 -  $IMAE$: Índice da Média de Anos de Estudo
@@ -949,7 +952,7 @@ Dimensão capital humano
 -  Mães jovens (de 10 a 17 anos)
 -  Mães sem ensino fundamental com filhos até 15 anos de idade
 -  Analfabetismo
-- Criançcas em domicĩlios em que ninguém tem o ensino fundamental completo
+-  Crianças em domicílios em que ninguém tem o ensino fundamental completo
 
 Dimensão renda e trabalho
 

@@ -1,9 +1,10 @@
 {
     "cSpell.words": [
+        "aporesentando",
         "Cisgênero"
     ],
     "cSpell.enabledFileTypes": {
-        "quarto": false
+        "quarto": true
     },
     "cSpell.language": "en,pt,pt-BR"
 }
