@@ -1,1 +1,21 @@
 # Climáticos
+
+## Indicadores nominais
+
+### Temperatura
+
+### Precipitação
+
+### Umidade do ar
+
+### Sensação térmica
+
+## Indicadores de eventos
+
+### Ondas de calor
+
+### Ondas de frio
+
+### Chuvas persistentes
+
+### Secas
