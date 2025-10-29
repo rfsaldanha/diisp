@@ -1,21 +1,184 @@
 # Climáticos
 
+Indicadores climáticos são de grande importância para o estudo e contextualização de um conjunto de doenças cuja incidência e mecanismos de transmissão são afetados por fenômenos atmosféricos e climáticos. Este conjunto de doenças pode ser denominado como "Doenças Sensíveis ao Clima".
+
+::: {.callout-note}
+Usa-se o termo "tempo" para descrever as condições meteorológicas atuais ou de um passado ou futuro de curto prazo, dos próximos dias ou semanas. Já o termo "clima" é empregado para se descrever as condições meteorológicas observadas ou previstas para longo períodos, em geral, acima de 30 anos.
+:::
+
+A relação de entre clima e saúde pode se dar de modo direto ou indireto, a depender dos mecanismos do processo saúde-doença relevantes. A relação direta entre clima e saúde se dá quando o aspecto climático afeta diretamente o organismo e a saúde humana. Por exemplo, ondas de calor estressam fisicamente o mentalmente o corpo humano, podendo desencadear doenças respiratórias, cardíacas e até mesmo mentais. Outro exemplo de relação direta entre clima e saúde são eventos extremos, como chuvas torrenciais, alagamentos, deslizamentos de terra e secas, que afetam diretamente a saúde humana.
+
+Já a relação indireta entre clima e saúde se dá por mecanismos intermediários, como a propagação de vetores. Por exemplo, condições meteorológicas específicas podem favorecer a proliferação de vetores de doenças, como mosquitos e ratos. Este aumento da população vetorial, por sua vez, pode levar a um aumento da circulação de vírus e bactérias, desencadeando por fim um aumento da incidência de doenças infecciosas. Este é o caso, por exemplo, de arboviroses como Dengue, Zika e Chikungunya.
+
+::: {.callout-tip}
+A relação entre variáveis climáticas e a incidência de doenças tem uma defasagem temporal: as condições climáticas do *passado* são responsáveis por afetar a incidência de doenças no *futuro*. Isto tem relação com a dinâmica de cada vetor, incluindo os tempos necessários para o desenvolvimento do vetor, tempo de incubação e transmissão.
+:::
+
+O estudo de doenças sensíveis ao clima pode ser realizado observando indicadores nominais de variáveis climáticas, tão como com indicadores de eventos climáticos, como visto a seguir.
+
 ## Indicadores nominais
 
-### Temperatura
+Indicadores climáticos nominais são constituídos pela observação direta do fenômeno atmosférico/climático em questão. 
+
+### Temperatura do ar
+
+#### Conceituação {.unnumbered}
+
+A temperatura do diz respeito ao grau de agitação das moléculas no ar, onde um grau maior de agitação conduz a uma maior temperatura e um grau menor de agitação a uma menor temperatura. Desta forma, a temperatura é uma medida escalar arbitrária. 
+
+A temperatura do ar pode ser expressada em diversas unidades, como Kelvin, Graus Célsius e Fahrenheit. A temperatura de 0 Kelvin equivale teoricamente a um estado de nenhuma agitação das moléculas do ar. Já a temperatura de 272,15 Kelvin equivale a 0 graus célsius ou 32 fahrenheit. 
+
+A temperatura do ar pode ser medida através de instrumentos analógicos como o termômetro de mercúrio, instrumentos digitais com sensores específicos ou inferida à partir de sensores à bordo de satélites meteorológicos.
+
+A medição da temperatura por instrumentos, sejam analógicos ou digitais, geralmente é feita em "Estações meteorológicas", que agrupam um certo número de instrumentos e sensores. Em geral, os instrumentos de mensuração da temperatura ficam armazenados em um tipo de armário, denominado "Abrigo de Stervenson". A construção desse "abrigo" é padronizada internacionalmente, possibilitando a obtenção da temperatura do ar na sombra de forma padronizada.
+
+::: {.callout-tip}
+A localização de um termômetro ou sensor de temperatura afeta diretamente as observações. Estes instrumentos, quando expostos diretamente ao sol e localizados próximos à superfícies refletivas como telhados de zinco/metal, ou próximos a materiais de alta absorvição energética como concreto e asfalto, tendem a apresentar valores significativamente mais altos do que instrumentos localizados à sombra do sol e distantes destas superfícies e materiais.
+:::
+
+#### Interpretação {.unnumbered}
+
+A interpretação de indicadores climáticos nominais deve ser feita com cautela posto que eles exprimem simplesmente o fenômeno meteorológico em questão em uma unidade direta. Por exemplo, a temperatura de 35 graus pode ser compreendida como uma temperatura muito alta por populações que vivem em zonas temperadas ou frias, ou como uma temperatura típica para populações que habitam zonas tropicais. 
+
+#### Usos {.unnumbered}
+
+Estudos de saúde em geral observam a temperatura máxima e a temperatura mínima observadas durante um período de tempo (um dia, por exemplo). Estas duas temperaturas em conjunto exprimem bem a *amplitude térmica*, que é a diferença entre a temperatura máxima e mínima.
+
+Alguns estudos mais específicos também fracionam o dia entre períodos diurnos e noturnos, com medidas de temperatura máxima e mínima observadas para cada um desses períodos. 
+
+::: {.callout-tip}
+A temperatura máxima observada em um dia costuma ocorrer no período da tarde, por volta das 15h no Brasil. Neste horário, apesar da incidência solar já estar levemente reduzida, os materiais como solo, concreto e asfalto já absorveram o máximo de energia solar possível e passam a emitir de volta esta energia acumulada para a atmosfera.
+
+Já a temperatura mínima costuma ser observada por volta das 6h, logo antes do amanhecer. Este é o momento em que a superfície terrestre permaneceu a maior parte do tempo sem incidência solar desde o pôr-do-sol, já tendo perdido toda a energia solar acumulada.
+:::
+
+#### Limitações {.unnumbered}
+
+A temperatura média, apesar de usada em alguns estudos, pode ser uma medida enganosa, principalmente em regiões com maiores amplitudes térmicas. Por exemplo, uma temperatura média de 25 graus célsius pode aparentar uma situação térmica aprazível, mas pode esconder variações importantes da temperatura durante o período observado.
+
+#### Fontes de dados {.unnumbered}
+
+Dados de temperatura podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.
 
 ### Precipitação
 
-### Umidade do ar
+#### Conceituação {.unnumbered}
+
+A precipitação é uma medida do volume de partículas de água que se precipitam da atmosfera e atingem a superfície terrestre. Desta forma, a precipitação não diz respeito unicamente da chuva, mas também a outras formas de precipitação de água, como granizo e neve.
+
+Em geral, a precipitação é medida por um instrumento analógico denominado "pluviômetro", por sensores digitais, ou inferida à partir de sensores em satélites meteorológicos. 
+
+
+#### Interpretação {.unnumbered}
+
+Por convenção, a precipitação observada representa a quantidade de partículas de água precipitada em um metro quadrado de superfície, geralmente expressa em milímetros.
+
+::: {.callout-warning}
+Apesar de ser uma medida de volume, a precipitação é expressa em milímetros (mm) para guardar correspondência direta com o valor observado na régua de um pluviômetro.
+:::
+
+A precipitação é um indicador de volume acumulado por um período de tempo, podendo ser por hora, dia ou mês, geralmente. Desta forma, é necessário saber o tempo de acumulação para a correta interpretação do valor. Por exemplo, o valor de 110mm de precipitação pode ser relativamente elevado para um dia, mas relativamente baixo para um mês.
+
+#### Usos {.unnumbered}
+
+Estudos de clima e saúde usam a precipitação como indicador principalmente quando o desenvolvimento de um vetor necessita da oferta de água, como mosquitos. 
+
+#### Limitações {.unnumbered}
+
+Chuvas são fenômenos meteorológicos que podem ser bem localizados, podendo ocorrer em um bairro e não ocorrer em um outro bairro vizinho. Desta forma, deve-se lembrar que a medida de precipitação observada por um sensor corresponde apenas a área de um metro quadrado ao seu redor. 
+
+#### Fontes de dados {.unnumbered}
+
+Dados de precipitação podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.
+
+### Umidade relativa do ar
+
+#### Conceituação {.unnumbered}
+
+A umidade relativa do ar é um indicador do grau de saturação de quantidade de água presente no ar.
+
+#### Interpretação {.unnumbered}
+
+Por ser um grau de saturação, a umidade relativa do ar é uma medida expressa em percentual: 100% de umidade relativa do ar significa que uma unidade de ar não consegue absorver mais água, estando completamente saturado. Esta capacidade de saturação do ar varia conforme a temperatura e pressão, por isso se diz que a umidade do ar é relativa.
+
+A Organização Mundial da Saúde (OMS) apresenta níveis de referência para a umidade do ar relacionados a saúde humana. 
+
+#### Usos {.unnumbered}
+
+A umidade do ar é utilizada em análises de clima e saúde quando a dinâmica vetorial é afetada por esse indicador: alguns vetores não são ativos ou são comprometidos em baixas ou altos níveis de umidade do ar. 
+
+#### Limitações {.unnumbered}
+
+A comparação da umidade relativa do ar entre regiões deve ser feita considerando também os indicadores de temperatura e pressão.
+
+#### Fontes de dados {.unnumbered}
+
+Dados de umidade relativa do ar podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.
 
 ### Sensação térmica
+
+#### Conceituação {.unnumbered}
+
+A percepção da temperatura do ar pelo corpo humano pode variar frente a diferentes condições de umidade relativa e vento, dentre outros fatores. Assim, uma mesma temperatura pode provocar sensações diferentes de calor ou frio, a depender destes fatores.
+
+A sensação térmica é um indicador composto que visa padronizar esta percepção, utilizando em seu cálculo indicadores de umidade relativa e velocidade do vento em conjunto com a temperatura, exprimindo a "temperatura percebida" do ar.
+
+#### Interpretação {.unnumbered}
+
+A interpretação da sensação térmica é direta, podendo ser comparada entre regiões. Mas cuidados devem ser tomados para a sua generalização: a percepção da temperatura de forma individual é variada, podendo estar relacionada a fatores como sexo, idade e aclimatação.
+
+#### Usos {.unnumbered}
+
+#### Limitações {.unnumbered}
+
+#### Fontes de dados {.unnumbered}
 
 ## Indicadores de eventos
 
 ### Ondas de calor
 
+#### Conceituação {.unnumbered}
+
+#### Interpretação {.unnumbered}
+
+#### Usos {.unnumbered}
+
+#### Limitações {.unnumbered}
+
+#### Fontes de dados {.unnumbered}
+
+#### Métodos de cálculo {.unnumbered}
+
+#### Categorias sugeridas para análise {.unnumbered}
+
 ### Ondas de frio
+
+#### Conceituação {.unnumbered}
+
+#### Interpretação {.unnumbered}
+
+#### Usos {.unnumbered}
+
+#### Limitações {.unnumbered}
+
+#### Fontes de dados {.unnumbered}
+
+#### Métodos de cálculo {.unnumbered}
+
+#### Categorias sugeridas para análise {.unnumbered}
 
 ### Chuvas persistentes
 
-### Secas
+#### Conceituação {.unnumbered}
+
+#### Interpretação {.unnumbered}
+
+#### Usos {.unnumbered}
+
+#### Limitações {.unnumbered}
+
+#### Fontes de dados {.unnumbered}
+
+#### Métodos de cálculo {.unnumbered}
+
+#### Categorias sugeridas para análise {.unnumbered}

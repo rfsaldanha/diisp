@@ -220,11 +220,51 @@
     ]
   },
   {
+    "objectID": "clima.html",
+    "href": "clima.html",
+    "title": "5  Climáticos",
+    "section": "",
+    "text": "5.1 Indicadores nominais\nIndicadores climáticos são de grande importância para o estudo e contextualização de um conjunto de doenças cuja incidência e mecanismos de transmissão são afetados por fenômenos atmosféricos e climáticos. Este conjunto de doenças pode ser denominado como “Doenças Sensíveis ao Clima”.\nA relação de entre clima e saúde pode se dar de modo direto ou indireto, a depender dos mecanismos do processo saúde-doença relevantes. A relação direta entre clima e saúde se dá quando o aspecto climático afeta diretamente o organismo e a saúde humana. Por exemplo, ondas de calor estressam fisicamente o mentalmente o corpo humano, podendo desencadear doenças respiratórias, cardíacas e até mesmo mentais. Outro exemplo de relação direta entre clima e saúde são eventos extremos, como chuvas torrenciais, alagamentos, deslizamentos de terra e secas, que afetam diretamente a saúde humana.\nJá a relação indireta entre clima e saúde se dá por mecanismos intermediários, como a propagação de vetores. Por exemplo, condições meteorológicas específicas podem favorecer a proliferação de vetores de doenças, como mosquitos e ratos. Este aumento da população vetorial, por sua vez, pode levar a um aumento da circulação de vírus e bactérias, desencadeando por fim um aumento da incidência de doenças infecciosas. Este é o caso, por exemplo, de arboviroses como Dengue, Zika e Chikungunya.\nO estudo de doenças sensíveis ao clima pode ser realizado observando indicadores nominais de variáveis climáticas, tão como com indicadores de eventos climáticos, como visto a seguir.\nIndicadores climáticos nominais são constituídos pela observação direta do fenômeno atmosférico/climático em questão.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Climáticos</span>"
+    ]
+  },
+  {
+    "objectID": "clima.html#indicadores-nominais",
+    "href": "clima.html#indicadores-nominais",
+    "title": "5  Climáticos",
+    "section": "",
+    "text": "5.1.1 Temperatura do ar\n\nConceituação\nA temperatura do diz respeito ao grau de agitação das moléculas no ar, onde um grau maior de agitação conduz a uma maior temperatura e um grau menor de agitação a uma menor temperatura. Desta forma, a temperatura é uma medida escalar arbitrária.\nA temperatura do ar pode ser expressada em diversas unidades, como Kelvin, Graus Célsius e Fahrenheit. A temperatura de 0 Kelvin equivale teoricamente a um estado de nenhuma agitação das moléculas do ar. Já a temperatura de 272,15 Kelvin equivale a 0 graus célsius ou 32 fahrenheit.\nA temperatura do ar pode ser medida através de instrumentos analógicos como o termômetro de mercúrio, instrumentos digitais com sensores específicos ou inferida à partir de sensores à bordo de satélites meteorológicos.\nA medição da temperatura por instrumentos, sejam analógicos ou digitais, geralmente é feita em “Estações meteorológicas”, que agrupam um certo número de instrumentos e sensores. Em geral, os instrumentos de mensuração da temperatura ficam armazenados em um tipo de armário, denominado “Abrigo de Stervenson”. A construção desse “abrigo” é padronizada internacionalmente, possibilitando a obtenção da temperatura do ar na sombra de forma padronizada.\n\n\n\n\n\n\nDica\n\n\n\nA localização de um termômetro ou sensor de temperatura afeta diretamente as observações. Estes instrumentos, quando expostos diretamente ao sol e localizados próximos à superfícies refletivas como telhados de zinco/metal, ou próximos a materiais de alta absorvição energética como concreto e asfalto, tendem a apresentar valores significativamente mais altos do que instrumentos localizados à sombra do sol e distantes destas superfícies e materiais.\n\n\n\n\nInterpretação\nA interpretação de indicadores climáticos nominais deve ser feita com cautela posto que eles exprimem simplesmente o fenômeno meteorológico em questão em uma unidade direta. Por exemplo, a temperatura de 35 graus pode ser compreendida como uma temperatura muito alta por populações que vivem em zonas temperadas ou frias, ou como uma temperatura típica para populações que habitam zonas tropicais.\n\n\nUsos\nEstudos de saúde em geral observam a temperatura máxima e a temperatura mínima observadas durante um período de tempo (um dia, por exemplo). Estas duas temperaturas em conjunto exprimem bem a amplitude térmica, que é a diferença entre a temperatura máxima e mínima.\nAlguns estudos mais específicos também fracionam o dia entre períodos diurnos e noturnos, com medidas de temperatura máxima e mínima observadas para cada um desses períodos.\n\n\n\n\n\n\nDica\n\n\n\nA temperatura máxima observada em um dia costuma ocorrer no período da tarde, por volta das 15h no Brasil. Neste horário, apesar da incidência solar já estar levemente reduzida, os materiais como solo, concreto e asfalto já absorveram o máximo de energia solar possível e passam a emitir de volta esta energia acumulada para a atmosfera.\nJá a temperatura mínima costuma ser observada por volta das 6h, logo antes do amanhecer. Este é o momento em que a superfície terrestre permaneceu a maior parte do tempo sem incidência solar desde o pôr-do-sol, já tendo perdido toda a energia solar acumulada.\n\n\n\n\nLimitações\nA temperatura média, apesar de usada em alguns estudos, pode ser uma medida enganosa, principalmente em regiões com maiores amplitudes térmicas. Por exemplo, uma temperatura média de 25 graus célsius pode aparentar uma situação térmica aprazível, mas pode esconder variações importantes da temperatura durante o período observado.\n\n\nFontes de dados\nDados de temperatura podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.\n\n\n\n5.1.2 Precipitação\n\nConceituação\nA precipitação é uma medida do volume de partículas de água que se precipitam da atmosfera e atingem a superfície terrestre. Desta forma, a precipitação não diz respeito unicamente da chuva, mas também a outras formas de precipitação de água, como granizo e neve.\nEm geral, a precipitação é medida por um instrumento analógico denominado “pluviômetro”, por sensores digitais, ou inferida à partir de sensores em satélites meteorológicos.\n\n\nInterpretação\nPor convenção, a precipitação observada representa a quantidade de partículas de água precipitada em um metro quadrado de superfície, geralmente expressa em milímetros.\n\n\n\n\n\n\nAviso\n\n\n\nApesar de ser uma medida de volume, a precipitação é expressa em milímetros (mm) para guardar correspondência direta com o valor observado na régua de um pluviômetro.\n\n\nA precipitação é um indicador de volume acumulado por um período de tempo, podendo ser por hora, dia ou mês, geralmente. Desta forma, é necessário saber o tempo de acumulação para a correta interpretação do valor. Por exemplo, o valor de 110mm de precipitação pode ser relativamente elevado para um dia, mas relativamente baixo para um mês.\n\n\nUsos\nEstudos de clima e saúde usam a precipitação como indicador principalmente quando o desenvolvimento de um vetor necessita da oferta de água, como mosquitos.\n\n\nLimitações\nChuvas são fenômenos meteorológicos que podem ser bem localizados, podendo ocorrer em um bairro e não ocorrer em um outro bairro vizinho. Desta forma, deve-se lembrar que a medida de precipitação observada por um sensor corresponde apenas a área de um metro quadrado ao seu redor.\n\n\nFontes de dados\nDados de precipitação podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.\n\n\n\n5.1.3 Umidade relativa do ar\n\nConceituação\nA umidade relativa do ar é um indicador do grau de saturação de quantidade de água presente no ar.\n\n\nInterpretação\nPor ser um grau de saturação, a umidade relativa do ar é uma medida expressa em percentual: 100% de umidade relativa do ar significa que uma unidade de ar não consegue absorver mais água, estando completamente saturado. Esta capacidade de saturação do ar varia conforme a temperatura e pressão, por isso se diz que a umidade do ar é relativa.\nA Organização Mundial da Saúde (OMS) apresenta níveis de referência para a umidade do ar relacionados a saúde humana.\n\n\nUsos\nA umidade do ar é utilizada em análises de clima e saúde quando a dinâmica vetorial é afetada por esse indicador: alguns vetores não são ativos ou são comprometidos em baixas ou altos níveis de umidade do ar.\n\n\nLimitações\nA comparação da umidade relativa do ar entre regiões deve ser feita considerando também os indicadores de temperatura e pressão.\n\n\nFontes de dados\nDados de umidade relativa do ar podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.\n\n\n\n5.1.4 Sensação térmica\n\nConceituação\nA percepção da temperatura do ar pelo corpo humano pode variar frente a diferentes condições de umidade relativa e vento, dentre outros fatores. Assim, uma mesma temperatura pode provocar sensações diferentes de calor ou frio, a depender destes fatores.\nA sensação térmica é um indicador composto que visa padronizar esta percepção, utilizando em seu cálculo indicadores de umidade relativa e velocidade do vento em conjunto com a temperatura, exprimindo a “temperatura percebida” do ar.\n\n\nInterpretação\nA interpretação da sensação térmica é direta, podendo ser comparada entre regiões. Mas cuidados devem ser tomados para a sua generalização: a percepção da temperatura de forma individual é variada, podendo estar relacionada a fatores como sexo, idade e aclimatação.\n\n\nUsos\n\n\nLimitações\n\n\nFontes de dados",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Climáticos</span>"
+    ]
+  },
+  {
+    "objectID": "clima.html#indicadores-de-eventos",
+    "href": "clima.html#indicadores-de-eventos",
+    "title": "5  Climáticos",
+    "section": "5.2 Indicadores de eventos",
+    "text": "5.2 Indicadores de eventos\n\n5.2.1 Ondas de calor\n\nConceituação\n\n\nInterpretação\n\n\nUsos\n\n\nLimitações\n\n\nFontes de dados\n\n\nMétodos de cálculo\n\n\nCategorias sugeridas para análise\n\n\n\n5.2.2 Ondas de frio\n\nConceituação\n\n\nInterpretação\n\n\nUsos\n\n\nLimitações\n\n\nFontes de dados\n\n\nMétodos de cálculo\n\n\nCategorias sugeridas para análise\n\n\n\n5.2.3 Chuvas persistentes\n\nConceituação\n\n\nInterpretação\n\n\nUsos\n\n\nLimitações\n\n\nFontes de dados\n\n\nMétodos de cálculo\n\n\nCategorias sugeridas para análise",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Climáticos</span>"
+    ]
+  },
+  {
     "objectID": "inter.html",
     "href": "inter.html",
     "title": "6  Internet, redes sociais e outras mídias",
     "section": "",
-    "text": "6.1 Volume de pesquisas em ferramentas de busca",
+    "text": "6.1 Acessibilidade da Internet\nPesquisa NIC.br Saúde.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Internet, redes sociais e outras mídias</span>"
+    ]
+  },
+  {
+    "objectID": "inter.html#volume-de-pesquisas-em-ferramentas-de-busca",
+    "href": "inter.html#volume-de-pesquisas-em-ferramentas-de-busca",
+    "title": "6  Internet, redes sociais e outras mídias",
+    "section": "6.2 Volume de pesquisas em ferramentas de busca",
+    "text": "6.2 Volume de pesquisas em ferramentas de busca",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Internet, redes sociais e outras mídias</span>"
     ]
@@ -233,8 +273,8 @@
     "objectID": "inter.html#menções-em-postagens-de-redes-sociais",
     "href": "inter.html#menções-em-postagens-de-redes-sociais",
     "title": "6  Internet, redes sociais e outras mídias",
-    "section": "6.2 Menções em postagens de redes sociais",
-    "text": "6.2 Menções em postagens de redes sociais",
+    "section": "6.3 Menções em postagens de redes sociais",
+    "text": "6.3 Menções em postagens de redes sociais",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Internet, redes sociais e outras mídias</span>"
     ]
