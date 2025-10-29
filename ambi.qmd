@@ -2,9 +2,9 @@
 
 Indicadores ambientais são de grande importância para análises de saúde pública, pois permitem a identificação e o monitoramento de fatores ambientais que influenciam diretamente o bem-estar das populações. Esses indicadores, que incluem variáveis como uso e ocupação do solo, umidade e seca, vegetação e poluição do ar e da água, fornecem subsídios para a formulação de políticas públicas e intervenções preventivas mais eficazes. Ao correlacionar indicadores ambientais com eventos de saúde, é possível realizar ações direcionadas para a redução de riscos e promoção da saúde. Dessa forma, o uso sistemático e integrado de indicadores ambientais fortalece a vigilância em saúde, contribui para a equidade no acesso a ambientes saudáveis e subsidia decisões baseadas em evidências científicas.
 
-## Uso e ocupação do solo
+## Solo
 
-Análises sobre o uso e ocupação do solo permitem determinar quais as condições ambientais que as populações estão expostas, evidenciando questões como adensamento urbano, ocupação desordenada, vulnerabilidade a desastres e escassez de áreas verdes. Estes fatores tem grande influencia na saúde humana, afertando a qualidade do ar e do solo, o conforto térmico e o bem-estar psicológico.
+Indicadores sobre uso e ocupação do solo permitem determinar quais as condições ambientais que as populações estão expostas, evidenciando questões como adensamento urbano, ocupação desordenada, vulnerabilidade a desastres e escassez de áreas verdes. Estes fatores tem grande influencia na saúde humana, afetando a qualidade do ar e do solo, o conforto térmico e o bem-estar psicológico.
 
 ### Taxa de Densidade Populacional
 
@@ -139,6 +139,10 @@ Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regi�
 #### Conceituação {.unnumbered}
 
 Descrição da superfície terrestre com base nos elementos físicos e biológicos visíveis, como vegetação natural, corpos d’água, edificações, solo exposto e superfícies impermeáveis. Diferentemente do uso do solo, que está ligado à atividade humana, a cobertura do solo representa o que efetivamente recobre o terreno, independentemente de sua função.
+
+::: {.callout-tip}
+A *cobertura do solo* descreve o que está presente sobre a superfície terrestre, enquanto o *uso do solo* explica como essa superfície é empregada ou manejada. Assim, uma mesma categoria de cobertura pode corresponder a diferentes tipos de uso. Por exemplo, uma área coberta por vegetação florestal pode estar destinada à conservação ambiental (uso conservacionista) ou à produção madeireira (uso econômico).
+:::
 
 #### Interpretação {.unnumbered}
 

@@ -6,11 +6,13 @@ format:
 
 # Bem-vindo {.unnumbered}
 
-Este *e-book* busca apresentar as principais fontes de dados sóciodemográficas e ambientais de interesse para estudos em Saúde Pública. 
+Este *e-book* busca apresentar e discutir diferentes dados e indicadores de interesse para a saúde pública, englobando aspectos sociodemográficos, ambientais e climáticos, entre outros.
 
 # Como citar este material?
 
-> SALDANHA, Raphael de Freitas. **Dados Sociodemográficos e Ambientais de Interesse para a Saúde**. E-book. Disponível em <https://rfsaldanha.github.io/dsais/>. ISBN: 
+> SALDANHA, Raphael de Freitas. **Dados e Indicadores de Interesse para a Saúde Pública**. E-book. Disponível em <https://rfsaldanha.github.io/diisp/>.
+
+*ISBN requerido e em análise*
 
 # Sobre o autor
 

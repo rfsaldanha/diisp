@@ -84,6 +84,35 @@ gtag('js', new Date());
 gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -356,8 +385,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
   <li><a href="#indicadores-de-eventos" id="toc-indicadores-de-eventos" class="nav-link" data-scroll-target="#indicadores-de-eventos"><span class="header-section-number">5.2</span> Indicadores de eventos</a>
   <ul class="collapse">
   <li><a href="#ondas-de-calor" id="toc-ondas-de-calor" class="nav-link" data-scroll-target="#ondas-de-calor"><span class="header-section-number">5.2.1</span> Ondas de calor</a></li>
-  <li><a href="#ondas-de-frio" id="toc-ondas-de-frio" class="nav-link" data-scroll-target="#ondas-de-frio"><span class="header-section-number">5.2.2</span> Ondas de frio</a></li>
-  <li><a href="#chuvas-persistentes" id="toc-chuvas-persistentes" class="nav-link" data-scroll-target="#chuvas-persistentes"><span class="header-section-number">5.2.3</span> Chuvas persistentes</a></li>
+  <li><a href="#chuvas-persistentes" id="toc-chuvas-persistentes" class="nav-link" data-scroll-target="#chuvas-persistentes"><span class="header-section-number">5.2.2</span> Chuvas persistentes</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -531,7 +559,7 @@ Aviso
 </section>
 <section id="fontes-de-dados-2" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-2">Fontes de dados</h4>
-<p>Dados de umidade relativa do ar podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.</p>
+<p>Dados de sensação térmica podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.</p>
 </section>
 </section>
 <section id="sensação-térmica" class="level3" data-number="5.1.4">
@@ -547,12 +575,15 @@ Aviso
 </section>
 <section id="usos-3" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="usos-3">Usos</h4>
+<p>A sensação térmica é usada em estudos de saúde onde é necessário saber o real conforto térmico humano, como em estudos de estresse térmico.</p>
 </section>
 <section id="limitações-3" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="limitações-3">Limitações</h4>
+<p>Diferentes grupos populacionais podem apresentar percepções de sensação térmica dististas. Cuidados devem ser tomados para generalizações.</p>
 </section>
 <section id="fontes-de-dados-3" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-3">Fontes de dados</h4>
+<p>Dados de umidade relativa do ar podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.</p>
 </section>
 </section>
 </section>
@@ -562,72 +593,65 @@ Aviso
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="ondas-de-calor"><span class="header-section-number">5.2.1</span> Ondas de calor</h3>
 <section id="conceituação-4" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="conceituação-4">Conceituação</h4>
+<p>Ondas de calor são períodos prolongados de temperaturas anormalmente elevadas em relação às condições climatológicas médias de uma região. Existem diversas definições específicas de ondas de calor.</p>
+<p>De forma geral, uma onda de calor pode ser definida como uma sequência consecutiva de dias cujas temperaturas atingem valores acima de um valor de referência. A OMS, por exemplo, define como onda de calor uma sequencia de cinco dias consecutivos ou mais onde a temperatura máxima está acima da média histórica (normal climatológica) mais cinco graus célsius.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dica
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Uma normal climatológica é uma medida de referência de longo prazo, calculada como a média aritmética dos valores de um indicador climático observado em um intervalo de 30 anos.</p>
+<p><span class="math display">\[
+\text{Normal} = \frac{1}{30} \sum_{i=1}^{30} X_i
+\]</span></p>
+<p>As normais climatológicas são calculadas para intervalos de anos como 1961–1990, 1971–2000, 1981–2010, 1991–2020.</p>
+</div>
+</div>
 </section>
 <section id="interpretação-4" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="interpretação-4">Interpretação</h4>
+<p>O indicador de ondas de calor permite identificar eventos extremos de temperatura que representam riscos significativos à saúde humana, especialmente para populações vulneráveis (idosos, crianças, pessoas com doenças crônicas e trabalhadores expostos ao calor). Valores elevados do indicador indicam maior exposição da população a temperaturas perigosas e possível aumento da mortalidade e morbidade associadas a causas cardiovasculares, respiratórias e renais.</p>
 </section>
 <section id="usos-4" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="usos-4">Usos</h4>
+<p>O indicador de ondas de calor é utilizado em estudos de saúde principalmente em sistemas de alerta precoce, na vigilância em saúde e em análises epidemiológicas, especialmente vinculada a eventos de saúde como atendimentos de urgência, internações e mortalidade.</p>
 </section>
 <section id="limitações-4" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="limitações-4">Limitações</h4>
+<p>Como existem diversas definições específicas, com diferentes quantidade mínimas de dias e diferentes valores de referência, a comparação do indicador deve ser feita com cautela.</p>
 </section>
 <section id="fontes-de-dados-4" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-4">Fontes de dados</h4>
-</section>
-<section id="métodos-de-cálculo" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="métodos-de-cálculo">Métodos de cálculo</h4>
-</section>
-<section id="categorias-sugeridas-para-análise" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise">Categorias sugeridas para análise</h4>
+<p>Indicadores de onda de calor podem ser obtidos à partir de dados de organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.</p>
 </section>
 </section>
-<section id="ondas-de-frio" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="ondas-de-frio"><span class="header-section-number">5.2.2</span> Ondas de frio</h3>
+<section id="chuvas-persistentes" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="chuvas-persistentes"><span class="header-section-number">5.2.2</span> Chuvas persistentes</h3>
 <section id="conceituação-5" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="conceituação-5">Conceituação</h4>
+<p>Chuvas persistentes são eventos caracterizados por precipitação contínua ou recorrente ao longo de vários dias consecutivos, frequentemente resultando em acúmulo significativo de chuva em um curto período.</p>
+<p>O indicador pode ser definido como a quantidade de dias consecutivos com valores acumulados de precipitação acima de um valor de referência. Este valor pode ser definido <em>a priori</em> ou usar um valor relativo a uma média histórica (normal climatológica).</p>
 </section>
 <section id="interpretação-5" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="interpretação-5">Interpretação</h4>
+<p>Valores elevados do indicador indicam a ocorrência de períodos prolongados de precipitação, que podem gerar saturação do solo, inundações graduais, escorregamentos e aumento do risco de doenças relacionadas à água, como leptospirose e diarreias. A persistência da chuva, mais do que a intensidade isolada, é um fator crítico para avaliar vulnerabilidades territoriais e impactos à saúde pública, à infraestrutura e à produção agrícola.</p>
 </section>
 <section id="usos-5" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="usos-5">Usos</h4>
+<p>Este indicador é utilizado na vigilância em saúde ambiental, na gestão de riscos a desastres, no planejamento urbano e territorial e em análises epidemiológicas.</p>
 </section>
 <section id="limitações-5" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="limitações-5">Limitações</h4>
+<p>Como existem diversas definições específicas, com diferentes quantidade mínimas de dias e diferentes valores de referência, a comparação do indicador deve ser feita com cautela.</p>
 </section>
 <section id="fontes-de-dados-5" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-5">Fontes de dados</h4>
-</section>
-<section id="métodos-de-cálculo-1" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="métodos-de-cálculo-1">Métodos de cálculo</h4>
-</section>
-<section id="categorias-sugeridas-para-análise-1" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-1">Categorias sugeridas para análise</h4>
-</section>
-</section>
-<section id="chuvas-persistentes" class="level3" data-number="5.2.3">
-<h3 data-number="5.2.3" class="anchored" data-anchor-id="chuvas-persistentes"><span class="header-section-number">5.2.3</span> Chuvas persistentes</h3>
-<section id="conceituação-6" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceituação-6">Conceituação</h4>
-</section>
-<section id="interpretação-6" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="interpretação-6">Interpretação</h4>
-</section>
-<section id="usos-6" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="usos-6">Usos</h4>
-</section>
-<section id="limitações-6" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="limitações-6">Limitações</h4>
-</section>
-<section id="fontes-de-dados-6" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-6">Fontes de dados</h4>
-</section>
-<section id="métodos-de-cálculo-2" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="métodos-de-cálculo-2">Métodos de cálculo</h4>
-</section>
-<section id="categorias-sugeridas-para-análise-2" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-2">Categorias sugeridas para análise</h4>
+<p>Indicadores de chuvas persistentes podem ser obtidos à partir de dados de organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.</p>
 
 
 </section>

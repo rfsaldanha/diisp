@@ -1,6 +1,6 @@
 # Sociodemográficos
 
-Indicadores socioeconômicos desempenham um papel fundamental nas pesquisas de Saúde Pública, pois possibilitam uma compreensão mais abrangente dos determinantes sociais da saúde, das desigualdades sociais e suas repercussões na saúde das populações. Esses indicadores, que incluem variáveis como renda, escolaridade, ocupação, trabalho e moradia, são essenciais para identificar grupos vulneráveis, orientar políticas públicas e alocar recursos de forma mais equitativa. A utilização de indicadores socioeconômicos fortalece a abordagem multidimensional da saúde, promovendo uma análise dos determinantes sociais que influenciam o bem-estar coletivo.
+Indicadores sociodemográficos desempenham um papel fundamental nas pesquisas de Saúde Pública, pois possibilitam uma compreensão mais abrangente dos determinantes sociais da saúde, das desigualdades sociais e suas repercussões na saúde das populações. Esses indicadores, que incluem variáveis como renda, escolaridade, ocupação, trabalho e moradia, são essenciais para identificar grupos vulneráveis, orientar políticas públicas e alocar recursos de forma mais equitativa. A utilização de indicadores socioeconômicos fortalece a abordagem multidimensional da saúde, promovendo uma análise dos determinantes sociais que influenciam o bem-estar coletivo.
 
 ::: {.callout}
 Os Determinantes Sociais da Saúde (DSS) são definidos pela Organização Mundial da Saúde (OMS) como as condições em que as pessoas nascem, crescem, vivem, trabalham e envelhecem, e o acesso das pessoas ao poder, dinheiro e recursos.
@@ -300,9 +300,9 @@ Definições:
 
 A Organização Mundial da Saúde define qualidade de vida como "a percepção do indivíduo de sua inserção na vida, no contexto da cultura e sistemas de valores nos quais ele vive e em relação aos seus objetivos, expectativas, padrões e preocupações". Apesar de ser uma definição subjetiva, existem métodos objetivos para mensura-lá, como o Índice de Qualidade de Vida (IDH).
 
-A seguir são apresentadas fichas de caracterização dos principais indicadores sociodemográficos seguindo a formulação da RIPSA. Aprofundamentos e outros indicadores podem ser encontrados em @jannuzziIndicadoresSociaisNo2006 e @OPAS2008.
-
 ## Indicadores demográficos
+
+A seguir são apresentadas fichas de caracterização dos principais indicadores sociodemográficos seguindo a formulação da RIPSA. Aprofundamentos e outros indicadores podem ser encontrados em @jannuzziIndicadoresSociaisNo2006 e @OPAS2008.
 
 ### Razão de sexos
 

@@ -113,7 +113,7 @@ A comparação da umidade relativa do ar entre regiões deve ser feita considera
 
 #### Fontes de dados {.unnumbered}
 
-Dados de umidade relativa do ar podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.
+Dados de sensação térmica podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.
 
 ### Sensação térmica
 
@@ -129,9 +129,15 @@ A interpretação da sensação térmica é direta, podendo ser comparada entre 
 
 #### Usos {.unnumbered}
 
+A sensação térmica é usada em estudos de saúde onde é necessário saber o real conforto térmico humano, como em estudos de estresse térmico.
+
 #### Limitações {.unnumbered}
 
+Diferentes grupos populacionais podem apresentar percepções de sensação térmica dististas. Cuidados devem ser tomados para generalizações.
+
 #### Fontes de dados {.unnumbered}
+
+Dados de umidade relativa do ar podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.
 
 ## Indicadores de eventos
 
@@ -139,46 +145,58 @@ A interpretação da sensação térmica é direta, podendo ser comparada entre 
 
 #### Conceituação {.unnumbered}
 
-#### Interpretação {.unnumbered}
+Ondas de calor são períodos prolongados de temperaturas anormalmente elevadas em relação às condições climatológicas médias de uma região. Existem diversas definições específicas de ondas de calor. 
 
-#### Usos {.unnumbered}
+De forma geral, uma onda de calor pode ser definida como uma sequência consecutiva de dias cujas temperaturas atingem valores acima de um valor de referência. A OMS, por exemplo, define como onda de calor uma sequencia de cinco dias consecutivos ou mais onde a temperatura máxima está acima da média histórica (normal climatológica) mais cinco graus célsius. 
 
-#### Limitações {.unnumbered}
+::: {.callout-tip}
+Uma normal climatológica é uma medida de referência de longo prazo, calculada como a média aritmética dos valores de um indicador climático observado em um intervalo de 30 anos. 
 
-#### Fontes de dados {.unnumbered}
+$$
+\text{Normal} = \frac{1}{30} \sum_{i=1}^{30} X_i
+$$
 
-#### Métodos de cálculo {.unnumbered}
-
-#### Categorias sugeridas para análise {.unnumbered}
-
-### Ondas de frio
-
-#### Conceituação {.unnumbered}
+As normais climatológicas são calculadas para intervalos de anos como 1961–1990, 1971–2000, 1981–2010, 1991–2020. 
+:::
 
 #### Interpretação {.unnumbered}
 
+O indicador de ondas de calor permite identificar eventos extremos de temperatura que representam riscos significativos à saúde humana, especialmente para populações vulneráveis (idosos, crianças, pessoas com doenças crônicas e trabalhadores expostos ao calor). Valores elevados do indicador indicam maior exposição da população a temperaturas perigosas e possível aumento da mortalidade e morbidade associadas a causas cardiovasculares, respiratórias e renais.
+
 #### Usos {.unnumbered}
+
+O indicador de ondas de calor é utilizado em estudos de saúde principalmente em sistemas de alerta precoce, na vigilância em saúde e em análises epidemiológicas, especialmente vinculada a eventos de saúde como atendimentos de urgência, internações e mortalidade. 
 
 #### Limitações {.unnumbered}
 
+Como existem diversas definições específicas, com diferentes quantidade mínimas de dias e diferentes valores de referência, a comparação do indicador deve ser feita com cautela.
+
 #### Fontes de dados {.unnumbered}
 
-#### Métodos de cálculo {.unnumbered}
+Indicadores de onda de calor podem ser obtidos à partir de dados de organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.
 
-#### Categorias sugeridas para análise {.unnumbered}
+
 
 ### Chuvas persistentes
 
 #### Conceituação {.unnumbered}
 
+Chuvas persistentes são eventos caracterizados por precipitação contínua ou recorrente ao longo de vários dias consecutivos, frequentemente resultando em acúmulo significativo de chuva em um curto período.
+
+O indicador pode ser definido como a quantidade de dias consecutivos com valores acumulados de precipitação acima de um valor de referência. Este valor pode ser definido *a priori* ou usar um valor relativo a uma média histórica (normal climatológica).
+
 #### Interpretação {.unnumbered}
+
+Valores elevados do indicador indicam a ocorrência de períodos prolongados de precipitação, que podem gerar saturação do solo, inundações graduais, escorregamentos e aumento do risco de doenças relacionadas à água, como leptospirose e diarreias. A persistência da chuva, mais do que a intensidade isolada, é um fator crítico para avaliar vulnerabilidades territoriais e impactos à saúde pública, à infraestrutura e à produção agrícola.
 
 #### Usos {.unnumbered}
 
+Este indicador é utilizado na vigilância em saúde ambiental, na gestão de riscos a desastres, no planejamento urbano e territorial e em análises epidemiológicas.
+
 #### Limitações {.unnumbered}
+
+Como existem diversas definições específicas, com diferentes quantidade mínimas de dias e diferentes valores de referência, a comparação do indicador deve ser feita com cautela.
 
 #### Fontes de dados {.unnumbered}
 
-#### Métodos de cálculo {.unnumbered}
-
-#### Categorias sugeridas para análise {.unnumbered}
+Indicadores de chuvas persistentes podem ser obtidos à partir de dados de organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.
