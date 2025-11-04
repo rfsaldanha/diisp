@@ -1,4 +1,4 @@
-# Harmonização de indicadores em saúde
+# Harmonização de indicadores
 
 Estudos em Saúde Pública demandam uma grande quantidade de indicadores, provenientes de diversas áreas, para melhor refletir a realidade estudada, incluindo diversos aspectos contextuais sobre o processo saúde, doença e cuidado.
 
@@ -56,4 +56,4 @@ Neste caso de harmonização de indicadores, o indicador de superfície espacial
 
 Com esta sobreposição, observa-se quais *pixels* da superfície intersectam um elemento da malha. Considerando o conjunto de valores do indicador dos *pixels* que intersectam um dos elementos da malha, é aplicada uma estatística resumo, como a média. Este procedimento é denominado "estatística zonal" em *softwares* de geoprocessamento e Sistemas de Informação Geográfica (SIGs).
 
-![Procedimento de estatística zonal](assets/img/zonal_statistics.png)
+![Procedimento de estatística zonal. @saldanhaZonalStatisticsDatasets2024](assets/img/zonal_statistics.png)

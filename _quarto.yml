@@ -21,6 +21,7 @@ book:
     - index.qmd
     - intro.qmd
     - indi.qmd
+    - harmo.qmd
     - socio.qmd # Sociodemográficos
     - ambi.qmd  # Ambientais (cobertura e uso do solo)
     - clima.qmd # Climáticos e atmosféricos

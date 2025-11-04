@@ -2,7 +2,7 @@
 
 Indicadores climáticos são de grande importância para o estudo e contextualização de um conjunto de doenças cuja incidência e mecanismos de transmissão são afetados por fenômenos atmosféricos e climáticos. Este conjunto de doenças pode ser denominado como "Doenças Sensíveis ao Clima".
 
-::: {.callout-note}
+::: callout-note
 Usa-se o termo "tempo" para descrever as condições meteorológicas atuais ou de um passado ou futuro de curto prazo, dos próximos dias ou semanas. Já o termo "clima" é empregado para se descrever as condições meteorológicas observadas ou previstas para longo períodos, em geral, acima de 30 anos.
 :::
 
@@ -10,7 +10,7 @@ A relação de entre clima e saúde pode se dar de modo direto ou indireto, a de
 
 Já a relação indireta entre clima e saúde se dá por mecanismos intermediários, como a propagação de vetores. Por exemplo, condições meteorológicas específicas podem favorecer a proliferação de vetores de doenças, como mosquitos e ratos. Este aumento da população vetorial, por sua vez, pode levar a um aumento da circulação de vírus e bactérias, desencadeando por fim um aumento da incidência de doenças infecciosas. Este é o caso, por exemplo, de arboviroses como Dengue, Zika e Chikungunya.
 
-::: {.callout-tip}
+::: callout-tip
 A relação entre variáveis climáticas e a incidência de doenças tem uma defasagem temporal: as condições climáticas do *passado* são responsáveis por afetar a incidência de doenças no *futuro*. Isto tem relação com a dinâmica de cada vetor, incluindo os tempos necessários para o desenvolvimento do vetor, tempo de incubação e transmissão.
 :::
 
@@ -18,35 +18,37 @@ O estudo de doenças sensíveis ao clima pode ser realizado observando indicador
 
 ## Indicadores nominais
 
-Indicadores climáticos nominais são constituídos pela observação direta do fenômeno atmosférico/climático em questão. 
+Indicadores climáticos nominais são constituídos pela observação direta do fenômeno atmosférico/climático em questão.
 
 ### Temperatura do ar
 
+![Temperatura mínima média em junho de 2024, TerraClimate.](assets/img/temp_min_2024_06.png){fig-align="center"}
+
 #### Conceituação {.unnumbered}
 
-A temperatura do diz respeito ao grau de agitação das moléculas no ar, onde um grau maior de agitação conduz a uma maior temperatura e um grau menor de agitação a uma menor temperatura. Desta forma, a temperatura é uma medida escalar arbitrária. 
+A temperatura do diz respeito ao grau de agitação das moléculas no ar, onde um grau maior de agitação conduz a uma maior temperatura e um grau menor de agitação a uma menor temperatura. Desta forma, a temperatura é uma medida escalar arbitrária.
 
-A temperatura do ar pode ser expressada em diversas unidades, como Kelvin, Graus Célsius e Fahrenheit. A temperatura de 0 Kelvin equivale teoricamente a um estado de nenhuma agitação das moléculas do ar. Já a temperatura de 272,15 Kelvin equivale a 0 graus célsius ou 32 fahrenheit. 
+A temperatura do ar pode ser expressada em diversas unidades, como Kelvin, Graus Célsius e Fahrenheit. A temperatura de 0 Kelvin equivale teoricamente a um estado de nenhuma agitação das moléculas do ar. Já a temperatura de 272,15 Kelvin equivale a 0 graus célsius ou 32 fahrenheit.
 
 A temperatura do ar pode ser medida através de instrumentos analógicos como o termômetro de mercúrio, instrumentos digitais com sensores específicos ou inferida à partir de sensores à bordo de satélites meteorológicos.
 
 A medição da temperatura por instrumentos, sejam analógicos ou digitais, geralmente é feita em "Estações meteorológicas", que agrupam um certo número de instrumentos e sensores. Em geral, os instrumentos de mensuração da temperatura ficam armazenados em um tipo de armário, denominado "Abrigo de Stervenson". A construção desse "abrigo" é padronizada internacionalmente, possibilitando a obtenção da temperatura do ar na sombra de forma padronizada.
 
-::: {.callout-tip}
+::: callout-tip
 A localização de um termômetro ou sensor de temperatura afeta diretamente as observações. Estes instrumentos, quando expostos diretamente ao sol e localizados próximos à superfícies refletivas como telhados de zinco/metal, ou próximos a materiais de alta absorvição energética como concreto e asfalto, tendem a apresentar valores significativamente mais altos do que instrumentos localizados à sombra do sol e distantes destas superfícies e materiais.
 :::
 
 #### Interpretação {.unnumbered}
 
-A interpretação de indicadores climáticos nominais deve ser feita com cautela posto que eles exprimem simplesmente o fenômeno meteorológico em questão em uma unidade direta. Por exemplo, a temperatura de 35 graus pode ser compreendida como uma temperatura muito alta por populações que vivem em zonas temperadas ou frias, ou como uma temperatura típica para populações que habitam zonas tropicais. 
+A interpretação de indicadores climáticos nominais deve ser feita com cautela posto que eles exprimem simplesmente o fenômeno meteorológico em questão em uma unidade direta. Por exemplo, a temperatura de 35 graus pode ser compreendida como uma temperatura muito alta por populações que vivem em zonas temperadas ou frias, ou como uma temperatura típica para populações que habitam zonas tropicais.
 
 #### Usos {.unnumbered}
 
 Estudos de saúde em geral observam a temperatura máxima e a temperatura mínima observadas durante um período de tempo (um dia, por exemplo). Estas duas temperaturas em conjunto exprimem bem a *amplitude térmica*, que é a diferença entre a temperatura máxima e mínima.
 
-Alguns estudos mais específicos também fracionam o dia entre períodos diurnos e noturnos, com medidas de temperatura máxima e mínima observadas para cada um desses períodos. 
+Alguns estudos mais específicos também fracionam o dia entre períodos diurnos e noturnos, com medidas de temperatura máxima e mínima observadas para cada um desses períodos.
 
-::: {.callout-tip}
+::: callout-tip
 A temperatura máxima observada em um dia costuma ocorrer no período da tarde, por volta das 15h no Brasil. Neste horário, apesar da incidência solar já estar levemente reduzida, os materiais como solo, concreto e asfalto já absorveram o máximo de energia solar possível e passam a emitir de volta esta energia acumulada para a atmosfera.
 
 Já a temperatura mínima costuma ser observada por volta das 6h, logo antes do amanhecer. Este é o momento em que a superfície terrestre permaneceu a maior parte do tempo sem incidência solar desde o pôr-do-sol, já tendo perdido toda a energia solar acumulada.
@@ -60,20 +62,24 @@ A temperatura média, apesar de usada em alguns estudos, pode ser uma medida eng
 
 Dados de temperatura podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.
 
+-   [Projeto TerraClimate](https://www.climatologylab.org/terraclimate.html).
+-   [Médias de indicadores climáticos compilados para os municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html).
+
 ### Precipitação
+
+![Precipitação acumulada em janeiro de 2024, TerraClimate.](assets/img/prec_2024_01.png){fig-align="center"}
 
 #### Conceituação {.unnumbered}
 
 A precipitação é uma medida do volume de partículas de água que se precipitam da atmosfera e atingem a superfície terrestre. Desta forma, a precipitação não diz respeito unicamente da chuva, mas também a outras formas de precipitação de água, como granizo e neve.
 
-Em geral, a precipitação é medida por um instrumento analógico denominado "pluviômetro", por sensores digitais, ou inferida à partir de sensores em satélites meteorológicos. 
-
+Em geral, a precipitação é medida por um instrumento analógico denominado "pluviômetro", por sensores digitais, ou inferida à partir de sensores em satélites meteorológicos.
 
 #### Interpretação {.unnumbered}
 
 Por convenção, a precipitação observada representa a quantidade de partículas de água precipitada em um metro quadrado de superfície, geralmente expressa em milímetros.
 
-::: {.callout-warning}
+::: callout-warning
 Apesar de ser uma medida de volume, a precipitação é expressa em milímetros (mm) para guardar correspondência direta com o valor observado na régua de um pluviômetro.
 :::
 
@@ -81,15 +87,18 @@ A precipitação é um indicador de volume acumulado por um período de tempo, p
 
 #### Usos {.unnumbered}
 
-Estudos de clima e saúde usam a precipitação como indicador principalmente quando o desenvolvimento de um vetor necessita da oferta de água, como mosquitos. 
+Estudos de clima e saúde usam a precipitação como indicador principalmente quando o desenvolvimento de um vetor necessita da oferta de água, como mosquitos.
 
 #### Limitações {.unnumbered}
 
-Chuvas são fenômenos meteorológicos que podem ser bem localizados, podendo ocorrer em um bairro e não ocorrer em um outro bairro vizinho. Desta forma, deve-se lembrar que a medida de precipitação observada por um sensor corresponde apenas a área de um metro quadrado ao seu redor. 
+Chuvas são fenômenos meteorológicos que podem ser bem localizados, podendo ocorrer em um bairro e não ocorrer em um outro bairro vizinho. Desta forma, deve-se lembrar que a medida de precipitação observada por um sensor corresponde apenas a área de um metro quadrado ao seu redor.
 
 #### Fontes de dados {.unnumbered}
 
 Dados de precipitação podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.
+
+-   [Projeto TerraClimate](https://www.climatologylab.org/terraclimate.html).
+-   [Médias de indicadores climáticos compilados para os municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html).
 
 ### Umidade relativa do ar
 
@@ -101,11 +110,11 @@ A umidade relativa do ar é um indicador do grau de saturação de quantidade de
 
 Por ser um grau de saturação, a umidade relativa do ar é uma medida expressa em percentual: 100% de umidade relativa do ar significa que uma unidade de ar não consegue absorver mais água, estando completamente saturado. Esta capacidade de saturação do ar varia conforme a temperatura e pressão, por isso se diz que a umidade do ar é relativa.
 
-A Organização Mundial da Saúde (OMS) apresenta níveis de referência para a umidade do ar relacionados a saúde humana. 
+A Organização Mundial da Saúde (OMS) apresenta níveis de referência para a umidade do ar relacionados a saúde humana.
 
 #### Usos {.unnumbered}
 
-A umidade do ar é utilizada em análises de clima e saúde quando a dinâmica vetorial é afetada por esse indicador: alguns vetores não são ativos ou são comprometidos em baixas ou altos níveis de umidade do ar. 
+A umidade do ar é utilizada em análises de clima e saúde quando a dinâmica vetorial é afetada por esse indicador: alguns vetores não são ativos ou são comprometidos em baixas ou altos níveis de umidade do ar.
 
 #### Limitações {.unnumbered}
 
@@ -114,6 +123,9 @@ A comparação da umidade relativa do ar entre regiões deve ser feita considera
 #### Fontes de dados {.unnumbered}
 
 Dados de sensação térmica podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.
+
+-   [Projeto TerraClimate](https://www.climatologylab.org/terraclimate.html).
+-   [Médias de indicadores climáticos compilados para os municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html).
 
 ### Sensação térmica
 
@@ -139,24 +151,26 @@ Diferentes grupos populacionais podem apresentar percepções de sensação tér
 
 Dados de umidade relativa do ar podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.
 
+-   [Copernicus Thermal Confort Indices](https://cds.climate.copernicus.eu/datasets/derived-utci-historical?tab=overview)
+
 ## Indicadores de eventos
 
 ### Ondas de calor
 
 #### Conceituação {.unnumbered}
 
-Ondas de calor são períodos prolongados de temperaturas anormalmente elevadas em relação às condições climatológicas médias de uma região. Existem diversas definições específicas de ondas de calor. 
+Ondas de calor são períodos prolongados de temperaturas anormalmente elevadas em relação às condições climatológicas médias de uma região. Existem diversas definições específicas de ondas de calor.
 
-De forma geral, uma onda de calor pode ser definida como uma sequência consecutiva de dias cujas temperaturas atingem valores acima de um valor de referência. A OMS, por exemplo, define como onda de calor uma sequencia de cinco dias consecutivos ou mais onde a temperatura máxima está acima da média histórica (normal climatológica) mais cinco graus célsius. 
+De forma geral, uma onda de calor pode ser definida como uma sequência consecutiva de dias cujas temperaturas atingem valores acima de um valor de referência. A OMS, por exemplo, define como onda de calor uma sequencia de cinco dias consecutivos ou mais onde a temperatura máxima está acima da média histórica (normal climatológica) mais cinco graus célsius.
 
-::: {.callout-tip}
-Uma normal climatológica é uma medida de referência de longo prazo, calculada como a média aritmética dos valores de um indicador climático observado em um intervalo de 30 anos. 
+::: callout-tip
+Uma normal climatológica é uma medida de referência de longo prazo, calculada como a média aritmética dos valores de um indicador climático observado em um intervalo de 30 anos.
 
 $$
 \text{Normal} = \frac{1}{30} \sum_{i=1}^{30} X_i
 $$
 
-As normais climatológicas são calculadas para intervalos de anos como 1961–1990, 1971–2000, 1981–2010, 1991–2020. 
+As normais climatológicas são calculadas para intervalos de anos como 1961–1990, 1971–2000, 1981–2010, 1991–2020.
 :::
 
 #### Interpretação {.unnumbered}
@@ -165,7 +179,7 @@ O indicador de ondas de calor permite identificar eventos extremos de temperatur
 
 #### Usos {.unnumbered}
 
-O indicador de ondas de calor é utilizado em estudos de saúde principalmente em sistemas de alerta precoce, na vigilância em saúde e em análises epidemiológicas, especialmente vinculada a eventos de saúde como atendimentos de urgência, internações e mortalidade. 
+O indicador de ondas de calor é utilizado em estudos de saúde principalmente em sistemas de alerta precoce, na vigilância em saúde e em análises epidemiológicas, especialmente vinculada a eventos de saúde como atendimentos de urgência, internações e mortalidade.
 
 #### Limitações {.unnumbered}
 
@@ -174,8 +188,6 @@ Como existem diversas definições específicas, com diferentes quantidade míni
 #### Fontes de dados {.unnumbered}
 
 Indicadores de onda de calor podem ser obtidos à partir de dados de organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.
-
-
 
 ### Chuvas persistentes
 
