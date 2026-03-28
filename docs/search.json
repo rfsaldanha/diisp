@@ -40,6 +40,16 @@
     ]
   },
   {
+    "objectID": "indi.html#objetivo-representacional-de-dados-e-indicadores",
+    "href": "indi.html#objetivo-representacional-de-dados-e-indicadores",
+    "title": "2  Dados e indicadores",
+    "section": "2.2 Objetivo representacional de dados e indicadores",
+    "text": "2.2 Objetivo representacional de dados e indicadores\nImportante notar que os dados não tem um significado ou interpretação intrínseca, eles são a simples medida de algo. Já os indicadores são construídos a partir dos dados visando atender um objetivo conceitual (FRØNES, 2007). Desta forma, um indicador é uma ferramenta conceitual que operacionaliza um objetivo representacional.\n\n\n\n\n\n\nImportante\n\n\n\nUm objetivo representacional é o aspecto específico de um contexto que se quer observar.\n\n\nDesta forma, diferente dos dados, um indicador é imbuído de um objetivo e um conceito adjacente, que é operacionalizado pelo seu método de cálculo (FRANCESCHINI; GALETTO; MAISANO, 2019).\nPor exemplo, um indicador sobre pobreza tem por objetivo medir um conceito abstrato de uma população. O que é pobreza? Diversas definições e conceitos podem coexistir sobre esse fenômeno e um indicador irá adotar uma delas, operacionalizando em termos práticos essa definição por meio de um método de cálculo usando diversos dados específicos. A operacionalização de um indicador é, de forma geral, limitada e incompleta. A pobreza, por exemplo, é um fenômeno complexo que se estende em várias dimensões. Assim, um indicador que observe apenas a renda da população como elemento caracterizador da pobreza, irá ignorar outros aspectos como qualidade de vida e saúde. Por outro lado, ao se considerar diversos aspectos para caracterizar um objetivo representacional, o indicador se torna mais complexo de se calcular e de se interpretar.\nAlguns indicadores podem ser operacionalizados de forma muito simples, usando até mesmo o próprio valor de um dado. Já outros indicadores, com objetivos representacionais mais abrangentes e complexos, precisam usar diversos dados e até mesmo outros indicadores em sua operacionalização, como indicadores para pobrezz, qualidade de vida e conforto climático.\nA partir do estudo e interpretação de indicadores, novas informações são geradas e, por fim, um novo conhecimento pode ser solidificado.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados e indicadores</span>"
+    ]
+  },
+  {
     "objectID": "indi.html#classificação-de-indicadores",
     "href": "indi.html#classificação-de-indicadores",
     "title": "2  Dados e indicadores",
@@ -230,16 +240,6 @@
     ]
   },
   {
-    "objectID": "ambi.html#qualidade-da-água",
-    "href": "ambi.html#qualidade-da-água",
-    "title": "5  Indicadores Ambientais",
-    "section": "5.5 Qualidade da água",
-    "text": "5.5 Qualidade da água\n\n5.5.1 Indicador\n\nConceituação\n\n\nInterpretação\n\n\nUsos\n\n\nLimitações\n\n\nFonte de dados\n\n\nMétodo de cálculo\n\n\nCategorias sugeridas para análise\nUnidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.\n\n\n\n\nMCKEE, T. B.; DOESKEN, N. J.; KLEIST, J. The Relationship of Drought Frequency and Duration to Time Scales. Proceedings of the 8th Conference on Applied Climatology. Anais...Anaheim, CA: American Meteorological Society, 1993.\n\n\nPALMER, W. C. Meteorological Drought. Washington, D.C.: U.S. Weather Bureau, 1965. Disponível em: &lt;https://www.droughtmanagement.info/literature/USWB_Meteorological_Drought_1965.pdf&gt;. Acesso em: 28 mai. 2025.\n\n\nTUCKER, C. J. Red and Photographic Infrared Linear Combinations for Monitoring Vegetation. Remote Sensing of Environment, v. 8, n. 2, p. 127–150, 1979.\n\n\nWHO Global Air Quality Guidelines: Particulate matter (PM2.5 and PM10), ozone, nitrogen dioxide, sulfur dioxide and carbon monoxide. Geneva: World Health Organization, 2021.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Indicadores Ambientais</span>"
-    ]
-  },
-  {
     "objectID": "clima.html",
     "href": "clima.html",
     "title": "6  Indicadores Climáticos",
@@ -270,36 +270,6 @@
     ]
   },
   {
-    "objectID": "inter.html",
-    "href": "inter.html",
-    "title": "7  Internet, redes sociais e outras mídias",
-    "section": "",
-    "text": "7.1 Acessibilidade da Internet\nPesquisa NIC.br Saúde.",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Internet, redes sociais e outras mídias</span>"
-    ]
-  },
-  {
-    "objectID": "inter.html#volume-de-pesquisas-em-ferramentas-de-busca",
-    "href": "inter.html#volume-de-pesquisas-em-ferramentas-de-busca",
-    "title": "7  Internet, redes sociais e outras mídias",
-    "section": "7.2 Volume de pesquisas em ferramentas de busca",
-    "text": "7.2 Volume de pesquisas em ferramentas de busca",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Internet, redes sociais e outras mídias</span>"
-    ]
-  },
-  {
-    "objectID": "inter.html#menções-em-postagens-de-redes-sociais",
-    "href": "inter.html#menções-em-postagens-de-redes-sociais",
-    "title": "7  Internet, redes sociais e outras mídias",
-    "section": "7.3 Menções em postagens de redes sociais",
-    "text": "7.3 Menções em postagens de redes sociais",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Internet, redes sociais e outras mídias</span>"
-    ]
-  },
-  {
     "objectID": "referencias.html",
     "href": "referencias.html",
     "title": "Referências",
@@ -307,26 +277,6 @@
     "text": "BRASIL. Lei nº 8.080, de 19 de setembro de 1990: dispõe sobre as\ncondições para a promoção, proteção e recuperação da saúde, a\norganização e o funcionamento dos serviços correspondentes e dá outras\nprovidências., 1990. Disponível em: &lt;https://www.planalto.gov.br/ccivil_03/leis/l8080.htm&gt;\n\n\nBREILH, J. Epidemiologia crı́tica:\nCiência emancipadora e interculturalidade. Rio de\nJaneiro: Fiocruz, 2006.\n\n\nBUSS, P. M.; PELLEGRINI FILHO, A. A saúde e seus\ndeterminantes sociais. Physis: Revista de Saúde\nColetiva, v. 17, n. 1, p. 77–93, 2007.\n\n\nCOMMISSION ON SOCIAL DETERMINANTS OF HEALTH. Closing the Gap in a\nGeneration: Health Equity through Action on the Social Determinants of\nHealth. Geneva: World Health Organization, 2008.\n\n\nCONFERÊNCIA NACIONAL DE SAÚDE. Relatório Final da 8ª Conferência\nNacional de Saúde. Brasília, DF: Ministério da Saúde, 1986.\nDisponível em: &lt;https://bvsms.saude.gov.br/bvs/publicacoes/8_conferencia_nacional_saude_relatorio_final.pdf&gt;.\n\n\nCOSTA, M. A. et al. Vulnerabilidade social no Brasil: Conceitos,\nmétodos e primeiros resultados para municípios e regiões metropolitanas\nbrasileiras. Rio de Janeiro: Ipea, 2018.\n\n\nFRANCESCHINI, F.; GALETTO, M.; MAISANO, D. From\nMeasurement Theory to Indicator Theory.\nEm: FRANCESCHINI, F.; GALETTO, M.; MAISANO, D. (Eds.). Designing\nPerformance Measurement Systems. Cham: Springer\nInternational Publishing, 2019. p. 49–83.\n\n\nFRØNES, I. Theorizing Indicators:\nOn Indicators, Signs and\nTrends. Social Indicators Research, v.\n83, n. 1, p. 5–23, ago. 2007.\n\n\nINTERGOVERNMENTAL PANEL ON CLIMATE CHANGE. Fact Sheet —\nHealth. AR6 Working Group II: Impacts, Adaptation and\nVulnerability, 2023. Disponível em: &lt;https://www.ipcc.ch/report/ar6/wg2/downloads/outreach/IPCC_AR6_WGII_FactSheet_Health.pdf&gt;\n\n\nIPS BRASIL. Índice de Progresso Social Brasil 2025:\nQualidade de Vida Nos 5.570 Municípios Do\nBrasil. Belém: Instituto do Homem e Meio Ambiente\nda Amazônia, 2025.\n\n\nJANNUZZI, P. DE M. Indicadores Sociais No Brasil:\nConceitos, Fontes de Dados e Aplicações. 3. ed. [s.l.] Alínea,\n2006.\n\n\nJANNUZZI, P. DE M. Indicadores sociais no Brasil: conceitos,\nfontes de dados e aplicações. 6. ed. Campinas, SP: Editora\nAlínea, 2017.\n\n\nLAWSON, A. B. Bayesian Disease Mapping: Hierarchical Modeling in\nSpatial Epidemiology. 3. ed. Boca Raton: CRC Press, 2018.\n\n\nMCKEE, T. B.; DOESKEN, N. J.; KLEIST, J. The Relationship of\nDrought Frequency and Duration to Time Scales. Proceedings of\nthe 8th Conference on Applied Climatology.\nAnais...Anaheim, CA: American Meteorological Society,\n1993.\n\n\nMEDRONHO, R. et al. (EDS.). Epidemiologia. 2. ed. São\nPaulo: Atheneu, 2009.\n\n\nMINISTÉRIO DA SAÚDE. Abordagens Espaciais Na Saúde\nPública. [s.l: s.n.]. v. 1\n\n\nPALMER, W. C. Meteorological Drought. Washington, D.C.:\nU.S. Weather Bureau, 1965. Disponível em: &lt;https://www.droughtmanagement.info/literature/USWB_Meteorological_Drought_1965.pdf&gt;.\nAcesso em: 28 maio. 2025.\n\n\nPAN AMERICAN HEALTH ORGANIZATION. Intersectoral Action / Health\nin All Policies., 2026. Disponível em: &lt;https://www.paho.org/en/topics/intersectoral-action-health-all-policies&gt;\n\n\nREDE INTERAGENCIAL DE INFORMAÇÃO PARA A SAÚDE. Indicadores\nBásicos Para a Saúde No Brasil: Conceitos e\nAplicações. Brasília: Organização Pan-Americana da Saúde, 2008.\n\n\nSALDANHA, R. et al. Zonal\nStatistics Datasets of Climate Indicators for Brazilian\nMunicipalities. Environmental Data Science, v. 3,\np. e2, 2024.\n\n\nTUCKER, C. J. Red\nand Photographic Infrared Linear Combinations for Monitoring\nVegetation. Remote Sensing of Environment, v. 8, n.\n2, p. 127–150, 1979.\n\n\nWHO Global\nAir Quality Guidelines: Particulate matter (PM2.5 and\nPM10), ozone, nitrogen dioxide, sulfur dioxide and carbon\nmonoxide. Geneva: World Health Organization, 2021.\n\n\nWORLD HEALTH ORGANIZATION. Constitution of the World Health\nOrganization., 1948. Disponível em: &lt;https://www.who.int/about/governance/constitution&gt;\n\n\nWORLD HEALTH ORGANIZATION. Ottawa Charter for Health\nPromotion. First International Conference on Health Promotion,\nOttawa, 21 November 1986, 1986. Disponível em: &lt;https://www.afro.who.int/sites/default/files/2017-06/hpr%20ottawa_charter.pdf&gt;\n\n\nWORLD HEALTH ORGANIZATION. Operational Framework for Building\nClimate Resilient and Low Carbon Health Systems., 2023.\nDisponível em: &lt;https://www.who.int/publications/i/item/9789240081888&gt;",
     "crumbs": [
       "Referências"
-    ]
-  },
-  {
-    "objectID": "indi.html#classificação-de-variáveis",
-    "href": "indi.html#classificação-de-variáveis",
-    "title": "2  Dados e indicadores",
-    "section": "2.2 Classificação de variáveis",
-    "text": "2.2 Classificação de variáveis\nAs colunas de dados em uma tabela, também chamadas de variáveis, podem ser classificadas da seguinte forma:\n\nVariáveis quantitativas: características que podem ser medidas em uma escala quantitativa, aporesentando valores numéricos.\n\nVariáveis discretas: podem assumir o valor de um número inteiro, como contagens.\nVariáveis contínuas: podem assumir o valor de uma escala contínua (um número real), onde valores fracionais fazem sentido. São geralmente medidas por instrumentos ou resultado de cálculo.\n\nVariáveis qualitativas (ou categóricas): características que são representadas por categorias ou rótulos\n\nVariáveis nominais: não existe ordenação entre as categorias, como sexo, cor e município de residência\nVariáveis ordinais: existe ordenação entre as categorias, como renda, faixa etária e educação.\n\n\n\n\n\n\n\nflowchart LR\n  vq(Variáveis quantitativas) --&gt; vd(Variáveis discretas)\n  vq --&gt; vc(Variáveis contínuas)\n  vqq(Variáveis qualitativas) --&gt; vn(Variáveis nominais)\n  vqq --&gt; vo(Variáveis ordinais)\n\n\n\n\n\n\n\n\n\n\n\n\nDica\n\n\n\nObserve que uma variável pode apresentar números mas ser, por definição, uma variável categórica. Exemplos: número do CPF, número do RG, código do município, código da UF, entre outras.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados e indicadores</span>"
-    ]
-  },
-  {
-    "objectID": "indi.html#objetivo-representacional-de-dados-e-indicadores",
-    "href": "indi.html#objetivo-representacional-de-dados-e-indicadores",
-    "title": "2  Dados e indicadores",
-    "section": "2.2 Objetivo representacional de dados e indicadores",
-    "text": "2.2 Objetivo representacional de dados e indicadores\nImportante notar que os dados não tem um significado ou interpretação intrínseca, eles são a simples medida de algo. Já os indicadores são construídos a partir dos dados visando atender um objetivo conceitual (FRØNES, 2007). Desta forma, um indicador é uma ferramenta conceitual que operacionaliza um objetivo representacional.\n\n\n\n\n\n\nImportante\n\n\n\nUm objetivo representacional é o aspecto específico de um contexto que se quer observar.\n\n\nDesta forma, diferente dos dados, um indicador é imbuído de um objetivo e um conceito adjacente, que é operacionalizado pelo seu método de cálculo (FRANCESCHINI; GALETTO; MAISANO, 2019).\nPor exemplo, um indicador sobre pobreza tem por objetivo medir um conceito abstrato de uma população. O que é pobreza? Diversas definições e conceitos podem coexistir sobre esse fenômeno e um indicador irá adotar uma delas, operacionalizando em termos práticos essa definição por meio de um método de cálculo usando diversos dados específicos. A operacionalização de um indicador é, de forma geral, limitada e incompleta. A pobreza, por exemplo, é um fenômeno complexo que se estende em várias dimensões. Assim, um indicador que observe apenas a renda da população como elemento caracterizador da pobreza, irá ignorar outros aspectos como qualidade de vida e saúde. Por outro lado, ao se considerar diversos aspectos para caracterizar um objetivo representacional, o indicador se torna mais complexo de se calcular e de se interpretar.\nAlguns indicadores podem ser operacionalizados de forma muito simples, usando até mesmo o próprio valor de um dado. Já outros indicadores, com objetivos representacionais mais abrangentes e complexos, precisam usar diversos dados e até mesmo outros indicadores em sua operacionalização, como indicadores para pobrezz, qualidade de vida e conforto climático.\nA partir do estudo e interpretação de indicadores, novas informações são geradas e, por fim, um novo conhecimento pode ser solidificado.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados e indicadores</span>"
     ]
   }
 ]
