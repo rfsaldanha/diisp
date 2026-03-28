@@ -405,14 +405,14 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 <p>Estudos em Saúde Pública demandam uma grande quantidade de indicadores, provenientes de diversas áreas, para melhor refletir a realidade estudada, incluindo diversos aspectos contextuais sobre o processo saúde, doença e cuidado.</p>
 <p>A diversidade de indicadores introduz um desafio extra: a necessidade de compatibilizar os indicadores de modo a permitir a sua observação e comparação simultânea.</p>
 <p>Indicadores de saúde costumam ser agregados e divulgados por unidades administrativas ou sanitárias, como taxas de incidência de doenças por bairros, municípios ou regiões de saúde (dimensão espacial) e por dias, semanas epidemiológicas ou meses (dimensão temporal). Indicadores sociodemográficos seguem estruturas semelhantes.</p>
-<p>Já indicadores ambientais, como temperatura, precipitação, costumam ser apresentados por estação meteorológica (um ponto no espaço) ou como uma superfície espacial, com intervalos horários ou diários (dimensão temporal). Assim, para se incluir em uma mesma análise, indicadores de saúde, e indicadores de temperatura e precipitação, se faz necessário realizar um procedimento para a <em>compatibilização das escalas espaciais e temporais</em>.</p>
+<p>Já indicadores ambientais e climáticos, como temperatura e precipitação, podem ser coletados em localizações específicas, como estações meteorológicas, constituindo observações dos fenômenos climáticos em um ponto no espaço, ou coletados por sensores remotos, como satélites e drones, apresentando uma superfície espacial de observações. Assim, para se incluir em uma mesma análise, indicadores de saúde e indicadores ambientais, se faz necessário realizar um procedimento para a <em>compatibilização das escalas espaciais e temporais</em> dos indicadores.</p>
 <section id="conceito" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="conceito"><span class="header-section-number">3.1</span> Conceito</h2>
-<p>Entende-se aqui esse processo de compatibilização como “harmonização de indicadores”, onde as escalas temporais e espaciais dos indicadores são trabalhadas de modo a serem analisadas de modo interoperável.</p>
+<p>Entende-se aqui que a “harmonização de indicadores” é um processo de compatibilização, onde as escalas temporais e espaciais dos indicadores são trabalhadas de modo a serem analisadas de modo interoperável.</p>
 </section>
 <section id="operacionalização" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="operacionalização"><span class="header-section-number">3.2</span> Operacionalização</h2>
-<p>A operacionalização da harmonização de indicadores se dá através do re-cálculo dos indicadores para novas escalas espaciais e temporais, estabelecidas <em>a priori</em> considerando as necessidades do estudo. Ou seja, deve-se primeiro ponderar-se sobre qual a escala temporal e espacial adequada para o estudo, e realizar os procedimentos de harmonização de acordo com as escalas definidas.</p>
+<p>A operacionalização da harmonização de indicadores se dá através do re-cálculo dos indicadores para novas escalas espaciais e temporais, estabelecidas <em>a priori</em> considerando as necessidades do estudo. Ou seja, deve-se primeiro ponderar-se sobre qual a escala temporal e espacial adequada para o estudo e, em seguida, realizar os procedimentos de harmonização de acordo com as escalas definidas.</p>
 <p>Neste processo, indicadores de contagem podem ser somados ou divididos, mas indicadores como taxas e proporções devem ser recalculados.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -424,7 +424,7 @@ Cuidado
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>No caso de indicadores de taxas e proporções, não se deve aplicar estatísticas resumo, como média, mediada ou desvio padrão, para se obter o valor para a nova escala de análise. O indicador deve ser re-calculado inteiramente para a nova escala, considerando os novos valores de numerador e denominador.</p>
+<p>No caso de indicadores de taxas e proporções, não se deve aplicar estatísticas resumo, como média, mediada ou desvio padrão, para se obter o valor para a nova escala de análise. O indicador deve ser re-calculado inteiramente para a nova escala, considerando os novos valores de numerador e denominador adequados.</p>
 </div>
 </div>
 <section id="dimensão-temporal" class="level3" data-number="3.2.1">
@@ -435,17 +435,30 @@ Cuidado
 </section>
 <section id="dimensão-espacial" class="level3" data-number="3.2.2">
 <h3 data-number="3.2.2" class="anchored" data-anchor-id="dimensão-espacial"><span class="header-section-number">3.2.2</span> Dimensão espacial</h3>
-<p>A harmonização de indicadores na escala espacial deve ser considerar se o indicador é apresentado por pontos, por agregados em região administrativa, ou uma superfície espacial.</p>
+<p>A harmonização de indicadores na escala espacial deve considerar se o indicador é apresentado por pontos, por agregados em região administrativa, ou uma superfície espacial.</p>
 <section id="pontos-no-espaço" class="level4" data-number="3.2.2.1">
 <h4 data-number="3.2.2.1" class="anchored" data-anchor-id="pontos-no-espaço"><span class="header-section-number">3.2.2.1</span> Pontos no espaço</h4>
-<p>Caso os valores do indicador sejam apresentados como pontos no espaço (exemplo, medidas de temperatura por estação meteorológica, os valores do indicador para cada ponto de mensuração devem ser agregados para a nova dimensão pretendida (como municípios ou alguma região administrativa).</p>
+<p>Caso os valores do indicador sejam apresentados como pontos no espaço (exemplo, medidas de temperatura por estação meteorológica) os valores do indicador para cada ponto de mensuração devem ser agregados para a nova dimensão pretendida (como municípios ou alguma região administrativa).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="assets/img/estacoes_marrocos.png" class="img-fluid figure-img"></p>
 <figcaption>Estações meteorológicas no Marrocos</figcaption>
 </figure>
 </div>
-<p>A figura acima apresenta algumas estações meteorológicas localizadas no Marrocos e uma subdivisão administrativa do território. Em regiões com apenas uma estação, o valor desta estação é aplicado para a região. Em regiões com mais de uma estação, os valores das estações devem ser agregados e aplicados para a região. Regiões sem estações ficam sem valor para o indicador.</p>
+<p>A figura acima apresenta algumas estações meteorológicas localizadas no Marrocos e uma subdivisão administrativa do território. Em regiões com apenas uma estação, o valor desta estação é aplicado para toda a região. Em regiões com mais de uma estação, os valores das estações devem ser agregados e aplicados para a região. Regiões sem estações ficam sem valor para o indicador.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Indicadores escalares como temperatura e umidade relativa do ar podem ser harmonizados utilizando-se a média estatística. Já a harmonização de indicadores de volume, como precipitação, costuma-se utilizar a soma.</p>
+</div>
+</div>
 </section>
 <section id="regiões-administrativas" class="level4" data-number="3.2.2.2">
 <h4 data-number="3.2.2.2" class="anchored" data-anchor-id="regiões-administrativas"><span class="header-section-number">3.2.2.2</span> Regiões administrativas</h4>
@@ -461,13 +474,14 @@ Cuidado
 <figcaption>Temperatura máxima média em Janeiro de 2024, região do Marrocos</figcaption>
 </figure>
 </div>
-<p>Com esta sobreposição, observa-se quais <em>pixels</em> da superfície intersectam um elemento da malha. Considerando o conjunto de valores do indicador dos <em>pixels</em> que intersectam um dos elementos da malha, é aplicada uma estatística resumo, como a média. Este procedimento é denominado “estatística zonal” em <em>softwares</em> de geoprocessamento e Sistemas de Informação Geográfica (SIGs).</p>
+<p>Com esta sobreposição, observa-se quais <em>pixels</em> da superfície intersectam um elemento da malha. Considerando o conjunto de valores destes <em>pixels</em> que intersectam um dos elementos da malha, é aplicada uma estatística resumo, como a média. Este procedimento é denominado “estatística zonal” em <em>softwares</em> de geoprocessamento e Sistemas de Informação Geográfica (SIGs).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="assets/img/zonal_statistics.png" class="img-fluid figure-img"></p>
 <figcaption>Procedimento de estatística zonal. <span class="citation" data-cites="saldanhaZonalStatisticsDatasets2024">SALDANHA et al. (<a href="referencias.html#ref-saldanhaZonalStatisticsDatasets2024" role="doc-biblioref">2024</a>)</span></figcaption>
 </figure>
 </div>
+<p>A harmonização constitui uma etapa fundamental no processo de compatibilização indicadores, garantindo que diferentes variáveis possam ser analisadas de forma integrada e coerente. Esse processo envolve o ajuste e a padronização dos indicadores para que estejam alinhados em termos de escala temporal e espacial, permitindo comparações e análises consistentes. Ao assegurar essa compatibilidade, a harmonização viabiliza a integração de múltiplas fontes de dados e amplia a capacidade de interpretar fenômenos complexos, especialmente em estudos que articulam diferentes dimensões, como os determinantes sociais, ambientais e de saúde.</p>
 
 
 <div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list" style="display: none">
