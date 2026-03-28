@@ -1,4 +1,4 @@
-# Climáticos
+# Indicadores Climáticos
 
 Indicadores climáticos são de grande importância para o estudo e contextualização de um conjunto de doenças cuja incidência e mecanismos de transmissão são afetados por fenômenos atmosféricos e climáticos. Este conjunto de doenças pode ser denominado como "Doenças Sensíveis ao Clima".
 

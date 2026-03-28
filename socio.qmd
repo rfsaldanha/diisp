@@ -1,4 +1,4 @@
-# Sociodemográficos
+# Indicadores Sociodemográficos
 
 Indicadores sociodemográficos desempenham um papel fundamental nas pesquisas de Saúde Pública, pois possibilitam uma compreensão mais abrangente dos determinantes sociais da saúde, das desigualdades sociais e suas repercussões na saúde das populações. Esses indicadores, que incluem variáveis como renda, escolaridade, ocupação, trabalho e moradia, são essenciais para identificar grupos vulneráveis, orientar políticas públicas e alocar recursos de forma mais equitativa. A utilização de indicadores socioeconômicos fortalece a abordagem multidimensional da saúde, promovendo uma análise dos determinantes sociais que influenciam o bem-estar coletivo.
 
