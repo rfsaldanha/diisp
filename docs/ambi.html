@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -379,12 +414,6 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./inter.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Internet, redes sociais e outras mídias</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./referencias.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Referências</span></a>
   </div>
@@ -401,32 +430,22 @@ window.Quarto = {
   <ul>
   <li><a href="#solo" id="toc-solo" class="nav-link active" data-scroll-target="#solo"><span class="header-section-number">5.1</span> Solo</a>
   <ul class="collapse">
-  <li><a href="#taxa-de-densidade-populacional" id="toc-taxa-de-densidade-populacional" class="nav-link" data-scroll-target="#taxa-de-densidade-populacional"><span class="header-section-number">5.1.1</span> Taxa de Densidade Populacional</a></li>
-  <li><a href="#índice-de-permeabilização" id="toc-índice-de-permeabilização" class="nav-link" data-scroll-target="#índice-de-permeabilização"><span class="header-section-number">5.1.2</span> Índice de Permeabilização</a></li>
-  <li><a href="#uso-do-solo-por-categoria" id="toc-uso-do-solo-por-categoria" class="nav-link" data-scroll-target="#uso-do-solo-por-categoria"><span class="header-section-number">5.1.3</span> Uso do solo por categoria</a></li>
-  <li><a href="#cobertura-do-solo-por-categoria" id="toc-cobertura-do-solo-por-categoria" class="nav-link" data-scroll-target="#cobertura-do-solo-por-categoria"><span class="header-section-number">5.1.4</span> Cobertura do solo por categoria</a></li>
+  <li><a href="#taxa-de-densidade-demográfica" id="toc-taxa-de-densidade-demográfica" class="nav-link" data-scroll-target="#taxa-de-densidade-demográfica"><span class="header-section-number">5.1.1</span> Taxa de Densidade Demográfica</a></li>
+  <li><a href="#uso-do-solo-por-categoria" id="toc-uso-do-solo-por-categoria" class="nav-link" data-scroll-target="#uso-do-solo-por-categoria"><span class="header-section-number">5.1.2</span> Uso do solo por categoria</a></li>
+  <li><a href="#cobertura-do-solo-por-categoria" id="toc-cobertura-do-solo-por-categoria" class="nav-link" data-scroll-target="#cobertura-do-solo-por-categoria"><span class="header-section-number">5.1.3</span> Cobertura do solo por categoria</a></li>
   </ul></li>
   <li><a href="#seca" id="toc-seca" class="nav-link" data-scroll-target="#seca"><span class="header-section-number">5.2</span> Seca</a>
   <ul class="collapse">
   <li><a href="#índice-de-precipitação-padronizado" id="toc-índice-de-precipitação-padronizado" class="nav-link" data-scroll-target="#índice-de-precipitação-padronizado"><span class="header-section-number">5.2.1</span> Índice de Precipitação Padronizado</a></li>
   <li><a href="#índice-de-severidade-de-seca-de-palmer" id="toc-índice-de-severidade-de-seca-de-palmer" class="nav-link" data-scroll-target="#índice-de-severidade-de-seca-de-palmer"><span class="header-section-number">5.2.2</span> Índice de Severidade de Seca de Palmer</a></li>
-  <li><a href="#índice-integrado-de-seca" id="toc-índice-integrado-de-seca" class="nav-link" data-scroll-target="#índice-integrado-de-seca"><span class="header-section-number">5.2.3</span> Índice Integrado de Seca</a></li>
   </ul></li>
   <li><a href="#vegetação" id="toc-vegetação" class="nav-link" data-scroll-target="#vegetação"><span class="header-section-number">5.3</span> Vegetação</a>
   <ul class="collapse">
   <li><a href="#ndvi-normalized-difference-vegetation-index" id="toc-ndvi-normalized-difference-vegetation-index" class="nav-link" data-scroll-target="#ndvi-normalized-difference-vegetation-index"><span class="header-section-number">5.3.1</span> NDVI – Normalized Difference Vegetation Index</a></li>
-  <li><a href="#evi-enhanced-vegetation-index" id="toc-evi-enhanced-vegetation-index" class="nav-link" data-scroll-target="#evi-enhanced-vegetation-index"><span class="header-section-number">5.3.2</span> EVI – Enhanced Vegetation Index</a></li>
-  <li><a href="#gvi-green-view-index" id="toc-gvi-green-view-index" class="nav-link" data-scroll-target="#gvi-green-view-index"><span class="header-section-number">5.3.3</span> GVI – Green View Index</a></li>
   </ul></li>
   <li><a href="#poluição-do-ar" id="toc-poluição-do-ar" class="nav-link" data-scroll-target="#poluição-do-ar"><span class="header-section-number">5.4</span> Poluição do ar</a>
   <ul class="collapse">
   <li><a href="#material-particulado-fino-textpm_25" id="toc-material-particulado-fino-textpm_25" class="nav-link" data-scroll-target="#material-particulado-fino-textpm_25"><span class="header-section-number">5.4.1</span> Material particulado fino (<span class="math inline">\(\text{PM}_{2,5}\)</span>)</a></li>
-  <li><a href="#dióxido-de-nitrogênio-textno_2" id="toc-dióxido-de-nitrogênio-textno_2" class="nav-link" data-scroll-target="#dióxido-de-nitrogênio-textno_2"><span class="header-section-number">5.4.2</span> Dióxido de nitrogênio (<span class="math inline">\(\text{NO}_{2}\)</span>)</a></li>
-  <li><a href="#monóxido-de-carbono-textco" id="toc-monóxido-de-carbono-textco" class="nav-link" data-scroll-target="#monóxido-de-carbono-textco"><span class="header-section-number">5.4.3</span> Monóxido de carbono (<span class="math inline">\(\text{CO}\)</span>)</a></li>
-  </ul></li>
-  <li><a href="#qualidade-da-água" id="toc-qualidade-da-água" class="nav-link" data-scroll-target="#qualidade-da-água"><span class="header-section-number">5.5</span> Qualidade da água</a>
-  <ul class="collapse">
-  <li><a href="#indicador" id="toc-indicador" class="nav-link" data-scroll-target="#indicador"><span class="header-section-number">5.5.1</span> Indicador</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -454,19 +473,20 @@ window.Quarto = {
 </header>
 
 
-<p>Indicadores ambientais são de grande importância para análises de saúde pública, pois permitem a identificação e o monitoramento de fatores ambientais que influenciam diretamente o bem-estar das populações. Esses indicadores, que incluem variáveis como uso e ocupação do solo, umidade e seca, vegetação e poluição do ar e da água, fornecem subsídios para a formulação de políticas públicas e intervenções preventivas mais eficazes. Ao correlacionar indicadores ambientais com eventos de saúde, é possível realizar ações direcionadas para a redução de riscos e promoção da saúde. Dessa forma, o uso sistemático e integrado de indicadores ambientais fortalece a vigilância em saúde, contribui para a equidade no acesso a ambientes saudáveis e subsidia decisões baseadas em evidências científicas.</p>
+<p>Indicadores ambientais desempenham papel central na análise da saúde pública ao possibilitarem a identificação, o monitoramento e a compreensão dos fatores ambientais que influenciam o bem-estar das populações. Variáveis como uso e cobertura do solo, condições de umidade e seca, dinâmica da vegetação e níveis de poluição do ar e da água permitem caracterizar exposições e contextos territoriais de risco. Quando integrados a dados de saúde, esses indicadores ampliam a capacidade de análise, favorecendo a identificação de padrões, a antecipação de agravos e o direcionamento de ações preventivas. Além disso, fornecem base empírica para a formulação de políticas públicas mais eficazes e territorialmente orientadas. Assim, o uso sistemático e integrado de indicadores ambientais fortalece a vigilância em saúde, contribui para a redução de desigualdades e apoia a tomada de decisão fundamentada em evidências científicas.</p>
+<p>Este capítulo apresenta alguns principais indicadores ambientais de interesse para a saúde pública.</p>
 <section id="solo" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="solo"><span class="header-section-number">5.1</span> Solo</h2>
 <p>Indicadores sobre uso e ocupação do solo permitem determinar quais as condições ambientais que as populações estão expostas, evidenciando questões como adensamento urbano, ocupação desordenada, vulnerabilidade a desastres e escassez de áreas verdes. Estes fatores tem grande influencia na saúde humana, afetando a qualidade do ar e do solo, o conforto térmico e o bem-estar psicológico.</p>
-<section id="taxa-de-densidade-populacional" class="level3" data-number="5.1.1">
-<h3 data-number="5.1.1" class="anchored" data-anchor-id="taxa-de-densidade-populacional"><span class="header-section-number">5.1.1</span> Taxa de Densidade Populacional</h3>
+<section id="taxa-de-densidade-demográfica" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="taxa-de-densidade-demográfica"><span class="header-section-number">5.1.1</span> Taxa de Densidade Demográfica</h3>
 <section id="conceituação" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="conceituação">Conceituação</h4>
-<p>Relação entre o número de habitantes e a área geográfica ocupada, expressa geralmente em habitantes por quilômetro quadrado (hab/km²).</p>
+<p>Relação entre o número de habitantes e a área geográfica, expressa geralmente em habitantes por quilômetro quadrado (hab/km²).</p>
 </section>
 <section id="interpretação" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="interpretação">Interpretação</h4>
-<p>A densidade populacional está associada à demanda por serviços de saúde, infraestrutura, saneamento e transporte. Altas densidades podem favorecer a propagação de doenças transmissíveis, aumentar a poluição e reduzir a qualidade de vida, enquanto baixas densidades podem dificultar o acesso a serviços básicos.</p>
+<p>A densidade demográfica ou populacional está associada à demanda por serviços de saúde, infraestrutura, saneamento e transporte. Altas densidades podem favorecer a propagação de doenças transmissíveis, aumentar a poluição e reduzir a qualidade de vida, enquanto baixas densidades podem dificultar o acesso a serviços básicos.</p>
 </section>
 <section id="usos" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="usos">Usos</h4>
@@ -495,70 +515,24 @@ window.Quarto = {
 <p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
 </section>
 </section>
-<section id="índice-de-permeabilização" class="level3" data-number="5.1.2">
-<h3 data-number="5.1.2" class="anchored" data-anchor-id="índice-de-permeabilização"><span class="header-section-number">5.1.2</span> Índice de Permeabilização</h3>
-<section id="conceituação-1" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceituação-1">Conceituação</h4>
-<p>Representa a proporção da superfície de um terreno ou área urbana que permite a infiltração de água no solo, em relação à sua área total.</p>
-</section>
-<section id="interpretação-1" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="interpretação-1">Interpretação</h4>
-<p>O índice de permeabilização está diretamente relacionado ao controle do escoamento superficial, prevenção de enchentes e melhoria da qualidade da água. Superfícies permeáveis permitem a recarga de aquíferos, reduzem o acúmulo de águas pluviais e contribuem para o equilíbrio térmico urbano. Sua baixa presença pode aumentar a incidência de doenças relacionadas à água contaminada, como leptospirose e diarreias, além de agravar problemas respiratórios e ocorrência de ilhas de calor.</p>
-</section>
-<section id="usos-1" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="usos-1">Usos</h4>
-<ul>
-<li>Planejamento urbano e ambiental.</li>
-<li>Elaboração de políticas de uso e ocupação do solo.</li>
-<li>Avaliação de riscos hidrológicos e climáticos.</li>
-<li>Projetos de drenagem urbana sustentável.</li>
-<li>Gestão de áreas verdes e infraestrutura verde.</li>
-</ul>
-</section>
-<section id="limitações-1" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="limitações-1">Limitações</h4>
-<ul>
-<li>Pode não refletir a capacidade real de infiltração, pois desconsidera características do solo como compactação e tipo de cobertura vegetal.</li>
-<li>Acurácia limitada em áreas com ocupação irregular ou mudanças rápidas de uso do solo.</li>
-</ul>
-</section>
-<section id="fonte-de-dados-1" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-1">Fonte de dados</h4>
-<ul>
-<li>Imagens de satélite.</li>
-<li>Cadastros urbanos e mapas de uso e cobertura do solo.</li>
-</ul>
-</section>
-<section id="método-de-cálculo-1" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-1">Método de cálculo</h4>
-<p><span class="math display">\[
-\text{Índice de Permeabilização} = \frac{\text{Área permeável}}{\text{Área total}} \times 100
-\]</span></p>
-<p>Onde a área permeável corresponde à superfície do solo que permite a infiltração de água (jardins, áreas verdes, solo exposto).</p>
-</section>
-<section id="categorias-sugeridas-para-análise-1" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-1">Categorias sugeridas para análise</h4>
-<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
-</section>
-</section>
-<section id="uso-do-solo-por-categoria" class="level3" data-number="5.1.3">
-<h3 data-number="5.1.3" class="anchored" data-anchor-id="uso-do-solo-por-categoria"><span class="header-section-number">5.1.3</span> Uso do solo por categoria</h3>
+<section id="uso-do-solo-por-categoria" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="uso-do-solo-por-categoria"><span class="header-section-number">5.1.2</span> Uso do solo por categoria</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="assets/img/mapbiomas_uso.png" class="img-fluid figure-img"></p>
 <figcaption>Mapa de uso do solo, MapBiomas, 2024.</figcaption>
 </figure>
 </div>
-<section id="conceituação-2" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceituação-2">Conceituação</h4>
+<section id="conceituação-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-1">Conceituação</h4>
 <p>Classificação e quantificação das diferentes formas de utilização da superfície terrestre por atividades humanas, como moradia, agricultura, indústria, comércio, áreas verdes, infraestrutura e áreas institucionais. Ele permite identificar como os espaços são organizados e utilizados dentro de uma área geográfica específica.</p>
 </section>
-<section id="interpretação-2" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="interpretação-2">Interpretação</h4>
+<section id="interpretação-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-1">Interpretação</h4>
 <p>O uso do solo influencia diretamente as condições ambientais e sanitárias de uma região. Ocupações inadequadas podem resultar em exposição a riscos como contaminação por resíduos, poluição atmosférica, alagamentos, e proliferação de vetores de doenças. O acesso a áreas verdes, serviços públicos e infraestrutura adequada, refletido no uso do solo, está associado a melhores condições de saúde física e mental.</p>
 </section>
-<section id="usos-2" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="usos-2">Usos</h4>
+<section id="usos-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-1">Usos</h4>
 <ul>
 <li>Planejamento urbano e ordenamento territorial.</li>
 <li>Avaliação de impactos ambientais.</li>
@@ -567,25 +541,16 @@ window.Quarto = {
 <li>Monitoramento da expansão urbana e uso sustentável do território.</li>
 </ul>
 </section>
-<section id="limitações-2" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="limitações-2">Limitações</h4>
+<section id="limitações-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-1">Limitações</h4>
 <ul>
 <li>Pode não refletir a qualidade do uso ou a intensidade da atividade (ex: área residencial subutilizada ou superlotada)</li>
 <li>Classificações podem variar conforme a metodologia adotada.</li>
 <li>Nem sempre identifica usos mistos ou informais do solo (como moradia em áreas industriais ou invasões).</li>
 </ul>
 </section>
-<section id="fonte-de-dados-2" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-2">Fonte de dados</h4>
-<ul>
-<li>Imagens de satélite</li>
-<li>Cadastros urbanos</li>
-<li><a href="https://brasil.mapbiomas.org">MapBiomas</a></li>
-<li><a href="https://www.terraclass.gov.br">INPE TerraClass</a></li>
-</ul>
-</section>
-<section id="método-de-cálculo-2" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-2">Método de cálculo</h4>
+<section id="método-de-cálculo-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-1">Método de cálculo</h4>
 <p>O indicador de uso do solo pode ser expresso em termos percentuais ou absolutos da área ocupada por cada tipo de uso em relação à área total analisada. O cálculo é feito com base em classificação de imagens de satélite, por meio de técnicas de sensoriamento remoto e análise multiespectral.</p>
 <p><span class="math display">\[
 \text{Uso do solo} = \frac{\text{Área de uso específico}}{\text{Área total}} \times 100
@@ -604,21 +569,60 @@ window.Quarto = {
 <li>Uso indefinido, como lotes vagos ou em transição</li>
 </ul>
 </section>
-<section id="categorias-sugeridas-para-análise-2" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-2">Categorias sugeridas para análise</h4>
+<section id="categorias-sugeridas-para-análise-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-1">Categorias sugeridas para análise</h4>
 <p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
 </section>
+<section id="fonte-de-dados-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-1">Fonte de dados</h4>
+<ul>
+<li>Imagens de satélite</li>
+<li>Cadastros urbanos</li>
+<li><a href="https://brasil.mapbiomas.org">MapBiomas</a></li>
+<li><a href="https://www.terraclass.gov.br">INPE TerraClass</a></li>
+</ul>
+<p>O repositório abaixo disponibiliza uma série histórica dos percentuais de uso do solo dos municípios brasileiros.</p>
+<p><a href="https://doi.org/10.5281/zenodo.19285752"><img src="https://img.shields.io/badge/download-10.5281/zenodo.19285752-green.svg" class="img-fluid"></a></p>
+<p>Veja um exemplo prático de uso usando o R.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zendown)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(arrow)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">19285752</span>, <span class="st">"uso_solo_mapbiomas.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_parquet</span>() <span class="sc">|&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(cod_ibge <span class="sc">==</span> <span class="dv">2611606</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.numeric</span>(ano), <span class="at">y =</span> percentual)) <span class="sc">+</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>classe, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Uso do solo em Recife, PE"</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Ano"</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Percentual"</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Fonte: MapBiomas"</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ambi_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="cobertura-do-solo-por-categoria" class="level3" data-number="5.1.4">
-<h3 data-number="5.1.4" class="anchored" data-anchor-id="cobertura-do-solo-por-categoria"><span class="header-section-number">5.1.4</span> Cobertura do solo por categoria</h3>
+</section>
+<section id="cobertura-do-solo-por-categoria" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="cobertura-do-solo-por-categoria"><span class="header-section-number">5.1.3</span> Cobertura do solo por categoria</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="assets/img/mapbiomas_cobertura.png" class="img-fluid figure-img"></p>
 <figcaption>Mapa de cobertura do solo, MapBiomas, 2024.</figcaption>
 </figure>
 </div>
-<section id="conceituação-3" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceituação-3">Conceituação</h4>
+<section id="conceituação-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-2">Conceituação</h4>
 <p>Descrição da superfície terrestre com base nos elementos físicos e biológicos visíveis, como vegetação natural, corpos d’água, edificações, solo exposto e superfícies impermeáveis. Diferentemente do uso do solo, que está ligado à atividade humana, a cobertura do solo representa o que efetivamente recobre o terreno, independentemente de sua função.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -634,12 +638,12 @@ Dica
 </div>
 </div>
 </section>
-<section id="interpretação-3" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="interpretação-3">Interpretação</h4>
+<section id="interpretação-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-2">Interpretação</h4>
 <p>A cobertura do solo influencia diretamente a qualidade ambiental e, consequentemente, a saúde da população. A presença de áreas verdes, por exemplo, está associada à melhora da qualidade do ar, redução de ilhas de calor, promoção da atividade física e bem-estar mental. Por outro lado, superfícies impermeáveis e solo exposto podem aumentar o risco de enchentes, poluição e propagação de vetores de doenças.</p>
 </section>
-<section id="usos-3" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="usos-3">Usos</h4>
+<section id="usos-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-2">Usos</h4>
 <ul>
 <li>Monitoramento ambiental e urbano.</li>
 <li>Planejamento e gestão territorial.</li>
@@ -648,15 +652,15 @@ Dica
 <li>Identificação de áreas de risco para intervenções em saúde pública.</li>
 </ul>
 </section>
-<section id="limitações-3" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="limitações-3">Limitações</h4>
+<section id="limitações-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-2">Limitações</h4>
 <ul>
 <li>A distinção entre tipos de cobertura pode ser dificultada por limitações na resolução de imagens ou interferência de nuvens e sombras.</li>
 <li>Pode não refletir a dinâmica sazonal da vegetação (ex: áreas agrícolas variam ao longo do ano).</li>
 </ul>
 </section>
-<section id="fonte-de-dados-3" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-3">Fonte de dados</h4>
+<section id="fonte-de-dados-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-2">Fonte de dados</h4>
 <ul>
 <li>Imagens de satélite</li>
 <li>Cadastros urbanos</li>
@@ -664,8 +668,8 @@ Dica
 <li><a href="https://www.terraclass.gov.br">INPE TerraClass</a></li>
 </ul>
 </section>
-<section id="método-de-cálculo-3" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-3">Método de cálculo</h4>
+<section id="método-de-cálculo-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-2">Método de cálculo</h4>
 <p>O indicador pode ser expressado em termos percentuais ou absolutos da área ocupada por cada tipo de cobertura. O cálculo é feito com base em classificação de imagens de satélite, por meio de técnicas de sensoriamento remoto e análise multiespectral.</p>
 <p><span class="math display">\[
 \text{Cobertura do solo} = \frac{\text{Área de uma classe de cobertura}}{\text{Área total}} \times 100
@@ -682,8 +686,8 @@ Dica
 <li>Áreas úmidas e várzeas</li>
 </ul>
 </section>
-<section id="categorias-sugeridas-para-análise-3" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-3">Categorias sugeridas para análise</h4>
+<section id="categorias-sugeridas-para-análise-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-2">Categorias sugeridas para análise</h4>
 <p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
 </section>
 </section>
@@ -693,19 +697,19 @@ Dica
 <p>Indicadores sobre seca ajudam a antecipar, monitorar e mitigar uma série de impactos diretos e indiretos que a escassez de água pode provocar na população, impactando na transmissão de doenças, na segurança alimentar, em problemas respiratórios, doenças crônicas e na saúde mental.</p>
 <section id="índice-de-precipitação-padronizado" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="índice-de-precipitação-padronizado"><span class="header-section-number">5.2.1</span> Índice de Precipitação Padronizado</h3>
-<p>(SPI – Standardized Precipitation Index)</p>
+<p>Também chamado de <em>Standardized Precipitation Index</em> (SPI).</p>
 <p>Fonte: <span class="citation" data-cites="mckee_doesken_kleist_1993">MCKEE; DOESKEN; KLEIST (<a href="referencias.html#ref-mckee_doesken_kleist_1993" role="doc-biblioref">1993</a>)</span></p>
-<section id="conceituação-4" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceituação-4">Conceituação</h4>
+<section id="conceituação-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-3">Conceituação</h4>
 <p>Quantifica desvios da precipitação observada em relação à média histórica, em escalas temporais diversas (1, 3, 6, 12, até 48 meses).</p>
 </section>
-<section id="interpretação-4" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="interpretação-4">Interpretação</h4>
+<section id="interpretação-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-3">Interpretação</h4>
 <p>O SPI permite identificar secas meteorológicas que podem ter efeitos diretos e indiretos sobre a saúde pública. O estresse hídrico pode aumentar a vulnerabilidade de populações já em risco social, dificultando o acesso a saneamento básico e serviços de saúde.</p>
 <p>Ele é padronizado com média zero e desvio padrão um, permitindo comparações entre regiões e períodos distintos, independentemente do clima local.</p>
 </section>
-<section id="usos-4" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="usos-4">Usos</h4>
+<section id="usos-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-3">Usos</h4>
 <ul>
 <li>Monitoramento de secas meteorológicas em sistemas de alerta precoce.</li>
 <li>Planejamento de recursos hídricos e agrícolas.</li>
@@ -714,24 +718,24 @@ Dica
 <li>Subsídio à elaboração de políticas públicas e ações de mitigação.</li>
 </ul>
 </section>
-<section id="limitações-4" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="limitações-4">Limitações</h4>
+<section id="limitações-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-3">Limitações</h4>
 <ul>
 <li>Não considera a temperatura ou a evapotranspiração, o que pode superestimar a umidade disponível em regiões quentes.</li>
 <li>Baseia-se exclusivamente em precipitação, podendo não refletir diretamente o estresse hídrico no solo ou vegetação.</li>
 <li>Requer séries históricas longas e consistentes para maior confiabilidade.</li>
 </ul>
 </section>
-<section id="fonte-de-dados-4" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-4">Fonte de dados</h4>
+<section id="fonte-de-dados-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-3">Fonte de dados</h4>
 <ul>
 <li>Estações pluviométricas do INMET, ANA, CEMADEN e outras redes estaduais.</li>
 <li>Produtos de reanálise climática (como ERA5) ou dados de satélite calibrados.</li>
 <li>Bases globais como CHIRPS, GPCC, CRU e GPCP para escalas continentais ou globais.</li>
 </ul>
 </section>
-<section id="método-de-cálculo-4" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-4">Método de cálculo</h4>
+<section id="método-de-cálculo-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-3">Método de cálculo</h4>
 <ol type="1">
 <li>Coleta da série histórica de precipitação em uma escala de tempo (ex: acumulado de 3 meses).</li>
 <li>Ajuste da série a uma distribuição estatística (normalmente a distribuição gama).</li>
@@ -771,8 +775,8 @@ Dica
 </tbody>
 </table>
 </section>
-<section id="categorias-sugeridas-para-análise-4" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-4">Categorias sugeridas para análise</h4>
+<section id="categorias-sugeridas-para-análise-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-3">Categorias sugeridas para análise</h4>
 <p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
 </section>
 </section>
@@ -786,42 +790,32 @@ Dica
 <figcaption>Indicador de PDSI para os municípios brasileiros. Saúde no Semiárido, 2022.</figcaption>
 </figure>
 </div>
-<section id="conceituação-5" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceituação-5">Conceituação</h4>
+<section id="conceituação-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-4">Conceituação</h4>
 <p>Estima o balanço hídrico de uma região, combinando precipitação, evapotranspiração potencial (<span class="math inline">\(ET_0\)</span>), capacidade de armazenamento de água no solo e recarga hídrica.</p>
 </section>
-<section id="interpretação-5" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="interpretação-5">Interpretação</h4>
+<section id="interpretação-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-4">Interpretação</h4>
 <p>O PDSI apresenta uma série padronizada em que valores negativos indicam seca (–1 = seca moderada; –3 = seca severa; ≤ –4 = seca extrema) e valores positivos indicam condições úmidas.</p>
 </section>
-<section id="usos-5" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="usos-5">Usos</h4>
+<section id="usos-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-4">Usos</h4>
 <ul>
 <li>Monitoramento operacional de secas em serviços meteorológicos e sistemas de alerta precoce.</li>
 <li>Gestão de recursos hídricos (reservatórios, irrigação, hidroeletricidade).</li>
 <li>Estudos epidemiológicos que relacionam eventos de seca a eventos de saúde.</li>
 </ul>
 </section>
-<section id="limitações-5" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="limitações-5">Limitações</h4>
+<section id="limitações-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-4">Limitações</h4>
 <ul>
 <li>Utiliza coeficientes empíricos calibrados para regiões dos EUA (modelo original), podendo exigir recalibração para outros climas.</li>
 <li>Sensível ao tipo de solo e profundidade radicular assumidos; erros nesses parâmetros afetam o resultado.</li>
 <li>Requer longas séries contínuas de precipitação e temperatura; falhas comprometem a confiabilidade. Responde lentamente a eventos curtos (veranicos), pois foca no balanço de longo prazo.</li>
 </ul>
 </section>
-<section id="fonte-de-dados-5" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-5">Fonte de dados</h4>
-<ul>
-<li>Séries pluviométricas e termométricas de redes nacionais (INMET, ANA, CEMADEN) ou dados globais (CRU, GPCC, CHIRPS).</li>
-<li>Reanálises climáticas (ERA5, MERRA-2) para regiões com escassez de estações.</li>
-<li>Bases de solos (FAO, SoilGrids) para estimar capacidade de campo e água disponível.</li>
-<li>Projeto <a href="https://www.climatologylab.org/terraclimate.html">TerraClimate</a>.</li>
-<li><a href="https://shiny.icict.fiocruz.br/sentseca2/">Projeto Saúde no Semiárido</a>, Observatório de Clima e Saúde, LIS, ICICT.</li>
-</ul>
-</section>
-<section id="método-de-cálculo-5" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-5">Método de cálculo</h4>
+<section id="método-de-cálculo-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-4">Método de cálculo</h4>
 <ol type="1">
 <li>Conversão da temperatura média mensal em evapotranspiração potencial (<span class="math inline">\(ET_0\)</span>) via equação de Thornthwaite ou Penman-Monteith simplificada.</li>
 <li>Cálculo do balanço hídrico mensal, estimando:
@@ -848,111 +842,132 @@ Dica
 </div>
 </div>
 </section>
-<section id="categorias-sugeridas-para-análise-5" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-5">Categorias sugeridas para análise</h4>
+<section id="categorias-sugeridas-para-análise-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-4">Categorias sugeridas para análise</h4>
 <p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
 </section>
-</section>
-<section id="índice-integrado-de-seca" class="level3" data-number="5.2.3">
-<h3 data-number="5.2.3" class="anchored" data-anchor-id="índice-integrado-de-seca"><span class="header-section-number">5.2.3</span> Índice Integrado de Seca</h3>
-<p>(CDI – Combined Drought Indicator)</p>
-<p>Fonte: <span class="citation" data-cites="sepulcre_canto_2012_cdi">SEPULCRE-CANTÓ et al. (<a href="referencias.html#ref-sepulcre_canto_2012_cdi" role="doc-biblioref">2012</a>)</span></p>
-<section id="conceituação-6" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceituação-6">Conceituação</h4>
-<p>O CDI combina, numa única métrica, diferentes dimensões da seca: meteorológica (chuva), agrícola (umidade do solo e vegetação) e hidrológica (vazão ou armazenamento de água).</p>
-</section>
-<section id="interpretação-6" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="interpretação-6">Interpretação</h4>
-<p>O indicador é classificado em classes de severidade, como por exemplo: Normal, Seca Moderada, Seca Severa, Seca Extrema.</p>
-</section>
-<section id="usos-6" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="usos-6">Usos</h4>
+<section id="fonte-de-dados-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-4">Fonte de dados</h4>
 <ul>
-<li>Sistemas nacionais e regionais de alerta precoce (ex.: Monitor de Secas – ANA/FUNCEME).</li>
-<li>Planejamento intersetorial (saúde, agricultura, defesa civil, recursos hídricos).</li>
-<li>Modelagem de impacto em epidemiologia climática.</li>
-<li>Relatórios de risco para concessionárias de energia e abastecimento urbano.</li>
+<li>Séries pluviométricas e termométricas de redes nacionais (INMET, ANA, CEMADEN) ou dados globais (CRU, GPCC, CHIRPS).</li>
+<li>Reanálises climáticas (ERA5, MERRA-2) para regiões com escassez de estações.</li>
+<li>Bases de solos (FAO, SoilGrids) para estimar capacidade de campo e água disponível.</li>
+<li>Projeto <a href="https://www.climatologylab.org/terraclimate.html">TerraClimate</a>.</li>
+<li><a href="https://shiny.icict.fiocruz.br/sentseca2/">Projeto Saúde no Semiárido</a>, Observatório de Clima e Saúde, LIS, ICICT.</li>
 </ul>
-</section>
-<section id="limitações-6" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="limitações-6">Limitações</h4>
-<ol type="1">
-<li>Dependência de múltiplas bases de dados.</li>
-<li>Escolha dos pesos e limiares é subjetiva; metodologias diferentes geram mapas distintos.</li>
-<li>Uso de Diferentes escalas temporais podem complicar a interpretação.</li>
-<li>Atraso de resposta: indicadores hidrológicos reagem mais lentamente que os meteorológicos.</li>
-</ol>
-</section>
-<section id="fonte-de-dados-6" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-6">Fonte de dados</h4>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 37%">
-<col style="width: 37%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Dimensão</th>
-<th>Fontes típicas no Brasil</th>
-<th>Alternativas globais / remotas</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Precipitação</td>
-<td>Rede pluviométrica INMET, ANA, CEMADEN</td>
-<td>CHIRPS, ERA5, GPM</td>
-</tr>
-<tr class="even">
-<td>Umidade do solo</td>
-<td>Sondas in-situ (ANA, EMBRAPA)</td>
-<td>SMAP, SMOS, ERA5-Land</td>
-</tr>
-<tr class="odd">
-<td>Vegetação (NDVI/VHI)</td>
-<td>Satélite CBERS-4A, IBGE MOD13Q1</td>
-<td>MODIS, VIIRS, Sentinel-2</td>
-</tr>
-<tr class="even">
-<td>Vazão / reservatórios</td>
-<td>Hidroweb-ANA, ONS</td>
-<td>Reanálises hidrológicas (GLDAS), GRACE</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="método-de-cálculo-6" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-6">Método de cálculo</h4>
-<ol type="1">
-<li>Seleção dos sub-índices representativos de cada dimensão .</li>
-<li>Padronização de cada série para média zero e desvio-padrão um.</li>
-<li>Reclassificação em categorias (Normal, Moderada, Severa, Extrema) usando limiares fixos ou percentis.</li>
-<li>Integração espacial:
-<ul>
-<li>Método por consenso: seca é declarada se pelo menos dois sub-índices indicam seca.</li>
-<li>Método de ponderação: pesos definidos por regressão ou por especialistas.</li>
-</ul></li>
-<li>Validação com registros de impacto (perdas agrícolas, nível de reservatórios, declarações de emergência).</li>
-<li>Atualização operacional mensal ou quinzenal; publicação de mapas com classes de severidade.</li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>O repositório abaixo disponibiliza uma série histórica da média do PDSI dos municípios brasileiros.</p>
+<p><a href="https://doi.org/10.5281/zenodo.19286356"><img src="https://img.shields.io/badge/download-10.5281/zenodo.19286356-green.svg" class="img-fluid"></a></p>
+<p>Veja um exemplo prático de uso usando o R.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zendown)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(arrow)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">19286356</span>, <span class="st">"pdsi_mean_mean.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_parquet</span>() <span class="sc">|&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">2510808</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.Date</span>(date), <span class="at">y =</span> value)) <span class="sc">+</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"rect"</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmin =</span> <span class="sc">-</span><span class="cn">Inf</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmax =</span> <span class="cn">Inf</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymin =</span> <span class="sc">-</span><span class="cn">Inf</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymax =</span> <span class="sc">-</span><span class="dv">4</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> .<span class="dv">2</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"#7f0000"</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"rect"</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmin =</span> <span class="sc">-</span><span class="cn">Inf</span>,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmax =</span> <span class="cn">Inf</span>,</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymin =</span> <span class="sc">-</span><span class="dv">4</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymax =</span> <span class="sc">-</span><span class="dv">3</span>,</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> .<span class="dv">2</span>,</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"#b30000"</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">"rect"</span>,</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmin =</span> <span class="sc">-</span><span class="cn">Inf</span>,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmax =</span> <span class="cn">Inf</span>,</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymin =</span> <span class="sc">-</span><span class="dv">3</span>,</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymax =</span> <span class="sc">-</span><span class="dv">2</span>,</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> .<span class="dv">2</span>,</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"#d95f0e"</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    <span class="st">"rect"</span>,</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmin =</span> <span class="sc">-</span><span class="cn">Inf</span>,</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmax =</span> <span class="cn">Inf</span>,</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymin =</span> <span class="sc">-</span><span class="dv">2</span>,</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymax =</span> <span class="sc">-</span><span class="dv">1</span>,</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> .<span class="dv">2</span>,</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"#fdae6b"</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    <span class="st">"rect"</span>,</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmin =</span> <span class="sc">-</span><span class="cn">Inf</span>,</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmax =</span> <span class="cn">Inf</span>,</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymin =</span> <span class="sc">-</span><span class="dv">1</span>,</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymax =</span> <span class="dv">1</span>,</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> .<span class="dv">2</span>,</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"#f0f0f0"</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    <span class="st">"rect"</span>,</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmin =</span> <span class="sc">-</span><span class="cn">Inf</span>,</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmax =</span> <span class="cn">Inf</span>,</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymin =</span> <span class="dv">1</span>,</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymax =</span> <span class="dv">2</span>,</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> .<span class="dv">2</span>,</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"#bdd7e7"</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    <span class="st">"rect"</span>,</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmin =</span> <span class="sc">-</span><span class="cn">Inf</span>,</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmax =</span> <span class="cn">Inf</span>,</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymin =</span> <span class="dv">2</span>,</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymax =</span> <span class="dv">3</span>,</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> .<span class="dv">2</span>,</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"#6baed6"</span></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>    <span class="st">"rect"</span>,</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmin =</span> <span class="sc">-</span><span class="cn">Inf</span>,</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmax =</span> <span class="cn">Inf</span>,</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymin =</span> <span class="dv">3</span>,</span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymax =</span> <span class="dv">4</span>,</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> .<span class="dv">2</span>,</span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"#3182bd"</span></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>    <span class="st">"rect"</span>,</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmin =</span> <span class="sc">-</span><span class="cn">Inf</span>,</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmax =</span> <span class="cn">Inf</span>,</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymin =</span> <span class="dv">4</span>,</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymax =</span> <span class="cn">Inf</span>,</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> .<span class="dv">2</span>,</span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"#08519c"</span></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"PDSI médio em Patos, PB"</span>,</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Data"</span>,</span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"PDSI"</span>,</span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Fonte: TerraClimate"</span></span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ambi_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
-<div class="callout-title-container flex-fill">
-Dica
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>O Self-Calibrating CDI (sc-CDI), adotado pelo Monitor de Secas, ajusta automaticamente limiares de cada pixel à climatologia local, aumentando consistência entre biomas (Amazônia vs.&nbsp;Semiárido).</p>
-</div>
-</div>
-</section>
-<section id="categorias-sugeridas-para-análise-6" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-6">Categorias sugeridas para análise</h4>
-<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
 </section>
 </section>
 </section>
@@ -967,16 +982,16 @@ Dica
 <figcaption>Mapa de NDVI do Copernicus</figcaption>
 </figure>
 </div>
-<section id="conceituação-7" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceituação-7">Conceituação</h4>
+<section id="conceituação-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-5">Conceituação</h4>
 <p>Trata-se de um índice espectral calculado a partir da reflectância no infravermelho-próximo (NIR) e na banda vermelha de sensores remotos orbitais ou aerotransportados. Varia de <span class="math inline">\(–1\)</span> (água/turbidez) a <span class="math inline">\(+1\)</span> (vegetação densa), representando o “verdor” ou a atividade fotossintética da cobertura vegetal.</p>
 </section>
-<section id="interpretação-7" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="interpretação-7">Interpretação</h4>
+<section id="interpretação-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-5">Interpretação</h4>
 <p>Serve como proxy objetiva da exposição a áreas verdes, cujo aumento já foi relacionado a menores mortalidade por todas as causas e cardiovascular, menor incidência de doenças respiratórias, melhor saúde mental, redução do peso ao nascer e mitigação de ilhas de calor urbanas. Assim, o NDVI apoia avaliações de risco ambiental, vigilância epidemiológica e planejamento de cidades mais saudáveis.</p>
 </section>
-<section id="usos-7" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="usos-7">Usos</h4>
+<section id="usos-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-5">Usos</h4>
 <ul>
 <li>Classificação de cenários de “alto” e “baixo” verde em estudos de coorte.</li>
 <li>Modelagem de habitats de vetores (malária, dengue, leishmaniose).</li>
@@ -985,8 +1000,8 @@ Dica
 <li>Estudos de poluição atmosférica (vegetação como barreira física).</li>
 </ul>
 </section>
-<section id="limitações-7" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="limitações-7">Limitações</h4>
+<section id="limitações-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-5">Limitações</h4>
 <ul>
 <li>Saturação em florestas muito densas.</li>
 <li>Influência de solo exposto, neve ou umidade.</li>
@@ -995,128 +1010,55 @@ Dica
 <li>Diferenças entre sensores exigem harmonização.</li>
 </ul>
 </section>
-<section id="fonte-de-dados-7" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-7">Fonte de dados</h4>
-<ul>
-<li>Satélites Landsat, MODIS e Sentinel-2.</li>
-<li><a href="https://rfsaldanha.github.io/data-projects/brazil_ndvi.html">Compilados para os municípios brasileiros</a>.</li>
-</ul>
-</section>
-<section id="método-de-cálculo-7" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-7">Método de cálculo</h4>
+<section id="método-de-cálculo-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-5">Método de cálculo</h4>
 <p><span class="math display">\[
 \text{NDVI} = \frac{\rho_{\mathrm{NIR}} - \rho_{\mathrm{Red}}}{\rho_{\mathrm{NIR}} + \rho_{\mathrm{Red}}}
 \]</span></p>
 </section>
-<section id="categorias-sugeridas-para-análise-7" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-7">Categorias sugeridas para análise</h4>
+<section id="categorias-sugeridas-para-análise-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-5">Categorias sugeridas para análise</h4>
 <p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
 </section>
-</section>
-<section id="evi-enhanced-vegetation-index" class="level3" data-number="5.3.2">
-<h3 data-number="5.3.2" class="anchored" data-anchor-id="evi-enhanced-vegetation-index"><span class="header-section-number">5.3.2</span> EVI – Enhanced Vegetation Index</h3>
-<p>Fonte: <span class="citation" data-cites="Huete2002">HUETE et al. (<a href="referencias.html#ref-Huete2002" role="doc-biblioref">2002</a>)</span></p>
-<section id="conceituação-8" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceituação-8">Conceituação</h4>
-<p>Trata-se de um índice espectral desenvolvido para maximizar a sensibilidade a vegetação em áreas de biomassa alta, reduzindo efeitos de partículas atmosféricas e do fundo de solo. Ele combina reflectâncias no infravermelho-próximo (NIR), vermelho e azul, aplicando fatores de ganho e de correção atmosférica que estabilizam o sinal em comparação ao NDVI.</p>
-</section>
-<section id="interpretação-8" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="interpretação-8">Interpretação</h4>
-<p>Os valores típicos variam de –1 a +1, com vegetação densa acima de ~0,6.</p>
-</section>
-<section id="usos-8" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="usos-8">Usos</h4>
+<section id="fonte-de-dados-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-5">Fonte de dados</h4>
 <ul>
-<li>Avaliação de intervenções de arborização urbana e parques.</li>
-<li>Análises de inequidades ambientais (distribuição de verde vs.&nbsp;renda).</li>
+<li>Satélites Landsat, MODIS e Sentinel-2.</li>
+<li><a href="https://rfsaldanha.github.io/data-projects/brazil_ndvi.html">Compilados para os municípios brasileiros</a>.</li>
 </ul>
-</section>
-<section id="limitações-8" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="limitações-8">Limitações</h4>
-<ul>
-<li>Necessita da banda azul, ausente em sensores mais antigos.</li>
-<li>Coeficientes podem variar em adaptações, reduzindo comparabilidade;</li>
-<li>Sensível a resíduos de correção atmosférica inadequada (aerossóis fortes);</li>
-<li>Menor disponibilidade de séries temporais de longa duração do que o NDVI.</li>
-<li>Desempenho reduzido em áreas com cobertura de neve e solos muito brilhantes.</li>
-</ul>
-</section>
-<section id="fonte-de-dados-8" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-8">Fonte de dados</h4>
-<ul>
-<li>MODIS, VIIRS, Sentinel-2, Landsat 8-9.</li>
-</ul>
-</section>
-<section id="método-de-cálculo-8" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-8">Método de cálculo</h4>
-<p><span class="math display">\[
-\text{EVI} = G \times \frac{\rho_{\mathrm{NIR}} - \rho_{\mathrm{Red}}}{\rho_{\mathrm{NIR}} + C_1\,\rho_{\mathrm{Red}} - C_2\,\rho_{\mathrm{Blue}} + L}
-\]</span></p>
-<p>Onde <span class="math inline">\(rho\)</span> são reflectâncias de superfície corrigidas; <span class="math inline">\(G = 2,5\)</span> é o ganho; <span class="math inline">\(C_1 = 6\)</span> e <span class="math inline">\(C_2 = 7,5\)</span> corrigem aerossóis e <span class="math inline">\(L = 1\)</span> compensa fundo de solo.</p>
-</section>
-<section id="categorias-sugeridas-para-análise-8" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-8">Categorias sugeridas para análise</h4>
-<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
-</section>
-</section>
-<section id="gvi-green-view-index" class="level3" data-number="5.3.3">
-<h3 data-number="5.3.3" class="anchored" data-anchor-id="gvi-green-view-index"><span class="header-section-number">5.3.3</span> GVI – Green View Index</h3>
-<p>Fonte: <span class="citation" data-cites="Li2015">LI et al. (<a href="referencias.html#ref-Li2015" role="doc-biblioref">2015</a>)</span></p>
-<section id="conceituação-9" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceituação-9">Conceituação</h4>
-<p>Quantifica a proporção de vegetação visível a partir do ponto de vista de um pedestre, usualmente obtida de panoramas como o <em>Google Street View</em> ou plataformas semelhantes.</p>
-</section>
-<section id="interpretação-9" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="interpretação-9">Interpretação</h4>
-<p>Varia de 0 a 1 (ou 0 %–100 %), sendo 0 ausência total de “verde” no campo visual e 1 total ocupação por vegetação. A métrica captura a percepção humana do verde, algo que índices de satélite não conseguem representar.</p>
-</section>
-<section id="usos-9" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="usos-9">Usos</h4>
-<ul>
-<li>Avaliar desigualdades na distribuição de áreas verdes no nível local.</li>
-<li>Modelar indicadores com base em percepção de vegetação.</li>
-<li>Investigar relações entre exposição diária ao verde e desfechos de saúde mental.</li>
-<li>Monitorar resultados de programas de arborização urbana.</li>
-<li>Priorizar rotas “mais verdes” em aplicativos de mapas e rotas.</li>
-</ul>
-</section>
-<section id="limitações-9" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="limitações-9">Limitações</h4>
-<ul>
-<li>Dependência da cobertura e da atualização das imagens, com lacunas em regiões periféricas ou rurais.</li>
-<li>Sazonalidade e horários diferentes das capturas podem sub ou superestimar o indicador</li>
-<li>Oclusões por veículos, fachadas e sinalização reduzem a visão.</li>
-<li>Processamento exige rotulagem semântica automática (redes neurais) ou cromaticidade, suscetíveis a erros;</li>
-<li>Restrições de termos de uso e privacidade de alguns provedores de imagens.</li>
-</ul>
-</section>
-<section id="fonte-de-dados-9" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-9">Fonte de dados</h4>
-<ul>
-<li>Google Street View</li>
-<li>Mapillary, KartaView e plataformas colaborativas (com API aberta).</li>
-<li>Imagens coletadas por câmeras 360° montadas em veículos.</li>
-</ul>
-</section>
-<section id="método-de-cálculo-9" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-9">Método de cálculo</h4>
-<ol type="1">
-<li>Amostragem espacial: escolher pontos a cada <span class="math inline">\(n\)</span> metros ao longo da via.</li>
-<li>Coleta de panoramas (imagens) em quatro direções (0 °, 90 °, 180 °, 270 °).</li>
-<li>Segmentação semântica para classificar pixels como“vegetação”.</li>
-<li>Cálculo por imagem do GVI:</li>
-</ol>
-<p><span class="math display">\[
-GVI = \frac{P_{verde}}{P_{total}}
-\]</span></p>
-<p>Onde <span class="math inline">\(P_P{verde}\)</span> é o total de pixels classificados como vegeração.</p>
-<ol start="5" type="1">
-<li>Agregação: média das quatro direções ou de todos os pontos.</li>
-</ol>
-</section>
-<section id="categorias-sugeridas-para-análise-9" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-9">Categorias sugeridas para análise</h4>
-<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+<p>Os repositórios abaixo disponibilizam séries históricas da média do NDVI dos municípios brasileiros.</p>
+<p><a href="https://doi.org/10.5281/zenodo.17093199"><img src="https://img.shields.io/badge/download-10.5281/zenodo.17093199-green.svg" class="img-fluid"></a></p>
+<p><a href="https://doi.org/10.5281/zenodo.18329383"><img src="https://img.shields.io/badge/download-10.5281/zenodo.18329383-green.svg" class="img-fluid"></a></p>
+<p>Veja um exemplo prático de uso usando o R.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zendown)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(arrow)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">open_dataset</span>(<span class="fu">c</span>(</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">zen_file</span>(<span class="dv">17093199</span>, <span class="st">"ndvi_mean.parquet"</span>),</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">zen_file</span>(<span class="dv">18329383</span>, <span class="st">"ndvi_mean.parquet"</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>)) <span class="sc">|&gt;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">2614006</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>() <span class="sc">|&gt;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"NDVI médio em Serrita, PE"</span>,</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Ano"</span>,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Percentual"</span>,</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Fonte: Copernicus"</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ambi_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 </section>
 </section>
@@ -1125,17 +1067,17 @@ GVI = \frac{P_{verde}}{P_{total}}
 <section id="material-particulado-fino-textpm_25" class="level3" data-number="5.4.1">
 <h3 data-number="5.4.1" class="anchored" data-anchor-id="material-particulado-fino-textpm_25"><span class="header-section-number">5.4.1</span> Material particulado fino (<span class="math inline">\(\text{PM}_{2,5}\)</span>)</h3>
 <p>Fonte: <span class="citation" data-cites="who2021aqg">WHO Global Air Quality Guidelines (<a href="referencias.html#ref-who2021aqg" role="doc-biblioref">2021</a>)</span></p>
-<section id="conceituação-10" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceituação-10">Conceituação</h4>
+<section id="conceituação-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-6">Conceituação</h4>
 <p>Este indicador quantifica a presença de partículas sólidas e gotículas líquidas no ar com diâmetro aerodinâmico menor ou igual a 2,5 <span class="math inline">\(\mu m\)</span>, incluindo sulfatos, nitratos, carbôno, metais, poeira e outros elementos.</p>
 </section>
-<section id="interpretação-10" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="interpretação-10">Interpretação</h4>
+<section id="interpretação-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-6">Interpretação</h4>
 <p>O material particulado deste diâmetro penetra profundamente nos alvéolos pulmonares, podendo alcançar a corrente sanguínea. Este indicador está associado a aumento de mortalidade por doenças cardiovasculares e respiratórias, câncer de pulmão, AVC, diabetes e desfechos adversos na gestação.</p>
 <p>O indicador é lido como a concentração média de material particulado no ar por metro cúbico.</p>
 </section>
-<section id="usos-10" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="usos-10">Usos</h4>
+<section id="usos-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-6">Usos</h4>
 <ul>
 <li>Vigilância da qualidade do ar</li>
 <li>Estudos epidemiológicos</li>
@@ -1143,8 +1085,8 @@ GVI = \frac{P_{verde}}{P_{total}}
 <li>Sistemas de alerta precoce</li>
 </ul>
 </section>
-<section id="limitações-10" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="limitações-10">Limitações</h4>
+<section id="limitações-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-6">Limitações</h4>
 <ul>
 <li>Alta variabilidade espacial: poucas estações podem subestimar ou superestimar exposições reais</li>
 <li>Equipamentos de referência são caros e exigem manutenção</li>
@@ -1153,143 +1095,50 @@ GVI = \frac{P_{verde}}{P_{total}}
 <li>A composição química não é capturada pelo valor de massa</li>
 </ul>
 </section>
-<section id="fonte-de-dados-10" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-10">Fonte de dados</h4>
+<section id="categorias-sugeridas-para-análise-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-6">Categorias sugeridas para análise</h4>
+<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+</section>
+<section id="fonte-de-dados-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-6">Fonte de dados</h4>
 <p>Este indicador pode ser calculado diretamente a partir de sensores ou estimado por sensoriamento remoto.</p>
-</section>
-<section id="categorias-sugeridas-para-análise-10" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-10">Categorias sugeridas para análise</h4>
-<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
-</section>
-</section>
-<section id="dióxido-de-nitrogênio-textno_2" class="level3" data-number="5.4.2">
-<h3 data-number="5.4.2" class="anchored" data-anchor-id="dióxido-de-nitrogênio-textno_2"><span class="header-section-number">5.4.2</span> Dióxido de nitrogênio (<span class="math inline">\(\text{NO}_{2}\)</span>)</h3>
-<p>Fonte: <span class="citation" data-cites="who2021aqg">WHO Global Air Quality Guidelines (<a href="referencias.html#ref-who2021aqg" role="doc-biblioref">2021</a>)</span></p>
-<section id="conceituação-11" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceituação-11">Conceituação</h4>
-<p>O dióxido de nitrogênio (<span class="math inline">\(\text{NO}_{2}\)</span>) é um gás formado principalmente na combustão de combustíveis fósseis (veículos, termelétricas e processos industriais, entre outros). Concentra-se sobretudo em áreas urbanas e corredores de tráfego de veículos intenso.</p>
-</section>
-<section id="interpretação-11" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="interpretação-11">Interpretação</h4>
-<p>A exposição contínua ao <span class="math inline">\(\text{NO}_{2}\)</span> está associada a redução do desenvolvimento da função pulmonar, aumento de exacerbações asmáticas, hospitalizações por doenças respiratórias e mortalidade cardiovascular.</p>
-<p>O indicador é lido como a concentração média no ar por metro cúbico.</p>
-</section>
-<section id="usos-11" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="usos-11">Usos</h4>
-<ul>
-<li>Vigilância da qualidade do ar e elaboração de inventários de emissões de tráfego.</li>
-<li>Estudos epidemiológicos</li>
-<li>Apoio à modelagem de exposição</li>
-<li>Subsídio para políticas públicas de de controle de emissões veiculares</li>
-<li>Indicador em índices compostos sobre a qualidade do ar</li>
-</ul>
-</section>
-<section id="limitações-11" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="limitações-11">Limitações</h4>
-<ul>
-<li>Forte gradiente vertical: concentrações podem variar verticalmente nas ruas, sendo mais densa em menores alturas</li>
-<li>Concentrações de pico relevantes para saúde são difíceis de capturar com poucos sensores</li>
-<li>Influência meteorológica (vento, inversão térmica) gera variabilidade diária</li>
-<li>Interferência de outros gases oxidantes em alguns sensores eletroquímicos de baixo custo</li>
-<li>Relação não linear entre <span class="math inline">\(\text{NO}_{2}\)</span> e tráfego sob presença de catalisadores modernos de exaustão (níveis podem diminuir embora tráfego aumente)</li>
-</ul>
-</section>
-<section id="fonte-de-dados-11" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-11">Fonte de dados</h4>
-<p>Este indicador pode ser calculado diretamente a partir de sensores ou estimado por sensoriamento remoto.</p>
-<ul>
-<li><a href="https://rfsaldanha.github.io/data-projects/brazil_air_pollutants.html">Indicadores médias de poluição do ar para os municípios brasileiros</a>.</li>
-</ul>
-</section>
-<section id="categorias-sugeridas-para-análise-11" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-11">Categorias sugeridas para análise</h4>
-<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
-</section>
-</section>
-<section id="monóxido-de-carbono-textco" class="level3" data-number="5.4.3">
-<h3 data-number="5.4.3" class="anchored" data-anchor-id="monóxido-de-carbono-textco"><span class="header-section-number">5.4.3</span> Monóxido de carbono (<span class="math inline">\(\text{CO}\)</span>)</h3>
-<p>Fonte: <span class="citation" data-cites="who2021aqg">WHO Global Air Quality Guidelines (<a href="referencias.html#ref-who2021aqg" role="doc-biblioref">2021</a>)</span></p>
-<section id="conceituação-12" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceituação-12">Conceituação</h4>
-<p>O <span class="math inline">\(\text{CO}\)</span> é um gás incolor, inodoro e insípido (sem sabor) gerado pela combustão incompleta de combustíveis fósseis, biomassa (vegetação) e por processos industriais.</p>
-</section>
-<section id="interpretação-12" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="interpretação-12">Interpretação</h4>
-<p>Exposições agudas podem causar hipóxia, alterações neurológicas e morte. Exposições contínuas podem agravar doenças cardiovasculares e provocar complicações na gestação. O <span class="math inline">\(\text{CO}\)</span> também é marcador de emissões veiculares e de incêndios florestais (queimadas), ocorrendo em conjunto com outros poluentes do ar.</p>
-<p>O indicador é lido como a concentração média no ar por metro cúbico.</p>
-</section>
-<section id="usos-12" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="usos-12">Usos</h4>
-<ul>
-<li>Vigilância da qualidade do ar</li>
-<li>Estudos epidemiológicos</li>
-<li>Indicador de eficiência de combustão em inventários de emissões.</li>
-<li>Sensoriamento de queimadas e transporte de plumas (por imagem de satélite)</li>
-</ul>
-</section>
-<section id="limitações-12" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="limitações-12">Limitações</h4>
-<ul>
-<li>Curto tempo de vida atmosférico (de 1 a 2 meses) dificulta capturar picos locais e transporte regional</li>
-<li>Sensores eletroquímicos de baixo custo apresentam interferência por hidrogênio e efeito temperatura/umidade.</li>
-<li>A exposição individual nem sempre se reflete nos valores ambientais dos sensores</li>
-</ul>
-</section>
-<section id="fonte-de-dados-12" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-12">Fonte de dados</h4>
-<p>Este indicador pode ser calculado diretamente a partir de sensores ou estimado por sensoriamento remoto.</p>
-<ul>
-<li><a href="https://rfsaldanha.github.io/data-projects/brazil_air_pollutants.html">Indicadores médias de poluição do ar para os municípios brasileiros</a>.</li>
-</ul>
-</section>
-<section id="categorias-sugeridas-para-análise-12" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-12">Categorias sugeridas para análise</h4>
-<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
-</section>
-</section>
-</section>
-<section id="qualidade-da-água" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="qualidade-da-água"><span class="header-section-number">5.5</span> Qualidade da água</h2>
-<section id="indicador" class="level3" data-number="5.5.1">
-<h3 data-number="5.5.1" class="anchored" data-anchor-id="indicador"><span class="header-section-number">5.5.1</span> Indicador</h3>
-<section id="conceituação-13" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceituação-13">Conceituação</h4>
-</section>
-<section id="interpretação-13" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="interpretação-13">Interpretação</h4>
-</section>
-<section id="usos-13" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="usos-13">Usos</h4>
-</section>
-<section id="limitações-13" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="limitações-13">Limitações</h4>
-</section>
-<section id="fonte-de-dados-13" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-13">Fonte de dados</h4>
-</section>
-<section id="método-de-cálculo-10" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-10">Método de cálculo</h4>
-</section>
-<section id="categorias-sugeridas-para-análise-13" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-13">Categorias sugeridas para análise</h4>
-<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+<p>O repositório abaixo disponibiliza uma série histórica dos percentuais de uso do solo dos municípios brasileiros.</p>
+<p><a href="https://doi.org/10.5281/zenodo.19285752"><img src="https://img.shields.io/badge/download-10.5281/zenodo.19285752-green.svg" class="img-fluid"></a></p>
+<p>Veja um exemplo prático de uso usando o R.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zendown)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(arrow)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">zen_file</span>(<span class="dv">16374139</span>, <span class="st">"pm25_max_mean.parquet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_parquet</span>() <span class="sc">|&gt;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code_muni <span class="sc">==</span> <span class="dv">5103403</span>) <span class="sc">|&gt;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Concentração máxima média de PM2.5 em Cuiabá, MS"</span>,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Data"</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"um/m3"</span>,</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Fonte: Copernicus/CAMS"</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ambi_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 <div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list" style="display: none">
-<div id="ref-Huete2002" class="csl-entry" role="listitem">
-HUETE, A. R. et al. <a href="https://doi.org/10.1016/S0034-4257(02)00096-2">Overview of the Radiometric and Biophysical Performance of the MODIS Vegetation Indices</a>. <strong>Remote Sensing of Environment</strong>, v. 83, n. 1–2, p. 195–213, 2002.
-</div>
-<div id="ref-Li2015" class="csl-entry" role="listitem">
-LI, X. et al. <a href="https://doi.org/10.1016/j.ufug.2015.06.006">Assessing Street-Level Urban Greenery Using Google Street View and a Modified Green View Index</a>. <strong>Urban Forestry &amp; Urban Greening</strong>, v. 14, p. 675–685, 2015.
-</div>
 <div id="ref-mckee_doesken_kleist_1993" class="csl-entry" role="listitem">
 MCKEE, T. B.; DOESKEN, N. J.; KLEIST, J. <strong>The Relationship of Drought Frequency and Duration to Time Scales</strong>. Proceedings of the 8<sup>th</sup> Conference on Applied Climatology. <strong>Anais</strong>...Anaheim, CA: American Meteorological Society, 1993.
 </div>
 <div id="ref-palmer_1965" class="csl-entry" role="listitem">
 PALMER, W. C. <strong>Meteorological Drought</strong>. Washington, D.C.: U.S. Weather Bureau, 1965. Disponível em: &lt;<a href="https://www.droughtmanagement.info/literature/USWB_Meteorological_Drought_1965.pdf">https://www.droughtmanagement.info/literature/USWB_Meteorological_Drought_1965.pdf</a>&gt;. Acesso em: 28 mai. 2025.
-</div>
-<div id="ref-sepulcre_canto_2012_cdi" class="csl-entry" role="listitem">
-SEPULCRE-CANTÓ, G. et al. <a href="https://doi.org/10.5194/nhess-12-3519-2012">Development of a Combined Drought Indicator to Detect Agricultural Drought in Europe</a>. <strong>Natural Hazards and Earth System Sciences</strong>, v. 12, n. 11, p. 3519–3531, 2012.
 </div>
 <div id="ref-Tucker1979" class="csl-entry" role="listitem">
 TUCKER, C. J. <a href="https://doi.org/10.1016/0034-4257(79)90013-0">Red and Photographic Infrared Linear Combinations for Monitoring Vegetation</a>. <strong>Remote Sensing of Environment</strong>, v. 8, n. 2, p. 127–150, 1979.
