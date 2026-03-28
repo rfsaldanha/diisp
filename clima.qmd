@@ -26,7 +26,7 @@ Indicadores climáticos nominais são constituídos pela observação direta do 
 
 #### Conceituação {.unnumbered}
 
-A temperatura do diz respeito ao grau de agitação das moléculas no ar, onde um grau maior de agitação conduz a uma maior temperatura e um grau menor de agitação a uma menor temperatura. Desta forma, a temperatura é uma medida escalar arbitrária.
+A temperatura diz respeito ao grau de agitação das moléculas no ar, onde um grau maior de agitação conduz a uma maior temperatura e um grau menor de agitação a uma menor temperatura. Desta forma, a temperatura é uma medida escalar arbitrária.
 
 A temperatura do ar pode ser expressada em diversas unidades, como Kelvin, Graus Célsius e Fahrenheit. A temperatura de 0 Kelvin equivale teoricamente a um estado de nenhuma agitação das moléculas do ar. Já a temperatura de 272,15 Kelvin equivale a 0 graus célsius ou 32 fahrenheit.
 
@@ -65,6 +65,36 @@ Dados de temperatura podem ser obtidos por organismos meteorológicos oficiais c
 -   [Projeto TerraClimate](https://www.climatologylab.org/terraclimate.html).
 -   [Médias de indicadores climáticos compilados para os municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html).
 
+O repositório abaixo disponibiliza uma série histórica de variáveis climáticas dos municípios brasileiros.
+
+[![](https://img.shields.io/badge/download-10.5281/zenodo.19285752-green.svg)](https://doi.org/10.5281/zenodo.19285752)
+
+Veja um exemplo prático de uso usando o R.
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: false
+library(zendown)
+library(arrow)
+library(dplyr)
+library(ggplot2)
+
+zen_file(19286356, "tmax_mean_mean.parquet") |>
+  read_parquet() |>
+  filter(code_muni == 3304557) |>
+  ggplot(aes(x = as.Date(date), y = value)) +
+  geom_line() +
+  geom_smooth() +
+  labs(
+    title = "Temperatura máxima média mensal no Rio de Janeiro, RJ",
+    x = "Data",
+    y = "°C",
+    caption = "Fonte: TerraClimate"
+  ) +
+  theme_bw()
+```
+
 ### Precipitação
 
 ![Precipitação acumulada em janeiro de 2024, TerraClimate.](assets/img/prec_2024_01.png){fig-align="center"}
@@ -99,6 +129,36 @@ Dados de precipitação podem ser obtidos por organismos meteorológicos oficiai
 
 -   [Projeto TerraClimate](https://www.climatologylab.org/terraclimate.html).
 -   [Médias de indicadores climáticos compilados para os municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html).
+
+O repositório abaixo disponibiliza uma série histórica de variáveis climáticas dos municípios brasileiros.
+
+[![](https://img.shields.io/badge/download-10.5281/zenodo.19285752-green.svg)](https://doi.org/10.5281/zenodo.19285752)
+
+Veja um exemplo prático de uso usando o R.
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: false
+library(zendown)
+library(arrow)
+library(dplyr)
+library(ggplot2)
+
+zen_file(19286356, "pet_mean_mean.parquet") |>
+  read_parquet() |>
+  filter(code_muni == 1302603) |>
+  ggplot(aes(x = as.Date(date), y = value)) +
+  geom_line() +
+  geom_smooth() +
+  labs(
+    title = "Precipitação média mensal em Manaus, AM",
+    x = "Data",
+    y = "mm",
+    caption = "Fonte: TerraClimate"
+  ) +
+  theme_bw()
+```
 
 ### Umidade relativa do ar
 
