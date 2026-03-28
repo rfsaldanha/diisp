@@ -25,7 +25,7 @@ book:
     - socio.qmd # Sociodemográficos
     - ambi.qmd  # Ambientais (cobertura e uso do solo)
     - clima.qmd # Climáticos e atmosféricos
-    - inter.qmd # Dados da internet e redes sociais
+    # - inter.qmd # Dados da internet e redes sociais
     - referencias.qmd
   # appendices: 
     # - malhas.qmd # Malhas territoriais, DTB
