@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 1em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -413,12 +433,21 @@ window.Quarto = {
   <li><a href="#temperatura-do-ar" id="toc-temperatura-do-ar" class="nav-link" data-scroll-target="#temperatura-do-ar"><span class="header-section-number">6.1.1</span> Temperatura do ar</a></li>
   <li><a href="#precipitação" id="toc-precipitação" class="nav-link" data-scroll-target="#precipitação"><span class="header-section-number">6.1.2</span> Precipitação</a></li>
   <li><a href="#umidade-relativa-do-ar" id="toc-umidade-relativa-do-ar" class="nav-link" data-scroll-target="#umidade-relativa-do-ar"><span class="header-section-number">6.1.3</span> Umidade relativa do ar</a></li>
-  <li><a href="#sensação-térmica" id="toc-sensação-térmica" class="nav-link" data-scroll-target="#sensação-térmica"><span class="header-section-number">6.1.4</span> Sensação térmica</a></li>
+  <li><a href="#velocidade-do-vento" id="toc-velocidade-do-vento" class="nav-link" data-scroll-target="#velocidade-do-vento"><span class="header-section-number">6.1.4</span> Velocidade do vento</a></li>
+  <li><a href="#sensação-térmica" id="toc-sensação-térmica" class="nav-link" data-scroll-target="#sensação-térmica"><span class="header-section-number">6.1.5</span> Sensação térmica</a></li>
+  <li><a href="#índice-de-calor" id="toc-índice-de-calor" class="nav-link" data-scroll-target="#índice-de-calor"><span class="header-section-number">6.1.6</span> Índice de calor</a></li>
   </ul></li>
   <li><a href="#indicadores-de-eventos" id="toc-indicadores-de-eventos" class="nav-link" data-scroll-target="#indicadores-de-eventos"><span class="header-section-number">6.2</span> Indicadores de eventos</a>
   <ul class="collapse">
   <li><a href="#ondas-de-calor" id="toc-ondas-de-calor" class="nav-link" data-scroll-target="#ondas-de-calor"><span class="header-section-number">6.2.1</span> Ondas de calor</a></li>
-  <li><a href="#chuvas-persistentes" id="toc-chuvas-persistentes" class="nav-link" data-scroll-target="#chuvas-persistentes"><span class="header-section-number">6.2.2</span> Chuvas persistentes</a></li>
+  <li><a href="#dias-quentes" id="toc-dias-quentes" class="nav-link" data-scroll-target="#dias-quentes"><span class="header-section-number">6.2.2</span> Dias quentes</a></li>
+  <li><a href="#ondas-de-frio" id="toc-ondas-de-frio" class="nav-link" data-scroll-target="#ondas-de-frio"><span class="header-section-number">6.2.3</span> Ondas de frio</a></li>
+  <li><a href="#dias-frios" id="toc-dias-frios" class="nav-link" data-scroll-target="#dias-frios"><span class="header-section-number">6.2.4</span> Dias frios</a></li>
+  <li><a href="#chuvas-persistentes" id="toc-chuvas-persistentes" class="nav-link" data-scroll-target="#chuvas-persistentes"><span class="header-section-number">6.2.5</span> Chuvas persistentes</a></li>
+  <li><a href="#ondas-de-seca" id="toc-ondas-de-seca" class="nav-link" data-scroll-target="#ondas-de-seca"><span class="header-section-number">6.2.6</span> Ondas de seca</a></li>
+  <li><a href="#ondas-de-umidade" id="toc-ondas-de-umidade" class="nav-link" data-scroll-target="#ondas-de-umidade"><span class="header-section-number">6.2.7</span> Ondas de umidade</a></li>
+  <li><a href="#ondas-de-pouco-vento" id="toc-ondas-de-pouco-vento" class="nav-link" data-scroll-target="#ondas-de-pouco-vento"><span class="header-section-number">6.2.8</span> Ondas de pouco vento</a></li>
+  <li><a href="#ondas-de-vento-em-excesso" id="toc-ondas-de-vento-em-excesso" class="nav-link" data-scroll-target="#ondas-de-vento-em-excesso"><span class="header-section-number">6.2.9</span> Ondas de vento em excesso</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -447,13 +476,13 @@ window.Quarto = {
 
 
 <p>Indicadores climáticos são de grande importância para o estudo e contextualização de um conjunto de doenças cuja incidência e mecanismos de transmissão são afetados por fenômenos atmosféricos e climáticos. Este conjunto de doenças pode ser denominado como “Doenças Sensíveis ao Clima”.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Nota
+Dica
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -679,41 +708,87 @@ Aviso
 </ul>
 </section>
 </section>
-<section id="sensação-térmica" class="level3" data-number="6.1.4">
-<h3 data-number="6.1.4" class="anchored" data-anchor-id="sensação-térmica"><span class="header-section-number">6.1.4</span> Sensação térmica</h3>
+<section id="velocidade-do-vento" class="level3" data-number="6.1.4">
+<h3 data-number="6.1.4" class="anchored" data-anchor-id="velocidade-do-vento"><span class="header-section-number">6.1.4</span> Velocidade do vento</h3>
 <section id="conceituação-3" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="conceituação-3">Conceituação</h4>
-<p>A percepção da temperatura do ar pelo corpo humano pode variar frente a diferentes condições de umidade relativa e vento, dentre outros fatores. Assim, uma mesma temperatura pode provocar sensações diferentes de calor ou frio, a depender destes fatores.</p>
-<p>A sensação térmica é um indicador composto que visa padronizar esta percepção, utilizando em seu cálculo indicadores de umidade relativa e velocidade do vento em conjunto com a temperatura, exprimindo a “temperatura percebida” do ar.</p>
+<p>Expressa a intensidade do deslocamento horizontal do ar em um determinado local e período. Em estudos ambientais e de saúde, pode ser representado por medidas diárias, mensais ou anuais, como média, máximo, mínimo ou outros resumos estatísticos da velocidade observada. Sua unidade de medida é geralmente metros por segundo (m/s) ou quilômetros por hora (km/h). Trata-se de uma variável meteorológica fundamental para caracterizar a dinâmica atmosférica e as condições ambientais de um território.</p>
 </section>
 <section id="interpretação-3" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="interpretação-3">Interpretação</h4>
-<p>A interpretação da sensação térmica é direta, podendo ser comparada entre regiões. Mas cuidados devem ser tomados para a sua generalização: a percepção da temperatura de forma individual é variada, podendo estar relacionada a fatores como sexo, idade e aclimatação.</p>
+<p>Valores mais elevados indicam maior intensidade do vento, enquanto valores mais baixos sugerem condições de ar mais estagnado. A interpretação do indicador depende do contexto de análise. Ventos fracos podem favorecer o acúmulo de poluentes atmosféricos e fumaça, reduzindo a dispersão de contaminantes. Já ventos mais intensos podem aumentar a ventilação e a dispersão de poluentes, mas também podem transportar poeira, partículas, aerossóis, fumaça e alérgenos, além de influenciar o conforto térmico e a sensação térmica da população.</p>
 </section>
 <section id="usos-3" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="usos-3">Usos</h4>
-<p>A sensação térmica é usada em estudos de saúde onde é necessário saber o real conforto térmico humano, como em estudos de estresse térmico.</p>
+<p>Esse indicador pode ser utilizado no monitoramento de condições meteorológicas e ambientais, em estudos de qualidade do ar, na análise da dispersão de poluentes e fumaça, na caracterização de contextos de desconforto térmico e em investigações sobre a relação entre variáveis ambientais e desfechos em saúde. Também pode apoiar sistemas de alerta, vigilância em saúde ambiental, modelagem atmosférica, planejamento territorial e avaliação de riscos relacionados a eventos extremos, queimadas e poluição do ar.</p>
 </section>
 <section id="limitações-3" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="limitações-3">Limitações</h4>
-<p>Diferentes grupos populacionais podem apresentar percepções de sensação térmica dististas. Cuidados devem ser tomados para generalizações.</p>
+<p>A velocidade do vento, quando analisada isoladamente, não descreve completamente a dinâmica atmosférica, pois seus efeitos dependem também da direção do vento, da estabilidade atmosférica, da temperatura, da umidade, do relevo e do uso do solo. Sua interpretação pode variar entre diferentes contextos territoriais, como áreas urbanas, costeiras, rurais ou florestais. Além disso, os valores observados podem ser influenciados pela localização e altura dos instrumentos de medição, bem como pela resolução espacial e temporal dos dados utilizados.</p>
 </section>
 <section id="fontes-de-dados-3" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-3">Fontes de dados</h4>
-<p>Dados de umidade relativa do ar podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.</p>
+<p>O indicador pode ser calculado a partir de dados diários de velocidade do vento em estações meteorológicas, reanálises climáticas ou produtos em <em>grid</em>. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o <em>ERA5-Land</em>.</p>
+</section>
+</section>
+<section id="sensação-térmica" class="level3" data-number="6.1.5">
+<h3 data-number="6.1.5" class="anchored" data-anchor-id="sensação-térmica"><span class="header-section-number">6.1.5</span> Sensação térmica</h3>
+<section id="conceituação-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-4">Conceituação</h4>
+<p>Representa a percepção térmica experimentada pelo corpo humano a partir da combinação entre a temperatura do ar e outras variáveis ambientais que influenciam as trocas de calor, como umidade relativa, velocidade do vento e, em alguns casos, radiação solar. Diferentemente da temperatura do ar isolada, a sensação térmica busca expressar de forma mais realista o conforto ou desconforto térmico ao qual a população está exposta. Sua estimativa pode ser feita por diferentes índices e fórmulas, cuja escolha depende do contexto climático e do objetivo da análise.</p>
+</section>
+<section id="interpretação-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-4">Interpretação</h4>
+<p>Valores mais elevados indicam condições de maior calor percebido, geralmente associadas a maior desconforto térmico e maior risco de estresse por calor, especialmente quando há alta umidade e baixa ventilação. Valores mais baixos indicam frio percebido mais intenso, frequentemente agravado por ventos fortes. Assim, a sensação térmica permite interpretar de forma mais próxima da experiência humana os efeitos combinados das condições atmosféricas, sendo útil para identificar situações de risco à saúde relacionadas ao calor ou ao frio.</p>
+</section>
+<section id="usos-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-4">Usos</h4>
+<p>Esse indicador pode ser utilizado para monitorar condições de conforto e desconforto térmico, subsidiar sistemas de alerta para eventos extremos, apoiar ações de vigilância em saúde ambiental e orientar estudos sobre os efeitos do calor e do frio na morbimortalidade. Também pode ser empregado em análises urbanas e territoriais, em avaliações de exposição ocupacional, em estudos sobre ilhas de calor e em estratégias de adaptação às mudanças climáticas, especialmente quando se deseja aproximar a análise meteorológica das condições efetivamente sentidas pela população.</p>
+</section>
+<section id="limitações-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-4">Limitações</h4>
+<p>A sensação térmica não possui uma única forma universal de cálculo, podendo variar conforme o índice adotado, o conjunto de variáveis incluídas e o contexto climático de aplicação. Alguns métodos enfatizam o calor, enquanto outros são mais adequados para condições de frio. Além disso, o indicador não capta integralmente fatores individuais e sociais que modulam a percepção térmica e os impactos à saúde, como idade, estado de saúde, nível de atividade física, tipo de vestimenta, condições de moradia e acesso a mecanismos de proteção. Sua interpretação, portanto, deve considerar o método utilizado e o contexto local.</p>
+</section>
+<section id="fontes-de-dados-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-4">Fontes de dados</h4>
+<p>O indicador pode ser calculado a partir de dados meteorológicos de temperatura do ar, umidade relativa, velocidade do vento e, quando necessário, radiação solar. Essas variáveis podem ser obtidas em estações meteorológicas, redes observacionais, reanálises climáticas e produtos em <em>grid</em>. Entre as fontes possíveis estão estações do INMET, outras redes meteorológicas e produtos como o <em>ERA5-Land</em>.</p>
 <ul>
 <li><a href="https://cds.climate.copernicus.eu/datasets/derived-utci-historical?tab=overview">Copernicus Thermal Confort Indices</a></li>
 </ul>
 </section>
 </section>
+<section id="índice-de-calor" class="level3" data-number="6.1.6">
+<h3 data-number="6.1.6" class="anchored" data-anchor-id="índice-de-calor"><span class="header-section-number">6.1.6</span> Índice de calor</h3>
+<section id="conceituação-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-5">Conceituação</h4>
+<p>O índice de calor é uma medida de temperatura aparente que combina a temperatura do ar com a umidade relativa, buscando representar o quanto o calor é efetivamente sentido pelo corpo humano. Ele se baseia no fato de que, em condições de maior umidade, a evaporação do suor se torna menos eficiente, reduzindo a capacidade de resfriamento do organismo. O índice de calor é definido para condições de sombra e vento fraco. Em exposição direta ao sol, os valores percebidos podem ser ainda maiores.</p>
+</section>
+<section id="interpretação-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-5">Interpretação</h4>
+<p>Valores mais elevados indicam maior desconforto térmico e maior risco de efeitos adversos à saúde relacionados ao calor. Faixas de risco podem ser estabelecidas para classificar o perigo associado ao índice de calor, com categorias que vão de “cuidado” a “perigo extremo”. Em termos de saúde, a exposição ao calor excessivo pode contribuir para exaustão pelo calor, cãibras, desidratação e, nos casos mais graves, insolação.</p>
+</section>
+<section id="usos-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-5">Usos</h4>
+<p>O índice de calor é amplamente utilizado em sistemas de alerta, comunicação de risco, vigilância em saúde ambiental e planejamento de medidas de proteção em períodos quentes. Também é útil em estudos epidemiológicos e ocupacionais, especialmente para identificar dias e áreas com maior potencial de impacto do calor sobre a saúde, orientar ações preventivas e apoiar recomendações à população e a trabalhadores expostos.</p>
+</section>
+<section id="limitações-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-5">Limitações</h4>
+<p>O índice de calor não incorpora todos os fatores ambientais relevantes para o estresse térmico, como radiação solar e vento. Além disso, o índice de calor foi concebido para pessoas à sombra e em repouso leve, de modo que pode subestimar o risco em situações de esforço físico, exposição solar direta ou características individuais de maior vulnerabilidade.</p>
+</section>
+<section id="fontes-de-dados-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-5">Fontes de dados</h4>
+<p>O indicador pode ser calculado a partir de dados diários temperatura e umidade relativa do ar em estações meteorológicas, reanálises climáticas ou produtos em <em>grid</em>. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o <em>ERA5-Land</em>.</p>
+</section>
+</section>
 </section>
 <section id="indicadores-de-eventos" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="indicadores-de-eventos"><span class="header-section-number">6.2</span> Indicadores de eventos</h2>
+<p>Uma série de eventos climáticos com impactos na saúde podem ser definidos com base nos indicadores nominais de clima, como ondas de calor e chuvas persistentes. Abaixo são apresentados algumas desses indicadores.</p>
 <section id="ondas-de-calor" class="level3" data-number="6.2.1">
 <h3 data-number="6.2.1" class="anchored" data-anchor-id="ondas-de-calor"><span class="header-section-number">6.2.1</span> Ondas de calor</h3>
-<section id="conceituação-4" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceituação-4">Conceituação</h4>
-<p>Ondas de calor são períodos prolongados de temperaturas anormalmente elevadas em relação às condições climatológicas médias de uma região. Existem diversas definições específicas de ondas de calor.</p>
+<section id="conceituação-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-6">Conceituação</h4>
+<p>Ondas de calor são períodos prolongados de temperaturas anormalmente elevadas em relação às condições climatológicas médias de uma região. Existem diversas definições específicas de ondas de calor <span class="citation" data-cites="who2015heatwaves">(<a href="referencias.html#ref-who2015heatwaves" role="doc-biblioref">WORLD HEALTH ORGANIZATION; WORLD METEOROLOGICAL ORGANIZATION, 2015</a>)</span>.</p>
 <p>De forma geral, uma onda de calor pode ser definida como uma sequência consecutiva de dias cujas temperaturas atingem valores acima de um valor de referência. A OMS, por exemplo, define como onda de calor uma sequencia de cinco dias consecutivos ou mais onde a temperatura máxima está acima da média histórica (normal climatológica) mais cinco graus célsius.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -733,47 +808,213 @@ Dica
 </div>
 </div>
 </section>
-<section id="interpretação-4" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="interpretação-4">Interpretação</h4>
+<section id="interpretação-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-6">Interpretação</h4>
 <p>O indicador de ondas de calor permite identificar eventos extremos de temperatura que representam riscos significativos à saúde humana, especialmente para populações vulneráveis (idosos, crianças, pessoas com doenças crônicas e trabalhadores expostos ao calor). Valores elevados do indicador indicam maior exposição da população a temperaturas perigosas e possível aumento da mortalidade e morbidade associadas a causas cardiovasculares, respiratórias e renais.</p>
 </section>
-<section id="usos-4" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="usos-4">Usos</h4>
+<section id="usos-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-6">Usos</h4>
 <p>O indicador de ondas de calor é utilizado em estudos de saúde principalmente em sistemas de alerta precoce, na vigilância em saúde e em análises epidemiológicas, especialmente vinculada a eventos de saúde como atendimentos de urgência, internações e mortalidade.</p>
 </section>
-<section id="limitações-4" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="limitações-4">Limitações</h4>
+<section id="limitações-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-6">Limitações</h4>
 <p>Como existem diversas definições específicas, com diferentes quantidade mínimas de dias e diferentes valores de referência, a comparação do indicador deve ser feita com cautela.</p>
 </section>
-<section id="fontes-de-dados-4" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-4">Fontes de dados</h4>
-<p>Indicadores de onda de calor podem ser obtidos à partir de dados de organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.</p>
+<section id="fontes-de-dados-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-6">Fontes de dados</h4>
+<p>O indicador pode ser calculado a partir de dados diários de temperatura máxima obtidos em estações meteorológicas, reanálises climáticas ou produtos em <em>grid</em>. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o <em>ERA5-Land</em>.</p>
 </section>
 </section>
-<section id="chuvas-persistentes" class="level3" data-number="6.2.2">
-<h3 data-number="6.2.2" class="anchored" data-anchor-id="chuvas-persistentes"><span class="header-section-number">6.2.2</span> Chuvas persistentes</h3>
-<section id="conceituação-5" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceituação-5">Conceituação</h4>
-<p>Chuvas persistentes são eventos caracterizados por precipitação contínua ou recorrente ao longo de vários dias consecutivos, frequentemente resultando em acúmulo significativo de chuva em um curto período.</p>
-<p>O indicador pode ser definido como a quantidade de dias consecutivos com valores acumulados de precipitação acima de um valor de referência. Este valor pode ser definido <em>a priori</em> ou usar um valor relativo a uma média histórica (normal climatológica).</p>
+<section id="dias-quentes" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="dias-quentes"><span class="header-section-number">6.2.2</span> Dias quentes</h3>
+<section id="conceituação-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-7">Conceituação</h4>
+<p>Corresponde à contagem do número de dias, em um período de interesse, em que a temperatura máxima diária ultrapassa o 90º percentil da normal climatológica para o mesmo local e período do ano. Por considerar a distribuição histórica da temperatura, o indicador permite identificar situações de calor anômalo mesmo em contextos climáticos distintos.</p>
 </section>
-<section id="interpretação-5" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="interpretação-5">Interpretação</h4>
-<p>Valores elevados do indicador indicam a ocorrência de períodos prolongados de precipitação, que podem gerar saturação do solo, inundações graduais, escorregamentos e aumento do risco de doenças relacionadas à água, como leptospirose e diarreias. A persistência da chuva, mais do que a intensidade isolada, é um fator crítico para avaliar vulnerabilidades territoriais e impactos à saúde pública, à infraestrutura e à produção agrícola.</p>
+<section id="interpretação-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-7">Interpretação</h4>
+<p>Valores mais elevados indicam maior frequência de dias com temperatura máxima excepcionalmente alta em relação às condições habituais do local. Assim, o indicador sinaliza períodos de maior exposição da população ao calor, podendo estar associado ao aumento do desconforto térmico e ao agravamento de riscos à saúde, especialmente entre grupos mais vulneráveis, como idosos, crianças, trabalhadores expostos ao ar livre e pessoas com doenças crônicas.</p>
+<p>Por não necessariamente considerar dias em sequência em seu cálculo, o indicador é mais sensível do que as ondas de calor, porém menos específico.</p>
 </section>
-<section id="usos-5" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="usos-5">Usos</h4>
-<p>Este indicador é utilizado na vigilância em saúde ambiental, na gestão de riscos a desastres, no planejamento urbano e territorial e em análises epidemiológicas.</p>
+<section id="usos-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-7">Usos</h4>
+<p>Esse indicador pode ser utilizado para o monitoramento de extremos de calor, para análises sazonais e territoriais da exposição térmica e para estudos sobre os efeitos do calor na saúde. Também pode subsidiar sistemas de alerta precoce, ações de vigilância em saúde ambiental, planejamento de medidas de adaptação às mudanças climáticas e investigações sobre associações entre calor extremo e desfechos como internações, mortalidade, desidratação e agravamento de doenças cardiovasculares e respiratórias.</p>
 </section>
-<section id="limitações-5" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="limitações-5">Limitações</h4>
-<p>Como existem diversas definições específicas, com diferentes quantidade mínimas de dias e diferentes valores de referência, a comparação do indicador deve ser feita com cautela.</p>
+<section id="limitações-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-7">Limitações</h4>
+<p>O indicador depende da qualidade da série histórica utilizada para estimar a normal climatológica e o percentil de referência. Sua interpretação também pode variar conforme o período de referência adotado e a escala espacial dos dados. Além disso, por se basear apenas na temperatura máxima, ele não incorpora outros fatores relevantes para o estresse térmico, como umidade do ar, duração do evento, temperatura noturna e capacidade de adaptação da população. Em áreas com pouca cobertura observacional ou com uso de dados interpolados e de reanálise, podem existir incertezas adicionais.</p>
 </section>
-<section id="fontes-de-dados-5" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-5">Fontes de dados</h4>
-<p>Indicadores de chuvas persistentes podem ser obtidos à partir de dados de organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.</p>
+<section id="fontes-de-dados-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-7">Fontes de dados</h4>
+<p>O indicador pode ser calculado a partir de dados diários de temperatura máxima obtidos em estações meteorológicas, reanálises climáticas ou produtos em <em>grid</em>. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o <em>ERA5-Land</em>.</p>
+</section>
+</section>
+<section id="ondas-de-frio" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3" class="anchored" data-anchor-id="ondas-de-frio"><span class="header-section-number">6.2.3</span> Ondas de frio</h3>
+<section id="conceituação-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-8">Conceituação</h4>
+<p>Representa a ocorrência de períodos consecutivos de frio intenso em relação ao padrão climatológico local. Em geral, é definido como a contagem de eventos ou de dias em que a temperatura mínima permanece abaixo de um limiar de referência por um número mínimo de dias consecutivos. Esse limiar pode ser absoluto ou relativo, como percentis da normal climatológica, e deve ser explicitado conforme a metodologia adotada.</p>
+</section>
+<section id="interpretação-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-8">Interpretação</h4>
+<p>Valores mais elevados indicam maior frequência ou duração de episódios de frio intenso, sugerindo aumento da exposição da população a condições térmicas adversas. Esses eventos podem estar associados ao agravamento de doenças respiratórias e cardiovasculares, ao aumento da demanda por serviços de saúde e a impactos mais intensos sobre populações em maior vulnerabilidade, como pessoas idosas, crianças, pessoas em situação de rua e grupos com habitação precária.</p>
+</section>
+<section id="usos-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-8">Usos</h4>
+<p>O indicador pode ser utilizado no monitoramento de eventos extremos de baixa temperatura, na vigilância em saúde ambiental, em estudos epidemiológicos sobre os efeitos do frio na morbimortalidade e no apoio a sistemas de alerta precoce. Também pode subsidiar o planejamento de ações de preparação e resposta, como proteção de grupos vulneráveis, organização de serviços de saúde e formulação de estratégias de adaptação climática em diferentes territórios.</p>
+</section>
+<section id="limitações-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-8">Limitações</h4>
+<p>A definição de onda de frio varia entre estudos e instituições, o que pode dificultar comparações. Os resultados dependem do limiar adotado, do número mínimo de dias consecutivos e da qualidade da série histórica utilizada como referência. Além disso, o indicador não capta, isoladamente, fatores que modulam os impactos do frio, como vento, umidade, amplitude térmica, condições de moradia e capacidade de proteção da população. Em áreas com baixa cobertura observacional ou com uso de dados interpolados e de reanálise, podem existir incertezas adicionais.</p>
+</section>
+<section id="fontes-de-dados-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-8">Fontes de dados</h4>
+<p>O indicador pode ser calculado a partir de dados diários de temperatura mínima obtidos em estações meteorológicas, reanálises climáticas ou produtos em <em>grid</em>. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o <em>ERA5-Land</em>.</p>
+</section>
+</section>
+<section id="dias-frios" class="level3" data-number="6.2.4">
+<h3 data-number="6.2.4" class="anchored" data-anchor-id="dias-frios"><span class="header-section-number">6.2.4</span> Dias frios</h3>
+<section id="conceituação-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-9">Conceituação</h4>
+<p>Corresponde à contagem do número de dias, em um período de interesse, em que a temperatura observada fica abaixo de um limiar de referência definido para caracterizar frio anômalo ou intenso. Esse limiar pode ser estabelecido de forma relativa, com base em percentis da normal climatológica local, ou de forma absoluta, a partir de valores fixos de temperatura. Em geral, o indicador é calculado a partir da temperatura mínima, conforme o objetivo analítico e a metodologia adotada.</p>
+</section>
+<section id="interpretação-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-9">Interpretação</h4>
+<p>Valores mais elevados indicam maior frequência de dias com temperaturas inferiores ao padrão esperado para o local e a época do ano, sugerindo maior exposição da população a condições de frio potencialmente prejudiciais à saúde. O aumento desse indicador pode estar relacionado a maior risco de agravamento de doenças respiratórias e cardiovasculares, além de efeitos mais intensos em populações vulneráveis, como pessoas idosas, crianças, pessoas em situação de rua e indivíduos em moradias precárias.</p>
+</section>
+<section id="usos-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-9">Usos</h4>
+<p>O indicador pode ser utilizado para monitorar a ocorrência de frio em diferentes escalas temporais e espaciais, apoiar análises sazonais e territoriais da exposição térmica e subsidiar estudos sobre os efeitos do frio na saúde. Também pode contribuir para sistemas de alerta, ações de vigilância em saúde ambiental, planejamento de respostas em períodos de baixas temperaturas e investigações sobre associações entre frio e desfechos como internações, mortalidade e agravamento de doenças crônicas.</p>
+</section>
+<section id="limitações-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-9">Limitações</h4>
+<p>A utilidade e a comparabilidade do indicador dependem da definição do limiar adotado e da variável de temperatura utilizada no cálculo. Quando baseado apenas em um valor diário, o indicador pode não captar adequadamente a intensidade, a duração ou a persistência do frio. Além disso, não incorpora diretamente outros fatores que influenciam a sensação térmica e os impactos à saúde, como vento, umidade, condições de moradia e capacidade de proteção da população. Também podem existir incertezas associadas à qualidade, cobertura e escala dos dados meteorológicos utilizados.</p>
+</section>
+<section id="fontes-de-dados-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-9">Fontes de dados</h4>
+<p>O indicador pode ser calculado a partir de dados diários de temperatura mínima obtidos em estações meteorológicas, reanálises climáticas ou produtos em <em>grid</em>. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o <em>ERA5-Land</em>.</p>
+</section>
+</section>
+<section id="chuvas-persistentes" class="level3" data-number="6.2.5">
+<h3 data-number="6.2.5" class="anchored" data-anchor-id="chuvas-persistentes"><span class="header-section-number">6.2.5</span> Chuvas persistentes</h3>
+<section id="conceituação-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-10">Conceituação</h4>
+<p>Representa a ocorrência de períodos consecutivos em que a precipitação diária permanece acima de um limiar de referência, definido em relação ao padrão climatológico local. Trata-se de um evento caracterizado não apenas pela intensidade da chuva em um único dia, mas por sua persistência ao longo de dias consecutivos. Esse limiar pode ser definido, por exemplo, pela precipitação diária acima da normal climatológica ou acima de um percentil de referência, durante um número mínimo de dias consecutivos previamente estabelecido.</p>
+</section>
+<section id="interpretação-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-10">Interpretação</h4>
+<p>Valores mais elevados indicam maior frequência ou duração de episódios de chuva persistente, sugerindo condições favoráveis à saturação do solo, alagamentos, enchentes, deslizamentos e outros impactos ambientais e sanitários. Em termos de saúde pública, esses eventos podem estar associados à interrupção de serviços, contaminação da água, aumento do risco de doenças de veiculação hídrica como a leptospirose, além de agravarem situações de vulnerabilidade social em áreas com infraestrutura precária.</p>
+</section>
+<section id="usos-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-10">Usos</h4>
+<p>O indicador pode ser utilizado para monitorar eventos hidrometeorológicos de interesse para a saúde pública, apoiar sistemas de alerta precoce, identificar áreas e períodos de maior risco e subsidiar análises sobre os impactos das chuvas intensas e prolongadas na morbimortalidade. Também é útil em estudos sobre desastres, vigilância em saúde ambiental, planejamento territorial, defesa civil e formulação de estratégias de preparação e resposta a eventos extremos.</p>
+</section>
+<section id="limitações-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-10">Limitações</h4>
+<p>A definição operacional de chuva persistente pode variar conforme o limiar adotado, o número mínimo de dias consecutivos e a escala temporal de análise, o que pode dificultar comparações entre estudos. Além disso, o indicador não capta, isoladamente, todos os fatores que condicionam os impactos da chuva, como características do relevo, drenagem urbana, cobertura do solo, impermeabilização, ocupação de áreas de risco e capacidade de resposta local. Também podem existir incertezas associadas à qualidade e à resolução espacial dos dados de precipitação, especialmente em regiões com baixa cobertura observacional.</p>
+</section>
+<section id="fontes-de-dados-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-10">Fontes de dados</h4>
+<p>O indicador pode ser calculado a partir de dados diários de precipitação obtidos em estações meteorológicas, reanálises climáticas ou produtos em <em>grid</em>. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o <em>ERA5-Land</em> e <em>CHIRPS</em>.</p>
+</section>
+</section>
+<section id="ondas-de-seca" class="level3" data-number="6.2.6">
+<h3 data-number="6.2.6" class="anchored" data-anchor-id="ondas-de-seca"><span class="header-section-number">6.2.6</span> Ondas de seca</h3>
+<section id="conceituação-11" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-11">Conceituação</h4>
+<p>Representa a ocorrência de períodos consecutivos de baixa umidade relativa do ar em relação ao padrão climatológico local. O indicador é definido a partir da identificação de sequências de dias consecutivos em que a umidade relativa diária permanece abaixo de um limiar de referência, estabelecido com base na climatologia. Esse limiar pode ser definido, por exemplo, por um percentil inferior da distribuição histórica da umidade relativa para o local e a época do ano, durante um número mínimo de dias consecutivos previamente especificado.</p>
+</section>
+<section id="interpretação-11" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-11">Interpretação</h4>
+<p>Valores mais elevados indicam maior frequência ou duração de episódios de ar persistentemente seco, sugerindo condições atmosféricas potencialmente desfavoráveis à saúde e ao bem-estar. Esses episódios podem aumentar o desconforto térmico, favorecer o ressecamento das vias aéreas e da pele, agravar doenças respiratórias e ampliar a suscetibilidade a queimadas e à piora da qualidade do ar. Em contextos de vulnerabilidade social e ambiental, a persistência de baixa umidade pode intensificar riscos sanitários e operacionais para a população.</p>
+</section>
+<section id="usos-11" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-11">Usos</h4>
+<p>O indicador pode ser utilizado para monitorar episódios de secura atmosférica, apoiar sistemas de alerta precoce, identificar períodos e áreas sob maior exposição a condições ambientais adversas e subsidiar estudos sobre os efeitos da baixa umidade na saúde. Também pode ser empregado em análises de sazonalidade climática, vigilância em saúde ambiental, preparação para eventos extremos e investigações sobre associações entre secura do ar e desfechos como internações por doenças respiratórias, agravamento de crises asmáticas, desconforto térmico e risco de incêndios.</p>
+</section>
+<section id="limitações-11" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-11">Limitações</h4>
+<p>A definição operacional do indicador depende do limiar adotado, do número mínimo de dias consecutivos e da qualidade da série histórica utilizada como referência. Além disso, por se basear na umidade relativa do ar, o indicador descreve principalmente a secura atmosférica, não captando integralmente outras dimensões da seca, como déficit de precipitação, redução da umidade do solo, escassez hídrica ou impactos hidrológicos. Seus efeitos também podem variar conforme temperatura, vento, poluição atmosférica, condições de moradia e capacidade de adaptação da população. Em áreas com baixa cobertura observacional ou com uso de dados interpolados e de reanálise, podem existir incertezas adicionais.</p>
+</section>
+<section id="fontes-de-dados-11" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-11">Fontes de dados</h4>
+<p>O indicador pode ser calculado a partir de dados diários de umidade relativa em estações meteorológicas, reanálises climáticas ou produtos em <em>grid</em>. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o <em>ERA5-Land</em>.</p>
+</section>
+</section>
+<section id="ondas-de-umidade" class="level3" data-number="6.2.7">
+<h3 data-number="6.2.7" class="anchored" data-anchor-id="ondas-de-umidade"><span class="header-section-number">6.2.7</span> Ondas de umidade</h3>
+<section id="conceituação-12" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-12">Conceituação</h4>
+<p>Representa a ocorrência de períodos consecutivos em que a umidade relativa do ar permanece acima de um limiar de referência definido em relação ao padrão climatológico local. Trata-se de um indicador de persistência, construído a partir da identificação de sequências de dias consecutivos com valores anormalmente elevados de umidade relativa. Esse limiar pode ser definido com base em um percentil superior da climatologia local para a mesma época do ano, associado a uma duração mínima previamente estabelecida.</p>
+</section>
+<section id="interpretação-12" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-12">Interpretação</h4>
+<p>Valores mais elevados indicam maior frequência ou duração de episódios de umidade persistentemente alta. Essas condições podem intensificar o desconforto térmico, especialmente quando associadas a temperaturas elevadas, ao dificultar a evaporação do suor e a dissipação do calor corporal. Além disso, podem favorecer ambientes propícios à proliferação de fungos, mofo e outros agentes relacionados a agravos respiratórios e alergias. Em determinados contextos, episódios prolongados de alta umidade também podem estar associados a condições ambientais favoráveis à transmissão de doenças infecciosas e à deterioração das condições de habitação.</p>
+</section>
+<section id="usos-12" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-12">Usos</h4>
+<p>O indicador pode ser utilizado para monitorar episódios de umidade excessiva, identificar períodos e áreas de maior desconforto térmico e subsidiar análises sobre a relação entre condições atmosféricas e desfechos em saúde. Também pode apoiar sistemas de alerta, ações de vigilância em saúde ambiental, estudos sobre doenças respiratórias, análise de condições favoráveis à sobrevivência de vetores e planejamento de medidas adaptativas em contextos de variabilidade climática e mudanças climáticas.</p>
+</section>
+<section id="limitações-12" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-12">Limitações</h4>
+<p>A definição operacional do indicador depende do limiar adotado, do número mínimo de dias consecutivos e da qualidade da série histórica utilizada como referência. Por se basear apenas na umidade relativa do ar, o indicador não capta isoladamente a totalidade do desconforto térmico ou dos riscos à saúde, que também dependem de temperatura, ventilação, condições de moradia e exposição da população. Além disso, a interpretação pode variar conforme o contexto climático local, já que níveis elevados de umidade têm significados distintos em regiões secas e úmidas. Em áreas com baixa cobertura observacional ou uso de dados interpolados e de reanálise, podem existir incertezas adicionais.</p>
+</section>
+<section id="fontes-de-dados-12" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-12">Fontes de dados</h4>
+<p>O indicador pode ser calculado a partir de dados diários de umidade relativa em estações meteorológicas, reanálises climáticas ou produtos em <em>grid</em>. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o <em>ERA5-Land</em>.</p>
+</section>
+</section>
+<section id="ondas-de-pouco-vento" class="level3" data-number="6.2.8">
+<h3 data-number="6.2.8" class="anchored" data-anchor-id="ondas-de-pouco-vento"><span class="header-section-number">6.2.8</span> Ondas de pouco vento</h3>
+<section id="conceituação-13" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-13">Conceituação</h4>
+<p>Representa a ocorrência de períodos consecutivos em que a velocidade diária do vento permanece abaixo de um limiar de referência definido em relação ao padrão climatológico local. Trata-se de um indicador de persistência, construído a partir da identificação de sequências de dias consecutivos com vento anormalmente fraco para determinada localidade e época do ano. Esse limiar pode ser definido com base em um percentil inferior da climatologia local, associado a uma duração mínima previamente estabelecida.</p>
+</section>
+<section id="interpretação-13" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-13">Interpretação</h4>
+<p>Valores mais elevados indicam maior frequência ou duração de episódios de vento persistentemente fraco. Essas condições podem reduzir a dispersão de poluentes atmosféricos, favorecer a estagnação do ar e intensificar a concentração de contaminantes próximos à superfície, especialmente em áreas urbanas e industrializadas. Em determinadas situações, a persistência de pouco vento também pode contribuir para maior desconforto térmico, sobretudo quando combinada a temperaturas elevadas e alta umidade, além de influenciar a propagação de fumaça em episódios de queimadas.</p>
+</section>
+<section id="usos-13" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-13">Usos</h4>
+<p>O indicador pode ser utilizado para monitorar condições atmosféricas favoráveis à estagnação do ar, apoiar análises sobre qualidade do ar e saúde, identificar períodos e áreas com maior propensão ao acúmulo de poluentes e subsidiar sistemas de alerta ambiental. Também pode ser empregado em estudos sobre a relação entre condições meteorológicas e agravos respiratórios e cardiovasculares, no acompanhamento de episódios de fumaça e poluição, e no planejamento de ações de vigilância em saúde ambiental.</p>
+</section>
+<section id="limitações-13" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-13">Limitações</h4>
+<p>A definição operacional do indicador depende do limiar adotado, do número mínimo de dias consecutivos e da qualidade da série histórica utilizada como referência. Por se basear apenas na velocidade do vento, o indicador não capta, isoladamente, toda a complexidade dos processos atmosféricos associados à dispersão de poluentes, que também dependem de fatores como estabilidade atmosférica, temperatura, umidade, relevo e características urbanas locais. Além disso, sua interpretação pode variar conforme o contexto territorial, já que ventos fracos têm implicações distintas em áreas costeiras, urbanas, rurais ou sujeitas a queimadas. Em áreas com baixa cobertura observacional ou com uso de dados interpolados e de reanálise, podem existir incertezas adicionais.</p>
+</section>
+<section id="fontes-de-dados-13" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-13">Fontes de dados</h4>
+<p>O indicador pode ser calculado a partir de dados diários de velocidade do vento em estações meteorológicas, reanálises climáticas ou produtos em <em>grid</em>. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o <em>ERA5-Land</em>.</p>
+</section>
+</section>
+<section id="ondas-de-vento-em-excesso" class="level3" data-number="6.2.9">
+<h3 data-number="6.2.9" class="anchored" data-anchor-id="ondas-de-vento-em-excesso"><span class="header-section-number">6.2.9</span> Ondas de vento em excesso</h3>
+<section id="conceituação-14" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-14">Conceituação</h4>
+<p>Representa a ocorrência de períodos consecutivos em que a velocidade diária do vento permanece acima de um limiar de referência definido em relação ao padrão climatológico local. Trata-se de um indicador de persistência, construído a partir da identificação de sequências de dias consecutivos com vento anormalmente intenso para uma determinada localidade e época do ano. Esse limiar pode ser definido com base em um percentil superior da climatologia local, associado a uma duração mínima previamente estabelecida.</p>
+</section>
+<section id="interpretação-14" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-14">Interpretação</h4>
+<p>Valores mais elevados indicam maior frequência ou duração de episódios de vento persistentemente forte. Essas condições podem estar associadas a impactos sobre a saúde e o bem-estar, seja de forma direta, por desconforto térmico, ressecamento do ambiente e exposição a poeira e partículas, seja de forma indireta, ao favorecer a dispersão de fumaça, aerossóis, poluentes e alérgenos como o pólen. Em alguns contextos, ventos intensos também podem se relacionar a danos à infraestrutura, interrupção de serviços e aumento da vulnerabilidade em áreas expostas.</p>
+</section>
+<section id="usos-14" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-14">Usos</h4>
+<p>O indicador pode ser utilizado para monitorar eventos meteorológicos persistentes de vento forte, identificar períodos e áreas mais suscetíveis a impactos ambientais e sanitários e subsidiar análises sobre a relação entre condições atmosféricas e desfechos em saúde. Também pode apoiar sistemas de alerta, vigilância em saúde ambiental, estudos sobre dispersão de poluentes e fumaça, planejamento de respostas a eventos extremos e avaliação de riscos em contextos urbanos, costeiros, semiáridos ou sujeitos a queimadas.</p>
+</section>
+<section id="limitações-14" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-14">Limitações</h4>
+<p>A definição operacional do indicador depende do limiar adotado, do número mínimo de dias consecutivos e da qualidade da série histórica utilizada como referência. Por se basear apenas na velocidade do vento, o indicador não captura isoladamente toda a complexidade dos impactos associados, que também dependem da direção do vento, da temperatura, da umidade, do relevo, do uso do solo e das características da ocupação humana. Além disso, sua interpretação varia conforme o contexto territorial, uma vez que ventos intensos podem ter efeitos distintos em áreas urbanas, rurais, costeiras ou florestais. Em regiões com baixa cobertura observacional ou com uso de dados interpolados e de reanálise, podem existir incertezas adicionais.</p>
+</section>
+<section id="fontes-de-dados-14" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-14">Fontes de dados</h4>
+<p>O indicador pode ser calculado a partir de dados diários de velocidade do vento em estações meteorológicas, reanálises climáticas ou produtos em <em>grid</em>. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o <em>ERA5-Land</em>.</p>
 
 
+<div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list" style="display: none">
+<div id="ref-who2015heatwaves" class="csl-entry" role="listitem">
+WORLD HEALTH ORGANIZATION; WORLD METEOROLOGICAL ORGANIZATION. <strong><a href="https://www.who.int/publications/i/item/heatwaves-and-health-guidance-on-warning-system-development">Heatwaves and Health: Guidance on Warning-System Development</a></strong>. Geneva: World Health Organization, 2015.
+</div>
+</div>
 </section>
 </section>
 </section>
