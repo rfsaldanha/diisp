@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>3&nbsp; Harmonização de indicadores – Dados e Indicadores de Interesse para a Saúde Pública</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -54,19 +57,18 @@ div.csl-indent {
 <link href="./indi.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-89a1f99596d6e4a91b0a24663eeb039f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-234501a227967ac462f24af7be37efa8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-89a1f99596d6e4a91b0a24663eeb039f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-54427c74024eba8e34e34421ce4d6b49.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-aa873432a3c62897e6c2091c0d30a948.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-54427c74024eba8e34e34421ce4d6b49.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -103,7 +105,39 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -370,6 +404,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
   <li><a href="#dimensão-temporal" id="toc-dimensão-temporal" class="nav-link" data-scroll-target="#dimensão-temporal"><span class="header-section-number">3.2.1</span> Dimensão temporal</a></li>
   <li><a href="#dimensão-espacial" id="toc-dimensão-espacial" class="nav-link" data-scroll-target="#dimensão-espacial"><span class="header-section-number">3.2.2</span> Dimensão espacial</a></li>
   </ul></li>
+  <li><a href="#qualidade-incerteza-e-documentação" id="toc-qualidade-incerteza-e-documentação" class="nav-link" data-scroll-target="#qualidade-incerteza-e-documentação"><span class="header-section-number">3.3</span> Qualidade, incerteza e documentação</a></li>
   </ul>
 </nav>
     </div>
@@ -399,14 +434,34 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 <p>Estudos em Saúde Pública demandam uma grande quantidade de indicadores, provenientes de diversas áreas, para melhor refletir a realidade estudada, incluindo diversos aspectos contextuais sobre o processo saúde, doença e cuidado.</p>
 <p>A diversidade de indicadores introduz um desafio extra: a necessidade de compatibilizar os indicadores de modo a permitir a sua observação e comparação simultânea.</p>
 <p>Indicadores de saúde costumam ser agregados e divulgados por unidades administrativas ou sanitárias, como taxas de incidência de doenças por bairros, municípios ou regiões de saúde (dimensão espacial) e por dias, semanas epidemiológicas ou meses (dimensão temporal). Indicadores sociodemográficos seguem estruturas semelhantes.</p>
-<p>Já indicadores ambientais e climáticos, como temperatura e precipitação, podem ser coletados em localizações específicas, como estações meteorológicas, constituindo observações dos fenômenos climáticos em um ponto no espaço, ou coletados por sensores remotos, como satélites e drones, apresentando uma superfície espacial de observações. Assim, para se incluir em uma mesma análise, indicadores de saúde e indicadores ambientais, se faz necessário realizar um procedimento para a <em>compatibilização das escalas espaciais e temporais</em> dos indicadores.</p>
+<p>Já indicadores ambientais e climáticos, como temperatura e precipitação, podem ser coletados em localizações específicas, como estações meteorológicas, constituindo observações dos fenômenos climáticos em um ponto no espaço, ou obtidos por sensores remotos, reanálises e outros produtos em grade, apresentando uma superfície espacial de observações. Assim, para incluir indicadores de saúde, sociais, ambientais e climáticos em uma mesma análise, é necessário realizar um procedimento para a <em>compatibilização das escalas espaciais e temporais</em> dos indicadores.</p>
 <section id="conceito" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="conceito"><span class="header-section-number">3.1</span> Conceito</h2>
-<p>Entende-se aqui que a “harmonização de indicadores” é um processo de compatibilização, onde as escalas temporais e espaciais dos indicadores são trabalhadas de modo a serem analisadas de modo interoperável.</p>
+<p>Entende-se aqui que a “harmonização de indicadores” é o processo de tornar diferentes indicadores compatíveis entre si, considerando suas unidades espaciais, unidades temporais, métodos de cálculo e formas de mensuração. O objetivo é permitir que indicadores provenientes de diferentes fontes possam ser analisados conjuntamente de forma coerente.</p>
+<p>A harmonização não é apenas uma etapa técnica. Ela influencia diretamente a interpretação dos resultados, pois altera a unidade de observação, a escala temporal, a forma de agregação e, em alguns casos, o próprio significado substantivo do indicador. Um indicador de precipitação diária, por exemplo, pode representar intensidade de chuva quando observado por dia, mas passa a representar volume acumulado quando agregado por mês. Do mesmo modo, uma taxa municipal pode expressar uma situação média do município, mas esconder desigualdades importantes entre bairros ou setores censitários.</p>
+<p>Por isso, a harmonização deve ser compreendida como uma decisão metodológica. Ela precisa estar alinhada à pergunta de pesquisa, ao fenômeno observado e à escala em que uma ação de vigilância, planejamento ou política pública pode ser executada.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Dados originais] --&gt; B[Escala espacial original]
+  A --&gt; C[Escala temporal original]
+  B --&gt; D[Regra de harmonização]
+  C --&gt; D
+  D --&gt; E[Indicador harmonizado]
+  E --&gt; F[Análise integrada]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 </section>
 <section id="operacionalização" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="operacionalização"><span class="header-section-number">3.2</span> Operacionalização</h2>
-<p>A operacionalização da harmonização de indicadores se dá através do re-cálculo dos indicadores para novas escalas espaciais e temporais, estabelecidas <em>a priori</em> considerando as necessidades do estudo. Ou seja, deve-se primeiro ponderar-se sobre qual a escala temporal e espacial adequada para o estudo e, em seguida, realizar os procedimentos de harmonização de acordo com as escalas definidas.</p>
+<p>A operacionalização da harmonização de indicadores se dá por meio do recálculo ou da reagregação dos indicadores para novas escalas espaciais e temporais, estabelecidas <em>a priori</em> considerando as necessidades do estudo. Ou seja, deve-se primeiro definir quais escalas temporal e espacial são adequadas para a pergunta de pesquisa ou de vigilância e, em seguida, realizar os procedimentos de harmonização de acordo com as escalas definidas.</p>
 <p>Neste processo, indicadores de contagem podem ser somados ou divididos, mas indicadores como taxas e proporções devem ser recalculados.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -418,28 +473,133 @@ Cuidado
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>No caso de indicadores de taxas e proporções, não se deve aplicar estatísticas resumo, como média, mediada ou desvio padrão, para se obter o valor para a nova escala de análise. O indicador deve ser re-calculado inteiramente para a nova escala, considerando os novos valores de numerador e denominador adequados.</p>
+<p>No caso de indicadores de taxas e proporções, não se deve aplicar estatísticas resumo, como média, mediana ou desvio padrão, para obter o valor para a nova escala de análise quando os numeradores e denominadores estão disponíveis. O indicador deve ser recalculado para a nova escala, considerando os novos valores de numerador e denominador adequados.</p>
 </div>
 </div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ao harmonizar taxas e proporções, some os numeradores e denominadores e recalcule o indicador na nova escala. Não use a média simples de taxas ou proporções de unidades menores para obter o valor de uma unidade maior.</p>
+</div>
+</div>
+<p>Por exemplo, considere dois municípios:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Município</th>
+<th style="text-align: right;">Casos</th>
+<th style="text-align: right;">População</th>
+<th style="text-align: right;">Taxa por 1.000 habitantes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: right;">10,0</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">100.000</td>
+<td style="text-align: right;">1,0</td>
+</tr>
+</tbody>
+</table>
+<p>A média simples das taxas municipais seria:</p>
+<p><span class="math display">\[
+\frac{10,0 + 1,0}{2} = 5,5
+\]</span></p>
+<p>Contudo, a taxa regional correta deve ser recalculada a partir da soma dos casos e da população:</p>
+<p><span class="math display">\[
+\frac{10 + 100}{1.000 + 100.000} \times 1.000 = 1,09
+\]</span></p>
+<p>Neste exemplo, a média simples superestima a taxa regional porque atribui o mesmo peso a um município pequeno e a um município muito maior.</p>
+<p>Um fluxo prático para harmonização de indicadores pode seguir as seguintes etapas:</p>
+<ol type="1">
+<li>Definir a pergunta analítica ou de vigilância.</li>
+<li>Definir a unidade espacial de análise, como município, bairro, setor censitário ou região de saúde.</li>
+<li>Definir a unidade temporal de análise, como dia, semana epidemiológica, mês ou ano.</li>
+<li>Identificar o tipo de cada indicador: contagem, proporção, taxa, razão, medida escalar, volume ou superfície espacial.</li>
+<li>Escolher a regra de harmonização adequada para cada indicador.</li>
+<li>Documentar as decisões metodológicas adotadas, incluindo perdas de informação, imputações e limitações.</li>
+</ol>
+<p>Por exemplo, um estudo sobre dengue pode combinar casos notificados diariamente por município com precipitação mensal estimada em uma grade espacial. Se a análise for definida na escala município-mês, os casos diários devem ser somados por município e mês, enquanto a precipitação em grade deve ser harmonizada para os limites municipais e para o mesmo período mensal.</p>
+<p>A tabela abaixo sintetiza regras gerais para a harmonização de diferentes tipos de indicadores.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo de indicador</th>
+<th>Exemplos</th>
+<th>Regra comum de harmonização</th>
+<th>Cuidado principal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Contagem</td>
+<td>Casos, óbitos, internações</td>
+<td>Soma para unidades maiores de tempo ou espaço</td>
+<td>Verificar duplicidades e mudanças de residência, ocorrência ou notificação</td>
+</tr>
+<tr class="even">
+<td>Proporção</td>
+<td>Percentual de população idosa, proporção de domicílios com saneamento</td>
+<td>Recalcular usando numerador e denominador agregados</td>
+<td>Evitar média simples de proporções</td>
+</tr>
+<tr class="odd">
+<td>Taxa</td>
+<td>Incidência, mortalidade, natalidade</td>
+<td>Recalcular usando eventos e população de referência</td>
+<td>Preservar o denominador adequado para o período e a população sob risco</td>
+</tr>
+<tr class="even">
+<td>Razão</td>
+<td>Razão de sexos, razão de dependência</td>
+<td>Recalcular usando os componentes agregados</td>
+<td>Garantir que os grupos comparados sejam compatíveis</td>
+</tr>
+<tr class="odd">
+<td>Medida escalar</td>
+<td>Temperatura, umidade relativa, velocidade do vento</td>
+<td>Média, mediana, mínimo ou máximo, conforme o objetivo</td>
+<td>A estatística escolhida altera a interpretação do indicador</td>
+</tr>
+<tr class="even">
+<td>Volume ou acumulado</td>
+<td>Precipitação, emissões, produção</td>
+<td>Soma no tempo ou no espaço, quando apropriado</td>
+<td>Diferenciar intensidade, média e volume acumulado</td>
+</tr>
+<tr class="odd">
+<td>Índice padronizado</td>
+<td>SPI, PDSI, NDVI, índices sintéticos</td>
+<td>Geralmente média ou estatística zonal, conforme a escala</td>
+<td>Verificar se o índice pode ser agregado sem perder significado</td>
+</tr>
+</tbody>
+</table>
 <section id="dimensão-temporal" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="dimensão-temporal"><span class="header-section-number">3.2.1</span> Dimensão temporal</h3>
-<p>A harmonização de indicadores na dimensão temporal se dá através da agregação ou desagregação do indicador para uma nova dimensão de tempo. Esta agregação/desagregação pode envolver a simples soma de valores no caso de indicadores de contagem, ou o re-cálculo do indicador considerando a nova escala temporal.</p>
+<p>A harmonização de indicadores na dimensão temporal se dá por meio da agregação ou desagregação do indicador para uma nova unidade de tempo. Esta agregação ou desagregação pode envolver a simples soma de valores, no caso de indicadores de contagem, ou o recálculo do indicador considerando a nova escala temporal.</p>
 <p>Por exemplo, se o indicador de saúde é uma contagem de casos por dia e se tem por objetivo da harmonização apresentar este indicador por semana epidemiológica, o procedimento será realizar a soma da quantidade de casos que ocorrem em uma mesma semana epidemiológica.</p>
 <p>Contudo, se o indicador for uma taxa, ele deve ser recalculado considerando a contagem para a nova escala e o valor do denominador apropriado.</p>
-</section>
-<section id="dimensão-espacial" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="dimensão-espacial"><span class="header-section-number">3.2.2</span> Dimensão espacial</h3>
-<p>A harmonização de indicadores na escala espacial deve considerar se o indicador é apresentado por pontos, por agregados em região administrativa, ou uma superfície espacial.</p>
-<section id="pontos-no-espaço" class="level4" data-number="3.2.2.1">
-<h4 data-number="3.2.2.1" class="anchored" data-anchor-id="pontos-no-espaço"><span class="header-section-number">3.2.2.1</span> Pontos no espaço</h4>
-<p>Caso os valores do indicador sejam apresentados como pontos no espaço (exemplo, medidas de temperatura por estação meteorológica) os valores do indicador para cada ponto de mensuração devem ser agregados para a nova dimensão pretendida (como municípios ou alguma região administrativa).</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/img/estacoes_marrocos.png" class="img-fluid figure-img"></p>
-<figcaption>Estações meteorológicas no Marrocos</figcaption>
-</figure>
-</div>
-<p>A figura acima apresenta algumas estações meteorológicas localizadas no Marrocos e uma subdivisão administrativa do território. Em regiões com apenas uma estação, o valor desta estação é aplicado para toda a região. Em regiões com mais de uma estação, os valores das estações devem ser agregados e aplicados para a região. Regiões sem estações ficam sem valor para o indicador.</p>
+<p>A escolha da unidade temporal deve considerar o processo que está sendo analisado. Eventos agudos, como atendimentos por calor extremo, podem exigir dados diários ou semanais. Indicadores relacionados a condições estruturais, como saneamento ou renda, costumam variar lentamente e podem ser analisados em escala anual ou censitária. Doenças transmitidas por vetores podem exigir uma escala intermediária, como semana epidemiológica ou mês, especialmente quando há defasagem entre exposição ambiental e ocorrência do agravo.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -450,17 +610,62 @@ Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Indicadores escalares como temperatura e umidade relativa do ar podem ser harmonizados utilizando-se a média estatística. Já a harmonização de indicadores de volume, como precipitação, costuma-se utilizar a soma.</p>
+<p>Em análises de clima e saúde, é comum que a exposição ambiental relevante ocorra antes do desfecho em saúde. Temperatura, precipitação ou umidade observadas em semanas anteriores podem afetar a incidência futura de arboviroses, doenças respiratórias ou agravos relacionados ao calor. Assim, além da harmonização temporal, pode ser necessário construir defasagens temporais (<em>lags</em>) coerentes com o mecanismo estudado.</p>
 </div>
 </div>
+<p>Quando a análise envolve desagregação temporal, o cuidado deve ser ainda maior. Transformar uma informação anual em valores mensais, por exemplo, pode exigir pressupostos fortes sobre a distribuição do fenômeno no tempo. Em muitos casos, é preferível reconhecer que o indicador só está disponível em uma escala mais agregada do que criar uma série temporal artificialmente detalhada.</p>
+</section>
+<section id="dimensão-espacial" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="dimensão-espacial"><span class="header-section-number">3.2.2</span> Dimensão espacial</h3>
+<p>A harmonização de indicadores na escala espacial deve considerar se o indicador é apresentado por pontos, por agregados em região administrativa, ou uma superfície espacial.</p>
+<p>A escolha da unidade espacial também deve levar em conta o fenômeno analisado. Municípios podem ser adequados para análises nacionais ou estaduais, mas podem ser pouco informativos para grandes centros urbanos, onde desigualdades intraurbanas são relevantes. Setores censitários, bairros ou áreas de abrangência de serviços de saúde podem ser mais adequados para análises locais, desde que os dados estejam disponíveis e sejam suficientemente estáveis.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Cuidado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Resultados de análises espaciais podem mudar quando a mesma informação é agregada em unidades territoriais diferentes. Esse problema é conhecido como problema da unidade de área modificável (<em>modifiable areal unit problem</em>, MAUP) <span class="citation" data-cites="openshaw1984maup">(<a href="referencias.html#ref-openshaw1984maup" role="doc-biblioref">OPENSHAW, 1984</a>)</span>. Por isso, comparações entre estudos ou mapas devem considerar a escala e a delimitação territorial utilizadas.</p>
+</div>
+</div>
+<section id="pontos-no-espaço" class="level4" data-number="3.2.2.1">
+<h4 data-number="3.2.2.1" class="anchored" data-anchor-id="pontos-no-espaço"><span class="header-section-number">3.2.2.1</span> Pontos no espaço</h4>
+<p>Caso os valores do indicador sejam apresentados como pontos no espaço, como medidas de temperatura por estação meteorológica, os valores do indicador para cada ponto de mensuração devem ser associados ou agregados à nova unidade espacial pretendida, como municípios ou regiões administrativas.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/img/estacoes_marrocos.png" class="img-fluid figure-img"></p>
+<figcaption>Estações meteorológicas no Marrocos</figcaption>
+</figure>
+</div>
+<p>A figura acima apresenta algumas estações meteorológicas localizadas no Marrocos e uma subdivisão administrativa do território. Em regiões com apenas uma estação, o valor desta estação pode ser aplicado para toda a região. Em regiões com mais de uma estação, os valores das estações podem ser agregados e aplicados para a região. Regiões sem estações ficam sem valor para o indicador, a menos que sejam utilizados métodos de preenchimento ou interpolação espacial.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Indicadores escalares como temperatura e umidade relativa do ar podem ser harmonizados utilizando-se a média estatística. Já na harmonização de indicadores de volume, como precipitação, costuma-se utilizar a soma.</p>
+</div>
+</div>
+<p>Outras estratégias podem ser empregadas quando a cobertura de estações é insuficiente, como o uso da estação mais próxima, ponderação pela distância, interpolação espacial, krigagem ou produtos em grade baseados em sensoriamento remoto e reanálises climáticas. A escolha do método deve considerar a densidade da rede de observação, a variabilidade espacial do fenômeno e a escala de análise.</p>
 </section>
 <section id="regiões-administrativas" class="level4" data-number="3.2.2.2">
 <h4 data-number="3.2.2.2" class="anchored" data-anchor-id="regiões-administrativas"><span class="header-section-number">3.2.2.2</span> Regiões administrativas</h4>
-<p>Indicadores apresentados por regiões administrativas podem ser re-agregados para outras regiões administrativas caso exista uma hierarquia espacial compatível entre essas escalas. Por exemplo: municípios, microrregiões, macrorregiões, unidades federativas e grandes regiões. Neste caso, uma unidade espacial não pode estar contida em mais de uma outra unidade espacial de nível superior (por exemplo, um município não pode pertencer a duas ou mais UFs).</p>
+<p>Indicadores apresentados por regiões administrativas podem ser reagregados para outras regiões administrativas caso exista uma hierarquia espacial compatível entre essas escalas. Por exemplo: municípios, microrregiões, macrorregiões, unidades federativas e grandes regiões. Neste caso, uma unidade espacial não pode estar contida em mais de uma outra unidade espacial de nível superior. Por exemplo, um município não pode pertencer a duas ou mais UFs.</p>
+<p>Quando existe hierarquia territorial, contagens podem ser somadas diretamente. Taxas, proporções e razões devem ser recalculadas a partir de seus componentes. Por exemplo, para obter uma taxa estadual de mortalidade a partir de dados municipais, deve-se somar os óbitos dos municípios, somar ou estimar a população de referência correspondente e então calcular a taxa estadual. A média simples das taxas municipais daria o mesmo peso a municípios pequenos e grandes, produzindo uma medida potencialmente distorcida.</p>
+<p>Nem toda mudança de escala espacial é hierárquica. A conversão entre bairros, setores censitários, áreas de abrangência de equipes de saúde e regiões administrativas pode envolver unidades que se sobrepõem parcialmente. Nesses casos, pode ser necessário usar métodos de redistribuição espacial, ponderação por área, ponderação por população ou outras técnicas de interpolação areal. A escolha do método deve ser explicitada, pois pode afetar os resultados.</p>
 </section>
 <section id="superfície-espacial" class="level4" data-number="3.2.2.3">
 <h4 data-number="3.2.2.3" class="anchored" data-anchor-id="superfície-espacial"><span class="header-section-number">3.2.2.3</span> Superfície espacial</h4>
-<p>A harmonização de um indicador que é apresentado como uma superfície espacial é um caso especial de harmonização, onde é possível a aplicação de estatísticas resumo (como média, mediana e desvio-padrão).</p>
+<p>A harmonização de um indicador que é apresentado como uma superfície espacial é um caso especial, onde é possível a aplicação de estatísticas resumo, como média, mediana e desvio-padrão.</p>
 <p>Neste caso de harmonização de indicadores, o indicador de superfície espacial deve ser, primeiramente, sobreposto espacialmente à malha dos limites administrativos, como apresentado na figura abaixo.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -468,23 +673,47 @@ Nota
 <figcaption>Temperatura máxima média em Janeiro de 2024, região do Marrocos</figcaption>
 </figure>
 </div>
-<p>Com esta sobreposição, observa-se quais <em>pixels</em> da superfície intersectam um elemento da malha. Considerando o conjunto de valores destes <em>pixels</em> que intersectam um dos elementos da malha, é aplicada uma estatística resumo, como a média. Este procedimento é denominado “estatística zonal” em <em>softwares</em> de geoprocessamento e Sistemas de Informação Geográfica (SIGs).</p>
+<p>Com esta sobreposição, observa-se quais <em>pixels</em> da superfície intersectam ou se sobrepõem a um elemento da malha. Considerando o conjunto de valores destes <em>pixels</em> para cada elemento da malha, é aplicada uma estatística resumo, como a média. Este procedimento é denominado “estatística zonal” em programas de geoprocessamento e Sistemas de Informação Geográfica (SIGs).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="assets/img/zonal_statistics.png" class="img-fluid figure-img"></p>
 <figcaption>Procedimento de estatística zonal. <span class="citation" data-cites="saldanhaZonalStatisticsDatasets2024">SALDANHA et al. (<a href="referencias.html#ref-saldanhaZonalStatisticsDatasets2024" role="doc-biblioref">2024</a>)</span></figcaption>
 </figure>
 </div>
-<p>A harmonização constitui uma etapa fundamental no processo de compatibilização indicadores, garantindo que diferentes variáveis possam ser analisadas de forma integrada e coerente. Esse processo envolve o ajuste e a padronização dos indicadores para que estejam alinhados em termos de escala temporal e espacial, permitindo comparações e análises consistentes. Ao assegurar essa compatibilidade, a harmonização viabiliza a integração de múltiplas fontes de dados e amplia a capacidade de interpretar fenômenos complexos, especialmente em estudos que articulam diferentes dimensões, como os determinantes sociais, ambientais e de saúde.</p>
+<p>Em estatísticas zonais, a escolha da estatística resumo deve refletir o objetivo analítico. A média pode ser adequada para representar a exposição média de uma população ou território, enquanto o máximo pode ser mais relevante para detectar eventos extremos. O mínimo, a amplitude, o desvio-padrão ou percentis podem ser úteis para caracterizar heterogeneidade interna, especialmente em municípios extensos ou ambientalmente diversos.</p>
+<p>Também é importante considerar se a estatística deve ser ponderada. Em alguns estudos, a média simples dos <em>pixels</em> de uma variável ambiental dentro do município é suficiente. Em outros, pode ser mais adequado ponderar os valores pela distribuição da população, dando maior peso às áreas onde as pessoas efetivamente residem.</p>
+</section>
+</section>
+</section>
+<section id="qualidade-incerteza-e-documentação" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="qualidade-incerteza-e-documentação"><span class="header-section-number">3.3</span> Qualidade, incerteza e documentação</h2>
+<p>Todo procedimento de harmonização pode introduzir incertezas. Parte dessas incertezas decorre dos próprios dados originais, como subnotificação, erro de medição, baixa cobertura de estações, resolução espacial insuficiente ou mudanças na metodologia de coleta. Outra parte decorre das decisões de harmonização, como escolha da unidade espacial, regra de agregação, tratamento de valores ausentes e uso de interpolação.</p>
+<p>Em estudos epidemiológicos, também é importante diferenciar interpretações ecológicas e individuais. Indicadores harmonizados para municípios, bairros ou regiões descrevem características agregadas dessas áreas. Relações observadas nessa escala não devem ser automaticamente interpretadas como relações válidas para indivíduos, pois podem refletir composição populacional, contexto territorial, padrões de agregação ou instabilidade estatística em pequenas áreas <span class="citation" data-cites="lawson2018bayesian">(<a href="referencias.html#ref-lawson2018bayesian" role="doc-biblioref">LAWSON, 2018</a>)</span>.</p>
+<p>Algumas perguntas ajudam a avaliar a qualidade do procedimento:</p>
+<ul>
+<li>A escala escolhida é coerente com o fenômeno e com a pergunta analítica?</li>
+<li>O numerador e o denominador dos indicadores foram preservados quando necessário?</li>
+<li>A agregação temporal respeita a dinâmica do processo estudado?</li>
+<li>A unidade espacial escolhida esconde heterogeneidades importantes?</li>
+<li>Há perdas de informação relevantes ao transformar pontos ou grades em áreas administrativas?</li>
+<li>Valores ausentes foram mantidos, imputados ou estimados por algum método?</li>
+<li>As decisões metodológicas são reprodutíveis e estão documentadas?</li>
+</ul>
+<p>A documentação dessas escolhas é parte essencial da análise. Sempre que possível, deve-se registrar a fonte original de cada indicador, sua escala espacial e temporal original, a escala final adotada, a regra de harmonização, o tratamento de valores ausentes e as limitações resultantes. Essa documentação facilita a reprodução dos resultados e evita interpretações indevidas.</p>
+<p>A harmonização constitui uma etapa fundamental no processo de compatibilização de indicadores, garantindo que diferentes variáveis possam ser analisadas de forma integrada e coerente. Ao assegurar essa compatibilidade, a harmonização viabiliza a integração de múltiplas fontes de dados e amplia a capacidade de interpretar fenômenos complexos, especialmente em estudos que articulam diferentes dimensões, como os determinantes sociais, ambientais e de saúde.</p>
 
 
 <div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list" style="display: none">
+<div id="ref-lawson2018bayesian" class="csl-entry" role="listitem">
+LAWSON, A. B. <strong>Bayesian Disease Mapping: Hierarchical Modeling in Spatial Epidemiology</strong>. 3. ed. Boca Raton: CRC Press, 2018.
+</div>
+<div id="ref-openshaw1984maup" class="csl-entry" role="listitem">
+OPENSHAW, S. <strong>The Modifiable Areal Unit Problem</strong>. Norwich: Geo Books, 1984.
+</div>
 <div id="ref-saldanhaZonalStatisticsDatasets2024" class="csl-entry" role="listitem">
 SALDANHA, R. et al. <a href="https://doi.org/10.1017/eds.2024.3">Zonal Statistics Datasets of Climate Indicators for <span>Brazilian</span> Municipalities</a>. <strong>Environmental Data Science</strong>, v. 3, p. e2, 2024.
 </div>
 </div>
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
