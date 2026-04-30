@@ -28,7 +28,7 @@ book:
     - saude.qmd # Saúde
     - ambi.qmd  # Ambientais (cobertura e uso do solo)
     - clima.qmd # Climáticos e atmosféricos
-    - inter.qmd # Dados da internet e redes sociais
+    # - inter.qmd # Dados da internet e redes sociais
     - etica.qmd # Ética e governança
     - reproducibilidade.qmd
     - estudo_caso.qmd
