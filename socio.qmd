@@ -10,7 +10,11 @@ Uma discussão mais aprofundada sobre os DSS pode ser encontrada em @breilh2006e
 
 Populações podem ser caracterizadas de diversas formas, incluindo características do contingente populacional, da sua renda, educação, domicílios e entorno, mercado de trabalho e condições de vida. Estas caracterizações básicas são utilizadas nas definições de indicadores sociodemográficos e são apresentadas a seguir.
 
+Este capítulo está organizado em duas partes. A primeira apresenta dimensões básicas de caracterização da população, úteis para compreender a construção e a interpretação dos indicadores. A segunda apresenta fichas de indicadores sociodemográficos, seguindo uma estrutura comum de conceituação, interpretação, usos, limitações, fontes de dados, método de cálculo e categorias sugeridas para análise.
+
 ## Caracterização da população
+
+A caracterização da população é uma etapa anterior ao cálculo de muitos indicadores. Ela define os grupos, recortes e atributos que serão observados, como idade, sexo, raça/cor, situação do domicílio, renda, educação e inserção no trabalho. Essas dimensões podem ser usadas tanto como indicadores em si quanto como categorias de estratificação para análises de desigualdade.
 
 ### Contingente populacional
 
@@ -86,11 +90,15 @@ A raça/cor de uma pessoa não se relaciona apenas a sua cor da pele (colorismo)
 
 Interessante notar que essa classificação pode ou não funcionar em populações de outros países e contextos, a depender dos grupos étnicos mais presentes na população. Por exemplo, em uma população com forte ascendência indígena, essa categoria pode ser melhor subdividida. 
 
+::: {.callout-note}
+Categorias sociodemográficas não são neutras nem universais. Elas dependem de convenções institucionais, contextos históricos, normas legais e formas de autodeclaração. Em séries históricas ou comparações internacionais, é necessário verificar se as categorias mantêm o mesmo significado ao longo do tempo e entre territórios.
+:::
+
 #### Urbano e rural
 
 O recorte do contingente populacional como rural ou urbano permite a comparação da saúde de populações que vivem em contextos sociais, econômicos e de acesso à saúde distintos.
 
-O cálculo do contingente populacional urbano é realizado pelo IBGE no Brasil à partir de definições territoriais de distritos sede nos municípios brasileiros. A população residente nos distritos sede é definida como urbana e a população restante é definida como rural. Saiba mais sobre a metodologia utilizada pelo IBGE [aqui](https://www.ibge.gov.br/geociencias/organizacao-do-territorio/tipologias-do-territorio/15790-classificacao-rural-e-urbana.html).
+O cálculo do contingente populacional urbano é realizado pelo IBGE no Brasil a partir de definições territoriais de distritos sede nos municípios brasileiros. A população residente nos distritos sede é definida como urbana e a população restante é definida como rural. Saiba mais sobre a metodologia utilizada pelo IBGE [aqui](https://www.ibge.gov.br/geociencias/organizacao-do-territorio/tipologias-do-territorio/15790-classificacao-rural-e-urbana.html).
 
 ::: {.callout-tip}
 A delimitação dos distritos sedes é realizada pelos próprios municípios e enviada para o IBGE. Em geral, esta delimitação pode ser afetada por interesses econômicos para a cobrança de taxas municipais. Propriedades em áreas urbanas pagam o Imposto sobre a Propriedade Predial e Territorial Urbana (IPTU), enquanto propriedades rurais pagam o Imposto Territorial Rural (ITR), que é, em geral, de menor valor. Isto produz uma pressão para que áreas rurais sejam declaradas como urbanas, ainda que não apresentem sinais claros de urbanização.
@@ -116,7 +124,7 @@ No Censo de 2022, o IBGE dividiu a população em sete classes de rendimento:
 | De 2 a 3                   | 2.424,01 a 3.636,00   |
 | Até 2                      | Até 2.424,00          |
 
-Já a Associação Brasileira de Empresas de Pesquisa (Abep) propõe uma classificação denominada "[Critério Brasil](https://abep.org/criterio-brasil/)", que é calculada em um sistema de pontos dado pelo grau de instrução, acesso a serviços públicos e acesso a uma série de características do domicilio (número de banheiros, por dentro outros) e a bens duráveis (número de automóveis e aparelhos de TV, dentro outros). O Critério Brasil apresenta a seguinte correspondência com a renda familiar média:
+Já a Associação Brasileira de Empresas de Pesquisa (Abep) propõe uma classificação denominada "[Critério Brasil](https://abep.org/criterio-brasil/)", que é calculada em um sistema de pontos dado pelo grau de instrução, acesso a serviços públicos e acesso a uma série de características do domicílio (número de banheiros, dentre outros) e a bens duráveis (número de automóveis e aparelhos de TV, dentre outros). O Critério Brasil apresenta a seguinte correspondência com a renda familiar média:
 
 | Estrato socioeconômico | Renda média  |
 |------------------------|--------------|
@@ -167,117 +175,20 @@ Após a LDB 9.394/96:
 
 A classificação da população segundo características do domicílio em que vivem e de seu entorno permite que estudos se aprofundem nas condições de vida da população. 
 
-A seguir, características do domicílio e entorno levantadas no Censo 2022 do IBGE.
+No Censo Demográfico, essas informações incluem dimensões como:
 
-Tipo de domicílio:
+-  tipo de domicílio, por exemplo casa, apartamento, cortiço ou habitação indígena;
+-  forma de abastecimento de água, incluindo rede geral, poços, fontes, carro-pipa, água da chuva e corpos d'água;
+-  existência de canalização de água até o domicílio ou apenas no terreno;
+-  tipo de esgotamento sanitário, como rede geral, fossa séptica, fossa rudimentar, vala ou lançamento em corpos d'água;
+-  destino do lixo, como coleta por serviço de limpeza, queima, enterro ou descarte em terreno baldio;
+-  características do entorno, como pavimentação, drenagem, iluminação pública, transporte, calçadas, acessibilidade e arborização.
 
--  Casa
--  Casa de vila ou em condomínio
--  Apartamento
--  Habitação em casa de cômodos ou cortiço
--  Habitação indígena sem paredes ou maloca
--  Estrutura residencial permanente degradada ou inacabada
+Essas variáveis são relevantes para a Saúde Pública porque permitem caracterizar exposições e vulnerabilidades relacionadas a saneamento, infraestrutura urbana, risco ambiental, mobilidade, acessibilidade e qualidade do ambiente construído. Muitas delas podem ser utilizadas diretamente como proporções, como a proporção de domicílios com esgotamento sanitário adequado, ou combinadas em indicadores sintéticos de condições de moradia e infraestrutura.
 
-Ligação à rede geral de distribuição de água e principal forma de abastecimento de água:
-
--  Possui ligação à rede geral e a utiliza como forma principal
--  Possui ligação à rede geral, mas utiliza principalmente outra forma
--  Possui ligação à rede geral, mas utiliza principalmente outra forma 
-   -  Poço profundo ou artesiano	
-   -  Poço raso, freático ou cacimba
-   -  Fonte, nascente ou mina
-   -  Carro-pipa
-   -  Água da chuva armazenada	
-   -  Rios, açudes, córregos, lagos e igarapés
-   -  Outra	
--  Não possui ligação com a rede geral
-   -  Poço profundo ou artesiano
-   -  Poço raso, freático ou cacimba
-   -  Fonte, nascente ou mina
-   -  Carro-pipa
-   -  Água da chuva armazenada
-   -  Rios, açudes, córregos, lagos e igarapés
-   -  Outra
-
-Canalização de água e principal forma de abastecimento de água:
-
--  Rede geral de distribuição
-   -  Canalizada até dentro da casa, apartamento ou habitação
-   -  Canalizada, mas apenas no terreno
-   -  Sem água canalizada
--  Poço profundo ou artesiano
-   -  Canalizada até dentro da casa, apartamento ou habitação
-   -  Canalizada, mas apenas no terreno
-   -  Sem água canalizada
--  Poço raso, freático ou cacimba
-   -  Canalizada até dentro da casa, apartamento ou habitação
-   -  Canalizada, mas apenas no terreno
-   -  Sem água canalizada
--  Fonte, nascente ou mina
-   -  Canalizada até dentro da casa, apartamento ou habitação
-   -  Canalizada, mas apenas no terreno
-   -  Sem água canalizada
--  Carro-pipa
-   -  Canalizada até dentro da casa, apartamento ou habitação
-   -  Canalizada, mas apenas no terreno
-   -  Sem água canalizada
--  Água da chuva armazenada
-   -  Canalizada até dentro da casa, apartamento ou habitação
-   -  Canalizada, mas apenas no terreno
-   -  Sem água canalizada
--  Rios, açudes, córregos, lagos e igarapés
-   -  Canalizada até dentro da casa, apartamento ou habitação
-   -  Canalizada, mas apenas no terreno
-   -  Sem água canalizada
--  Outra
-   -  Canalizada até dentro da casa, apartamento ou habitação
-   -  Canalizada, mas apenas no terreno
-   -  Sem água canalizada
-
-Esgotamento sanitário:
-
--  Rede geral, rede pluvial ou fossa ligada à rede
--  Rede geral ou pluvial
--  Fossa séptica ou fossa filtro ligada à rede
--  Fossa séptica ou fossa filtro não ligada à rede
--  Fossa rudimentar ou buraco
--  Vala
--  Rio, lago, córrego ou mar
--  Outra forma
--  Não tinham banheiro nem sanitário
-
-Destino do lixo:
-
--  Coletado
--  Coletado no domicílio por serviço de limpeza
--  Depositado em caçamba de serviço de limpeza
--  Queimado na propriedade
--  Enterrado na propriedade
--  Jogado em terreno baldio, encosta ou área pública
--  Outro destino
-
-Características do entorno do domicílio:
-
--  Capacidade máxima de circulação da via 
-   -  Caminhão ou ônibus
-   -  Carro ou van
-   -  Motocicletas, bicicletas e pedestres
-   -  Aquavias
-   -  Não declarado
--  Via pavimentada
--  Existência de bueiro / boca de lobo
--  Existência de iluminação pública
--  Existência de ponto de ônibus / van
--  Existência de via sinalizada para bicicleta
--  Existência de calçada / passeio
--  Existência de obstáculo na calçada
--  Existência de rampa para cadeirante
--  Arborização
-   -  Sem árvores
-   -  De 1 a 2 árvores
-   -  De 3 a 4 árvores
-   -  5 ou mais árvores
-   -  Não declarado
+::: {.callout-tip}
+Ao utilizar variáveis de domicílio e entorno, é importante distinguir a condição do domicílio da condição da pessoa. Um indicador domiciliar pode ser apresentado como proporção de domicílios ou como proporção de pessoas residentes em domicílios com determinada característica. A escolha altera o denominador e a interpretação.
+:::
 
 ### Mercado de trabalho
 
@@ -298,11 +209,13 @@ Definições:
 
 ### Qualidade de vida
 
-A Organização Mundial da Saúde define qualidade de vida como "a percepção do indivíduo de sua inserção na vida, no contexto da cultura e sistemas de valores nos quais ele vive e em relação aos seus objetivos, expectativas, padrões e preocupações". Apesar de ser uma definição subjetiva, existem métodos objetivos para mensura-lá, como o Índice de Qualidade de Vida (IDH).
+A Organização Mundial da Saúde define qualidade de vida como "a percepção do indivíduo de sua inserção na vida, no contexto da cultura e sistemas de valores nos quais ele vive e em relação aos seus objetivos, expectativas, padrões e preocupações". Apesar de ser uma definição subjetiva, existem instrumentos padronizados para mensurá-la, como o WHOQOL. O Índice de Desenvolvimento Humano (IDH), por sua vez, não mede a qualidade de vida individual, mas sintetiza dimensões do desenvolvimento humano em uma população.
 
 ## Indicadores demográficos
 
 A seguir são apresentadas fichas de caracterização dos principais indicadores sociodemográficos seguindo a formulação da RIPSA. Aprofundamentos e outros indicadores podem ser encontrados em @jannuzziIndicadoresSociaisNo2006 e @OPAS2008.
+
+As fichas devem ser lidas como modelos de consulta. Em aplicações concretas, é necessário verificar a fonte mais recente disponível, a escala territorial de divulgação, a periodicidade de atualização e as categorias compatíveis com a análise pretendida.
 
 ### Razão de sexos
 
@@ -355,7 +268,7 @@ $$
 Com dados censitários do [IBGE](https://seriesestatisticas.ibge.gov.br/series.aspx?no=10&op=0&vcodigo=CD77&t=populacao-presente-residente-sexo-dados-universo). 
 
 ```{r}
-#| messsage: false
+#| message: false
 library(tibble)
 library(ggplot2)
 
@@ -419,7 +332,7 @@ IBGE.
 As estimativas de crescimento da população são realizadas pelo método geométrico. Em termos técnicos, para se obter a taxa de crescimento ($r$), subtrai-se 1 da raiz enésima do quociente entre a população final ($Pt$) e a população no começo do período considerado ($P_0$), multiplicando-se o resultado por 100, sendo $n$ igual ao número de anos no período.
 
 $$
-r = \left[ \sqrt[n]{\frac{P_t}{P_0}} \times 100 \right]
+r = \left[ \sqrt[n]{\frac{P_t}{P_0}} - 1 \right] \times 100
 $$
 
 #### Categorias sugeridas para análise {.unnumbered}
@@ -485,7 +398,7 @@ Mede a intensidade de fecundidade a que as mulheres estão sujeitas em cada grup
 
 #### Usos {.unnumbered}
 
--  Analisar perfis de concentração da fecundidade por faixa etária. n Detectar variações das taxas nos grupos de maior risco reprodutivo.
+-  Analisar perfis de concentração da fecundidade por faixa etária e detectar variações das taxas nos grupos de maior risco reprodutivo.
 -  Calcular medidas sintéticas de fecundidade (taxa de fecundidade total, taxa bruta de reprodução e taxa líquida de reprodução).
 -  Possibilitar o estudo dinâmico da fecundidade, mediante análise longitudinal.
 -  Formular hipóteses de projeções populacionais.
@@ -538,7 +451,7 @@ Número de nascidos vivos, por mil habitantes, na população residente em deter
 
 #### Limitações {.unnumbered}
 
--  Devido à subenumeração de nascidos vivos, o uso de dados derivados de sistemas de registro contínuo está condicionado a correções, freqüente em áreas menos desenvolvidas.
+-  Devido à subenumeração de nascidos vivos, o uso de dados derivados de sistemas de registro contínuo está condicionado a correções, frequente em áreas menos desenvolvidas.
 -  A base de dados demográficos utilizada para o cálculo do indicador pode apresentar imprecisões inerentes à coleta de dados ou à metodologia empregada para elaborar estimativas populacionais.
 -  As projeções demográficas perdem precisão à medida que se distanciam dos anos de partida das projeções.
 -  Para comparar taxas entre populações de composição etária distinta, recomenda-se a prévia padronização de suas estruturas. As taxas padronizadas devem ser utilizadas apenas para análises comparativas.
@@ -772,7 +685,7 @@ Fonte: @OPAS2008
 
 Número de vezes que a renda do quinto superior da distribuição da renda (20% mais ricos) é maior do que a renda do quinto inferior (20% mais pobres) na população residente em determinado espaço geográfico, no ano considerado.
 
-##### Interpretação {.unnumbered}
+#### Interpretação {.unnumbered}
 
 -  Expressa a concentração da renda pessoal, ao comparar os estratos extremos de renda.
 -  Quanto mais elevados os valores, maior o desnível de renda entre grupos populacionais dos estratos considerados.
@@ -863,7 +776,7 @@ Indica a proporção da população total que reside em áreas urbanas, segundo 
 #### Usos {.unnumbered}
 
 -  Acompanhar o processo de urbanização da população brasileira, em diferentes espaços geográficos.
--  Subsidiar processos de planejamento, gestão e avaliação de políticas públicas, para adequação e funcionamento da rede de serviços sociais e da infra-estrutura urbana.
+-  Subsidiar processos de planejamento, gestão e avaliação de políticas públicas, para adequação e funcionamento da rede de serviços sociais e da infraestrutura urbana.
 
 #### Limitações {.unnumbered}
 
@@ -891,7 +804,7 @@ Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regi�
 
 ### Índice de Desenvolvimento Humano (IDH)
 
-O IDH foi proposto em 1990, pelo economista Mahbub ul Haq em colaboração com o economista Amartya Sen. A motivação do índice reside na necessidade mensurar o desenvolvimento humano não apenas pela renda, mas também considerando outros aspectos de importância para a vida, como educação e saúde.
+O IDH foi proposto em 1990, pelo economista Mahbub ul Haq em colaboração com o economista Amartya Sen. A motivação do índice reside na necessidade de mensurar o desenvolvimento humano não apenas pela renda, mas também considerando outros aspectos de importância para a vida, como educação e saúde.
 
 #### Conceituação {.unnumbered}
 
@@ -968,7 +881,7 @@ Este índice é calculado pelo Instituto de Pesquisas Econômicas Aplicadas (Ipe
 
 O IVS é um índice sintético que agrega um total de 16 indicadores de três categorias para mensurar a *vulnerabilidade social* [@costaVulnerabilidadeSocialNo2018].
 
-Dimensão infra-estrutura urbana
+Dimensão infraestrutura urbana
 
 -  Coleta de lixo
 -  Água e esgoto inadequados
@@ -1021,22 +934,22 @@ O IVS pode ser utilizado na comparação de municípios e regiões metropolitana
 
 Os 16 indicadores base são normalizados entre 0 e 1 e cada indicador recebe um peso específico, conforme a tabela abaixo:
 
-Dimensão | Indicador | Peso
+Dimensão | Indicador | Peso
 ---------|-----------|------
 IVS infraestrutura urbana | Percentual de pessoas em domicílios com abastecimento de água e esgotamento sanitário inadequados | 0,300  
-IVS infraestrutura urbana | Percentual da população que vive em domicílios urbanos sem serviço de coleta de lixo | 0,300
+IVS infraestrutura urbana | Percentual da população que vive em domicílios urbanos sem serviço de coleta de lixo | 0,300
 IVS infraestrutura urbana | Percentual de pessoas que vivem em domicílios com renda per capita inferior a meio salário mínimo e que gastam mais de  uma hora até o trabalho no total de pessoas ocupadas, vulneráveis e que retornam diariamente do trabalho | 0,400  
 IVS capital humano | Mortalidade até 1 ano de idade | 0,125
-IVS capital humano | Percentual de crianças de 0 a 5 anos que não frequentam a escola | 0,125
-IVS capital humano | Percentual de pessoas de 6 a 14 anos que não frequentam a escola | 0,125
+IVS capital humano | Percentual de crianças de 0 a 5 anos que não frequentam a escola | 0,125
+IVS capital humano | Percentual de pessoas de 6 a 14 anos que não frequentam a escola | 0,125
 IVS capital humano | Percentual de mulheres de 10 a 17 anos de idade que tiveram filhos | 0,125
-IVS capital humano | Percentual de mães chefes de família sem fundamental completo e com pelo menos um filho menor de 15 anos de idade, no total de mães chefes de família | 0,125
-IVS capital humano | Taxa de analfabetismo da população de 15 anos ou mais de idade | 0,125
+IVS capital humano | Percentual de mães chefes de família sem fundamental completo e com pelo menos um filho menor de 15 anos de idade, no total de mães chefes de família | 0,125
+IVS capital humano | Taxa de analfabetismo da população de 15 anos ou mais de idade | 0,125
 IVS capital humano | Percentual de crianças que vivem em domicílios em que nenhum dos moradores tem o ensino fundamental completo | 0,125
-IVS capital humano | Percentual de pessoas de 15 a 24 anos que não estudam, não trabalham e possuem renda domiciliar per capita igual ou inferior a meio salário mínimo (2010), na população total dessa faixa etária | 0,125 
-IVS renda e trabalho | Proporção de pessoas com renda domiciliar per capita igual ou inferior a meio salário mínimo (2010) | 0,200 
-IVS renda e trabalho | Taxa de desocupação da população de 18 anos ou mais de idade | 0,200
-IVS renda e trabalho | Percentual de pessoas de 18 anos ou mais sem fundamental completo e em ocupação informal | 0,200
+IVS capital humano | Percentual de pessoas de 15 a 24 anos que não estudam, não trabalham e possuem renda domiciliar per capita igual ou inferior a meio salário mínimo (2010), na população total dessa faixa etária | 0,125 
+IVS renda e trabalho | Proporção de pessoas com renda domiciliar per capita igual ou inferior a meio salário mínimo (2010) | 0,200 
+IVS renda e trabalho | Taxa de desocupação da população de 18 anos ou mais de idade | 0,200
+IVS renda e trabalho | Percentual de pessoas de 18 anos ou mais sem fundamental completo e em ocupação informal | 0,200
 IVS renda e trabalho | Percentual de pessoas em domicílios com renda per capita inferior a meio salário mínimo (de 2010) e dependentes de idosos | 0,200
 IVS renda e trabalho | Taxa de atividade das pessoas de 10 a 14 anos de idade | 0,200
 
@@ -1104,7 +1017,7 @@ O IPS visa medir o desempenho social e ambiental considerando 57 indicadores soc
    -  Direitos individuais
       -  Acesso a programas de direitos humanos
       -  Existência de ações para direitos de minorias
-      -  Índice de atendimetno à demanda de justiça
+      -  Índice de atendimento à demanda de justiça
       -  Resposta a processos familiares
       -  Resposta a processos previdenciários
       -  Taxa de congestionamento líquida de processos
@@ -1123,7 +1036,7 @@ O IPS visa medir o desempenho social e ambiental considerando 57 indicadores soc
    -  Acesso à educação superior
       -  Empregados com ensino superior
       -  Mulheres empregadas com ensino superior
-      -  Nota mediana o Enem
+      -  Nota mediana do Enem
 
 
 #### Interpretação {.unnumbered}
@@ -1147,7 +1060,7 @@ O IPS pode ser utilizado na comparação de municípios, em pesquisas e na orien
 
 -  O IPS é calculado com a média simples das notas das três dimensões.
 -  As notas das três dimensões são calculadas pela média simples dos resultados de seus componentes, respectivamente.
--  As notas dos componentes é obtida pelo método de Análise de Componentes Principais (ACP).
+-  As notas dos componentes são obtidas pelo método de Análise de Componentes Principais (ACP).
 
 ## Fontes de dados e indicadores sociodemográficos calculados
 
@@ -1163,19 +1076,15 @@ A seguir, links para as principais pesquisas do IBGE com dados sociodemográfico
 -  [Estatísticas do registro civil](https://sidra.ibge.gov.br/pesquisa/registro-civil)
 -  [Estimativas populacionais](https://sidra.ibge.gov.br/pesquisa/estimapop)
 
-### IPEA
+### Ipea
 
-O Instituto de Pesquisa Econômica Aplicada (IPEA) disponibiliza o cálculo do IVS para os municípios brasileiros [aqui](https://ivs.ipea.gov.br/). 
+O Instituto de Pesquisa Econômica Aplicada (Ipea) disponibiliza o cálculo do IVS para os municípios brasileiros [aqui](https://ivs.ipea.gov.br/). 
 
-O IPEA também mantêm a plataforma [IpeaData](http://www.ipeadata.gov.br), que disponibiliza diversos indicadores sócio-demográficos em três níveis básicos: macroeconômico, regional e social.
+O Ipea também mantém a plataforma [IpeaData](http://www.ipeadata.gov.br), que disponibiliza diversos indicadores sociodemográficos em três níveis básicos: macroeconômico, regional e social.
 
 ### PNUD
 
-O Programa das Nações Unidas para o Desenvolvimento (PNUD) mantêm o projeto [Atlas Brasil](http://www.atlasbrasil.org.br/), disponibilizando o cálculo do IDH para os municípios brasileiros. 
-
-### Ipea
-
-O Ipea disponibiliza o cálculo do IVS para os municípios brasileiros [aqui](https://ivs.ipea.gov.br/).
+O Programa das Nações Unidas para o Desenvolvimento (PNUD) mantém o projeto [Atlas Brasil](http://www.atlasbrasil.org.br/), disponibilizando o cálculo do IDH para os municípios brasileiros. 
 
 ### IPS Brasil
 
