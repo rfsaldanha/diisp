@@ -2,11 +2,24 @@
 
 Indicadores climáticos são de grande importância para o estudo e contextualização de um conjunto de doenças cuja incidência e mecanismos de transmissão são afetados por fenômenos atmosféricos e climáticos. Este conjunto de doenças pode ser denominado como "Doenças Sensíveis ao Clima".
 
+Este capítulo apresenta indicadores climáticos nominais e indicadores de eventos climáticos de interesse para a Saúde Pública. Sempre que possível, são indicados conjuntos de dados já harmonizados para municípios brasileiros, disponíveis na página de [datasets](https://rfsaldanha.github.io/data.html).
+
+| Indicador | Tipo | Variável base | Unidade ou medida | Fonte harmonizada sugerida |
+|---|---|---|---|---|
+| Temperatura do ar | Nominal | Temperatura máxima, mínima ou média | Graus Celsius | [Estatísticas zonais de indicadores climáticos para municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html) |
+| Precipitação | Nominal | Precipitação acumulada | Milímetros | [Estatísticas zonais de indicadores climáticos para municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html) |
+| Umidade relativa do ar | Nominal | Umidade relativa | Percentual | [Estatísticas zonais de indicadores climáticos para municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html) |
+| Velocidade do vento | Nominal | Velocidade do vento | m/s ou km/h | [Estatísticas zonais de indicadores climáticos para municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html) |
+| Sensação térmica e índice de calor | Nominal derivado | Temperatura, umidade, vento e radiação | Índice ou temperatura aparente | [Estatísticas zonais de indicadores climáticos para municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html) |
+| Ondas, dias extremos e eventos persistentes | Evento | Temperatura, precipitação, umidade e vento | Contagem, duração ou ocorrência | [Indicadores climáticos baseados em eventos para análise em Saúde Pública](https://rfsaldanha.github.io/data-projects/brazil_climate_event_based_indicators.html) |
+
+: Síntese dos indicadores climáticos apresentados no capítulo
+
 ::: callout-tip
-Usa-se o termo "tempo" para descrever as condições meteorológicas atuais ou de um passado ou futuro de curto prazo, dos próximos dias ou semanas. Já o termo "clima" é empregado para se descrever as condições meteorológicas observadas ou previstas para longo períodos, em geral, acima de 30 anos.
+Usa-se o termo "tempo" para descrever as condições meteorológicas atuais ou de um passado ou futuro de curto prazo, dos próximos dias ou semanas. Já o termo "clima" é empregado para se descrever as condições meteorológicas observadas ou previstas para longos períodos, em geral, acima de 30 anos.
 :::
 
-A relação de entre clima e saúde pode se dar de modo direto ou indireto, a depender dos mecanismos do processo saúde-doença relevantes. A relação direta entre clima e saúde se dá quando o aspecto climático afeta diretamente o organismo e a saúde humana. Por exemplo, ondas de calor estressam fisicamente o mentalmente o corpo humano, podendo desencadear doenças respiratórias, cardíacas e até mesmo mentais. Outro exemplo de relação direta entre clima e saúde são eventos extremos, como chuvas torrenciais, alagamentos, deslizamentos de terra e secas, que afetam diretamente a saúde humana.
+A relação entre clima e saúde pode se dar de modo direto ou indireto, a depender dos mecanismos do processo saúde-doença relevantes. A relação direta entre clima e saúde se dá quando o aspecto climático afeta diretamente o organismo e a saúde humana. Por exemplo, ondas de calor estressam física e mentalmente o corpo humano, podendo desencadear doenças respiratórias, cardíacas e até mesmo mentais. Outro exemplo de relação direta entre clima e saúde são eventos extremos, como chuvas torrenciais, alagamentos, deslizamentos de terra e secas, que afetam diretamente a saúde humana.
 
 Já a relação indireta entre clima e saúde se dá por mecanismos intermediários, como a propagação de vetores. Por exemplo, condições meteorológicas específicas podem favorecer a proliferação de vetores de doenças, como mosquitos e ratos. Este aumento da população vetorial, por sua vez, pode levar a um aumento da circulação de vírus e bactérias, desencadeando por fim um aumento da incidência de doenças infecciosas. Este é o caso, por exemplo, de arboviroses como Dengue, Zika e Chikungunya.
 
@@ -14,11 +27,15 @@ Já a relação indireta entre clima e saúde se dá por mecanismos intermediár
 A relação entre variáveis climáticas e a incidência de doenças tem uma defasagem temporal: as condições climáticas do *passado* são responsáveis por afetar a incidência de doenças no *futuro*. Isto tem relação com a dinâmica de cada vetor, incluindo os tempos necessários para o desenvolvimento do vetor, tempo de incubação e transmissão.
 :::
 
-O estudo de doenças sensíveis ao clima pode ser realizado observando indicadores nominais de variáveis climáticas, tão como com indicadores de eventos climáticos, como visto a seguir.
+::: callout-warning
+Indicadores climáticos agregados no espaço e no tempo devem ser interpretados com cautela. Médias mensais municipais podem ocultar extremos diários, variações intraurbanas e diferenças entre grupos populacionais. Sempre que o desfecho em saúde estiver associado a episódios de curta duração, limiares críticos ou microclimas locais, a escala temporal e espacial do indicador deve ser compatível com o mecanismo analisado.
+:::
+
+O estudo de doenças sensíveis ao clima pode ser realizado observando indicadores nominais de variáveis climáticas, bem como indicadores de eventos climáticos, como visto a seguir.
 
 ## Indicadores nominais
 
-Indicadores climáticos nominais são constituídos pela observação direta do fenômeno atmosférico/climático em questão.
+Indicadores climáticos nominais são constituídos pela observação direta do fenômeno atmosférico/climático em questão. Eles descrevem valores observados ou estimados, como temperatura máxima, precipitação acumulada, umidade relativa ou velocidade do vento. Indicadores de eventos, por sua vez, transformam séries diárias em contagens, durações ou ocorrências baseadas em limiares, como dias quentes, ondas de calor ou sequências de chuva persistente.
 
 ### Temperatura do ar
 
@@ -28,19 +45,19 @@ Indicadores climáticos nominais são constituídos pela observação direta do 
 
 A temperatura diz respeito ao grau de agitação das moléculas no ar, onde um grau maior de agitação conduz a uma maior temperatura e um grau menor de agitação a uma menor temperatura. Desta forma, a temperatura é uma medida escalar arbitrária.
 
-A temperatura do ar pode ser expressada em diversas unidades, como Kelvin, Graus Célsius e Fahrenheit. A temperatura de 0 Kelvin equivale teoricamente a um estado de nenhuma agitação das moléculas do ar. Já a temperatura de 272,15 Kelvin equivale a 0 graus célsius ou 32 fahrenheit.
+A temperatura do ar pode ser expressa em diversas unidades, como kelvin, graus Celsius e graus Fahrenheit. A temperatura de 0 kelvin equivale teoricamente a um estado de nenhuma agitação das moléculas do ar. Já a temperatura de 273,15 kelvin equivale a 0 grau Celsius ou 32 graus Fahrenheit.
 
-A temperatura do ar pode ser medida através de instrumentos analógicos como o termômetro de mercúrio, instrumentos digitais com sensores específicos ou inferida à partir de sensores à bordo de satélites meteorológicos.
+A temperatura do ar pode ser medida através de instrumentos analógicos como o termômetro de mercúrio, instrumentos digitais com sensores específicos ou inferida a partir de sensores a bordo de satélites meteorológicos.
 
-A medição da temperatura por instrumentos, sejam analógicos ou digitais, geralmente é feita em "Estações meteorológicas", que agrupam um certo número de instrumentos e sensores. Em geral, os instrumentos de mensuração da temperatura ficam armazenados em um tipo de armário, denominado "Abrigo de Stervenson". A construção desse "abrigo" é padronizada internacionalmente, possibilitando a obtenção da temperatura do ar na sombra de forma padronizada.
+A medição da temperatura por instrumentos, sejam analógicos ou digitais, geralmente é feita em estações meteorológicas, que agrupam um certo número de instrumentos e sensores. Em geral, os instrumentos de mensuração da temperatura ficam armazenados em um tipo de armário, denominado "Abrigo de Stevenson". A construção desse abrigo é padronizada internacionalmente, possibilitando a obtenção da temperatura do ar na sombra de forma padronizada.
 
 ::: callout-tip
-A localização de um termômetro ou sensor de temperatura afeta diretamente as observações. Estes instrumentos, quando expostos diretamente ao sol e localizados próximos à superfícies refletivas como telhados de zinco/metal, ou próximos a materiais de alta absorvição energética como concreto e asfalto, tendem a apresentar valores significativamente mais altos do que instrumentos localizados à sombra do sol e distantes destas superfícies e materiais.
+A localização de um termômetro ou sensor de temperatura afeta diretamente as observações. Estes instrumentos, quando expostos diretamente ao sol e localizados próximos a superfícies refletivas como telhados de zinco/metal, ou próximos a materiais de alta absorção energética como concreto e asfalto, tendem a apresentar valores significativamente mais altos do que instrumentos localizados à sombra do sol e distantes destas superfícies e materiais.
 :::
 
 #### Interpretação {.unnumbered}
 
-A interpretação de indicadores climáticos nominais deve ser feita com cautela posto que eles exprimem simplesmente o fenômeno meteorológico em questão em uma unidade direta. Por exemplo, a temperatura de 35 graus pode ser compreendida como uma temperatura muito alta por populações que vivem em zonas temperadas ou frias, ou como uma temperatura típica para populações que habitam zonas tropicais.
+A interpretação de indicadores climáticos nominais deve ser feita com cautela, pois eles exprimem simplesmente o fenômeno meteorológico em questão em uma unidade direta. Por exemplo, a temperatura de 35 graus pode ser compreendida como uma temperatura muito alta por populações que vivem em zonas temperadas ou frias, ou como uma temperatura típica para populações que habitam zonas tropicais.
 
 #### Usos {.unnumbered}
 
@@ -56,18 +73,18 @@ Já a temperatura mínima costuma ser observada por volta das 6h, logo antes do 
 
 #### Limitações {.unnumbered}
 
-A temperatura média, apesar de usada em alguns estudos, pode ser uma medida enganosa, principalmente em regiões com maiores amplitudes térmicas. Por exemplo, uma temperatura média de 25 graus célsius pode aparentar uma situação térmica aprazível, mas pode esconder variações importantes da temperatura durante o período observado.
+A temperatura média, apesar de usada em alguns estudos, pode ser uma medida enganosa, principalmente em regiões com maiores amplitudes térmicas. Por exemplo, uma temperatura média de 25 graus Celsius pode aparentar uma situação térmica aprazível, mas pode esconder variações importantes da temperatura durante o período observado.
 
 #### Fontes de dados {.unnumbered}
 
-Dados de temperatura podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.
+Dados de temperatura podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto Nacional de Pesquisas Espaciais (INPE), bem como em organizações privadas como Climatempo e Metsul.
 
 -   [Projeto TerraClimate](https://www.climatologylab.org/terraclimate.html).
--   [Médias de indicadores climáticos compilados para os municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html).
+-   [Estatísticas zonais de indicadores climáticos para municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html).
 
 O repositório abaixo disponibiliza uma série histórica de variáveis climáticas dos municípios brasileiros.
 
-[![](https://img.shields.io/badge/download-10.5281/zenodo.19285752-green.svg)](https://doi.org/10.5281/zenodo.19285752)
+[![](https://img.shields.io/badge/download-10.5281/zenodo.19286356-green.svg)](https://doi.org/10.5281/zenodo.19286356)
 
 Veja um exemplo prático de uso usando o R.
 
@@ -101,9 +118,9 @@ zen_file(19286356, "tmax_mean_mean.parquet") |>
 
 #### Conceituação {.unnumbered}
 
-A precipitação é uma medida do volume de partículas de água que se precipitam da atmosfera e atingem a superfície terrestre. Desta forma, a precipitação não diz respeito unicamente da chuva, mas também a outras formas de precipitação de água, como granizo e neve.
+A precipitação é uma medida do volume de partículas de água que se precipitam da atmosfera e atingem a superfície terrestre. Desta forma, a precipitação não diz respeito unicamente à chuva, mas também a outras formas de precipitação de água, como granizo e neve.
 
-Em geral, a precipitação é medida por um instrumento analógico denominado "pluviômetro", por sensores digitais, ou inferida à partir de sensores em satélites meteorológicos.
+Em geral, a precipitação é medida por um instrumento analógico denominado "pluviômetro", por sensores digitais, ou inferida a partir de sensores em satélites meteorológicos.
 
 #### Interpretação {.unnumbered}
 
@@ -121,18 +138,18 @@ Estudos de clima e saúde usam a precipitação como indicador principalmente qu
 
 #### Limitações {.unnumbered}
 
-Chuvas são fenômenos meteorológicos que podem ser bem localizados, podendo ocorrer em um bairro e não ocorrer em um outro bairro vizinho. Desta forma, deve-se lembrar que a medida de precipitação observada por um sensor corresponde apenas a área de um metro quadrado ao seu redor.
+Chuvas são fenômenos meteorológicos que podem ser bem localizados, podendo ocorrer em um bairro e não ocorrer em outro bairro vizinho. Desta forma, deve-se lembrar que a medida de precipitação observada por um sensor corresponde apenas à área de um metro quadrado ao seu redor.
 
 #### Fontes de dados {.unnumbered}
 
-Dados de precipitação podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.
+Dados de precipitação podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto Nacional de Pesquisas Espaciais (INPE), bem como em organizações privadas como Climatempo e Metsul.
 
 -   [Projeto TerraClimate](https://www.climatologylab.org/terraclimate.html).
--   [Médias de indicadores climáticos compilados para os municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html).
+-   [Estatísticas zonais de indicadores climáticos para municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html).
 
 O repositório abaixo disponibiliza uma série histórica de variáveis climáticas dos municípios brasileiros.
 
-[![](https://img.shields.io/badge/download-10.5281/zenodo.19285752-green.svg)](https://doi.org/10.5281/zenodo.19285752)
+[![](https://img.shields.io/badge/download-10.5281/zenodo.19286356-green.svg)](https://doi.org/10.5281/zenodo.19286356)
 
 Veja um exemplo prático de uso usando o R.
 
@@ -145,7 +162,7 @@ library(arrow)
 library(dplyr)
 library(ggplot2)
 
-zen_file(19286356, "pet_mean_mean.parquet") |>
+zen_file(19286356, "ppt_mean_mean.parquet") |>
   read_parquet() |>
   filter(code_muni == 1302603) |>
   ggplot(aes(x = as.Date(date), y = value)) +
@@ -170,11 +187,11 @@ A umidade relativa do ar é um indicador do grau de saturação de quantidade de
 
 Por ser um grau de saturação, a umidade relativa do ar é uma medida expressa em percentual: 100% de umidade relativa do ar significa que uma unidade de ar não consegue absorver mais água, estando completamente saturado. Esta capacidade de saturação do ar varia conforme a temperatura e pressão, por isso se diz que a umidade do ar é relativa.
 
-A Organização Mundial da Saúde (OMS) apresenta níveis de referência para a umidade do ar relacionados a saúde humana.
+A Organização Mundial da Saúde (OMS) apresenta níveis de referência para a umidade do ar relacionados à saúde humana.
 
 #### Usos {.unnumbered}
 
-A umidade do ar é utilizada em análises de clima e saúde quando a dinâmica vetorial é afetada por esse indicador: alguns vetores não são ativos ou são comprometidos em baixas ou altos níveis de umidade do ar.
+A umidade do ar é utilizada em análises de clima e saúde quando a dinâmica vetorial é afetada por esse indicador: alguns vetores não são ativos ou são comprometidos em baixos ou altos níveis de umidade do ar.
 
 #### Limitações {.unnumbered}
 
@@ -182,10 +199,10 @@ A comparação da umidade relativa do ar entre regiões deve ser feita considera
 
 #### Fontes de dados {.unnumbered}
 
-Dados de sensação térmica podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto de Pesquisas Espaciais (INPE), tão como em organizações privadas como Climatempo e Metsul.
+Dados de umidade relativa do ar podem ser obtidos por organismos meteorológicos oficiais como o Instituto Nacional de Meteorologia (INMET) e o Instituto Nacional de Pesquisas Espaciais (INPE), bem como em organizações privadas como Climatempo e Metsul.
 
 -   [Projeto TerraClimate](https://www.climatologylab.org/terraclimate.html).
--   [Médias de indicadores climáticos compilados para os municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html).
+-   [Estatísticas zonais de indicadores climáticos para municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html).
 
 ### Velocidade do vento
 
@@ -209,6 +226,8 @@ A velocidade do vento, quando analisada isoladamente, não descreve completament
 
 O indicador pode ser calculado a partir de dados diários de velocidade do vento em estações meteorológicas, reanálises climáticas ou produtos em *grid*. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o *ERA5-Land*.
 
+-   [Estatísticas zonais de indicadores climáticos para municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html).
+
 ### Sensação térmica
 
 #### Conceituação {.unnumbered}
@@ -231,7 +250,8 @@ A sensação térmica não possui uma única forma universal de cálculo, podend
 
 O indicador pode ser calculado a partir de dados meteorológicos de temperatura do ar, umidade relativa, velocidade do vento e, quando necessário, radiação solar. Essas variáveis podem ser obtidas em estações meteorológicas, redes observacionais, reanálises climáticas e produtos em *grid*. Entre as fontes possíveis estão estações do INMET, outras redes meteorológicas e produtos como o *ERA5-Land*.
 
--   [Copernicus Thermal Confort Indices](https://cds.climate.copernicus.eu/datasets/derived-utci-historical?tab=overview)
+-   [Copernicus Thermal Comfort Indices](https://cds.climate.copernicus.eu/datasets/derived-utci-historical?tab=overview)
+-   [Estatísticas zonais de indicadores climáticos para municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html).
 
 ### Índice de calor
 
@@ -253,11 +273,15 @@ O índice de calor não incorpora todos os fatores ambientais relevantes para o 
 
 #### Fontes de dados {.unnumbered}
 
-O indicador pode ser calculado a partir de dados diários temperatura e umidade relativa do ar em estações meteorológicas, reanálises climáticas ou produtos em *grid*. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o *ERA5-Land*.
+O indicador pode ser calculado a partir de dados diários de temperatura e umidade relativa do ar em estações meteorológicas, reanálises climáticas ou produtos em *grid*. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o *ERA5-Land*.
+
+-   [Estatísticas zonais de indicadores climáticos para municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html).
 
 ## Indicadores de eventos
 
-Uma série de eventos climáticos com impactos na saúde podem ser definidos com base nos indicadores nominais de clima, como ondas de calor e chuvas persistentes. Abaixo são apresentados algumas desses indicadores.
+Uma série de eventos climáticos com impactos na saúde pode ser definida com base nos indicadores nominais de clima, como ondas de calor e chuvas persistentes. Abaixo são apresentados alguns desses indicadores.
+
+Além dos indicadores nominais, há um conjunto de [indicadores climáticos baseados em eventos para análise em Saúde Pública](https://rfsaldanha.github.io/data-projects/brazil_climate_event_based_indicators.html), calculado para municípios brasileiros a partir de normais climatológicas e variáveis como temperatura máxima, temperatura mínima, precipitação, umidade relativa e velocidade do vento. As fichas abaixo podem utilizar esse conjunto como fonte municipal harmonizada quando a definição do indicador corresponder à variável descrita.
 
 ### Ondas de calor
 
@@ -265,7 +289,7 @@ Uma série de eventos climáticos com impactos na saúde podem ser definidos com
 
 Ondas de calor são períodos prolongados de temperaturas anormalmente elevadas em relação às condições climatológicas médias de uma região. Existem diversas definições específicas de ondas de calor [@who2015heatwaves].
 
-De forma geral, uma onda de calor pode ser definida como uma sequência consecutiva de dias cujas temperaturas atingem valores acima de um valor de referência. A OMS, por exemplo, define como onda de calor uma sequencia de cinco dias consecutivos ou mais onde a temperatura máxima está acima da média histórica (normal climatológica) mais cinco graus célsius.
+De forma geral, uma onda de calor pode ser definida como uma sequência consecutiva de dias cujas temperaturas atingem valores acima de um valor de referência. A OMS, por exemplo, define como onda de calor uma sequência de cinco dias consecutivos ou mais em que a temperatura máxima está acima da média histórica (normal climatológica) mais cinco graus Celsius.
 
 ::: callout-tip
 Uma normal climatológica é uma medida de referência de longo prazo, calculada como a média aritmética dos valores de um indicador climático observado em um intervalo de 30 anos.
@@ -287,11 +311,23 @@ O indicador de ondas de calor é utilizado em estudos de saúde principalmente e
 
 #### Limitações {.unnumbered}
 
-Como existem diversas definições específicas, com diferentes quantidade mínimas de dias e diferentes valores de referência, a comparação do indicador deve ser feita com cautela.
+Como existem diversas definições específicas, com diferentes quantidades mínimas de dias e diferentes valores de referência, a comparação do indicador deve ser feita com cautela.
+
+#### Método de cálculo {.unnumbered}
+
+Uma definição operacional possível é contar sequências de dias em que a temperatura máxima diária ultrapassa a normal climatológica acrescida de um limiar fixo:
+
+$$
+\text{Ondas de calor} = \#\{\text{sequências com } k \geq D_{\min} \text{ e } T_{\max,d} > \text{Normal}_{d} + L\}
+$$
+
+em que $T_{\max,d}$ é a temperatura máxima no dia $d$, $\text{Normal}_{d}$ é a normal climatológica correspondente, $L$ é o limiar adotado, como 5 graus Celsius, $k$ é a duração da sequência e $D_{\min}$ é a duração mínima definida.
 
 #### Fontes de dados {.unnumbered}
 
 O indicador pode ser calculado a partir de dados diários de temperatura máxima obtidos em estações meteorológicas, reanálises climáticas ou produtos em *grid*. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o *ERA5-Land*.
+
+-   [Indicadores climáticos baseados em eventos para análise em Saúde Pública](https://rfsaldanha.github.io/data-projects/brazil_climate_event_based_indicators.html).
 
 ### Dias quentes
 
@@ -313,9 +349,21 @@ Esse indicador pode ser utilizado para o monitoramento de extremos de calor, par
 
 O indicador depende da qualidade da série histórica utilizada para estimar a normal climatológica e o percentil de referência. Sua interpretação também pode variar conforme o período de referência adotado e a escala espacial dos dados. Além disso, por se basear apenas na temperatura máxima, ele não incorpora outros fatores relevantes para o estresse térmico, como umidade do ar, duração do evento, temperatura noturna e capacidade de adaptação da população. Em áreas com pouca cobertura observacional ou com uso de dados interpolados e de reanálise, podem existir incertezas adicionais.
 
+#### Método de cálculo {.unnumbered}
+
+O indicador pode ser calculado pela contagem de dias em que a temperatura máxima ultrapassa um percentil superior da normal climatológica:
+
+$$
+\text{Dias quentes} = \sum_{d=1}^{n} \mathbb{1}(T_{\max,d} > P90_{\max,d})
+$$
+
+em que $P90_{\max,d}$ representa o 90º percentil histórico da temperatura máxima para o local e período comparável do ano.
+
 #### Fontes de dados {.unnumbered}
 
 O indicador pode ser calculado a partir de dados diários de temperatura máxima obtidos em estações meteorológicas, reanálises climáticas ou produtos em *grid*. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o *ERA5-Land*.
+
+-   [Indicadores climáticos baseados em eventos para análise em Saúde Pública](https://rfsaldanha.github.io/data-projects/brazil_climate_event_based_indicators.html).
 
 ### Ondas de frio
 
@@ -335,9 +383,21 @@ O indicador pode ser utilizado no monitoramento de eventos extremos de baixa tem
 
 A definição de onda de frio varia entre estudos e instituições, o que pode dificultar comparações. Os resultados dependem do limiar adotado, do número mínimo de dias consecutivos e da qualidade da série histórica utilizada como referência. Além disso, o indicador não capta, isoladamente, fatores que modulam os impactos do frio, como vento, umidade, amplitude térmica, condições de moradia e capacidade de proteção da população. Em áreas com baixa cobertura observacional ou com uso de dados interpolados e de reanálise, podem existir incertezas adicionais.
 
+#### Método de cálculo {.unnumbered}
+
+Uma definição operacional possível é contar sequências de dias em que a temperatura mínima permanece abaixo da normal climatológica menos um limiar fixo:
+
+$$
+\text{Ondas de frio} = \#\{\text{sequências com } k \geq D_{\min} \text{ e } T_{\min,d} < \text{Normal}_{d} - L\}
+$$
+
+em que $T_{\min,d}$ é a temperatura mínima no dia $d$, $L$ é o limiar adotado, $k$ é a duração da sequência e $D_{\min}$ é a duração mínima definida.
+
 #### Fontes de dados {.unnumbered}
 
 O indicador pode ser calculado a partir de dados diários de temperatura mínima obtidos em estações meteorológicas, reanálises climáticas ou produtos em *grid*. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o *ERA5-Land*.
+
+-   [Indicadores climáticos baseados em eventos para análise em Saúde Pública](https://rfsaldanha.github.io/data-projects/brazil_climate_event_based_indicators.html).
 
 ### Dias frios
 
@@ -357,9 +417,21 @@ O indicador pode ser utilizado para monitorar a ocorrência de frio em diferente
 
 A utilidade e a comparabilidade do indicador dependem da definição do limiar adotado e da variável de temperatura utilizada no cálculo. Quando baseado apenas em um valor diário, o indicador pode não captar adequadamente a intensidade, a duração ou a persistência do frio. Além disso, não incorpora diretamente outros fatores que influenciam a sensação térmica e os impactos à saúde, como vento, umidade, condições de moradia e capacidade de proteção da população. Também podem existir incertezas associadas à qualidade, cobertura e escala dos dados meteorológicos utilizados.
 
+#### Método de cálculo {.unnumbered}
+
+O indicador pode ser calculado pela contagem de dias em que a temperatura mínima fica abaixo de um percentil inferior da normal climatológica:
+
+$$
+\text{Dias frios} = \sum_{d=1}^{n} \mathbb{1}(T_{\min,d} < P10_{\min,d})
+$$
+
+em que $P10_{\min,d}$ representa o 10º percentil histórico da temperatura mínima para o local e período comparável do ano.
+
 #### Fontes de dados {.unnumbered}
 
 O indicador pode ser calculado a partir de dados diários de temperatura mínima obtidos em estações meteorológicas, reanálises climáticas ou produtos em *grid*. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o *ERA5-Land*.
+
+-   [Indicadores climáticos baseados em eventos para análise em Saúde Pública](https://rfsaldanha.github.io/data-projects/brazil_climate_event_based_indicators.html).
 
 ### Chuvas persistentes
 
@@ -379,11 +451,23 @@ O indicador pode ser utilizado para monitorar eventos hidrometeorológicos de in
 
 A definição operacional de chuva persistente pode variar conforme o limiar adotado, o número mínimo de dias consecutivos e a escala temporal de análise, o que pode dificultar comparações entre estudos. Além disso, o indicador não capta, isoladamente, todos os fatores que condicionam os impactos da chuva, como características do relevo, drenagem urbana, cobertura do solo, impermeabilização, ocupação de áreas de risco e capacidade de resposta local. Também podem existir incertezas associadas à qualidade e à resolução espacial dos dados de precipitação, especialmente em regiões com baixa cobertura observacional.
 
+#### Método de cálculo {.unnumbered}
+
+O indicador pode ser calculado pela contagem de sequências de dias com precipitação acima de um limiar definido:
+
+$$
+\text{Chuvas persistentes} = \#\{\text{sequências com } k \geq D_{\min} \text{ e } P_d > L_p\}
+$$
+
+em que $P_d$ é a precipitação diária, $L_p$ é o limiar adotado, como a normal climatológica, um percentil histórico ou um valor fixo em milímetros, $k$ é a duração da sequência e $D_{\min}$ é a duração mínima definida.
+
 #### Fontes de dados {.unnumbered}
 
-O indicador pode ser calculado a partir de dados diários de precipitação  obtidos em estações meteorológicas, reanálises climáticas ou produtos em *grid*. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o *ERA5-Land* e *CHIRPS*.
+O indicador pode ser calculado a partir de dados diários de precipitação obtidos em estações meteorológicas, reanálises climáticas ou produtos em *grid*. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o *ERA5-Land* e *CHIRPS*.
 
-### Ondas de seca
+-   [Indicadores climáticos baseados em eventos para análise em Saúde Pública](https://rfsaldanha.github.io/data-projects/brazil_climate_event_based_indicators.html).
+
+### Ondas de ar seco
 
 #### Conceituação {.unnumbered}
 
@@ -401,9 +485,21 @@ O indicador pode ser utilizado para monitorar episódios de secura atmosférica,
 
 A definição operacional do indicador depende do limiar adotado, do número mínimo de dias consecutivos e da qualidade da série histórica utilizada como referência. Além disso, por se basear na umidade relativa do ar, o indicador descreve principalmente a secura atmosférica, não captando integralmente outras dimensões da seca, como déficit de precipitação, redução da umidade do solo, escassez hídrica ou impactos hidrológicos. Seus efeitos também podem variar conforme temperatura, vento, poluição atmosférica, condições de moradia e capacidade de adaptação da população. Em áreas com baixa cobertura observacional ou com uso de dados interpolados e de reanálise, podem existir incertezas adicionais.
 
+#### Método de cálculo {.unnumbered}
+
+O indicador pode ser calculado pela contagem de sequências de dias em que a umidade relativa permanece abaixo de um limiar definido:
+
+$$
+\text{Ondas de ar seco} = \#\{\text{sequências com } k \geq D_{\min} \text{ e } UR_d < L_{UR}\}
+$$
+
+em que $UR_d$ representa a umidade relativa diária, $L_{UR}$ é o limiar adotado, como um percentil inferior da normal climatológica ou um valor fixo de referência, $k$ é a duração da sequência e $D_{\min}$ é a duração mínima definida.
+
 #### Fontes de dados {.unnumbered}
 
 O indicador pode ser calculado a partir de dados diários de umidade relativa em estações meteorológicas, reanálises climáticas ou produtos em *grid*. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o *ERA5-Land*.
+
+-   [Indicadores climáticos baseados em eventos para análise em Saúde Pública](https://rfsaldanha.github.io/data-projects/brazil_climate_event_based_indicators.html).
 
 ### Ondas de umidade
 
@@ -423,9 +519,21 @@ O indicador pode ser utilizado para monitorar episódios de umidade excessiva, i
 
 A definição operacional do indicador depende do limiar adotado, do número mínimo de dias consecutivos e da qualidade da série histórica utilizada como referência. Por se basear apenas na umidade relativa do ar, o indicador não capta isoladamente a totalidade do desconforto térmico ou dos riscos à saúde, que também dependem de temperatura, ventilação, condições de moradia e exposição da população. Além disso, a interpretação pode variar conforme o contexto climático local, já que níveis elevados de umidade têm significados distintos em regiões secas e úmidas. Em áreas com baixa cobertura observacional ou uso de dados interpolados e de reanálise, podem existir incertezas adicionais.
 
+#### Método de cálculo {.unnumbered}
+
+O indicador pode ser calculado pela contagem de sequências de dias em que a umidade relativa permanece acima de um limiar definido:
+
+$$
+\text{Ondas de umidade} = \#\{\text{sequências com } k \geq D_{\min} \text{ e } UR_d > L_{UR}\}
+$$
+
+em que $UR_d$ representa a umidade relativa diária, $L_{UR}$ é o limiar adotado, como um percentil superior da normal climatológica ou um valor fixo de referência, $k$ é a duração da sequência e $D_{\min}$ é a duração mínima definida.
+
 #### Fontes de dados {.unnumbered}
 
 O indicador pode ser calculado a partir de dados diários de umidade relativa em estações meteorológicas, reanálises climáticas ou produtos em *grid*. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o *ERA5-Land*.
+
+-   [Indicadores climáticos baseados em eventos para análise em Saúde Pública](https://rfsaldanha.github.io/data-projects/brazil_climate_event_based_indicators.html).
 
 ### Ondas de pouco vento
 
@@ -445,9 +553,21 @@ O indicador pode ser utilizado para monitorar condições atmosféricas favoráv
 
 A definição operacional do indicador depende do limiar adotado, do número mínimo de dias consecutivos e da qualidade da série histórica utilizada como referência. Por se basear apenas na velocidade do vento, o indicador não capta, isoladamente, toda a complexidade dos processos atmosféricos associados à dispersão de poluentes, que também dependem de fatores como estabilidade atmosférica, temperatura, umidade, relevo e características urbanas locais. Além disso, sua interpretação pode variar conforme o contexto territorial, já que ventos fracos têm implicações distintas em áreas costeiras, urbanas, rurais ou sujeitas a queimadas. Em áreas com baixa cobertura observacional ou com uso de dados interpolados e de reanálise, podem existir incertezas adicionais.
 
+#### Método de cálculo {.unnumbered}
+
+O indicador pode ser calculado pela contagem de sequências de dias em que a velocidade do vento permanece abaixo de um limiar definido:
+
+$$
+\text{Ondas de pouco vento} = \#\{\text{sequências com } k \geq D_{\min} \text{ e } V_d < L_V\}
+$$
+
+em que $V_d$ representa a velocidade diária do vento, $L_V$ é o limiar adotado, como a média climatológica ou um percentil inferior, $k$ é a duração da sequência e $D_{\min}$ é a duração mínima definida.
+
 #### Fontes de dados {.unnumbered}
 
 O indicador pode ser calculado a partir de dados diários de velocidade do vento em estações meteorológicas, reanálises climáticas ou produtos em *grid*. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o *ERA5-Land*.
+
+-   [Indicadores climáticos baseados em eventos para análise em Saúde Pública](https://rfsaldanha.github.io/data-projects/brazil_climate_event_based_indicators.html).
 
 ### Ondas de vento em excesso
 
@@ -467,6 +587,18 @@ O indicador pode ser utilizado para monitorar eventos meteorológicos persistent
 
 A definição operacional do indicador depende do limiar adotado, do número mínimo de dias consecutivos e da qualidade da série histórica utilizada como referência. Por se basear apenas na velocidade do vento, o indicador não captura isoladamente toda a complexidade dos impactos associados, que também dependem da direção do vento, da temperatura, da umidade, do relevo, do uso do solo e das características da ocupação humana. Além disso, sua interpretação varia conforme o contexto territorial, uma vez que ventos intensos podem ter efeitos distintos em áreas urbanas, rurais, costeiras ou florestais. Em regiões com baixa cobertura observacional ou com uso de dados interpolados e de reanálise, podem existir incertezas adicionais.
 
+#### Método de cálculo {.unnumbered}
+
+O indicador pode ser calculado pela contagem de sequências de dias em que a velocidade do vento permanece acima de um limiar definido:
+
+$$
+\text{Ondas de vento em excesso} = \#\{\text{sequências com } k \geq D_{\min} \text{ e } V_d > L_V\}
+$$
+
+em que $V_d$ representa a velocidade diária do vento, $L_V$ é o limiar adotado, como a média climatológica ou um percentil superior, $k$ é a duração da sequência e $D_{\min}$ é a duração mínima definida.
+
 #### Fontes de dados {.unnumbered}
 
 O indicador pode ser calculado a partir de dados diários de velocidade do vento em estações meteorológicas, reanálises climáticas ou produtos em *grid*. Entre as fontes possíveis estão bases observacionais nacionais, como as estações do INMET, e produtos climáticos de reanálise, como o *ERA5-Land*.
+
+-   [Indicadores climáticos baseados em eventos para análise em Saúde Pública](https://rfsaldanha.github.io/data-projects/brazil_climate_event_based_indicators.html).

@@ -430,7 +430,7 @@ window.Quarto = {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#solo" id="toc-solo" class="nav-link active" data-scroll-target="#solo"><span class="header-section-number">5.1</span> Solo</a>
+  <li><a href="#território-uso-do-solo-e-ambiente-construído" id="toc-território-uso-do-solo-e-ambiente-construído" class="nav-link active" data-scroll-target="#território-uso-do-solo-e-ambiente-construído"><span class="header-section-number">5.1</span> Território, uso do solo e ambiente construído</a>
   <ul class="collapse">
   <li><a href="#densidade-demográfica" id="toc-densidade-demográfica" class="nav-link" data-scroll-target="#densidade-demográfica"><span class="header-section-number">5.1.1</span> Densidade demográfica</a></li>
   <li><a href="#uso-do-solo-por-categoria" id="toc-uso-do-solo-por-categoria" class="nav-link" data-scroll-target="#uso-do-solo-por-categoria"><span class="header-section-number">5.1.2</span> Uso do solo por categoria</a></li>
@@ -448,6 +448,10 @@ window.Quarto = {
   <li><a href="#poluição-do-ar" id="toc-poluição-do-ar" class="nav-link" data-scroll-target="#poluição-do-ar"><span class="header-section-number">5.4</span> Poluição do ar</a>
   <ul class="collapse">
   <li><a href="#material-particulado-fino-textpm_25" id="toc-material-particulado-fino-textpm_25" class="nav-link" data-scroll-target="#material-particulado-fino-textpm_25"><span class="header-section-number">5.4.1</span> Material particulado fino (<span class="math inline">\(\text{PM}_{2,5}\)</span>)</a></li>
+  <li><a href="#dióxido-de-nitrogênio-textno_2" id="toc-dióxido-de-nitrogênio-textno_2" class="nav-link" data-scroll-target="#dióxido-de-nitrogênio-textno_2"><span class="header-section-number">5.4.2</span> Dióxido de nitrogênio (<span class="math inline">\(\text{NO}_{2}\)</span>)</a></li>
+  <li><a href="#ozônio-troposférico-texto_3" id="toc-ozônio-troposférico-texto_3" class="nav-link" data-scroll-target="#ozônio-troposférico-texto_3"><span class="header-section-number">5.4.3</span> Ozônio troposférico (<span class="math inline">\(\text{O}_{3}\)</span>)</a></li>
+  <li><a href="#monóxido-de-carbono-co" id="toc-monóxido-de-carbono-co" class="nav-link" data-scroll-target="#monóxido-de-carbono-co"><span class="header-section-number">5.4.4</span> Monóxido de carbono (CO)</a></li>
+  <li><a href="#dióxido-de-enxofre-textso_2" id="toc-dióxido-de-enxofre-textso_2" class="nav-link" data-scroll-target="#dióxido-de-enxofre-textso_2"><span class="header-section-number">5.4.5</span> Dióxido de enxofre (<span class="math inline">\(\text{SO}_{2}\)</span>)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -477,8 +481,64 @@ window.Quarto = {
 
 <p>Indicadores ambientais desempenham papel central na análise da Saúde Pública ao possibilitarem a identificação, o monitoramento e a compreensão dos fatores ambientais que influenciam o bem-estar das populações. Variáveis como uso e cobertura do solo, condições de umidade e seca, dinâmica da vegetação e níveis de poluição do ar e da água permitem caracterizar exposições e contextos territoriais de risco. Quando integrados a dados de saúde, esses indicadores ampliam a capacidade de análise, favorecendo a identificação de padrões, a antecipação de agravos e o direcionamento de ações preventivas. Além disso, fornecem base empírica para a formulação de políticas públicas mais eficazes e territorialmente orientadas. Assim, o uso sistemático e integrado de indicadores ambientais fortalece a vigilância em saúde, contribui para a redução de desigualdades e apoia a tomada de decisão fundamentada em evidências científicas.</p>
 <p>Este capítulo apresenta alguns dos principais indicadores ambientais de interesse para a Saúde Pública. Sempre que possível, são indicados conjuntos de dados já harmonizados para municípios brasileiros, disponíveis na página de <a href="https://rfsaldanha.github.io/data.html">datasets</a>.</p>
-<section id="solo" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="solo"><span class="header-section-number">5.1</span> Solo</h2>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Aviso
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Indicadores ambientais geralmente representam condições do território e devem ser interpretados como aproximações da exposição populacional. A média municipal de um poluente, de um índice de vegetação ou de uma classe de uso do solo não descreve, isoladamente, a exposição individual de cada pessoa. Sua interpretação deve considerar a escala espacial, o período de agregação, a mobilidade da população e a heterogeneidade interna do território.</p>
+</div>
+</div>
+<table class="caption-top table">
+<caption>Síntese dos domínios e fontes de dados ambientais apresentados no capítulo</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Domínio</th>
+<th>Indicadores apresentados</th>
+<th>Tipo de exposição</th>
+<th>Fonte harmonizada sugerida</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Território e ambiente construído</td>
+<td>Densidade demográfica, uso do solo, cobertura do solo</td>
+<td>Contexto territorial e ambiente construído</td>
+<td>IBGE, MapBiomas e repositórios municipais harmonizados</td>
+</tr>
+<tr class="even">
+<td>Seca</td>
+<td>SPI, PDSI</td>
+<td>Escassez hídrica e estresse ambiental</td>
+<td>Estatísticas zonais de indicadores climáticos para municípios brasileiros</td>
+</tr>
+<tr class="odd">
+<td>Vegetação</td>
+<td>NDVI</td>
+<td>Exposição a áreas verdes e vigor vegetativo</td>
+<td>Médias de NDVI para municípios brasileiros</td>
+</tr>
+<tr class="even">
+<td>Poluição do ar</td>
+<td>PM<sub>2,5</sub>, NO<sub>2</sub>, O<sub>3</sub>, CO, SO<sub>2</sub></td>
+<td>Concentração de poluentes atmosféricos</td>
+<td>Médias de poluentes atmosféricos para municípios brasileiros</td>
+</tr>
+</tbody>
+</table>
+<section id="território-uso-do-solo-e-ambiente-construído" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="território-uso-do-solo-e-ambiente-construído"><span class="header-section-number">5.1</span> Território, uso do solo e ambiente construído</h2>
 <p>Indicadores sobre uso e ocupação do solo permitem determinar a quais condições ambientais as populações estão expostas, evidenciando questões como adensamento urbano, ocupação desordenada, vulnerabilidade a desastres e escassez de áreas verdes. Estes fatores têm grande influência na saúde humana, afetando a qualidade do ar e do solo, o conforto térmico e o bem-estar psicológico.</p>
 <section id="densidade-demográfica" class="level3" data-number="5.1.1">
 <h3 data-number="5.1.1" class="anchored" data-anchor-id="densidade-demográfica"><span class="header-section-number">5.1.1</span> Densidade demográfica</h3>
@@ -531,7 +591,7 @@ window.Quarto = {
 </section>
 <section id="interpretação-1" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="interpretação-1">Interpretação</h4>
-<p>O uso do solo influencia diretamente as condições ambientais e sanitárias de uma região. Ocupações inadequadas podem resultar em exposição a riscos como contaminação por resíduos, poluição atmosférica, alagamentos, e proliferação de vetores de doenças. O acesso a áreas verdes, serviços públicos e infraestrutura adequada, refletido no uso do solo, está associado a melhores condições de saúde física e mental.</p>
+<p>O uso do solo influencia diretamente as condições ambientais e sanitárias de uma região. Ocupações inadequadas podem resultar em exposição a riscos como contaminação por resíduos, poluição atmosférica, alagamentos e proliferação de vetores de doenças. O acesso a áreas verdes, serviços públicos e infraestrutura adequada, refletido no uso do solo, está associado a melhores condições de saúde física e mental.</p>
 </section>
 <section id="usos-1" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="usos-1">Usos</h4>
@@ -697,7 +757,7 @@ Dica
 </section>
 <section id="seca" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="seca"><span class="header-section-number">5.2</span> Seca</h2>
-<p>Indicadores sobre seca ajudam a antecipar, monitorar e mitigar uma série de impactos diretos e indiretos que a escassez de água pode provocar na população, impactando na transmissão de doenças, na segurança alimentar, em problemas respiratórios, doenças crônicas e na saúde mental.</p>
+<p>Indicadores sobre seca ajudam a antecipar, monitorar e mitigar uma série de impactos diretos e indiretos que a escassez de água pode provocar na população, com efeitos sobre a transmissão de doenças, a segurança alimentar, problemas respiratórios, doenças crônicas e a saúde mental.</p>
 <section id="índice-de-precipitação-padronizado" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="índice-de-precipitação-padronizado"><span class="header-section-number">5.2.1</span> Índice de Precipitação Padronizado</h3>
 <p>Também chamado de <em>Standardized Precipitation Index</em> (SPI).</p>
@@ -1052,7 +1112,7 @@ Dica
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"NDVI médio em Serrita, PE"</span>,</span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Ano"</span>,</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Percentual"</span>,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"NDVI"</span>,</span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Fonte: Copernicus"</span></span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1100,6 +1160,14 @@ Dica
 <li>A composição química não é capturada pelo valor de massa</li>
 </ul>
 </section>
+<section id="método-de-cálculo-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-6">Método de cálculo</h4>
+<p>Quando calculado a partir de uma série temporal ou de uma superfície espacial, o indicador pode ser resumido por estatísticas como média, máximo, mínimo ou percentis no período e território de interesse. Em estudos ecológicos municipais, uma forma comum é calcular a média da concentração estimada no território:</p>
+<p><span class="math display">\[
+\text{PM}_{2,5} = \frac{1}{n}\sum_{i=1}^{n} C_i
+\]</span></p>
+<p>em que <span class="math inline">\(C_i\)</span> representa a concentração estimada em cada célula, ponto ou observação considerada, e <span class="math inline">\(n\)</span> representa o número de observações agregadas.</p>
+</section>
 <section id="categorias-sugeridas-para-análise-6" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-6">Categorias sugeridas para análise</h4>
 <p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
@@ -1139,6 +1207,194 @@ Dica
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="dióxido-de-nitrogênio-textno_2" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="dióxido-de-nitrogênio-textno_2"><span class="header-section-number">5.4.2</span> Dióxido de nitrogênio (<span class="math inline">\(\text{NO}_{2}\)</span>)</h3>
+<p>Fonte: <span class="citation" data-cites="who2021aqg">WHO Global Air Quality Guidelines (<a href="referencias.html#ref-who2021aqg" role="doc-biblioref">2021</a>)</span></p>
+<section id="conceituação-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-7">Conceituação</h4>
+<p>O dióxido de nitrogênio é um poluente atmosférico gasoso produzido principalmente por processos de combustão em veículos, indústrias, termelétricas e queimadas. Em áreas urbanas, costuma ser utilizado como marcador da poluição relacionada ao tráfego e à queima de combustíveis fósseis.</p>
+</section>
+<section id="interpretação-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-7">Interpretação</h4>
+<p>Concentrações mais elevadas indicam maior presença de emissões por combustão e podem estar associadas a irritação das vias aéreas, piora de doenças respiratórias, exacerbação de asma e aumento de atendimentos e internações por causas respiratórias.</p>
+</section>
+<section id="usos-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-7">Usos</h4>
+<ul>
+<li>Monitoramento da poluição relacionada ao tráfego.</li>
+<li>Estudos sobre doenças respiratórias em áreas urbanas.</li>
+<li>Avaliação de políticas de mobilidade e controle de emissões.</li>
+</ul>
+</section>
+<section id="limitações-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-7">Limitações</h4>
+<ul>
+<li>Forte variação espacial em pequenas distâncias, especialmente perto de vias de grande circulação.</li>
+<li>Pode atuar como marcador de uma mistura de poluentes, dificultando a atribuição causal isolada.</li>
+<li>Estimativas por reanálise ou sensoriamento remoto podem suavizar gradientes intraurbanos.</li>
+</ul>
+</section>
+<section id="método-de-cálculo-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-7">Método de cálculo</h4>
+<p>O indicador pode ser agregado por média, máximo, mínimo ou percentis da concentração no território e período de interesse:</p>
+<p><span class="math display">\[
+\text{NO}_{2} = \frac{1}{n}\sum_{i=1}^{n} C_i
+\]</span></p>
+</section>
+<section id="categorias-sugeridas-para-análise-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-7">Categorias sugeridas para análise</h4>
+<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+</section>
+<section id="fonte-de-dados-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-7">Fonte de dados</h4>
+<ul>
+<li>Redes de monitoramento da qualidade do ar.</li>
+<li>Reanálises atmosféricas e produtos de sensoriamento remoto.</li>
+<li><a href="https://rfsaldanha.github.io/data-projects/brazil_air_pollutants.html">Médias de poluentes atmosféricos para municípios brasileiros</a>.</li>
+</ul>
+</section>
+</section>
+<section id="ozônio-troposférico-texto_3" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="ozônio-troposférico-texto_3"><span class="header-section-number">5.4.3</span> Ozônio troposférico (<span class="math inline">\(\text{O}_{3}\)</span>)</h3>
+<p>Fonte: <span class="citation" data-cites="who2021aqg">WHO Global Air Quality Guidelines (<a href="referencias.html#ref-who2021aqg" role="doc-biblioref">2021</a>)</span></p>
+<section id="conceituação-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-8">Conceituação</h4>
+<p>O ozônio troposférico é um poluente secundário formado por reações fotoquímicas entre óxidos de nitrogênio, compostos orgânicos voláteis e radiação solar. Diferentemente do ozônio estratosférico, que protege contra radiação ultravioleta, o ozônio próximo à superfície pode ser nocivo à saúde.</p>
+</section>
+<section id="interpretação-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-8">Interpretação</h4>
+<p>Valores mais elevados indicam maior potencial de exposição a poluição fotoquímica. O ozônio está associado a irritação ocular e respiratória, redução da função pulmonar, agravamento de asma e aumento de morbimortalidade respiratória, especialmente em dias quentes e ensolarados.</p>
+</section>
+<section id="usos-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-8">Usos</h4>
+<ul>
+<li>Vigilância da qualidade do ar em períodos quentes.</li>
+<li>Estudos de efeitos respiratórios de curto prazo.</li>
+<li>Avaliação de episódios de poluição fotoquímica.</li>
+</ul>
+</section>
+<section id="limitações-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-8">Limitações</h4>
+<ul>
+<li>A formação do ozônio depende de processos atmosféricos complexos e não corresponde diretamente à emissão local.</li>
+<li>Pode apresentar máximos em áreas afastadas das fontes primárias de emissão.</li>
+<li>A interpretação deve considerar temperatura, radiação solar, vento e outros poluentes precursores.</li>
+</ul>
+</section>
+<section id="método-de-cálculo-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-8">Método de cálculo</h4>
+<p>O indicador pode ser resumido por estatísticas temporais ou espaciais, como média diária, média móvel ou máximo no período analisado:</p>
+<p><span class="math display">\[
+\text{O}_{3} = \frac{1}{n}\sum_{i=1}^{n} C_i
+\]</span></p>
+</section>
+<section id="categorias-sugeridas-para-análise-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-8">Categorias sugeridas para análise</h4>
+<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+</section>
+<section id="fonte-de-dados-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-8">Fonte de dados</h4>
+<ul>
+<li>Redes de monitoramento da qualidade do ar.</li>
+<li>Reanálises atmosféricas e produtos de sensoriamento remoto.</li>
+<li><a href="https://rfsaldanha.github.io/data-projects/brazil_air_pollutants.html">Médias de poluentes atmosféricos para municípios brasileiros</a>.</li>
+</ul>
+</section>
+</section>
+<section id="monóxido-de-carbono-co" class="level3" data-number="5.4.4">
+<h3 data-number="5.4.4" class="anchored" data-anchor-id="monóxido-de-carbono-co"><span class="header-section-number">5.4.4</span> Monóxido de carbono (CO)</h3>
+<p>Fonte: <span class="citation" data-cites="who2021aqg">WHO Global Air Quality Guidelines (<a href="referencias.html#ref-who2021aqg" role="doc-biblioref">2021</a>)</span></p>
+<section id="conceituação-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-9">Conceituação</h4>
+<p>O monóxido de carbono é um gás produzido pela combustão incompleta de combustíveis. Suas fontes incluem veículos automotores, queimadas, processos industriais e fontes domésticas de combustão em ambientes mal ventilados.</p>
+</section>
+<section id="interpretação-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-9">Interpretação</h4>
+<p>Concentrações elevadas indicam maior exposição a combustão incompleta. O CO se liga à hemoglobina, reduzindo a capacidade de transporte de oxigênio no sangue, e pode causar efeitos cardiovasculares, neurológicos e, em exposições intensas, intoxicação aguda.</p>
+</section>
+<section id="usos-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-9">Usos</h4>
+<ul>
+<li>Monitoramento de emissões por combustão.</li>
+<li>Estudos de exposição a queimadas e poluição urbana.</li>
+<li>Apoio a sistemas de alerta em episódios de fumaça e incêndios.</li>
+</ul>
+</section>
+<section id="limitações-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-9">Limitações</h4>
+<ul>
+<li>Exposições em ambientes internos podem ser muito diferentes das concentrações ambientais externas.</li>
+<li>Médias territoriais podem ocultar situações de risco localizadas.</li>
+<li>A interpretação deve considerar fontes móveis, queimadas e ventilação atmosférica.</li>
+</ul>
+</section>
+<section id="método-de-cálculo-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-9">Método de cálculo</h4>
+<p>O indicador pode ser calculado como média ou outra estatística da concentração observada ou estimada no período:</p>
+<p><span class="math display">\[
+\text{CO} = \frac{1}{n}\sum_{i=1}^{n} C_i
+\]</span></p>
+</section>
+<section id="categorias-sugeridas-para-análise-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-9">Categorias sugeridas para análise</h4>
+<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+</section>
+<section id="fonte-de-dados-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-9">Fonte de dados</h4>
+<ul>
+<li>Redes de monitoramento da qualidade do ar.</li>
+<li>Reanálises atmosféricas e produtos de sensoriamento remoto.</li>
+<li><a href="https://rfsaldanha.github.io/data-projects/brazil_air_pollutants.html">Médias de poluentes atmosféricos para municípios brasileiros</a>.</li>
+</ul>
+</section>
+</section>
+<section id="dióxido-de-enxofre-textso_2" class="level3" data-number="5.4.5">
+<h3 data-number="5.4.5" class="anchored" data-anchor-id="dióxido-de-enxofre-textso_2"><span class="header-section-number">5.4.5</span> Dióxido de enxofre (<span class="math inline">\(\text{SO}_{2}\)</span>)</h3>
+<p>Fonte: <span class="citation" data-cites="who2021aqg">WHO Global Air Quality Guidelines (<a href="referencias.html#ref-who2021aqg" role="doc-biblioref">2021</a>)</span></p>
+<section id="conceituação-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-10">Conceituação</h4>
+<p>O dióxido de enxofre é um gás produzido principalmente pela queima de combustíveis contendo enxofre e por algumas atividades industriais. Também pode estar associado a emissões de termelétricas, refinarias, processos metalúrgicos e fontes vulcânicas em alguns contextos.</p>
+</section>
+<section id="interpretação-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-10">Interpretação</h4>
+<p>Concentrações elevadas indicam maior presença de emissões sulfuradas e podem causar irritação respiratória, broncoconstrição e agravamento de doenças respiratórias, especialmente em pessoas com asma, crianças e idosos.</p>
+</section>
+<section id="usos-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-10">Usos</h4>
+<ul>
+<li>Monitoramento de áreas industriais e fontes estacionárias.</li>
+<li>Estudos de efeitos respiratórios associados à poluição atmosférica.</li>
+<li>Avaliação de políticas de controle de combustíveis e emissões industriais.</li>
+</ul>
+</section>
+<section id="limitações-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-10">Limitações</h4>
+<ul>
+<li>A concentração pode ser muito localizada perto de fontes específicas.</li>
+<li>Nem sempre é bem representada por médias municipais em áreas com fontes pontuais.</li>
+<li>Pode se transformar na atmosfera e contribuir para a formação de material particulado secundário.</li>
+</ul>
+</section>
+<section id="método-de-cálculo-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-10">Método de cálculo</h4>
+<p>O indicador pode ser calculado como média, máximo ou percentil da concentração no território e período de interesse:</p>
+<p><span class="math display">\[
+\text{SO}_{2} = \frac{1}{n}\sum_{i=1}^{n} C_i
+\]</span></p>
+</section>
+<section id="categorias-sugeridas-para-análise-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-10">Categorias sugeridas para análise</h4>
+<p>Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.</p>
+</section>
+<section id="fonte-de-dados-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fonte-de-dados-10">Fonte de dados</h4>
+<ul>
+<li>Redes de monitoramento da qualidade do ar.</li>
+<li>Reanálises atmosféricas e produtos de sensoriamento remoto.</li>
+<li><a href="https://rfsaldanha.github.io/data-projects/brazil_air_pollutants.html">Médias de poluentes atmosféricos para municípios brasileiros</a>.</li>
+</ul>
 
 
 <div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list" style="display: none">
