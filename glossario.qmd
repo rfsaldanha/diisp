@@ -1,0 +1,42 @@
+# Glossário {.unnumbered}
+
+**Agregação**: combinação de dados em unidades maiores, como somar casos municipais para obter total estadual.
+
+**Completude**: grau de preenchimento de uma variável ou conjunto de variáveis.
+
+**Denominador**: população, total de eventos ou base de referência usada para relativizar um numerador.
+
+**Dado**: registro bruto ou processado sobre uma unidade, evento, pessoa, território ou período.
+
+**Fonte de dados**: sistema, pesquisa, repositório, arquivo ou base de onde os dados são obtidos.
+
+**Harmonização**: processo de tornar dados ou indicadores comparáveis no espaço, no tempo, nas categorias ou nas definições.
+
+**Incidência**: ocorrência de casos novos em uma população sob risco durante um período.
+
+**Indicador**: medida construída para representar um fenômeno de interesse, geralmente com definição, fonte e método de cálculo explícitos.
+
+**Incerteza**: grau de imprecisão ou instabilidade associado a uma estimativa, indicador ou interpretação.
+
+**Letalidade**: proporção de casos de uma doença ou agravo que evoluem para óbito.
+
+**Numerador**: quantidade principal observada em um indicador, como casos, óbitos, internações ou domicílios com determinada condição.
+
+**Padronização**: ajuste de um indicador para permitir comparação entre populações com estruturas diferentes, como idade ou sexo.
+
+**Prevalência**: proporção de pessoas com uma doença, condição ou característica em um ponto ou período.
+
+**Proporção**: medida em que o numerador está contido no denominador.
+
+**Razão**: comparação entre duas grandezas, grupos ou quantidades que não necessariamente têm relação parte-todo.
+
+**Reprodutibilidade**: possibilidade de refazer uma análise com os mesmos dados e métodos, obtendo resultados equivalentes.
+
+**Suavização**: técnica para reduzir instabilidade aleatória em indicadores, especialmente em áreas pequenas ou séries temporais ruidosas.
+
+**Taxa**: medida que relaciona eventos a uma população de referência e, frequentemente, a um período.
+
+**Unidade de análise**: unidade sobre a qual o indicador é calculado ou interpretado, como pessoa, domicílio, município, mês ou ano.
+
+**Vigilância em saúde**: conjunto de ações voltadas ao conhecimento, detecção, prevenção e controle de riscos, agravos e determinantes da saúde.
+

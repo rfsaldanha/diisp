@@ -4,6 +4,15 @@ A escolha de indicadores é uma etapa analítica e política. Um indicador não 
 
 Em Saúde Pública, a seleção de indicadores deve partir de uma pergunta concreta. A pergunta orienta quais dimensões precisam ser observadas, quais populações devem ser consideradas, qual escala espacial é adequada e qual período de análise faz sentido. Sem essa definição, a seleção tende a se transformar em uma lista extensa de medidas pouco articuladas.
 
+```{mermaid}
+flowchart LR
+  A[Pergunta] --> B[Dimensões]
+  B --> C[Indicadores candidatos]
+  C --> D[Critérios de seleção]
+  D --> E[Conjunto final]
+  E --> F[Fichas técnicas]
+```
+
 ## Do problema ao indicador
 
 Uma forma prática de iniciar a seleção é decompor o problema em componentes mensuráveis.

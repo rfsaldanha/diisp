@@ -4,6 +4,15 @@ O uso de dados em Saúde Pública exige atenção ética mesmo quando os dados s
 
 Ética em dados não se limita à proteção individual. Em Saúde Pública, também envolve efeitos coletivos: a forma como um território é descrito, a maneira como um grupo social é classificado e os usos possíveis de uma informação depois de publicada.
 
+```{mermaid}
+flowchart LR
+  A[Finalidade] --> B[Minimização]
+  B --> C[Proteção]
+  C --> D[Agregação]
+  D --> E[Comunicação responsável]
+  E --> F[Revisão de risco]
+```
+
 ## Dados pessoais e dados sensíveis
 
 A Lei Geral de Proteção de Dados Pessoais (LGPD) estabelece regras para o tratamento de dados pessoais no Brasil e reconhece dados referentes à saúde como dados pessoais sensíveis [@brasilLGPD]. O uso de dados de saúde deve observar finalidade, necessidade, segurança, prevenção, responsabilização e transparência.

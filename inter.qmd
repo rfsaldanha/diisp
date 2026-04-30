@@ -1,9 +1,198 @@
 # Internet, redes sociais e outras mídias
 
-## Acessibilidade da Internet
+Dados produzidos na internet, em plataformas digitais e em meios de comunicação podem complementar indicadores tradicionais de Saúde Pública. Eles podem registrar interesse, circulação de informação, acesso digital, percepção pública, busca por sintomas, engajamento com campanhas e exposição a conteúdos relacionados à saúde.
 
-Pesquisa NIC.br Saúde.
+Esses dados, porém, exigem cuidado especial. Eles raramente representam a população geral, mudam rapidamente conforme plataformas e algoritmos, e podem refletir comportamento de busca, visibilidade midiática ou dinâmica de recomendação, e não necessariamente ocorrência real de doenças.
 
-## Volume de pesquisas em ferramentas de busca
+::: callout-warning
+Indicadores digitais não devem ser interpretados automaticamente como indicadores epidemiológicos. Um aumento em buscas por um termo pode refletir aumento de casos, cobertura jornalística, boatos, campanhas, mudanças na plataforma ou comportamento sazonal de busca.
+:::
 
-## Menções em postagens de redes sociais
+## Acesso e uso da internet
+
+Indicadores de acesso à internet ajudam a avaliar quem pode ser alcançado por estratégias digitais de comunicação, vigilância participativa, teleatendimento e educação em saúde.
+
+### Proporção de domicílios com acesso à internet
+
+#### Conceituação {.unnumbered}
+
+Proporção de domicílios que dispõem de acesso à internet, independentemente do dispositivo utilizado.
+
+#### Interpretação {.unnumbered}
+
+Valores mais elevados indicam maior conectividade domiciliar. Em Saúde Pública, o indicador ajuda a interpretar a viabilidade de ações digitais e o risco de exclusão de populações com menor acesso.
+
+#### Usos {.unnumbered}
+
+-   Planejar campanhas digitais de saúde.
+-   Avaliar desigualdades de acesso a serviços digitais.
+-   Contextualizar indicadores baseados em buscas, redes sociais ou aplicativos.
+
+#### Limitações {.unnumbered}
+
+-   Acesso não significa uso efetivo.
+-   Não mede qualidade, velocidade ou estabilidade da conexão.
+-   Pode ocultar desigualdades dentro do domicílio.
+
+#### Fontes de dados {.unnumbered}
+
+Pesquisas domiciliares, levantamentos sobre tecnologias da informação e comunicação, censos e pesquisas nacionais.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Acesso domiciliar à internet} =
+\frac{\text{Domicílios com acesso à internet}}{\text{Total de domicílios}} \times 100
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Município, unidade da federação, situação urbana/rural, renda, escolaridade, faixa etária e raça/cor da pessoa responsável pelo domicílio.
+
+## Buscas na internet
+
+Ferramentas de busca podem fornecer sinais indiretos sobre interesse público, preocupação social ou busca por informação em saúde. Esses sinais são úteis para vigilância complementar, comunicação de risco e avaliação de campanhas.
+
+### Índice relativo de buscas
+
+#### Conceituação {.unnumbered}
+
+Medida padronizada do volume relativo de buscas por um termo ou conjunto de termos em determinada região e período.
+
+#### Interpretação {.unnumbered}
+
+Valores maiores indicam maior interesse relativo pelo termo. O indicador deve ser interpretado como comportamento de busca, não como incidência ou prevalência.
+
+#### Usos {.unnumbered}
+
+-   Monitorar interesse por sintomas, doenças, vacinas ou serviços.
+-   Detectar mudanças rápidas na atenção pública.
+-   Avaliar campanhas de comunicação.
+-   Gerar hipóteses para investigação epidemiológica.
+
+#### Limitações {.unnumbered}
+
+-   A unidade é relativa e depende da plataforma.
+-   Termos podem ter múltiplos significados.
+-   Eventos midiáticos podem gerar picos sem mudança epidemiológica.
+-   A população que busca não representa toda a população.
+
+#### Fontes de dados {.unnumbered}
+
+Ferramentas de tendências de busca, APIs de plataformas digitais e séries públicas de interesse relativo.
+
+#### Método de cálculo {.unnumbered}
+
+O método depende da plataforma. De modo geral, usa-se uma série padronizada:
+
+$$
+\text{Índice de busca}_{t} =
+\frac{\text{Buscas pelo termo no período }t}{\text{Total de buscas ou valor máximo de referência}} \times 100
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Termo de busca, período, território, categoria temática, idioma e plataforma.
+
+## Redes sociais
+
+Redes sociais podem registrar circulação de mensagens, dúvidas, rumores, apoio social, desinformação e resposta a campanhas. A análise pode observar volume de postagens, engajamento, temas, sentimentos, redes de compartilhamento ou presença de conteúdos problemáticos.
+
+### Menções a tema de saúde
+
+#### Conceituação {.unnumbered}
+
+Número ou proporção de publicações que mencionam um tema, doença, serviço, campanha ou termo de interesse em uma plataforma digital.
+
+#### Interpretação {.unnumbered}
+
+O indicador expressa visibilidade ou circulação de um tema na plataforma analisada. Não representa diretamente ocorrência de doença nem opinião pública geral.
+
+#### Usos {.unnumbered}
+
+-   Monitorar comunicação pública durante emergências.
+-   Identificar dúvidas frequentes e rumores.
+-   Avaliar alcance de campanhas.
+-   Apoiar estratégias de comunicação de risco.
+
+#### Limitações {.unnumbered}
+
+-   Plataformas têm públicos e algoritmos diferentes.
+-   Amostras por API podem ser incompletas.
+-   Bots, campanhas coordenadas e mídia podem distorcer volume.
+-   Há riscos éticos e de privacidade, mesmo com dados públicos.
+
+#### Fontes de dados {.unnumbered}
+
+APIs oficiais, bases públicas, ferramentas de escuta social, repositórios de mídia e coletas documentadas.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Proporção de menções} =
+\frac{\text{Postagens com termo de interesse}}{\text{Total de postagens analisadas}} \times 100
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Plataforma, período, idioma, termo, tema, território inferido, tipo de perfil e tipo de conteúdo.
+
+## Mídia jornalística
+
+Notícias e matérias jornalísticas podem influenciar percepção de risco, demanda por serviços e comportamento de busca. Indicadores de mídia ajudam a contextualizar picos em séries digitais.
+
+### Volume de notícias sobre tema de saúde
+
+#### Conceituação {.unnumbered}
+
+Número de notícias publicadas sobre determinado tema de saúde em um conjunto definido de veículos e período.
+
+#### Interpretação {.unnumbered}
+
+Valores maiores indicam maior cobertura midiática, que pode refletir relevância pública, ocorrência de eventos, agenda política ou interesse jornalístico.
+
+#### Usos {.unnumbered}
+
+-   Contextualizar séries de busca e redes sociais.
+-   Avaliar comunicação em emergências.
+-   Monitorar visibilidade de temas prioritários.
+
+#### Limitações {.unnumbered}
+
+-   Depende dos veículos incluídos.
+-   A cobertura pode ser concentrada em eventos excepcionais.
+-   Quantidade de notícias não mede qualidade da informação.
+
+#### Fontes de dados {.unnumbered}
+
+Bases de notícias, arquivos de veículos, agregadores, observatórios de mídia e coletas próprias documentadas.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Volume de notícias} =
+\sum_{i=1}^{n} \mathbb{1}(\text{notícia}_i \text{ menciona o tema})
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Tema, veículo, período, território mencionado, tipo de notícia e enquadramento temático.
+
+## Fluxo de análise
+
+```{mermaid}
+flowchart LR
+  A[Definir pergunta] --> B[Selecionar termos e fontes]
+  B --> C[Coletar dados]
+  C --> D[Limpar e documentar]
+  D --> E[Construir indicador]
+  E --> F[Comparar com fontes tradicionais]
+  F --> G[Interpretar com cautela]
+```
+
+## Cuidados éticos
+
+Mesmo quando publicações são acessíveis publicamente, a análise deve respeitar privacidade, finalidade e minimização. Em geral, deve-se evitar expor perfis individuais, reproduzir mensagens sensíveis sem necessidade, publicar identificadores ou inferir características pessoais sem base ética e legal.
+
+Indicadores digitais devem ser documentados com clareza: plataforma, período, termos usados, critérios de inclusão, método de coleta, limitações da API, tratamento de duplicidades e forma de agregação.
+

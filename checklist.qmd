@@ -1,0 +1,68 @@
+# Checklist para construção de indicadores {.unnumbered}
+
+Este checklist resume etapas práticas para construir, revisar e publicar indicadores de interesse para a Saúde Pública.
+
+## Definição
+
+-   A pergunta analítica está clara?
+-   O fenômeno de interesse foi definido?
+-   O indicador responde diretamente à pergunta?
+-   O público-alvo da análise está definido?
+-   A unidade de análise está definida?
+
+## Fonte
+
+-   A fonte de dados é conhecida e documentada?
+-   A data de extração foi registrada?
+-   A versão da base foi registrada?
+-   A cobertura da fonte é adequada?
+-   Há mudanças metodológicas no período analisado?
+
+## Numerador e denominador
+
+-   O numerador está claramente definido?
+-   O denominador representa a população sob risco?
+-   O numerador está contido no denominador quando se trata de proporção?
+-   A constante de multiplicação foi definida?
+-   O período do numerador e do denominador é compatível?
+
+## Qualidade
+
+-   A completude dos campos essenciais foi avaliada?
+-   Registros duplicados foram verificados?
+-   Códigos territoriais foram validados?
+-   Datas e categorias foram verificadas?
+-   Ignorados e faltantes foram tratados de forma documentada?
+
+## Harmonização
+
+-   A escala territorial é compatível entre fontes?
+-   A escala temporal é compatível entre fontes?
+-   Mudanças de malha territorial foram consideradas?
+-   Taxas foram recalculadas a partir de numeradores e denominadores?
+-   Defasagens temporais foram avaliadas quando necessárias?
+
+## Incerteza
+
+-   O número absoluto de eventos foi observado?
+-   Indicadores com pequenos números foram identificados?
+-   Há necessidade de agregação temporal ou espacial?
+-   Intervalos de confiança ou outras medidas de incerteza são necessários?
+-   Rankings e mapas foram interpretados com cautela?
+
+## Ética e comunicação
+
+-   Há risco de identificação direta ou indireta?
+-   Células pequenas foram suprimidas ou agregadas quando necessário?
+-   A comunicação evita estigmatizar territórios ou grupos?
+-   Limitações foram apresentadas?
+-   A interpretação separa descrição, hipótese e recomendação?
+
+## Reprodutibilidade
+
+-   A fórmula está documentada?
+-   O código usado no cálculo está preservado?
+-   Os pacotes e versões principais foram registrados?
+-   A saída pode ser reproduzida?
+-   A ficha técnica do indicador está completa?
+

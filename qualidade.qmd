@@ -4,6 +4,17 @@ A qualidade dos indicadores depende diretamente da qualidade dos dados utilizado
 
 Em bases de saúde, a qualidade deve ser avaliada antes e depois da construção do indicador. Antes, porque problemas no dado bruto podem inviabilizar o cálculo; depois, porque o próprio indicador pode revelar inconsistências, como taxas impossíveis, valores acima de 100% ou quebras abruptas na série.
 
+```{mermaid}
+flowchart TD
+  A[Dado bruto] --> B[Validação de formato]
+  B --> C[Completude]
+  C --> D[Consistência]
+  D --> E[Duplicidades]
+  E --> F[Base analítica]
+  F --> G[Indicador]
+  G --> H[Revisão de plausibilidade]
+```
+
 ## Dimensões da qualidade
 
 As principais dimensões de qualidade em bases de interesse para a Saúde Pública incluem:

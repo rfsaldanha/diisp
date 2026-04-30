@@ -4,6 +4,15 @@ Indicadores em Saúde Pública frequentemente são calculados para áreas pequen
 
 A incerteza não é um problema restrito a modelos estatísticos. Ela aparece em contagens, taxas, proporções, estimativas populacionais, classificações territoriais e medidas ambientais. Reconhecer essa incerteza é parte da boa prática de análise.
 
+```{mermaid}
+flowchart LR
+  A[Poucos eventos] --> B[Taxa instável]
+  B --> C{Objetivo da análise}
+  C -->|Monitoramento local| D[Mostrar contagem e taxa]
+  C -->|Comparação territorial| E[Agregar ou suavizar]
+  C -->|Publicação sensível| F[Suprimir ou categorizar]
+```
+
 ## Instabilidade de taxas
 
 Uma taxa baseada em poucos eventos pode variar muito de um período para outro, mesmo quando o risco subjacente não mudou. Por exemplo, em um município pequeno, a ocorrência de um óbito adicional pode duplicar a taxa de mortalidade por uma causa específica.

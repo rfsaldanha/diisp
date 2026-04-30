@@ -48,6 +48,36 @@ $$
 
 O resultado indica 6,7 óbitos de menores de um ano por 1.000 nascidos vivos. Se o município for pequeno, a interpretação deve considerar a instabilidade do indicador e, quando necessário, usar períodos agregados.
 
+### Exemplo com dados exportados do DATASUS {.unnumbered}
+
+O exemplo abaixo ilustra o cálculo da mortalidade infantil a partir de duas tabelas previamente exportadas do TABNET/DATASUS: uma com óbitos de menores de um ano do SIM e outra com nascidos vivos do SINASC. O código não é executado automaticamente no livro porque depende de arquivos exportados pelo leitor.
+
+```{r}
+#| eval: false
+#| message: false
+#| warning: false
+#| code-fold: false
+
+obitos <- read.csv2("sim_obitos_menor_1_ano.csv")
+nascidos <- read.csv2("sinasc_nascidos_vivos.csv")
+
+base <- merge(
+  obitos,
+  nascidos,
+  by = c("cod_municipio", "ano"),
+  all = TRUE
+)
+
+base$tx_mortalidade_infantil <- with(
+  base,
+  obitos_menor_1_ano / nascidos_vivos * 1000
+)
+
+base
+```
+
+Ao usar dados exportados do TABNET, é importante registrar filtros, ano, local de residência ou ocorrência, faixa etária, causa, formato do arquivo e data de extração.
+
 ## Mortalidade
 
 ### Taxa bruta de mortalidade

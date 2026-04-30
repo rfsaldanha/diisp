@@ -92,6 +92,27 @@ Sempre que possível, use fontes com identificadores persistentes, como DOI, ver
 
 Quando uma base não possui DOI ou versão formal, registre pelo menos a data de download, URL, filtros usados e nome do arquivo original. Se a base for atualizada frequentemente, a data de extração passa a ser parte essencial da referência.
 
+## Como citar conjuntos de dados
+
+Conjuntos de dados devem ser citados como produtos próprios, não apenas como links. Quando houver DOI, ele deve ser preferido, pois identifica uma versão persistente. Quando houver uma página de documentação do conjunto, ela também deve ser indicada para que o leitor compreenda método, variáveis e escopo. Ao usar os conjuntos disponibilizados na página de [datasets](https://rfsaldanha.github.io/data.html), cite tanto a página descritiva do projeto quanto o DOI do depósito correspondente, quando disponível.
+
+Uma citação mínima deve incluir:
+
+-   Autor ou responsável pelo conjunto.
+-   Nome do conjunto de dados.
+-   Versão, data ou ano de referência.
+-   Repositório ou página de documentação.
+-   DOI, quando disponível.
+-   Data de acesso, quando o conteúdo puder mudar.
+
+Exemplo de formulação:
+
+> SALDANHA, Raphael de Freitas. *Médias de poluentes atmosféricos para municípios brasileiros*. Zenodo, versão consultada em 30 abr. 2026. DOI: `10.5281/zenodo.16374139`.
+
+::: callout-tip
+Quando o indicador foi calculado a partir de um arquivo específico, cite também o nome do arquivo usado, como `pm25_max_mean.parquet`, `ndvi_mean.parquet` ou `tmax_mean_mean.parquet`.
+:::
+
 ## Separação entre dado bruto e dado tratado
 
 O dado bruto deve ser preservado sempre que possível. As transformações devem gerar novos arquivos, mantendo rastreabilidade entre origem e produto final. Isso permite revisar decisões e corrigir erros sem reconstruir todo o processo manualmente.
