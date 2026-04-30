@@ -1,14 +1,27 @@
 # Indicadores Ambientais
 
-Indicadores ambientais desempenham papel central na análise da saúde pública ao possibilitarem a identificação, o monitoramento e a compreensão dos fatores ambientais que influenciam o bem-estar das populações. Variáveis como uso e cobertura do solo, condições de umidade e seca, dinâmica da vegetação e níveis de poluição do ar e da água permitem caracterizar exposições e contextos territoriais de risco. Quando integrados a dados de saúde, esses indicadores ampliam a capacidade de análise, favorecendo a identificação de padrões, a antecipação de agravos e o direcionamento de ações preventivas. Além disso, fornecem base empírica para a formulação de políticas públicas mais eficazes e territorialmente orientadas. Assim, o uso sistemático e integrado de indicadores ambientais fortalece a vigilância em saúde, contribui para a redução de desigualdades e apoia a tomada de decisão fundamentada em evidências científicas.
+Indicadores ambientais desempenham papel central na análise da Saúde Pública ao possibilitarem a identificação, o monitoramento e a compreensão dos fatores ambientais que influenciam o bem-estar das populações. Variáveis como uso e cobertura do solo, condições de umidade e seca, dinâmica da vegetação e níveis de poluição do ar e da água permitem caracterizar exposições e contextos territoriais de risco. Quando integrados a dados de saúde, esses indicadores ampliam a capacidade de análise, favorecendo a identificação de padrões, a antecipação de agravos e o direcionamento de ações preventivas. Além disso, fornecem base empírica para a formulação de políticas públicas mais eficazes e territorialmente orientadas. Assim, o uso sistemático e integrado de indicadores ambientais fortalece a vigilância em saúde, contribui para a redução de desigualdades e apoia a tomada de decisão fundamentada em evidências científicas.
 
-Este capítulo apresenta alguns principais indicadores ambientais de interesse para a saúde pública.
+Este capítulo apresenta alguns dos principais indicadores ambientais de interesse para a Saúde Pública. Sempre que possível, são indicados conjuntos de dados já harmonizados para municípios brasileiros, disponíveis na página de [datasets](https://rfsaldanha.github.io/data.html).
 
-## Solo
+::: callout-warning
+Indicadores ambientais geralmente representam condições do território e devem ser interpretados como aproximações da exposição populacional. A média municipal de um poluente, de um índice de vegetação ou de uma classe de uso do solo não descreve, isoladamente, a exposição individual de cada pessoa. Sua interpretação deve considerar a escala espacial, o período de agregação, a mobilidade da população e a heterogeneidade interna do território.
+:::
 
-Indicadores sobre uso e ocupação do solo permitem determinar quais as condições ambientais que as populações estão expostas, evidenciando questões como adensamento urbano, ocupação desordenada, vulnerabilidade a desastres e escassez de áreas verdes. Estes fatores tem grande influencia na saúde humana, afetando a qualidade do ar e do solo, o conforto térmico e o bem-estar psicológico.
+| Domínio | Indicadores apresentados | Tipo de exposição | Fonte harmonizada sugerida |
+|---|---|---|---|
+| Território e ambiente construído | Densidade demográfica, uso do solo, cobertura do solo | Contexto territorial e ambiente construído | IBGE, MapBiomas e repositórios municipais harmonizados |
+| Seca | SPI, PDSI | Escassez hídrica e estresse ambiental | Estatísticas zonais de indicadores climáticos para municípios brasileiros |
+| Vegetação | NDVI | Exposição a áreas verdes e vigor vegetativo | Médias de NDVI para municípios brasileiros |
+| Poluição do ar | PM~2,5~, NO~2~, O~3~, CO, SO~2~ | Concentração de poluentes atmosféricos | Médias de poluentes atmosféricos para municípios brasileiros |
 
-### Taxa de Densidade Demográfica
+: Síntese dos domínios e fontes de dados ambientais apresentados no capítulo
+
+## Território, uso do solo e ambiente construído
+
+Indicadores sobre uso e ocupação do solo permitem determinar a quais condições ambientais as populações estão expostas, evidenciando questões como adensamento urbano, ocupação desordenada, vulnerabilidade a desastres e escassez de áreas verdes. Estes fatores têm grande influência na saúde humana, afetando a qualidade do ar e do solo, o conforto térmico e o bem-estar psicológico.
+
+### Densidade demográfica
 
 #### Conceituação {.unnumbered}
 
@@ -20,12 +33,12 @@ A densidade demográfica ou populacional está associada à demanda por serviço
 
 #### Usos {.unnumbered}
 
-Utilizando no planejamento urbano e regional, alocação de recursos públicos, análise de risco epidemiológico, vigilância em saúde e políticas de habitação.
+Utilizado no planejamento urbano e regional, alocação de recursos públicos, análise de risco epidemiológico, vigilância em saúde e políticas de habitação.
 
 #### Limitações {.unnumbered}
 
 -   O indicador não considera características do território, como áreas não-habitáveis (corpos d'água e florestas e montanhas protegidas pela legislação ambiental).
--   Uma alta ou baixa densidade não está relacionado, necessariamente, a uma maior ou menor qualidade de vida.
+-   Uma alta ou baixa densidade não está relacionada, necessariamente, a uma maior ou menor qualidade de vida.
 
 #### Fonte de dados {.unnumbered}
 
@@ -52,7 +65,7 @@ Classificação e quantificação das diferentes formas de utilização da super
 
 #### Interpretação {.unnumbered}
 
-O uso do solo influencia diretamente as condições ambientais e sanitárias de uma região. Ocupações inadequadas podem resultar em exposição a riscos como contaminação por resíduos, poluição atmosférica, alagamentos, e proliferação de vetores de doenças. O acesso a áreas verdes, serviços públicos e infraestrutura adequada, refletido no uso do solo, está associado a melhores condições de saúde física e mental.
+O uso do solo influencia diretamente as condições ambientais e sanitárias de uma região. Ocupações inadequadas podem resultar em exposição a riscos como contaminação por resíduos, poluição atmosférica, alagamentos e proliferação de vetores de doenças. O acesso a áreas verdes, serviços públicos e infraestrutura adequada, refletido no uso do solo, está associado a melhores condições de saúde física e mental.
 
 #### Usos {.unnumbered}
 
@@ -165,9 +178,11 @@ A cobertura do solo influencia diretamente a qualidade ambiental e, consequentem
 -   [MapBiomas](https://brasil.mapbiomas.org)
 -   [INPE TerraClass](https://www.terraclass.gov.br)
 
+O repositório de uso do solo citado na seção anterior também pode ser utilizado para análises de cobertura e uso do solo em municípios brasileiros.
+
 #### Método de cálculo {.unnumbered}
 
-O indicador pode ser expressado em termos percentuais ou absolutos da área ocupada por cada tipo de cobertura. O cálculo é feito com base em classificação de imagens de satélite, por meio de técnicas de sensoriamento remoto e análise multiespectral.
+O indicador pode ser expresso em termos percentuais ou absolutos da área ocupada por cada tipo de cobertura. O cálculo é feito com base em classificação de imagens de satélite, por meio de técnicas de sensoriamento remoto e análise multiespectral.
 
 $$
 \text{Cobertura do solo} = \frac{\text{Área de uma classe de cobertura}}{\text{Área total}} \times 100
@@ -190,7 +205,7 @@ Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regi�
 
 ## Seca
 
-Indicadores sobre seca ajudam a antecipar, monitorar e mitigar uma série de impactos diretos e indiretos que a escassez de água pode provocar na população, impactando na transmissão de doenças, na segurança alimentar, em problemas respiratórios, doenças crônicas e na saúde mental.
+Indicadores sobre seca ajudam a antecipar, monitorar e mitigar uma série de impactos diretos e indiretos que a escassez de água pode provocar na população, com efeitos sobre a transmissão de doenças, a segurança alimentar, problemas respiratórios, doenças crônicas e a saúde mental.
 
 ### Índice de Precipitação Padronizado
 
@@ -227,6 +242,7 @@ Ele é padronizado com média zero e desvio padrão um, permitindo comparações
 -   Estações pluviométricas do INMET, ANA, CEMADEN e outras redes estaduais.
 -   Produtos de reanálise climática (como ERA5) ou dados de satélite calibrados.
 -   Bases globais como CHIRPS, GPCC, CRU e GPCP para escalas continentais ou globais.
+-   [Médias de indicadores climáticos compilados para os municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html).
 
 #### Método de cálculo {.unnumbered}
 
@@ -305,6 +321,7 @@ Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regi�
 -   Bases de solos (FAO, SoilGrids) para estimar capacidade de campo e água disponível.
 -   Projeto [TerraClimate](https://www.climatologylab.org/terraclimate.html).
 -   [Projeto Saúde no Semiárido](https://shiny.icict.fiocruz.br/sentseca2/), Observatório de Clima e Saúde, LIS, ICICT.
+-   [Médias de indicadores climáticos compilados para os municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil-climate-zonal-indicators.html).
 
 O repositório abaixo disponibiliza uma série histórica da média do PDSI dos municípios brasileiros.
 
@@ -461,7 +478,7 @@ Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regi�
 #### Fonte de dados {.unnumbered}
 
 -   Satélites Landsat, MODIS e Sentinel-2.
--   [Compilados para os municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil_ndvi.html).
+-   [Médias de NDVI para municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil_ndvi.html).
 
 Os repositórios abaixo disponibilizam séries históricas da média do NDVI dos municípios brasileiros.
 
@@ -491,7 +508,7 @@ open_dataset(c(
   labs(
     title = "NDVI médio em Serrita, PE",
     x = "Ano",
-    y = "Percentual",
+    y = "NDVI",
     caption = "Fonte: Copernicus"
   ) +
   theme_bw()
@@ -505,7 +522,7 @@ Fonte: @who2021aqg
 
 #### Conceituação {.unnumbered}
 
-Este indicador quantifica a presença de partículas sólidas e gotículas líquidas no ar com diâmetro aerodinâmico menor ou igual a 2,5 $\mu m$, incluindo sulfatos, nitratos, carbôno, metais, poeira e outros elementos.
+Este indicador quantifica a presença de partículas sólidas e gotículas líquidas no ar com diâmetro aerodinâmico menor ou igual a 2,5 $\mu m$, incluindo sulfatos, nitratos, carbono, metais, poeira e outros elementos.
 
 #### Interpretação {.unnumbered}
 
@@ -528,17 +545,29 @@ O indicador é lido como a concentração média de material particulado no ar p
 -   Impossibilidade de se determinar a fonte emissora do material (como tráfego, queima de biomassa, indústria, entre outros)
 -   A composição química não é capturada pelo valor de massa
 
+#### Método de cálculo {.unnumbered}
+
+Quando calculado a partir de uma série temporal ou de uma superfície espacial, o indicador pode ser resumido por estatísticas como média, máximo, mínimo ou percentis no período e território de interesse. Em estudos ecológicos municipais, uma forma comum é calcular a média da concentração estimada no território:
+
+$$
+\text{PM}_{2,5} = \frac{1}{n}\sum_{i=1}^{n} C_i
+$$
+
+em que $C_i$ representa a concentração estimada em cada célula, ponto ou observação considerada, e $n$ representa o número de observações agregadas.
+
 #### Categorias sugeridas para análise {.unnumbered}
 
 Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
 
 #### Fonte de dados {.unnumbered}
 
-Este indicador pode ser calculado diretamente a partir de sensores ou estimado por sensoriamento remoto.
+Este indicador pode ser calculado diretamente a partir de sensores ou estimado por sensoriamento remoto e reanálises atmosféricas.
 
-O repositório abaixo disponibiliza uma série histórica dos percentuais de uso do solo dos municípios brasileiros.
+O conjunto de dados abaixo disponibiliza séries históricas de poluentes atmosféricos para municípios brasileiros, calculadas por estatística zonal a partir do Copernicus Atmosphere Monitoring Service (CAMS).
 
-[![](https://img.shields.io/badge/download-10.5281/zenodo.19285752-green.svg)](https://doi.org/10.5281/zenodo.19285752)
+-   [Médias de poluentes atmosféricos para municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil_air_pollutants.html).
+
+[![](https://img.shields.io/badge/download-10.5281/zenodo.16374139-green.svg)](https://doi.org/10.5281/zenodo.16374139)
 
 Veja um exemplo prático de uso usando o R.
 
@@ -557,10 +586,178 @@ zen_file(16374139, "pm25_max_mean.parquet") |>
   ggplot(aes(x = date, y = value)) +
   geom_line() +
   labs(
-    title = "Concentração máxima média de PM2.5 em Cuiabá, MS",
+    title = "Concentração máxima média de PM2.5 em Cuiabá, MT",
     x = "Data",
-    y = "um/m3",
+    y = "µg/m³",
     caption = "Fonte: Copernicus/CAMS"
   ) +
   theme_bw()
 ```
+
+### Dióxido de nitrogênio ($\text{NO}_{2}$)
+
+Fonte: @who2021aqg
+
+#### Conceituação {.unnumbered}
+
+O dióxido de nitrogênio é um poluente atmosférico gasoso produzido principalmente por processos de combustão em veículos, indústrias, termelétricas e queimadas. Em áreas urbanas, costuma ser utilizado como marcador da poluição relacionada ao tráfego e à queima de combustíveis fósseis.
+
+#### Interpretação {.unnumbered}
+
+Concentrações mais elevadas indicam maior presença de emissões por combustão e podem estar associadas a irritação das vias aéreas, piora de doenças respiratórias, exacerbação de asma e aumento de atendimentos e internações por causas respiratórias.
+
+#### Usos {.unnumbered}
+
+-   Monitoramento da poluição relacionada ao tráfego.
+-   Estudos sobre doenças respiratórias em áreas urbanas.
+-   Avaliação de políticas de mobilidade e controle de emissões.
+
+#### Limitações {.unnumbered}
+
+-   Forte variação espacial em pequenas distâncias, especialmente perto de vias de grande circulação.
+-   Pode atuar como marcador de uma mistura de poluentes, dificultando a atribuição causal isolada.
+-   Estimativas por reanálise ou sensoriamento remoto podem suavizar gradientes intraurbanos.
+
+#### Método de cálculo {.unnumbered}
+
+O indicador pode ser agregado por média, máximo, mínimo ou percentis da concentração no território e período de interesse:
+
+$$
+\text{NO}_{2} = \frac{1}{n}\sum_{i=1}^{n} C_i
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
+#### Fonte de dados {.unnumbered}
+
+-   Redes de monitoramento da qualidade do ar.
+-   Reanálises atmosféricas e produtos de sensoriamento remoto.
+-   [Médias de poluentes atmosféricos para municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil_air_pollutants.html).
+
+### Ozônio troposférico ($\text{O}_{3}$)
+
+Fonte: @who2021aqg
+
+#### Conceituação {.unnumbered}
+
+O ozônio troposférico é um poluente secundário formado por reações fotoquímicas entre óxidos de nitrogênio, compostos orgânicos voláteis e radiação solar. Diferentemente do ozônio estratosférico, que protege contra radiação ultravioleta, o ozônio próximo à superfície pode ser nocivo à saúde.
+
+#### Interpretação {.unnumbered}
+
+Valores mais elevados indicam maior potencial de exposição a poluição fotoquímica. O ozônio está associado a irritação ocular e respiratória, redução da função pulmonar, agravamento de asma e aumento de morbimortalidade respiratória, especialmente em dias quentes e ensolarados.
+
+#### Usos {.unnumbered}
+
+-   Vigilância da qualidade do ar em períodos quentes.
+-   Estudos de efeitos respiratórios de curto prazo.
+-   Avaliação de episódios de poluição fotoquímica.
+
+#### Limitações {.unnumbered}
+
+-   A formação do ozônio depende de processos atmosféricos complexos e não corresponde diretamente à emissão local.
+-   Pode apresentar máximos em áreas afastadas das fontes primárias de emissão.
+-   A interpretação deve considerar temperatura, radiação solar, vento e outros poluentes precursores.
+
+#### Método de cálculo {.unnumbered}
+
+O indicador pode ser resumido por estatísticas temporais ou espaciais, como média diária, média móvel ou máximo no período analisado:
+
+$$
+\text{O}_{3} = \frac{1}{n}\sum_{i=1}^{n} C_i
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
+#### Fonte de dados {.unnumbered}
+
+-   Redes de monitoramento da qualidade do ar.
+-   Reanálises atmosféricas e produtos de sensoriamento remoto.
+-   [Médias de poluentes atmosféricos para municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil_air_pollutants.html).
+
+### Monóxido de carbono (CO)
+
+Fonte: @who2021aqg
+
+#### Conceituação {.unnumbered}
+
+O monóxido de carbono é um gás produzido pela combustão incompleta de combustíveis. Suas fontes incluem veículos automotores, queimadas, processos industriais e fontes domésticas de combustão em ambientes mal ventilados.
+
+#### Interpretação {.unnumbered}
+
+Concentrações elevadas indicam maior exposição a combustão incompleta. O CO se liga à hemoglobina, reduzindo a capacidade de transporte de oxigênio no sangue, e pode causar efeitos cardiovasculares, neurológicos e, em exposições intensas, intoxicação aguda.
+
+#### Usos {.unnumbered}
+
+-   Monitoramento de emissões por combustão.
+-   Estudos de exposição a queimadas e poluição urbana.
+-   Apoio a sistemas de alerta em episódios de fumaça e incêndios.
+
+#### Limitações {.unnumbered}
+
+-   Exposições em ambientes internos podem ser muito diferentes das concentrações ambientais externas.
+-   Médias territoriais podem ocultar situações de risco localizadas.
+-   A interpretação deve considerar fontes móveis, queimadas e ventilação atmosférica.
+
+#### Método de cálculo {.unnumbered}
+
+O indicador pode ser calculado como média ou outra estatística da concentração observada ou estimada no período:
+
+$$
+\text{CO} = \frac{1}{n}\sum_{i=1}^{n} C_i
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
+#### Fonte de dados {.unnumbered}
+
+-   Redes de monitoramento da qualidade do ar.
+-   Reanálises atmosféricas e produtos de sensoriamento remoto.
+-   [Médias de poluentes atmosféricos para municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil_air_pollutants.html).
+
+### Dióxido de enxofre ($\text{SO}_{2}$)
+
+Fonte: @who2021aqg
+
+#### Conceituação {.unnumbered}
+
+O dióxido de enxofre é um gás produzido principalmente pela queima de combustíveis contendo enxofre e por algumas atividades industriais. Também pode estar associado a emissões de termelétricas, refinarias, processos metalúrgicos e fontes vulcânicas em alguns contextos.
+
+#### Interpretação {.unnumbered}
+
+Concentrações elevadas indicam maior presença de emissões sulfuradas e podem causar irritação respiratória, broncoconstrição e agravamento de doenças respiratórias, especialmente em pessoas com asma, crianças e idosos.
+
+#### Usos {.unnumbered}
+
+-   Monitoramento de áreas industriais e fontes estacionárias.
+-   Estudos de efeitos respiratórios associados à poluição atmosférica.
+-   Avaliação de políticas de controle de combustíveis e emissões industriais.
+
+#### Limitações {.unnumbered}
+
+-   A concentração pode ser muito localizada perto de fontes específicas.
+-   Nem sempre é bem representada por médias municipais em áreas com fontes pontuais.
+-   Pode se transformar na atmosfera e contribuir para a formação de material particulado secundário.
+
+#### Método de cálculo {.unnumbered}
+
+O indicador pode ser calculado como média, máximo ou percentil da concentração no território e período de interesse:
+
+$$
+\text{SO}_{2} = \frac{1}{n}\sum_{i=1}^{n} C_i
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Unidade geográfica: Brasil, grandes regiões, estados, Distrito Federal e regiões metropolitanas, municípios.
+
+#### Fonte de dados {.unnumbered}
+
+-   Redes de monitoramento da qualidade do ar.
+-   Reanálises atmosféricas e produtos de sensoriamento remoto.
+-   [Médias de poluentes atmosféricos para municípios brasileiros](https://rfsaldanha.github.io/data-projects/brazil_air_pollutants.html).
