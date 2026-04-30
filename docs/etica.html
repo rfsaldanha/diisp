@@ -410,9 +410,14 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
   <ul>
   <li><a href="#dados-pessoais-e-dados-sensíveis" id="toc-dados-pessoais-e-dados-sensíveis" class="nav-link active" data-scroll-target="#dados-pessoais-e-dados-sensíveis"><span class="header-section-number">11.1</span> Dados pessoais e dados sensíveis</a></li>
   <li><a href="#princípios-práticos" id="toc-princípios-práticos" class="nav-link" data-scroll-target="#princípios-práticos"><span class="header-section-number">11.2</span> Princípios práticos</a></li>
-  <li><a href="#pequenas-áreas-e-eventos-raros" id="toc-pequenas-áreas-e-eventos-raros" class="nav-link" data-scroll-target="#pequenas-áreas-e-eventos-raros"><span class="header-section-number">11.3</span> Pequenas áreas e eventos raros</a></li>
-  <li><a href="#governança" id="toc-governança" class="nav-link" data-scroll-target="#governança"><span class="header-section-number">11.4</span> Governança</a></li>
-  <li><a href="#comunicação-responsável" id="toc-comunicação-responsável" class="nav-link" data-scroll-target="#comunicação-responsável"><span class="header-section-number">11.5</span> Comunicação responsável</a></li>
+  <li><a href="#finalidade-e-minimização" id="toc-finalidade-e-minimização" class="nav-link" data-scroll-target="#finalidade-e-minimização"><span class="header-section-number">11.3</span> Finalidade e minimização</a></li>
+  <li><a href="#pequenas-áreas-e-eventos-raros" id="toc-pequenas-áreas-e-eventos-raros" class="nav-link" data-scroll-target="#pequenas-áreas-e-eventos-raros"><span class="header-section-number">11.4</span> Pequenas áreas e eventos raros</a></li>
+  <li><a href="#matriz-de-risco-de-divulgação" id="toc-matriz-de-risco-de-divulgação" class="nav-link" data-scroll-target="#matriz-de-risco-de-divulgação"><span class="header-section-number">11.5</span> Matriz de risco de divulgação</a></li>
+  <li><a href="#governança" id="toc-governança" class="nav-link" data-scroll-target="#governança"><span class="header-section-number">11.6</span> Governança</a></li>
+  <li><a href="#papéis-e-responsabilidades" id="toc-papéis-e-responsabilidades" class="nav-link" data-scroll-target="#papéis-e-responsabilidades"><span class="header-section-number">11.7</span> Papéis e responsabilidades</a></li>
+  <li><a href="#retenção-e-descarte" id="toc-retenção-e-descarte" class="nav-link" data-scroll-target="#retenção-e-descarte"><span class="header-section-number">11.8</span> Retenção e descarte</a></li>
+  <li><a href="#comunicação-responsável" id="toc-comunicação-responsável" class="nav-link" data-scroll-target="#comunicação-responsável"><span class="header-section-number">11.9</span> Comunicação responsável</a></li>
+  <li><a href="#checklist-ético" id="toc-checklist-ético" class="nav-link" data-scroll-target="#checklist-ético"><span class="header-section-number">11.10</span> Checklist ético</a></li>
   </ul>
 </nav>
     </div>
@@ -440,9 +445,47 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 
 
 <p>O uso de dados em Saúde Pública exige atenção ética mesmo quando os dados são públicos, agregados ou anonimizados. Indicadores podem revelar desigualdades, orientar políticas e fortalecer a transparência, mas também podem expor grupos vulneráveis, reforçar estigmas ou permitir identificação indireta em áreas pequenas.</p>
+<p>Ética em dados não se limita à proteção individual. Em Saúde Pública, também envolve efeitos coletivos: a forma como um território é descrito, a maneira como um grupo social é classificado e os usos possíveis de uma informação depois de publicada.</p>
 <section id="dados-pessoais-e-dados-sensíveis" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="dados-pessoais-e-dados-sensíveis"><span class="header-section-number">11.1</span> Dados pessoais e dados sensíveis</h2>
 <p>A Lei Geral de Proteção de Dados Pessoais (LGPD) estabelece regras para o tratamento de dados pessoais no Brasil e reconhece dados referentes à saúde como dados pessoais sensíveis <span class="citation" data-cites="brasilLGPD">(<a href="referencias.html#ref-brasilLGPD" role="doc-biblioref">BRASIL, 2018</a>)</span>. O uso de dados de saúde deve observar finalidade, necessidade, segurança, prevenção, responsabilização e transparência.</p>
+<table class="caption-top table">
+<caption>Tipos de dados e riscos de identificação</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo de dado</th>
+<th>Exemplo</th>
+<th>Risco principal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Identificado</td>
+<td>Nome, CPF, CNS, endereço completo</td>
+<td>Identificação direta</td>
+</tr>
+<tr class="even">
+<td>Pseudonimizado</td>
+<td>Identificador substituído por código</td>
+<td>Reidentificação por chave ou combinação</td>
+</tr>
+<tr class="odd">
+<td>Agregado</td>
+<td>Contagens por município, idade e causa</td>
+<td>Identificação indireta em células pequenas</td>
+</tr>
+<tr class="even">
+<td>Anonimizado</td>
+<td>Dados tratados para impedir identificação razoável</td>
+<td>Risco residual se houver cruzamentos externos</td>
+</tr>
+</tbody>
+</table>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -470,8 +513,13 @@ Aviso
 <li>Avaliar risco de estigmatização de grupos e territórios.</li>
 </ul>
 </section>
-<section id="pequenas-áreas-e-eventos-raros" class="level2" data-number="11.3">
-<h2 data-number="11.3" class="anchored" data-anchor-id="pequenas-áreas-e-eventos-raros"><span class="header-section-number">11.3</span> Pequenas áreas e eventos raros</h2>
+<section id="finalidade-e-minimização" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="finalidade-e-minimização"><span class="header-section-number">11.3</span> Finalidade e minimização</h2>
+<p>Todo tratamento de dados deve ter finalidade definida. Em um projeto de indicadores, isso significa explicitar por que cada variável é necessária. Se uma análise municipal não usa nome, endereço ou identificador individual, esses campos não devem circular no ambiente analítico.</p>
+<p>Minimização não significa empobrecer a análise. Significa usar o nível de detalhe compatível com a pergunta. Por exemplo, idade simples pode ser necessária para calcular faixas etárias corretamente, mas a publicação pode apresentar apenas grupos etários.</p>
+</section>
+<section id="pequenas-áreas-e-eventos-raros" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="pequenas-áreas-e-eventos-raros"><span class="header-section-number">11.4</span> Pequenas áreas e eventos raros</h2>
 <p>Indicadores em pequenas áreas podem ser úteis para revelar desigualdades, mas exigem cuidado. Uma taxa de mortalidade por causa específica em um município pequeno pode se basear em um ou dois eventos. Além da instabilidade estatística, há risco de exposição indireta.</p>
 <p>Nessas situações, alternativas incluem:</p>
 <ul>
@@ -483,8 +531,54 @@ Aviso
 <li>Avaliar se o detalhamento é necessário para o objetivo da análise.</li>
 </ul>
 </section>
-<section id="governança" class="level2" data-number="11.4">
-<h2 data-number="11.4" class="anchored" data-anchor-id="governança"><span class="header-section-number">11.4</span> Governança</h2>
+<section id="matriz-de-risco-de-divulgação" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="matriz-de-risco-de-divulgação"><span class="header-section-number">11.5</span> Matriz de risco de divulgação</h2>
+<p>Antes de publicar uma tabela, mapa ou painel, é útil avaliar risco de identificação e dano.</p>
+<table class="caption-top table">
+<caption>Matriz simplificada de risco de divulgação</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Situação</th>
+<th>Risco</th>
+<th>Medida possível</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Célula com poucos eventos</td>
+<td>Identificação indireta</td>
+<td>Suprimir ou agregar</td>
+</tr>
+<tr class="even">
+<td>Evento sensível em município pequeno</td>
+<td>Estigma e identificação</td>
+<td>Agregar período ou território</td>
+</tr>
+<tr class="odd">
+<td>Cruzamento com muitas variáveis</td>
+<td>Reidentificação</td>
+<td>Reduzir estratificações</td>
+</tr>
+<tr class="even">
+<td>Ranking público de territórios</td>
+<td>Estigmatização</td>
+<td>Contextualizar e evitar leitura punitiva</td>
+</tr>
+<tr class="odd">
+<td>Microdados compartilhados</td>
+<td>Uso indevido</td>
+<td>Controlar acesso e documentar finalidade</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="governança" class="level2" data-number="11.6">
+<h2 data-number="11.6" class="anchored" data-anchor-id="governança"><span class="header-section-number">11.6</span> Governança</h2>
 <p>Governança de dados é o conjunto de regras, responsabilidades e processos que orientam coleta, acesso, tratamento, documentação, publicação e descarte de dados. Em projetos de indicadores, a governança deve responder a perguntas simples:</p>
 <ul>
 <li>Quem é responsável pela base?</li>
@@ -496,9 +590,54 @@ Aviso
 <li>Há risco de identificação ou dano coletivo?</li>
 </ul>
 </section>
-<section id="comunicação-responsável" class="level2" data-number="11.5">
-<h2 data-number="11.5" class="anchored" data-anchor-id="comunicação-responsável"><span class="header-section-number">11.5</span> Comunicação responsável</h2>
+<section id="papéis-e-responsabilidades" class="level2" data-number="11.7">
+<h2 data-number="11.7" class="anchored" data-anchor-id="papéis-e-responsabilidades"><span class="header-section-number">11.7</span> Papéis e responsabilidades</h2>
+<p>Em projetos institucionais, diferentes papéis devem estar claros:</p>
+<ul>
+<li>Responsável técnico: define método, qualidade e interpretação.</li>
+<li>Responsável pela base: controla origem, versão e documentação.</li>
+<li>Responsável pela segurança: define permissões, armazenamento e descarte.</li>
+<li>Responsável pela comunicação: garante clareza e contextualização.</li>
+<li>Gestor ou demandante: explicita finalidade e uso esperado.</li>
+</ul>
+<p>Essa divisão evita que decisões técnicas, éticas e comunicacionais fiquem implícitas ou concentradas em uma única etapa final.</p>
+</section>
+<section id="retenção-e-descarte" class="level2" data-number="11.8">
+<h2 data-number="11.8" class="anchored" data-anchor-id="retenção-e-descarte"><span class="header-section-number">11.8</span> Retenção e descarte</h2>
+<p>Dados identificáveis ou sensíveis não devem ser mantidos indefinidamente sem justificativa. O projeto deve definir:</p>
+<ul>
+<li>Onde os dados serão armazenados.</li>
+<li>Por quanto tempo serão mantidos.</li>
+<li>Quem terá acesso.</li>
+<li>Como serão descartados.</li>
+<li>Quais produtos agregados poderão permanecer públicos.</li>
+</ul>
+</section>
+<section id="comunicação-responsável" class="level2" data-number="11.9">
+<h2 data-number="11.9" class="anchored" data-anchor-id="comunicação-responsável"><span class="header-section-number">11.9</span> Comunicação responsável</h2>
 <p>Indicadores podem afetar a imagem de territórios, serviços e populações. A comunicação deve evitar culpabilizar comunidades por problemas estruturais. Sempre que possível, resultados devem ser contextualizados com determinantes sociais, ambientais, históricos e institucionais.</p>
+<p>Boas práticas de comunicação incluem:</p>
+<ul>
+<li>Evitar rankings sem contexto.</li>
+<li>Explicar limitações e incertezas.</li>
+<li>Indicar que indicadores territoriais não descrevem todos os indivíduos do território.</li>
+<li>Evitar termos que culpabilizem populações.</li>
+<li>Destacar desigualdades estruturais e capacidade de resposta.</li>
+<li>Separar descrição, interpretação e recomendação.</li>
+</ul>
+</section>
+<section id="checklist-ético" class="level2" data-number="11.10">
+<h2 data-number="11.10" class="anchored" data-anchor-id="checklist-ético"><span class="header-section-number">11.10</span> Checklist ético</h2>
+<p>Antes da publicação, pergunte:</p>
+<ul>
+<li>A finalidade da análise está explícita?</li>
+<li>O nível de detalhe é necessário?</li>
+<li>Há células pequenas ou eventos raros?</li>
+<li>A publicação pode estigmatizar grupos ou territórios?</li>
+<li>Os dados sensíveis foram protegidos?</li>
+<li>As limitações foram comunicadas?</li>
+<li>O produto final permite uso indevido previsível?</li>
+</ul>
 
 
 <div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list" style="display: none">

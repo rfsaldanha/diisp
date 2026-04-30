@@ -439,9 +439,15 @@ window.Quarto = {
   <ul>
   <li><a href="#instabilidade-de-taxas" id="toc-instabilidade-de-taxas" class="nav-link active" data-scroll-target="#instabilidade-de-taxas"><span class="header-section-number">6.1</span> Instabilidade de taxas</a></li>
   <li><a href="#intervalos-de-confiança" id="toc-intervalos-de-confiança" class="nav-link" data-scroll-target="#intervalos-de-confiança"><span class="header-section-number">6.2</span> Intervalos de confiança</a></li>
-  <li><a href="#suavização" id="toc-suavização" class="nav-link" data-scroll-target="#suavização"><span class="header-section-number">6.3</span> Suavização</a></li>
-  <li><a href="#supressão-e-agregação" id="toc-supressão-e-agregação" class="nav-link" data-scroll-target="#supressão-e-agregação"><span class="header-section-number">6.4</span> Supressão e agregação</a></li>
-  <li><a href="#comunicação-da-incerteza" id="toc-comunicação-da-incerteza" class="nav-link" data-scroll-target="#comunicação-da-incerteza"><span class="header-section-number">6.5</span> Comunicação da incerteza</a></li>
+  <li><a href="#erro-aleatório-e-viés" id="toc-erro-aleatório-e-viés" class="nav-link" data-scroll-target="#erro-aleatório-e-viés"><span class="header-section-number">6.3</span> Erro aleatório e viés</a></li>
+  <li><a href="#suavização" id="toc-suavização" class="nav-link" data-scroll-target="#suavização"><span class="header-section-number">6.4</span> Suavização</a>
+  <ul class="collapse">
+  <li><a href="#médias-móveis" id="toc-médias-móveis" class="nav-link" data-scroll-target="#médias-móveis"><span class="header-section-number">6.4.1</span> Médias móveis</a></li>
+  <li><a href="#agregação-temporal" id="toc-agregação-temporal" class="nav-link" data-scroll-target="#agregação-temporal"><span class="header-section-number">6.4.2</span> Agregação temporal</a></li>
+  </ul></li>
+  <li><a href="#supressão-e-agregação" id="toc-supressão-e-agregação" class="nav-link" data-scroll-target="#supressão-e-agregação"><span class="header-section-number">6.5</span> Supressão e agregação</a></li>
+  <li><a href="#mapas-e-ranqueamentos" id="toc-mapas-e-ranqueamentos" class="nav-link" data-scroll-target="#mapas-e-ranqueamentos"><span class="header-section-number">6.6</span> Mapas e ranqueamentos</a></li>
+  <li><a href="#comunicação-da-incerteza" id="toc-comunicação-da-incerteza" class="nav-link" data-scroll-target="#comunicação-da-incerteza"><span class="header-section-number">6.7</span> Comunicação da incerteza</a></li>
   </ul>
 </nav>
     </div>
@@ -469,6 +475,7 @@ window.Quarto = {
 
 
 <p>Indicadores em Saúde Pública frequentemente são calculados para áreas pequenas, grupos populacionais específicos ou períodos curtos. Nessas situações, pequenas variações no número de eventos podem produzir grandes oscilações em taxas e proporções. A interpretação deve considerar a incerteza estatística e a instabilidade dos indicadores.</p>
+<p>A incerteza não é um problema restrito a modelos estatísticos. Ela aparece em contagens, taxas, proporções, estimativas populacionais, classificações territoriais e medidas ambientais. Reconhecer essa incerteza é parte da boa prática de análise.</p>
 <section id="instabilidade-de-taxas" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="instabilidade-de-taxas"><span class="header-section-number">6.1</span> Instabilidade de taxas</h2>
 <p>Uma taxa baseada em poucos eventos pode variar muito de um período para outro, mesmo quando o risco subjacente não mudou. Por exemplo, em um município pequeno, a ocorrência de um óbito adicional pode duplicar a taxa de mortalidade por uma causa específica.</p>
@@ -485,6 +492,34 @@ Aviso
 <p>Taxas calculadas com numeradores pequenos não devem ser interpretadas isoladamente. Sempre que possível, apresente também o número absoluto de eventos e o denominador utilizado.</p>
 </div>
 </div>
+<p>Um exemplo simples ilustra o problema. Se um município com 5.000 habitantes registra 1 óbito por determinada causa, a taxa é 20 por 100.000 habitantes. Se no ano seguinte registra 2 óbitos, a taxa passa para 40 por 100.000 habitantes. A taxa dobrou, mas a diferença absoluta foi de apenas um evento.</p>
+<table class="caption-top table">
+<caption>Instabilidade de taxas com pequenos numeradores</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Óbitos</th>
+<th style="text-align: right;">População</th>
+<th style="text-align: right;">Taxa por 100.000</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5.000</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5.000</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5.000</td>
+<td style="text-align: right;">60</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="intervalos-de-confiança" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="intervalos-de-confiança"><span class="header-section-number">6.2</span> Intervalos de confiança</h2>
@@ -493,9 +528,51 @@ Aviso
 IC_{95\%} = p \pm 1{,}96 \sqrt{\frac{p(1-p)}{n}}
 \]</span></p>
 <p>em que <span class="math inline">\(p\)</span> é a proporção observada e <span class="math inline">\(n\)</span> é o denominador. Para taxas baseadas em eventos raros, aproximações baseadas na distribuição de Poisson podem ser mais adequadas.</p>
+<p>Em relatórios de gestão, nem sempre é necessário apresentar todos os intervalos de confiança, mas é importante reconhecer a incerteza quando se comparam áreas pequenas ou grupos com poucos eventos. Uma diferença aparente no mapa pode não representar uma diferença estatisticamente ou substantivamente relevante.</p>
 </section>
-<section id="suavização" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="suavização"><span class="header-section-number">6.3</span> Suavização</h2>
+<section id="erro-aleatório-e-viés" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="erro-aleatório-e-viés"><span class="header-section-number">6.3</span> Erro aleatório e viés</h2>
+<p>Erro aleatório e viés são problemas distintos. O erro aleatório decorre da variação esperada em torno de uma estimativa. O viés ocorre quando a medida se afasta sistematicamente do fenômeno real.</p>
+<table class="caption-top table">
+<caption>Diferença entre erro aleatório e viés</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Problema</th>
+<th>Exemplo</th>
+<th>Estratégia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Erro aleatório</td>
+<td>Poucos óbitos em município pequeno</td>
+<td>Agregar anos, suavizar ou apresentar incerteza</td>
+</tr>
+<tr class="even">
+<td>Viés de cobertura</td>
+<td>Subnotificação em determinado território</td>
+<td>Avaliar cobertura e interpretar com cautela</td>
+</tr>
+<tr class="odd">
+<td>Viés de seleção</td>
+<td>Testagem concentrada em casos graves</td>
+<td>Apresentar volume de testes e critério de testagem</td>
+</tr>
+<tr class="even">
+<td>Erro de classificação</td>
+<td>Causa básica mal definida</td>
+<td>Investigar qualidade do registro e categorias mal definidas</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="suavização" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="suavização"><span class="header-section-number">6.4</span> Suavização</h2>
 <p>Quando o objetivo é identificar padrões espaciais ou temporais, pode ser útil suavizar indicadores instáveis. Estratégias comuns incluem:</p>
 <ul>
 <li>Médias móveis temporais.</li>
@@ -505,9 +582,26 @@ IC_{95\%} = p \pm 1{,}96 \sqrt{\frac{p(1-p)}{n}}
 <li>Modelos bayesianos para mapeamento de doenças <span class="citation" data-cites="lawson2018bayesian">(<a href="referencias.html#ref-lawson2018bayesian" role="doc-biblioref">LAWSON, 2018</a>)</span>.</li>
 </ul>
 <p>Essas técnicas reduzem variações aleatórias, mas também podem ocultar mudanças abruptas ou heterogeneidades locais. A escolha deve ser justificada pelo objetivo da análise.</p>
+<section id="médias-móveis" class="level3" data-number="6.4.1">
+<h3 data-number="6.4.1" class="anchored" data-anchor-id="médias-móveis"><span class="header-section-number">6.4.1</span> Médias móveis</h3>
+<p>Uma média móvel temporal substitui o valor de um período por uma média de períodos vizinhos.</p>
+<p><span class="math display">\[
+\bar{x}_t = \frac{x_{t-1} + x_t + x_{t+1}}{3}
+\]</span></p>
+<p>Essa técnica pode reduzir oscilações pontuais em séries temporais. Porém, quando usada em vigilância, pode atrasar a identificação de mudanças recentes.</p>
 </section>
-<section id="supressão-e-agregação" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="supressão-e-agregação"><span class="header-section-number">6.4</span> Supressão e agregação</h2>
+<section id="agregação-temporal" class="level3" data-number="6.4.2">
+<h3 data-number="6.4.2" class="anchored" data-anchor-id="agregação-temporal"><span class="header-section-number">6.4.2</span> Agregação temporal</h3>
+<p>Outra estratégia é agregar anos ou meses. Em vez de calcular a taxa anual por município, pode-se calcular uma taxa trienal:</p>
+<p><span class="math display">\[
+\text{Taxa trienal} =
+\frac{\text{Eventos em 3 anos}}{\text{População média ou pessoa-tempo no período}} \times k
+\]</span></p>
+<p>A agregação aumenta a estabilidade, mas reduz a resolução temporal.</p>
+</section>
+</section>
+<section id="supressão-e-agregação" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="supressão-e-agregação"><span class="header-section-number">6.5</span> Supressão e agregação</h2>
 <p>Em algumas situações, indicadores com numeradores muito pequenos devem ser suprimidos ou apresentados em áreas/períodos agregados. Isso pode ser necessário tanto por instabilidade estatística quanto por proteção de privacidade.</p>
 <p>Exemplos de estratégias:</p>
 <ul>
@@ -516,10 +610,23 @@ IC_{95\%} = p \pm 1{,}96 \sqrt{\frac{p(1-p)}{n}}
 <li>Usar regiões de saúde em vez de municípios.</li>
 <li>Apresentar apenas contagens ou categorias amplas.</li>
 </ul>
+<p>Uma regra de supressão deve ser definida antes da divulgação. Por exemplo, pode-se optar por não publicar taxas quando o numerador for menor que 5 ou 10 eventos. O ponto de corte depende do tema, da finalidade, da sensibilidade dos dados e do risco de identificação.</p>
 </section>
-<section id="comunicação-da-incerteza" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="comunicação-da-incerteza"><span class="header-section-number">6.5</span> Comunicação da incerteza</h2>
+<section id="mapas-e-ranqueamentos" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="mapas-e-ranqueamentos"><span class="header-section-number">6.6</span> Mapas e ranqueamentos</h2>
+<p>Mapas e rankings podem sugerir diferenças mais claras do que os dados sustentam. Em áreas pequenas, municípios podem aparecer no topo ou na base de um ranking por flutuação aleatória. Por isso, mapas de taxas devem ser acompanhados por:</p>
+<ul>
+<li>Número absoluto de eventos.</li>
+<li>Denominador.</li>
+<li>Indicação de instabilidade.</li>
+<li>Classes de incerteza ou supressão quando necessário.</li>
+<li>Comentário metodológico sobre pequenos números.</li>
+</ul>
+</section>
+<section id="comunicação-da-incerteza" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="comunicação-da-incerteza"><span class="header-section-number">6.7</span> Comunicação da incerteza</h2>
 <p>A comunicação deve evitar falsa precisão. Em vez de destacar pequenas diferenças entre municípios ou grupos, é preferível indicar quando os valores são estatisticamente instáveis ou quando a diferença observada pode estar dentro da variação esperada.</p>
+<p>Frases como “o município A tem risco duas vezes maior” devem ser usadas com cuidado quando os números absolutos são pequenos. Em muitos casos, é mais adequado escrever: “o município apresentou taxa elevada no período, mas o indicador é instável devido ao pequeno número de eventos”.</p>
 
 
 <div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list" style="display: none">

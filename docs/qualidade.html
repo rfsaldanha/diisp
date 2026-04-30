@@ -420,9 +420,14 @@ window.Quarto = {
   <li><a href="#dimensões-da-qualidade" id="toc-dimensões-da-qualidade" class="nav-link active" data-scroll-target="#dimensões-da-qualidade"><span class="header-section-number">5.1</span> Dimensões da qualidade</a></li>
   <li><a href="#completude" id="toc-completude" class="nav-link" data-scroll-target="#completude"><span class="header-section-number">5.2</span> Completude</a></li>
   <li><a href="#consistência" id="toc-consistência" class="nav-link" data-scroll-target="#consistência"><span class="header-section-number">5.3</span> Consistência</a></li>
-  <li><a href="#subnotificação-e-cobertura" id="toc-subnotificação-e-cobertura" class="nav-link" data-scroll-target="#subnotificação-e-cobertura"><span class="header-section-number">5.4</span> Subnotificação e cobertura</a></li>
-  <li><a href="#auditoria-mínima" id="toc-auditoria-mínima" class="nav-link" data-scroll-target="#auditoria-mínima"><span class="header-section-number">5.5</span> Auditoria mínima</a></li>
-  <li><a href="#documentação" id="toc-documentação" class="nav-link" data-scroll-target="#documentação"><span class="header-section-number">5.6</span> Documentação</a></li>
+  <li><a href="#validade-e-padronização" id="toc-validade-e-padronização" class="nav-link" data-scroll-target="#validade-e-padronização"><span class="header-section-number">5.4</span> Validade e padronização</a></li>
+  <li><a href="#subnotificação-e-cobertura" id="toc-subnotificação-e-cobertura" class="nav-link" data-scroll-target="#subnotificação-e-cobertura"><span class="header-section-number">5.5</span> Subnotificação e cobertura</a></li>
+  <li><a href="#oportunidade" id="toc-oportunidade" class="nav-link" data-scroll-target="#oportunidade"><span class="header-section-number">5.6</span> Oportunidade</a></li>
+  <li><a href="#duplicidades" id="toc-duplicidades" class="nav-link" data-scroll-target="#duplicidades"><span class="header-section-number">5.7</span> Duplicidades</a></li>
+  <li><a href="#indicadores-de-qualidade-da-base" id="toc-indicadores-de-qualidade-da-base" class="nav-link" data-scroll-target="#indicadores-de-qualidade-da-base"><span class="header-section-number">5.8</span> Indicadores de qualidade da base</a></li>
+  <li><a href="#auditoria-mínima" id="toc-auditoria-mínima" class="nav-link" data-scroll-target="#auditoria-mínima"><span class="header-section-number">5.9</span> Auditoria mínima</a></li>
+  <li><a href="#decisões-de-tratamento" id="toc-decisões-de-tratamento" class="nav-link" data-scroll-target="#decisões-de-tratamento"><span class="header-section-number">5.10</span> Decisões de tratamento</a></li>
+  <li><a href="#documentação" id="toc-documentação" class="nav-link" data-scroll-target="#documentação"><span class="header-section-number">5.11</span> Documentação</a></li>
   </ul>
 </nav>
     </div>
@@ -450,6 +455,7 @@ window.Quarto = {
 
 
 <p>A qualidade dos indicadores depende diretamente da qualidade dos dados utilizados. Erros de registro, atrasos, duplicidades, mudanças de definição e subnotificação podem alterar a interpretação de uma taxa, proporção ou série temporal. Por isso, a avaliação da qualidade deve ser parte explícita da análise, e não uma etapa secundária.</p>
+<p>Em bases de saúde, a qualidade deve ser avaliada antes e depois da construção do indicador. Antes, porque problemas no dado bruto podem inviabilizar o cálculo; depois, porque o próprio indicador pode revelar inconsistências, como taxas impossíveis, valores acima de 100% ou quebras abruptas na série.</p>
 <section id="dimensões-da-qualidade" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="dimensões-da-qualidade"><span class="header-section-number">5.1</span> Dimensões da qualidade</h2>
 <p>As principais dimensões de qualidade em bases de interesse para a Saúde Pública incluem:</p>
@@ -462,6 +468,58 @@ window.Quarto = {
 <li>Cobertura: grau em que a base representa a população ou evento de interesse.</li>
 <li>Comparabilidade: estabilidade dos conceitos, formulários, classificações e métodos ao longo do tempo.</li>
 </ul>
+<table class="caption-top table">
+<caption>Dimensões práticas da qualidade dos dados</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimensão</th>
+<th>Pergunta prática</th>
+<th>Exemplo de problema</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Completude</td>
+<td>Os campos essenciais estão preenchidos?</td>
+<td>Município de residência ignorado</td>
+</tr>
+<tr class="even">
+<td>Consistência</td>
+<td>As variáveis são compatíveis entre si?</td>
+<td>Idade negativa ou data impossível</td>
+</tr>
+<tr class="odd">
+<td>Validade</td>
+<td>Os valores pertencem a categorias esperadas?</td>
+<td>Código de município inexistente</td>
+</tr>
+<tr class="even">
+<td>Oportunidade</td>
+<td>O dado chega a tempo de orientar ação?</td>
+<td>Notificações inseridas com atraso</td>
+</tr>
+<tr class="odd">
+<td>Duplicidade</td>
+<td>O mesmo evento aparece mais de uma vez?</td>
+<td>Duas notificações para o mesmo caso</td>
+</tr>
+<tr class="even">
+<td>Cobertura</td>
+<td>A base capta todos os eventos esperados?</td>
+<td>Sub-registro de óbitos ou casos</td>
+</tr>
+<tr class="odd">
+<td>Comparabilidade</td>
+<td>A definição se manteve no tempo?</td>
+<td>Mudança de formulário ou critério de caso</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="completude" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="completude"><span class="header-section-number">5.2</span> Completude</h2>
@@ -470,6 +528,34 @@ window.Quarto = {
 \text{Completude} = \frac{\text{Registros preenchidos}}{\text{Total de registros esperados}} \times 100
 \]</span></p>
 <p>Campos essenciais, como município de residência, idade, sexo, data de ocorrência e classificação diagnóstica, devem ser avaliados antes do cálculo de indicadores. Baixa completude pode comprometer análises por território, grupo populacional ou período.</p>
+<p>A completude deve ser avaliada por variável e por estratos relevantes. Uma base pode ter boa completude geral, mas baixa completude em um estado, ano, município, raça/cor ou campo específico. Por isso, é útil apresentar a completude em tabelas ou mapas antes de interpretar diferenças territoriais.</p>
+<table class="caption-top table">
+<caption>Exemplo de classificação operacional da completude</caption>
+<thead>
+<tr class="header">
+<th>Classificação operacional</th>
+<th style="text-align: right;">Completude</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Excelente</td>
+<td style="text-align: right;">95% ou mais</td>
+</tr>
+<tr class="even">
+<td>Boa</td>
+<td style="text-align: right;">90% a 94,9%</td>
+</tr>
+<tr class="odd">
+<td>Regular</td>
+<td style="text-align: right;">70% a 89,9%</td>
+</tr>
+<tr class="even">
+<td>Baixa</td>
+<td style="text-align: right;">Menos de 70%</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="consistência" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="consistência"><span class="header-section-number">5.3</span> Consistência</h2>
@@ -481,9 +567,35 @@ window.Quarto = {
 <li>Sexo incompatível com determinada condição registrada.</li>
 <li>Procedimento hospitalar incompatível com idade ou diagnóstico.</li>
 </ul>
+<p>Algumas inconsistências podem ser corrigidas com regras documentadas, como padronização de códigos territoriais. Outras devem ser tratadas como exclusões ou incertezas, especialmente quando não há informação suficiente para recuperar o valor correto.</p>
 </section>
-<section id="subnotificação-e-cobertura" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="subnotificação-e-cobertura"><span class="header-section-number">5.4</span> Subnotificação e cobertura</h2>
+<section id="validade-e-padronização" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="validade-e-padronização"><span class="header-section-number">5.4</span> Validade e padronização</h2>
+<p>Validade operacional significa que os valores registrados seguem formatos, domínios e classificações esperadas. Exemplos incluem códigos IBGE de municípios, códigos CID, datas válidas, categorias padronizadas de sexo, raça/cor e escolaridade.</p>
+<p>Problemas comuns:</p>
+<ul>
+<li>Códigos territoriais antigos misturados com códigos atuais.</li>
+<li>Categorias textuais escritas de formas diferentes.</li>
+<li>Datas em formatos distintos.</li>
+<li>Valores fora de faixa.</li>
+<li>Unidades de medida misturadas.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dica
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sempre que possível, use tabelas oficiais de referência para validar códigos territoriais, classificações diagnósticas e categorias padronizadas.</p>
+</div>
+</div>
+</section>
+<section id="subnotificação-e-cobertura" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="subnotificação-e-cobertura"><span class="header-section-number">5.5</span> Subnotificação e cobertura</h2>
 <p>Nem todos os eventos observáveis são registrados. A subnotificação pode variar entre territórios, grupos sociais, períodos e tipos de evento. Um aumento em uma taxa pode refletir aumento real da ocorrência, melhora da vigilância, mudança no acesso aos serviços ou alteração no processo de registro.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -499,8 +611,66 @@ Aviso
 </div>
 </div>
 </section>
-<section id="auditoria-mínima" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="auditoria-mínima"><span class="header-section-number">5.5</span> Auditoria mínima</h2>
+<section id="oportunidade" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="oportunidade"><span class="header-section-number">5.6</span> Oportunidade</h2>
+<p>A oportunidade é especialmente importante para vigilância. Um dado pode ser correto, mas chegar tarde demais para orientar uma ação. Pode-se medir a oportunidade como o intervalo entre a ocorrência do evento e sua entrada no sistema.</p>
+<p><span class="math display">\[
+\text{Atraso de notificação} = \text{Data de registro} - \text{Data de ocorrência}
+\]</span></p>
+<p>Esse atraso pode ser resumido por média, mediana, percentis ou proporção de registros dentro de um prazo aceitável.</p>
+</section>
+<section id="duplicidades" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="duplicidades"><span class="header-section-number">5.7</span> Duplicidades</h2>
+<p>Duplicidades podem ocorrer quando um mesmo evento é registrado mais de uma vez. A identificação depende de chaves fortes ou probabilísticas. Em bases de saúde, podem ser usadas combinações de campos como nome, data de nascimento, sexo, município, data do evento, número de cartão ou identificadores do sistema, quando disponíveis e permitidos.</p>
+<p>Após identificar possíveis duplicidades, é necessário decidir:</p>
+<ul>
+<li>Qual registro será mantido.</li>
+<li>Quais campos serão combinados.</li>
+<li>Quais registros serão excluídos.</li>
+<li>Como documentar a decisão.</li>
+</ul>
+</section>
+<section id="indicadores-de-qualidade-da-base" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="indicadores-de-qualidade-da-base"><span class="header-section-number">5.8</span> Indicadores de qualidade da base</h2>
+<p>Além dos indicadores substantivos, é útil calcular indicadores de qualidade:</p>
+<table class="caption-top table">
+<caption>Exemplos de indicadores de qualidade da base</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Indicador de qualidade</th>
+<th>Método de cálculo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Completude de campo essencial</td>
+<td>Registros preenchidos / total de registros</td>
+</tr>
+<tr class="even">
+<td>Proporção de registros inconsistentes</td>
+<td>Registros com erro lógico / total de registros</td>
+</tr>
+<tr class="odd">
+<td>Proporção de duplicidades</td>
+<td>Duplicidades prováveis / total de registros</td>
+</tr>
+<tr class="even">
+<td>Oportunidade da notificação</td>
+<td>Registros dentro do prazo / total de registros</td>
+</tr>
+<tr class="odd">
+<td>Percentual de ignorados</td>
+<td>Registros ignorados / total de registros</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="auditoria-mínima" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="auditoria-mínima"><span class="header-section-number">5.9</span> Auditoria mínima</h2>
 <p>Antes de publicar ou utilizar um indicador, recomenda-se verificar:</p>
 <ul>
 <li>Fonte e versão da base.</li>
@@ -513,9 +683,23 @@ Aviso
 <li>Consistência territorial e temporal.</li>
 </ul>
 </section>
-<section id="documentação" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="documentação"><span class="header-section-number">5.6</span> Documentação</h2>
+<section id="decisões-de-tratamento" class="level2" data-number="5.10">
+<h2 data-number="5.10" class="anchored" data-anchor-id="decisões-de-tratamento"><span class="header-section-number">5.10</span> Decisões de tratamento</h2>
+<p>Problemas de qualidade exigem decisões explícitas. Algumas possibilidades são:</p>
+<ul>
+<li>Manter o registro como está e sinalizar limitação.</li>
+<li>Corrigir com base em fonte auxiliar confiável.</li>
+<li>Reclassificar como ignorado.</li>
+<li>Excluir do numerador.</li>
+<li>Excluir da análise estratificada, mas manter no total.</li>
+<li>Redistribuir ignorados segundo critério estatístico.</li>
+</ul>
+<p>Não existe uma única regra universal. A decisão depende do indicador, da fonte, do volume de registros afetados e do risco de viés.</p>
+</section>
+<section id="documentação" class="level2" data-number="5.11">
+<h2 data-number="5.11" class="anchored" data-anchor-id="documentação"><span class="header-section-number">5.11</span> Documentação</h2>
 <p>Todo indicador deve ser acompanhado de uma ficha técnica. A ficha deve permitir que outra pessoa compreenda e reproduza o cálculo. Quando houver decisões analíticas, como exclusão de registros, redistribuição de ignorados ou uso de estimativas populacionais, essas decisões devem ser explicitadas.</p>
+<p>Uma boa documentação deve incluir uma seção específica de qualidade, informando problemas encontrados, proporção de registros afetados e tratamento adotado. Isso evita que o indicador pareça mais preciso do que realmente é.</p>
 
 
 </section>

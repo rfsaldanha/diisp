@@ -10,11 +10,22 @@ Este *e-book* apresenta conceitos, métodos, fontes de dados e exemplos de uso d
 
 O material foi pensado para estudantes, pesquisadores, profissionais de Saúde Pública e equipes técnicas que trabalham com vigilância, planejamento, avaliação de políticas públicas ou análise de situação de saúde.
 
+O livro combina duas abordagens. A primeira é metodológica: discute como selecionar, calcular, harmonizar, interpretar e documentar indicadores. A segunda é temática: apresenta indicadores sociodemográficos, de saúde, ambientais e climáticos que podem ser usados em análises aplicadas.
+
+Este material não substitui manuais oficiais dos sistemas de informação, normas técnicas de vigilância ou protocolos específicos de programas de saúde. Seu objetivo é apoiar a leitura crítica e o uso integrado de indicadores em análises territoriais.
+
 # Como usar este livro? {.unnumbered}
 
 Os capítulos iniciais discutem conceitos fundamentais sobre dados, indicadores e harmonização espacial e temporal. Os capítulos temáticos podem ser consultados como referência para identificar indicadores, compreender sua interpretação, reconhecer limitações e localizar fontes de dados.
 
 Sempre que possível, são apresentados exemplos práticos em R, fórmulas de cálculo e indicações de bases públicas disponíveis.
+
+Uma leitura sequencial é recomendada para quem está começando. Leitores interessados em uma aplicação específica podem seguir caminhos mais diretos:
+
+-   Para construir um painel de indicadores: começar por seleção, qualidade, incerteza e harmonização.
+-   Para análise territorial: consultar harmonização, indicadores sociodemográficos, ambientais e climáticos.
+-   Para indicadores epidemiológicos e de serviços: consultar indicadores de saúde, qualidade de dados e incerteza.
+-   Para publicação de resultados: consultar ética, privacidade, reprodutibilidade e estudo de caso integrado.
 
 # Como citar este material? {.unnumbered}
 

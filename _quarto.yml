@@ -10,7 +10,6 @@ lang: pt
 book:
   title: "Dados e Indicadores de Interesse para a Saúde Pública"
   author: "Raphael de Freitas Saldanha"
-  isbn: ""
   date: 2026-04-30
   search: true
   # downloads: [pdf, epub]
@@ -32,7 +31,7 @@ book:
     - etica.qmd # Ética e governança
     - reproducibilidade.qmd
     - estudo_caso.qmd
-    # - inter.qmd # Dados da internet e redes sociais
+    # Futuro: inter.qmd # Dados da internet e redes sociais
     - referencias.qmd
   # appendices: 
     # - malhas.qmd # Malhas territoriais, DTB

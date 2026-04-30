@@ -17,6 +17,37 @@ No Brasil, muitas informações podem ser obtidas em sistemas disponibilizados p
 Indicadores de saúde dependem da definição do evento e da população sob risco. O mesmo numerador pode gerar interpretações diferentes quando dividido por população residente, nascidos vivos, casos notificados, pessoas testadas ou população-alvo.
 :::
 
+## Fontes de dados em saúde
+
+Os sistemas de informação em saúde têm finalidades distintas. Antes de calcular um indicador, é necessário verificar se a fonte registra eventos, pessoas, procedimentos, estabelecimentos, doses, notificações ou resultados laboratoriais.
+
+| Fonte | Conteúdo principal | Exemplos de indicadores |
+|---|---|---|
+| SIM | Óbitos | Mortalidade geral, mortalidade específica, mortalidade infantil, mortalidade materna |
+| SINASC | Nascidos vivos | Nascidos vivos, denominador da mortalidade infantil e materna |
+| SINAN | Agravos de notificação | Incidência, taxa de notificação, letalidade |
+| SIH/SUS | Internações hospitalares | Taxa de internação, ICSAP, morbidade hospitalar |
+| SIA/SUS | Produção ambulatorial | Taxa de procedimentos, consultas, exames |
+| Sistemas de imunização | Doses aplicadas e esquemas | Cobertura vacinal, abandono vacinal |
+| CNES | Estabelecimentos, equipes e recursos | Oferta de serviços, capacidade instalada |
+
+: Fontes frequentes para indicadores de saúde no Brasil
+
+::: callout-tip
+Ao usar sistemas administrativos, lembre que a unidade registrada pode variar. O SIH/SUS registra autorizações de internação, o SIA/SUS registra procedimentos, sistemas de imunização registram doses, e sistemas de vigilância registram notificações ou casos. Essas unidades não devem ser tratadas automaticamente como pessoas.
+:::
+
+## Exemplo de cálculo
+
+Suponha que um município tenha registrado 8 óbitos de menores de um ano e 1.200 nascidos vivos em determinado ano. A taxa de mortalidade infantil seria:
+
+$$
+\text{Mortalidade infantil} =
+\frac{8}{1.200} \times 1.000 = 6{,}7
+$$
+
+O resultado indica 6,7 óbitos de menores de um ano por 1.000 nascidos vivos. Se o município for pequeno, a interpretação deve considerar a instabilidade do indicador e, quando necessário, usar períodos agregados.
+
 ## Mortalidade
 
 ### Taxa bruta de mortalidade

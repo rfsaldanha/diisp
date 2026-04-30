@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -391,9 +426,13 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
   <li><a href="#elementos-mínimos" id="toc-elementos-mínimos" class="nav-link active" data-scroll-target="#elementos-mínimos"><span class="header-section-number">12.1</span> Elementos mínimos</a></li>
   <li><a href="#pacotes-usados-nos-exemplos" id="toc-pacotes-usados-nos-exemplos" class="nav-link" data-scroll-target="#pacotes-usados-nos-exemplos"><span class="header-section-number">12.2</span> Pacotes usados nos exemplos</a></li>
   <li><a href="#execução-congelada" id="toc-execução-congelada" class="nav-link" data-scroll-target="#execução-congelada"><span class="header-section-number">12.3</span> Execução congelada</a></li>
-  <li><a href="#versionamento-de-dados" id="toc-versionamento-de-dados" class="nav-link" data-scroll-target="#versionamento-de-dados"><span class="header-section-number">12.4</span> Versionamento de dados</a></li>
-  <li><a href="#organização-sugerida" id="toc-organização-sugerida" class="nav-link" data-scroll-target="#organização-sugerida"><span class="header-section-number">12.5</span> Organização sugerida</a></li>
-  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist"><span class="header-section-number">12.6</span> Checklist</a></li>
+  <li><a href="#controle-de-versões" id="toc-controle-de-versões" class="nav-link" data-scroll-target="#controle-de-versões"><span class="header-section-number">12.4</span> Controle de versões</a></li>
+  <li><a href="#versionamento-de-dados" id="toc-versionamento-de-dados" class="nav-link" data-scroll-target="#versionamento-de-dados"><span class="header-section-number">12.5</span> Versionamento de dados</a></li>
+  <li><a href="#separação-entre-dado-bruto-e-dado-tratado" id="toc-separação-entre-dado-bruto-e-dado-tratado" class="nav-link" data-scroll-target="#separação-entre-dado-bruto-e-dado-tratado"><span class="header-section-number">12.6</span> Separação entre dado bruto e dado tratado</a></li>
+  <li><a href="#organização-sugerida" id="toc-organização-sugerida" class="nav-link" data-scroll-target="#organização-sugerida"><span class="header-section-number">12.7</span> Organização sugerida</a></li>
+  <li><a href="#nomes-e-metadados" id="toc-nomes-e-metadados" class="nav-link" data-scroll-target="#nomes-e-metadados"><span class="header-section-number">12.8</span> Nomes e metadados</a></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist"><span class="header-section-number">12.9</span> Checklist</a></li>
+  <li><a href="#reprodutibilidade-computacional-e-analítica" id="toc-reprodutibilidade-computacional-e-analítica" class="nav-link" data-scroll-target="#reprodutibilidade-computacional-e-analítica"><span class="header-section-number">12.10</span> Reprodutibilidade computacional e analítica</a></li>
   </ul>
 </nav>
     </div>
@@ -421,6 +460,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 
 
 <p>Uma análise é reprodutível quando outra pessoa consegue compreender seus dados, métodos e decisões a ponto de refazer o cálculo e obter resultados equivalentes. Em livros, painéis e relatórios de indicadores, a reprodutibilidade aumenta a confiança nos resultados e facilita atualizações futuras.</p>
+<p>Reprodutibilidade não significa apenas disponibilizar código. Também exige que as fontes, versões, parâmetros e decisões analíticas estejam documentados. Sem isso, duas pessoas podem usar a mesma fórmula e chegar a resultados diferentes.</p>
 <section id="elementos-mínimos" class="level2" data-number="12.1">
 <h2 data-number="12.1" class="anchored" data-anchor-id="elementos-mínimos"><span class="header-section-number">12.1</span> Elementos mínimos</h2>
 <p>Um projeto reprodutível deve registrar:</p>
@@ -436,6 +476,53 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 <li>Escalas espaciais e temporais.</li>
 <li>Responsável pela atualização.</li>
 </ul>
+<table class="caption-top table">
+<caption>Exemplo de registro mínimo para reprodução de um indicador</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Elemento</th>
+<th>Exemplo de registro</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fonte</td>
+<td>SIM/DATASUS, extração em 2026-04-30</td>
+</tr>
+<tr class="even">
+<td>Unidade territorial</td>
+<td>Município de residência, código IBGE de 7 dígitos</td>
+</tr>
+<tr class="odd">
+<td>Período</td>
+<td>Ano de ocorrência</td>
+</tr>
+<tr class="even">
+<td>Numerador</td>
+<td>Óbitos por causa X</td>
+</tr>
+<tr class="odd">
+<td>Denominador</td>
+<td>População residente estimada</td>
+</tr>
+<tr class="even">
+<td>Filtros</td>
+<td>Excluídos registros sem município de residência</td>
+</tr>
+<tr class="odd">
+<td>Pacotes</td>
+<td><code>dplyr</code>, <code>arrow</code>, <code>ggplot2</code></td>
+</tr>
+<tr class="even">
+<td>Saída</td>
+<td>Tabela municipal em formato parquet</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="pacotes-usados-nos-exemplos" class="level2" data-number="12.2">
 <h2 data-number="12.2" class="anchored" data-anchor-id="pacotes-usados-nos-exemplos"><span class="header-section-number">12.2</span> Pacotes usados nos exemplos</h2>
@@ -448,6 +535,15 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 <li><code>zendown</code></li>
 </ul>
 <p>Alguns exemplos acessam arquivos em repositórios Zenodo. Para renderizar o livro em um ambiente novo, é necessário ter os pacotes instalados e acesso à internet, salvo quando os resultados já estiverem congelados pelo mecanismo de execução do Quarto.</p>
+<p>Um trecho inicial de preparação do ambiente pode ser documentado da seguinte forma:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"arrow"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"dplyr"</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"ggplot2"</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tibble"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"zendown"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>))</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Esse código não precisa ser executado dentro do livro, mas ajuda o leitor a entender as dependências.</p>
 </section>
 <section id="execução-congelada" class="level2" data-number="12.3">
 <h2 data-number="12.3" class="anchored" data-anchor-id="execução-congelada"><span class="header-section-number">12.3</span> Execução congelada</h2>
@@ -466,8 +562,21 @@ Dica
 </div>
 </div>
 </section>
-<section id="versionamento-de-dados" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="versionamento-de-dados"><span class="header-section-number">12.4</span> Versionamento de dados</h2>
+<section id="controle-de-versões" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="controle-de-versões"><span class="header-section-number">12.4</span> Controle de versões</h2>
+<p>Além do versionamento do texto, é importante versionar decisões analíticas. Mudanças pequenas podem alterar resultados:</p>
+<ul>
+<li>Nova versão de uma base.</li>
+<li>Correção de código territorial.</li>
+<li>Atualização de população.</li>
+<li>Mudança no filtro de idade.</li>
+<li>Alteração em uma lista de causas.</li>
+<li>Inclusão ou exclusão de registros ignorados.</li>
+</ul>
+<p>Um histórico de mudanças deve registrar o que mudou, por que mudou e quais indicadores foram afetados.</p>
+</section>
+<section id="versionamento-de-dados" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="versionamento-de-dados"><span class="header-section-number">12.5</span> Versionamento de dados</h2>
 <p>Sempre que possível, use fontes com identificadores persistentes, como DOI, versão de repositório ou data de extração. Ao citar um conjunto de dados, registre:</p>
 <ul>
 <li>Nome do conjunto.</li>
@@ -477,9 +586,51 @@ Dica
 <li>Arquivo específico usado.</li>
 <li>Transformações aplicadas.</li>
 </ul>
+<p>Quando uma base não possui DOI ou versão formal, registre pelo menos a data de download, URL, filtros usados e nome do arquivo original. Se a base for atualizada frequentemente, a data de extração passa a ser parte essencial da referência.</p>
 </section>
-<section id="organização-sugerida" class="level2" data-number="12.5">
-<h2 data-number="12.5" class="anchored" data-anchor-id="organização-sugerida"><span class="header-section-number">12.5</span> Organização sugerida</h2>
+<section id="separação-entre-dado-bruto-e-dado-tratado" class="level2" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="separação-entre-dado-bruto-e-dado-tratado"><span class="header-section-number">12.6</span> Separação entre dado bruto e dado tratado</h2>
+<p>O dado bruto deve ser preservado sempre que possível. As transformações devem gerar novos arquivos, mantendo rastreabilidade entre origem e produto final. Isso permite revisar decisões e corrigir erros sem reconstruir todo o processo manualmente.</p>
+<table class="caption-top table">
+<caption>Camadas recomendadas de dados em projetos reprodutíveis</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Camada</th>
+<th>Conteúdo</th>
+<th>Deve ser editada manualmente?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bruta</td>
+<td>Arquivo original baixado ou recebido</td>
+<td>Não</td>
+</tr>
+<tr class="even">
+<td>Intermediária</td>
+<td>Dados padronizados e limpos</td>
+<td>Apenas por código</td>
+</tr>
+<tr class="odd">
+<td>Analítica</td>
+<td>Base pronta para indicadores</td>
+<td>Apenas por código</td>
+</tr>
+<tr class="even">
+<td>Produto</td>
+<td>Tabelas, gráficos, mapas, livro</td>
+<td>Gerado automaticamente quando possível</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="organização-sugerida" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="organização-sugerida"><span class="header-section-number">12.7</span> Organização sugerida</h2>
 <p>Uma estrutura simples para projetos de indicadores pode separar:</p>
 <ul>
 <li><code>data_raw/</code>: dados originais, sem edição.</li>
@@ -490,8 +641,18 @@ Dica
 <li><code>references.bib</code>: referências bibliográficas.</li>
 </ul>
 </section>
-<section id="checklist" class="level2" data-number="12.6">
-<h2 data-number="12.6" class="anchored" data-anchor-id="checklist"><span class="header-section-number">12.6</span> Checklist</h2>
+<section id="nomes-e-metadados" class="level2" data-number="12.8">
+<h2 data-number="12.8" class="anchored" data-anchor-id="nomes-e-metadados"><span class="header-section-number">12.8</span> Nomes e metadados</h2>
+<p>Nomes de arquivos devem ajudar a identificar conteúdo, território, período e versão. Exemplos:</p>
+<ul>
+<li><code>sim_obitos_municipio_2024_raw.csv</code></li>
+<li><code>pop_municipal_2024_ibge.parquet</code></li>
+<li><code>taxa_mortalidade_respiratoria_municipio_2024.parquet</code></li>
+</ul>
+<p>Evite nomes como <code>base_final.xlsx</code>, <code>base_final2.xlsx</code> ou <code>nova_base_corrigida.xlsx</code>, pois eles não informam origem, versão ou finalidade.</p>
+</section>
+<section id="checklist" class="level2" data-number="12.9">
+<h2 data-number="12.9" class="anchored" data-anchor-id="checklist"><span class="header-section-number">12.9</span> Checklist</h2>
 <p>Antes de publicar, verifique:</p>
 <ul>
 <li>O livro renderiza em um ambiente limpo.</li>
@@ -501,6 +662,19 @@ Dica
 <li>Os exemplos têm dependências documentadas.</li>
 <li>O código não contém caminhos locais privados.</li>
 <li>As bases usadas têm fonte e versão identificáveis.</li>
+</ul>
+</section>
+<section id="reprodutibilidade-computacional-e-analítica" class="level2" data-number="12.10">
+<h2 data-number="12.10" class="anchored" data-anchor-id="reprodutibilidade-computacional-e-analítica"><span class="header-section-number">12.10</span> Reprodutibilidade computacional e analítica</h2>
+<p>Uma análise pode ser computacionalmente reprodutível, mas analiticamente frágil. Por exemplo, o código pode rodar perfeitamente, mas usar um denominador inadequado. Por isso, a revisão deve verificar tanto a execução quanto o sentido epidemiológico e territorial do indicador.</p>
+<p>Perguntas úteis:</p>
+<ul>
+<li>O código executa?</li>
+<li>O resultado faz sentido?</li>
+<li>O numerador está contido no denominador quando se trata de proporção?</li>
+<li>A população sob risco foi definida corretamente?</li>
+<li>Taxas foram recalculadas a partir de contagens, e não por média simples?</li>
+<li>A escala espacial e temporal é compatível com a pergunta?</li>
 </ul>
 
 
