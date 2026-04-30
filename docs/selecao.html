@@ -105,6 +105,9 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -376,20 +379,26 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./inter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Internet, redes sociais e outras mídias</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./etica.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ética, privacidade e governança</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Ética, privacidade e governança</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./reproducibilidade.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Reprodutibilidade</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Reprodutibilidade</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./estudo_caso.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Estudo de caso integrado</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estudo de caso integrado</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -398,6 +407,29 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
  <span class="menu-text">Referências</span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apêndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glossario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossário</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./checklist.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Checklist para construção de indicadores</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -444,6 +476,23 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 
 <p>A escolha de indicadores é uma etapa analítica e política. Um indicador não deve ser incluído em uma análise apenas porque está disponível: ele precisa representar um conceito relevante, ser tecnicamente defensável, ser compreensível para o público-alvo e ser útil para a decisão ou interpretação pretendida <span class="citation" data-cites="jannuzziIndicadoresSociaisNo2006 OPAS2008">(<a href="referencias.html#ref-jannuzziIndicadoresSociaisNo2006" role="doc-biblioref">JANNUZZI, 2006</a>; <a href="referencias.html#ref-OPAS2008" role="doc-biblioref">REDE INTERAGENCIAL DE INFORMAÇÃO PARA A SAÚDE, 2008</a>)</span>.</p>
 <p>Em Saúde Pública, a seleção de indicadores deve partir de uma pergunta concreta. A pergunta orienta quais dimensões precisam ser observadas, quais populações devem ser consideradas, qual escala espacial é adequada e qual período de análise faz sentido. Sem essa definição, a seleção tende a se transformar em uma lista extensa de medidas pouco articuladas.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Pergunta] --&gt; B[Dimensões]
+  B --&gt; C[Indicadores candidatos]
+  C --&gt; D[Critérios de seleção]
+  D --&gt; E[Conjunto final]
+  E --&gt; F[Fichas técnicas]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <section id="do-problema-ao-indicador" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="do-problema-ao-indicador"><span class="header-section-number">4.1</span> Do problema ao indicador</h2>
 <p>Uma forma prática de iniciar a seleção é decompor o problema em componentes mensuráveis.</p>

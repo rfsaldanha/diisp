@@ -85,6 +85,9 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -385,20 +388,26 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./inter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Internet, redes sociais e outras mídias</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./etica.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ética, privacidade e governança</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Ética, privacidade e governança</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./reproducibilidade.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Reprodutibilidade</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Reprodutibilidade</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./estudo_caso.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Estudo de caso integrado</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estudo de caso integrado</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -407,6 +416,29 @@ window.Quarto = {
  <span class="menu-text">Referências</span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apêndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glossario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossário</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./checklist.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Checklist para construção de indicadores</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -456,6 +488,25 @@ window.Quarto = {
 
 <p>A qualidade dos indicadores depende diretamente da qualidade dos dados utilizados. Erros de registro, atrasos, duplicidades, mudanças de definição e subnotificação podem alterar a interpretação de uma taxa, proporção ou série temporal. Por isso, a avaliação da qualidade deve ser parte explícita da análise, e não uma etapa secundária.</p>
 <p>Em bases de saúde, a qualidade deve ser avaliada antes e depois da construção do indicador. Antes, porque problemas no dado bruto podem inviabilizar o cálculo; depois, porque o próprio indicador pode revelar inconsistências, como taxas impossíveis, valores acima de 100% ou quebras abruptas na série.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+  A[Dado bruto] --&gt; B[Validação de formato]
+  B --&gt; C[Completude]
+  C --&gt; D[Consistência]
+  D --&gt; E[Duplicidades]
+  E --&gt; F[Base analítica]
+  F --&gt; G[Indicador]
+  G --&gt; H[Revisão de plausibilidade]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <section id="dimensões-da-qualidade" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="dimensões-da-qualidade"><span class="header-section-number">5.1</span> Dimensões da qualidade</h2>
 <p>As principais dimensões de qualidade em bases de interesse para a Saúde Pública incluem:</p>

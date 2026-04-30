@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -405,20 +440,26 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./inter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Internet, redes sociais e outras mídias</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./etica.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ética, privacidade e governança</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Ética, privacidade e governança</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./reproducibilidade.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Reprodutibilidade</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Reprodutibilidade</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./estudo_caso.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Estudo de caso integrado</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estudo de caso integrado</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -427,6 +468,29 @@ window.Quarto = {
  <span class="menu-text">Referências</span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apêndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glossario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossário</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./checklist.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Checklist para construção de indicadores</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -438,7 +502,10 @@ window.Quarto = {
    
   <ul>
   <li><a href="#fontes-de-dados-em-saúde" id="toc-fontes-de-dados-em-saúde" class="nav-link active" data-scroll-target="#fontes-de-dados-em-saúde"><span class="header-section-number">8.1</span> Fontes de dados em saúde</a></li>
-  <li><a href="#exemplo-de-cálculo" id="toc-exemplo-de-cálculo" class="nav-link" data-scroll-target="#exemplo-de-cálculo"><span class="header-section-number">8.2</span> Exemplo de cálculo</a></li>
+  <li><a href="#exemplo-de-cálculo" id="toc-exemplo-de-cálculo" class="nav-link" data-scroll-target="#exemplo-de-cálculo"><span class="header-section-number">8.2</span> Exemplo de cálculo</a>
+  <ul class="collapse">
+  <li><a href="#exemplo-com-dados-exportados-do-datasus" id="toc-exemplo-com-dados-exportados-do-datasus" class="nav-link" data-scroll-target="#exemplo-com-dados-exportados-do-datasus">Exemplo com dados exportados do DATASUS</a></li>
+  </ul></li>
   <li><a href="#mortalidade" id="toc-mortalidade" class="nav-link" data-scroll-target="#mortalidade"><span class="header-section-number">8.3</span> Mortalidade</a>
   <ul class="collapse">
   <li><a href="#taxa-bruta-de-mortalidade" id="toc-taxa-bruta-de-mortalidade" class="nav-link" data-scroll-target="#taxa-bruta-de-mortalidade"><span class="header-section-number">8.3.1</span> Taxa bruta de mortalidade</a></li>
@@ -623,6 +690,29 @@ Dica
 \frac{8}{1.200} \times 1.000 = 6{,}7
 \]</span></p>
 <p>O resultado indica 6,7 óbitos de menores de um ano por 1.000 nascidos vivos. Se o município for pequeno, a interpretação deve considerar a instabilidade do indicador e, quando necessário, usar períodos agregados.</p>
+<section id="exemplo-com-dados-exportados-do-datasus" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="exemplo-com-dados-exportados-do-datasus">Exemplo com dados exportados do DATASUS</h3>
+<p>O exemplo abaixo ilustra o cálculo da mortalidade infantil a partir de duas tabelas previamente exportadas do TABNET/DATASUS: uma com óbitos de menores de um ano do SIM e outra com nascidos vivos do SINASC. O código não é executado automaticamente no livro porque depende de arquivos exportados pelo leitor.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>obitos <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="st">"sim_obitos_menor_1_ano.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>nascidos <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="st">"sinasc_nascidos_vivos.csv"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="fu">merge</span>(</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  obitos,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  nascidos,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"cod_municipio"</span>, <span class="st">"ano"</span>),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">all =</span> <span class="cn">TRUE</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>base<span class="sc">$</span>tx_mortalidade_infantil <span class="ot">&lt;-</span> <span class="fu">with</span>(</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  base,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  obitos_menor_1_ano <span class="sc">/</span> nascidos_vivos <span class="sc">*</span> <span class="dv">1000</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>base</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Ao usar dados exportados do TABNET, é importante registrar filtros, ano, local de residência ou ocorrência, faixa etária, causa, formato do arquivo e data de extração.</p>
+</section>
 </section>
 <section id="mortalidade" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="mortalidade"><span class="header-section-number">8.3</span> Mortalidade</h2>

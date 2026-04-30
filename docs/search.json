@@ -514,7 +514,7 @@
     "href": "saude.html#exemplo-de-cálculo",
     "title": "8  Indicadores de saúde",
     "section": "8.2 Exemplo de cálculo",
-    "text": "8.2 Exemplo de cálculo\nSuponha que um município tenha registrado 8 óbitos de menores de um ano e 1.200 nascidos vivos em determinado ano. A taxa de mortalidade infantil seria:\n\\[\n\\text{Mortalidade infantil} =\n\\frac{8}{1.200} \\times 1.000 = 6{,}7\n\\]\nO resultado indica 6,7 óbitos de menores de um ano por 1.000 nascidos vivos. Se o município for pequeno, a interpretação deve considerar a instabilidade do indicador e, quando necessário, usar períodos agregados.",
+    "text": "8.2 Exemplo de cálculo\nSuponha que um município tenha registrado 8 óbitos de menores de um ano e 1.200 nascidos vivos em determinado ano. A taxa de mortalidade infantil seria:\n\\[\n\\text{Mortalidade infantil} =\n\\frac{8}{1.200} \\times 1.000 = 6{,}7\n\\]\nO resultado indica 6,7 óbitos de menores de um ano por 1.000 nascidos vivos. Se o município for pequeno, a interpretação deve considerar a instabilidade do indicador e, quando necessário, usar períodos agregados.\n\nExemplo com dados exportados do DATASUS\nO exemplo abaixo ilustra o cálculo da mortalidade infantil a partir de duas tabelas previamente exportadas do TABNET/DATASUS: uma com óbitos de menores de um ano do SIM e outra com nascidos vivos do SINASC. O código não é executado automaticamente no livro porque depende de arquivos exportados pelo leitor.\n\nobitos &lt;- read.csv2(\"sim_obitos_menor_1_ano.csv\")\nnascidos &lt;- read.csv2(\"sinasc_nascidos_vivos.csv\")\n\nbase &lt;- merge(\n  obitos,\n  nascidos,\n  by = c(\"cod_municipio\", \"ano\"),\n  all = TRUE\n)\n\nbase$tx_mortalidade_infantil &lt;- with(\n  base,\n  obitos_menor_1_ano / nascidos_vivos * 1000\n)\n\nbase\n\nAo usar dados exportados do TABNET, é importante registrar filtros, ano, local de residência ou ocorrência, faixa etária, causa, formato do arquivo e data de extração.",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Indicadores de saúde</span>"
     ]
@@ -640,373 +640,453 @@
     ]
   },
   {
+    "objectID": "inter.html",
+    "href": "inter.html",
+    "title": "11  Internet, redes sociais e outras mídias",
+    "section": "",
+    "text": "11.1 Acesso e uso da internet\nDados produzidos na internet, em plataformas digitais e em meios de comunicação podem complementar indicadores tradicionais de Saúde Pública. Eles podem registrar interesse, circulação de informação, acesso digital, percepção pública, busca por sintomas, engajamento com campanhas e exposição a conteúdos relacionados à saúde.\nEsses dados, porém, exigem cuidado especial. Eles raramente representam a população geral, mudam rapidamente conforme plataformas e algoritmos, e podem refletir comportamento de busca, visibilidade midiática ou dinâmica de recomendação, e não necessariamente ocorrência real de doenças.\nIndicadores de acesso à internet ajudam a avaliar quem pode ser alcançado por estratégias digitais de comunicação, vigilância participativa, teleatendimento e educação em saúde.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Internet, redes sociais e outras mídias</span>"
+    ]
+  },
+  {
+    "objectID": "inter.html#acesso-e-uso-da-internet",
+    "href": "inter.html#acesso-e-uso-da-internet",
+    "title": "11  Internet, redes sociais e outras mídias",
+    "section": "",
+    "text": "11.1.1 Proporção de domicílios com acesso à internet\n\nConceituação\nProporção de domicílios que dispõem de acesso à internet, independentemente do dispositivo utilizado.\n\n\nInterpretação\nValores mais elevados indicam maior conectividade domiciliar. Em Saúde Pública, o indicador ajuda a interpretar a viabilidade de ações digitais e o risco de exclusão de populações com menor acesso.\n\n\nUsos\n\nPlanejar campanhas digitais de saúde.\nAvaliar desigualdades de acesso a serviços digitais.\nContextualizar indicadores baseados em buscas, redes sociais ou aplicativos.\n\n\n\nLimitações\n\nAcesso não significa uso efetivo.\nNão mede qualidade, velocidade ou estabilidade da conexão.\nPode ocultar desigualdades dentro do domicílio.\n\n\n\nFontes de dados\nPesquisas domiciliares, levantamentos sobre tecnologias da informação e comunicação, censos e pesquisas nacionais.\n\n\nMétodo de cálculo\n\\[\n\\text{Acesso domiciliar à internet} =\n\\frac{\\text{Domicílios com acesso à internet}}{\\text{Total de domicílios}} \\times 100\n\\]\n\n\nCategorias sugeridas para análise\nMunicípio, unidade da federação, situação urbana/rural, renda, escolaridade, faixa etária e raça/cor da pessoa responsável pelo domicílio.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Internet, redes sociais e outras mídias</span>"
+    ]
+  },
+  {
+    "objectID": "inter.html#buscas-na-internet",
+    "href": "inter.html#buscas-na-internet",
+    "title": "11  Internet, redes sociais e outras mídias",
+    "section": "11.2 Buscas na internet",
+    "text": "11.2 Buscas na internet\nFerramentas de busca podem fornecer sinais indiretos sobre interesse público, preocupação social ou busca por informação em saúde. Esses sinais são úteis para vigilância complementar, comunicação de risco e avaliação de campanhas.\n\n11.2.1 Índice relativo de buscas\n\nConceituação\nMedida padronizada do volume relativo de buscas por um termo ou conjunto de termos em determinada região e período.\n\n\nInterpretação\nValores maiores indicam maior interesse relativo pelo termo. O indicador deve ser interpretado como comportamento de busca, não como incidência ou prevalência.\n\n\nUsos\n\nMonitorar interesse por sintomas, doenças, vacinas ou serviços.\nDetectar mudanças rápidas na atenção pública.\nAvaliar campanhas de comunicação.\nGerar hipóteses para investigação epidemiológica.\n\n\n\nLimitações\n\nA unidade é relativa e depende da plataforma.\nTermos podem ter múltiplos significados.\nEventos midiáticos podem gerar picos sem mudança epidemiológica.\nA população que busca não representa toda a população.\n\n\n\nFontes de dados\nFerramentas de tendências de busca, APIs de plataformas digitais e séries públicas de interesse relativo.\n\n\nMétodo de cálculo\nO método depende da plataforma. De modo geral, usa-se uma série padronizada:\n\\[\n\\text{Índice de busca}_{t} =\n\\frac{\\text{Buscas pelo termo no período }t}{\\text{Total de buscas ou valor máximo de referência}} \\times 100\n\\]\n\n\nCategorias sugeridas para análise\nTermo de busca, período, território, categoria temática, idioma e plataforma.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Internet, redes sociais e outras mídias</span>"
+    ]
+  },
+  {
+    "objectID": "inter.html#redes-sociais",
+    "href": "inter.html#redes-sociais",
+    "title": "11  Internet, redes sociais e outras mídias",
+    "section": "11.3 Redes sociais",
+    "text": "11.3 Redes sociais\nRedes sociais podem registrar circulação de mensagens, dúvidas, rumores, apoio social, desinformação e resposta a campanhas. A análise pode observar volume de postagens, engajamento, temas, sentimentos, redes de compartilhamento ou presença de conteúdos problemáticos.\n\n11.3.1 Menções a tema de saúde\n\nConceituação\nNúmero ou proporção de publicações que mencionam um tema, doença, serviço, campanha ou termo de interesse em uma plataforma digital.\n\n\nInterpretação\nO indicador expressa visibilidade ou circulação de um tema na plataforma analisada. Não representa diretamente ocorrência de doença nem opinião pública geral.\n\n\nUsos\n\nMonitorar comunicação pública durante emergências.\nIdentificar dúvidas frequentes e rumores.\nAvaliar alcance de campanhas.\nApoiar estratégias de comunicação de risco.\n\n\n\nLimitações\n\nPlataformas têm públicos e algoritmos diferentes.\nAmostras por API podem ser incompletas.\nBots, campanhas coordenadas e mídia podem distorcer volume.\nHá riscos éticos e de privacidade, mesmo com dados públicos.\n\n\n\nFontes de dados\nAPIs oficiais, bases públicas, ferramentas de escuta social, repositórios de mídia e coletas documentadas.\n\n\nMétodo de cálculo\n\\[\n\\text{Proporção de menções} =\n\\frac{\\text{Postagens com termo de interesse}}{\\text{Total de postagens analisadas}} \\times 100\n\\]\n\n\nCategorias sugeridas para análise\nPlataforma, período, idioma, termo, tema, território inferido, tipo de perfil e tipo de conteúdo.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Internet, redes sociais e outras mídias</span>"
+    ]
+  },
+  {
+    "objectID": "inter.html#mídia-jornalística",
+    "href": "inter.html#mídia-jornalística",
+    "title": "11  Internet, redes sociais e outras mídias",
+    "section": "11.4 Mídia jornalística",
+    "text": "11.4 Mídia jornalística\nNotícias e matérias jornalísticas podem influenciar percepção de risco, demanda por serviços e comportamento de busca. Indicadores de mídia ajudam a contextualizar picos em séries digitais.\n\n11.4.1 Volume de notícias sobre tema de saúde\n\nConceituação\nNúmero de notícias publicadas sobre determinado tema de saúde em um conjunto definido de veículos e período.\n\n\nInterpretação\nValores maiores indicam maior cobertura midiática, que pode refletir relevância pública, ocorrência de eventos, agenda política ou interesse jornalístico.\n\n\nUsos\n\nContextualizar séries de busca e redes sociais.\nAvaliar comunicação em emergências.\nMonitorar visibilidade de temas prioritários.\n\n\n\nLimitações\n\nDepende dos veículos incluídos.\nA cobertura pode ser concentrada em eventos excepcionais.\nQuantidade de notícias não mede qualidade da informação.\n\n\n\nFontes de dados\nBases de notícias, arquivos de veículos, agregadores, observatórios de mídia e coletas próprias documentadas.\n\n\nMétodo de cálculo\n\\[\n\\text{Volume de notícias} =\n\\sum_{i=1}^{n} \\mathbb{1}(\\text{notícia}_i \\text{ menciona o tema})\n\\]\n\n\nCategorias sugeridas para análise\nTema, veículo, período, território mencionado, tipo de notícia e enquadramento temático.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Internet, redes sociais e outras mídias</span>"
+    ]
+  },
+  {
+    "objectID": "inter.html#fluxo-de-análise",
+    "href": "inter.html#fluxo-de-análise",
+    "title": "11  Internet, redes sociais e outras mídias",
+    "section": "11.5 Fluxo de análise",
+    "text": "11.5 Fluxo de análise\n\n\n\n\n\nflowchart LR\n  A[Definir pergunta] --&gt; B[Selecionar termos e fontes]\n  B --&gt; C[Coletar dados]\n  C --&gt; D[Limpar e documentar]\n  D --&gt; E[Construir indicador]\n  E --&gt; F[Comparar com fontes tradicionais]\n  F --&gt; G[Interpretar com cautela]",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Internet, redes sociais e outras mídias</span>"
+    ]
+  },
+  {
+    "objectID": "inter.html#cuidados-éticos",
+    "href": "inter.html#cuidados-éticos",
+    "title": "11  Internet, redes sociais e outras mídias",
+    "section": "11.6 Cuidados éticos",
+    "text": "11.6 Cuidados éticos\nMesmo quando publicações são acessíveis publicamente, a análise deve respeitar privacidade, finalidade e minimização. Em geral, deve-se evitar expor perfis individuais, reproduzir mensagens sensíveis sem necessidade, publicar identificadores ou inferir características pessoais sem base ética e legal.\nIndicadores digitais devem ser documentados com clareza: plataforma, período, termos usados, critérios de inclusão, método de coleta, limitações da API, tratamento de duplicidades e forma de agregação.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Internet, redes sociais e outras mídias</span>"
+    ]
+  },
+  {
     "objectID": "etica.html",
     "href": "etica.html",
-    "title": "11  Ética, privacidade e governança",
+    "title": "12  Ética, privacidade e governança",
     "section": "",
-    "text": "11.1 Dados pessoais e dados sensíveis\nO uso de dados em Saúde Pública exige atenção ética mesmo quando os dados são públicos, agregados ou anonimizados. Indicadores podem revelar desigualdades, orientar políticas e fortalecer a transparência, mas também podem expor grupos vulneráveis, reforçar estigmas ou permitir identificação indireta em áreas pequenas.\nÉtica em dados não se limita à proteção individual. Em Saúde Pública, também envolve efeitos coletivos: a forma como um território é descrito, a maneira como um grupo social é classificado e os usos possíveis de uma informação depois de publicada.\nA Lei Geral de Proteção de Dados Pessoais (LGPD) estabelece regras para o tratamento de dados pessoais no Brasil e reconhece dados referentes à saúde como dados pessoais sensíveis (BRASIL, 2018). O uso de dados de saúde deve observar finalidade, necessidade, segurança, prevenção, responsabilização e transparência.",
+    "text": "12.1 Dados pessoais e dados sensíveis\nO uso de dados em Saúde Pública exige atenção ética mesmo quando os dados são públicos, agregados ou anonimizados. Indicadores podem revelar desigualdades, orientar políticas e fortalecer a transparência, mas também podem expor grupos vulneráveis, reforçar estigmas ou permitir identificação indireta em áreas pequenas.\nÉtica em dados não se limita à proteção individual. Em Saúde Pública, também envolve efeitos coletivos: a forma como um território é descrito, a maneira como um grupo social é classificado e os usos possíveis de uma informação depois de publicada.\nA Lei Geral de Proteção de Dados Pessoais (LGPD) estabelece regras para o tratamento de dados pessoais no Brasil e reconhece dados referentes à saúde como dados pessoais sensíveis (BRASIL, 2018). O uso de dados de saúde deve observar finalidade, necessidade, segurança, prevenção, responsabilização e transparência.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
     ]
   },
   {
     "objectID": "etica.html#dados-pessoais-e-dados-sensíveis",
     "href": "etica.html#dados-pessoais-e-dados-sensíveis",
-    "title": "11  Ética, privacidade e governança",
+    "title": "12  Ética, privacidade e governança",
     "section": "",
     "text": "Tipos de dados e riscos de identificação\n\n\n\n\n\n\n\nTipo de dado\nExemplo\nRisco principal\n\n\n\n\nIdentificado\nNome, CPF, CNS, endereço completo\nIdentificação direta\n\n\nPseudonimizado\nIdentificador substituído por código\nReidentificação por chave ou combinação\n\n\nAgregado\nContagens por município, idade e causa\nIdentificação indireta em células pequenas\n\n\nAnonimizado\nDados tratados para impedir identificação razoável\nRisco residual se houver cruzamentos externos\n\n\n\n\n\n\n\n\n\nAviso\n\n\n\nDados agregados nem sempre eliminam risco de identificação. Em áreas pequenas, eventos raros ou grupos muito específicos, a combinação entre território, idade, sexo, causa e período pode permitir inferência sobre pessoas ou famílias.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
     ]
   },
   {
     "objectID": "etica.html#princípios-práticos",
     "href": "etica.html#princípios-práticos",
-    "title": "11  Ética, privacidade e governança",
-    "section": "11.2 Princípios práticos",
-    "text": "11.2 Princípios práticos\nAo construir indicadores de saúde, recomenda-se:\n\nUsar apenas variáveis necessárias ao objetivo declarado.\nPreferir dados agregados quando microdados não forem indispensáveis.\nEvitar publicar células com contagens muito pequenas.\nDocumentar critérios de supressão, agregação ou arredondamento.\nProteger arquivos intermediários que contenham dados identificáveis ou potencialmente identificáveis.\nSeparar ambientes de análise, publicação e compartilhamento.\nAvaliar risco de estigmatização de grupos e territórios.",
+    "title": "12  Ética, privacidade e governança",
+    "section": "12.2 Princípios práticos",
+    "text": "12.2 Princípios práticos\nAo construir indicadores de saúde, recomenda-se:\n\nUsar apenas variáveis necessárias ao objetivo declarado.\nPreferir dados agregados quando microdados não forem indispensáveis.\nEvitar publicar células com contagens muito pequenas.\nDocumentar critérios de supressão, agregação ou arredondamento.\nProteger arquivos intermediários que contenham dados identificáveis ou potencialmente identificáveis.\nSeparar ambientes de análise, publicação e compartilhamento.\nAvaliar risco de estigmatização de grupos e territórios.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
     ]
   },
   {
     "objectID": "etica.html#finalidade-e-minimização",
     "href": "etica.html#finalidade-e-minimização",
-    "title": "11  Ética, privacidade e governança",
-    "section": "11.3 Finalidade e minimização",
-    "text": "11.3 Finalidade e minimização\nTodo tratamento de dados deve ter finalidade definida. Em um projeto de indicadores, isso significa explicitar por que cada variável é necessária. Se uma análise municipal não usa nome, endereço ou identificador individual, esses campos não devem circular no ambiente analítico.\nMinimização não significa empobrecer a análise. Significa usar o nível de detalhe compatível com a pergunta. Por exemplo, idade simples pode ser necessária para calcular faixas etárias corretamente, mas a publicação pode apresentar apenas grupos etários.",
+    "title": "12  Ética, privacidade e governança",
+    "section": "12.3 Finalidade e minimização",
+    "text": "12.3 Finalidade e minimização\nTodo tratamento de dados deve ter finalidade definida. Em um projeto de indicadores, isso significa explicitar por que cada variável é necessária. Se uma análise municipal não usa nome, endereço ou identificador individual, esses campos não devem circular no ambiente analítico.\nMinimização não significa empobrecer a análise. Significa usar o nível de detalhe compatível com a pergunta. Por exemplo, idade simples pode ser necessária para calcular faixas etárias corretamente, mas a publicação pode apresentar apenas grupos etários.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
     ]
   },
   {
     "objectID": "etica.html#pequenas-áreas-e-eventos-raros",
     "href": "etica.html#pequenas-áreas-e-eventos-raros",
-    "title": "11  Ética, privacidade e governança",
-    "section": "11.4 Pequenas áreas e eventos raros",
-    "text": "11.4 Pequenas áreas e eventos raros\nIndicadores em pequenas áreas podem ser úteis para revelar desigualdades, mas exigem cuidado. Uma taxa de mortalidade por causa específica em um município pequeno pode se basear em um ou dois eventos. Além da instabilidade estatística, há risco de exposição indireta.\nNessas situações, alternativas incluem:\n\nAgregar anos.\nAgregar territórios.\nUsar faixas etárias amplas.\nSuprimir células com poucos eventos.\nApresentar categorias em vez de valores exatos.\nAvaliar se o detalhamento é necessário para o objetivo da análise.",
+    "title": "12  Ética, privacidade e governança",
+    "section": "12.4 Pequenas áreas e eventos raros",
+    "text": "12.4 Pequenas áreas e eventos raros\nIndicadores em pequenas áreas podem ser úteis para revelar desigualdades, mas exigem cuidado. Uma taxa de mortalidade por causa específica em um município pequeno pode se basear em um ou dois eventos. Além da instabilidade estatística, há risco de exposição indireta.\nNessas situações, alternativas incluem:\n\nAgregar anos.\nAgregar territórios.\nUsar faixas etárias amplas.\nSuprimir células com poucos eventos.\nApresentar categorias em vez de valores exatos.\nAvaliar se o detalhamento é necessário para o objetivo da análise.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
     ]
   },
   {
     "objectID": "etica.html#matriz-de-risco-de-divulgação",
     "href": "etica.html#matriz-de-risco-de-divulgação",
-    "title": "11  Ética, privacidade e governança",
-    "section": "11.5 Matriz de risco de divulgação",
-    "text": "11.5 Matriz de risco de divulgação\nAntes de publicar uma tabela, mapa ou painel, é útil avaliar risco de identificação e dano.\n\nMatriz simplificada de risco de divulgação\n\n\n\n\n\n\n\nSituação\nRisco\nMedida possível\n\n\n\n\nCélula com poucos eventos\nIdentificação indireta\nSuprimir ou agregar\n\n\nEvento sensível em município pequeno\nEstigma e identificação\nAgregar período ou território\n\n\nCruzamento com muitas variáveis\nReidentificação\nReduzir estratificações\n\n\nRanking público de territórios\nEstigmatização\nContextualizar e evitar leitura punitiva\n\n\nMicrodados compartilhados\nUso indevido\nControlar acesso e documentar finalidade",
+    "title": "12  Ética, privacidade e governança",
+    "section": "12.5 Matriz de risco de divulgação",
+    "text": "12.5 Matriz de risco de divulgação\nAntes de publicar uma tabela, mapa ou painel, é útil avaliar risco de identificação e dano.\n\nMatriz simplificada de risco de divulgação\n\n\n\n\n\n\n\nSituação\nRisco\nMedida possível\n\n\n\n\nCélula com poucos eventos\nIdentificação indireta\nSuprimir ou agregar\n\n\nEvento sensível em município pequeno\nEstigma e identificação\nAgregar período ou território\n\n\nCruzamento com muitas variáveis\nReidentificação\nReduzir estratificações\n\n\nRanking público de territórios\nEstigmatização\nContextualizar e evitar leitura punitiva\n\n\nMicrodados compartilhados\nUso indevido\nControlar acesso e documentar finalidade",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
     ]
   },
   {
     "objectID": "etica.html#governança",
     "href": "etica.html#governança",
-    "title": "11  Ética, privacidade e governança",
-    "section": "11.6 Governança",
-    "text": "11.6 Governança\nGovernança de dados é o conjunto de regras, responsabilidades e processos que orientam coleta, acesso, tratamento, documentação, publicação e descarte de dados. Em projetos de indicadores, a governança deve responder a perguntas simples:\n\nQuem é responsável pela base?\nQuem pode acessar os dados?\nQual é a finalidade do uso?\nQuais versões foram usadas?\nQuais transformações foram realizadas?\nOnde os resultados serão publicados?\nHá risco de identificação ou dano coletivo?",
+    "title": "12  Ética, privacidade e governança",
+    "section": "12.6 Governança",
+    "text": "12.6 Governança\nGovernança de dados é o conjunto de regras, responsabilidades e processos que orientam coleta, acesso, tratamento, documentação, publicação e descarte de dados. Em projetos de indicadores, a governança deve responder a perguntas simples:\n\nQuem é responsável pela base?\nQuem pode acessar os dados?\nQual é a finalidade do uso?\nQuais versões foram usadas?\nQuais transformações foram realizadas?\nOnde os resultados serão publicados?\nHá risco de identificação ou dano coletivo?",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
     ]
   },
   {
     "objectID": "etica.html#papéis-e-responsabilidades",
     "href": "etica.html#papéis-e-responsabilidades",
-    "title": "11  Ética, privacidade e governança",
-    "section": "11.7 Papéis e responsabilidades",
-    "text": "11.7 Papéis e responsabilidades\nEm projetos institucionais, diferentes papéis devem estar claros:\n\nResponsável técnico: define método, qualidade e interpretação.\nResponsável pela base: controla origem, versão e documentação.\nResponsável pela segurança: define permissões, armazenamento e descarte.\nResponsável pela comunicação: garante clareza e contextualização.\nGestor ou demandante: explicita finalidade e uso esperado.\n\nEssa divisão evita que decisões técnicas, éticas e comunicacionais fiquem implícitas ou concentradas em uma única etapa final.",
+    "title": "12  Ética, privacidade e governança",
+    "section": "12.7 Papéis e responsabilidades",
+    "text": "12.7 Papéis e responsabilidades\nEm projetos institucionais, diferentes papéis devem estar claros:\n\nResponsável técnico: define método, qualidade e interpretação.\nResponsável pela base: controla origem, versão e documentação.\nResponsável pela segurança: define permissões, armazenamento e descarte.\nResponsável pela comunicação: garante clareza e contextualização.\nGestor ou demandante: explicita finalidade e uso esperado.\n\nEssa divisão evita que decisões técnicas, éticas e comunicacionais fiquem implícitas ou concentradas em uma única etapa final.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
     ]
   },
   {
     "objectID": "etica.html#retenção-e-descarte",
     "href": "etica.html#retenção-e-descarte",
-    "title": "11  Ética, privacidade e governança",
-    "section": "11.8 Retenção e descarte",
-    "text": "11.8 Retenção e descarte\nDados identificáveis ou sensíveis não devem ser mantidos indefinidamente sem justificativa. O projeto deve definir:\n\nOnde os dados serão armazenados.\nPor quanto tempo serão mantidos.\nQuem terá acesso.\nComo serão descartados.\nQuais produtos agregados poderão permanecer públicos.",
+    "title": "12  Ética, privacidade e governança",
+    "section": "12.8 Retenção e descarte",
+    "text": "12.8 Retenção e descarte\nDados identificáveis ou sensíveis não devem ser mantidos indefinidamente sem justificativa. O projeto deve definir:\n\nOnde os dados serão armazenados.\nPor quanto tempo serão mantidos.\nQuem terá acesso.\nComo serão descartados.\nQuais produtos agregados poderão permanecer públicos.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
     ]
   },
   {
     "objectID": "etica.html#comunicação-responsável",
     "href": "etica.html#comunicação-responsável",
-    "title": "11  Ética, privacidade e governança",
-    "section": "11.9 Comunicação responsável",
-    "text": "11.9 Comunicação responsável\nIndicadores podem afetar a imagem de territórios, serviços e populações. A comunicação deve evitar culpabilizar comunidades por problemas estruturais. Sempre que possível, resultados devem ser contextualizados com determinantes sociais, ambientais, históricos e institucionais.\nBoas práticas de comunicação incluem:\n\nEvitar rankings sem contexto.\nExplicar limitações e incertezas.\nIndicar que indicadores territoriais não descrevem todos os indivíduos do território.\nEvitar termos que culpabilizem populações.\nDestacar desigualdades estruturais e capacidade de resposta.\nSeparar descrição, interpretação e recomendação.",
+    "title": "12  Ética, privacidade e governança",
+    "section": "12.9 Comunicação responsável",
+    "text": "12.9 Comunicação responsável\nIndicadores podem afetar a imagem de territórios, serviços e populações. A comunicação deve evitar culpabilizar comunidades por problemas estruturais. Sempre que possível, resultados devem ser contextualizados com determinantes sociais, ambientais, históricos e institucionais.\nBoas práticas de comunicação incluem:\n\nEvitar rankings sem contexto.\nExplicar limitações e incertezas.\nIndicar que indicadores territoriais não descrevem todos os indivíduos do território.\nEvitar termos que culpabilizem populações.\nDestacar desigualdades estruturais e capacidade de resposta.\nSeparar descrição, interpretação e recomendação.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
     ]
   },
   {
     "objectID": "etica.html#checklist-ético",
     "href": "etica.html#checklist-ético",
-    "title": "11  Ética, privacidade e governança",
-    "section": "11.10 Checklist ético",
-    "text": "11.10 Checklist ético\nAntes da publicação, pergunte:\n\nA finalidade da análise está explícita?\nO nível de detalhe é necessário?\nHá células pequenas ou eventos raros?\nA publicação pode estigmatizar grupos ou territórios?\nOs dados sensíveis foram protegidos?\nAs limitações foram comunicadas?\nO produto final permite uso indevido previsível?\n\n\n\n\n\nBRASIL. Lei n. 13.709, de 14 de agosto de 2018: Lei Geral de Proteção de Dados Pessoais (LGPD)., 2018. Disponível em: &lt;https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709.htm&gt;",
+    "title": "12  Ética, privacidade e governança",
+    "section": "12.10 Checklist ético",
+    "text": "12.10 Checklist ético\nAntes da publicação, pergunte:\n\nA finalidade da análise está explícita?\nO nível de detalhe é necessário?\nHá células pequenas ou eventos raros?\nA publicação pode estigmatizar grupos ou territórios?\nOs dados sensíveis foram protegidos?\nAs limitações foram comunicadas?\nO produto final permite uso indevido previsível?\n\n\n\n\n\nBRASIL. Lei n. 13.709, de 14 de agosto de 2018: Lei Geral de Proteção de Dados Pessoais (LGPD)., 2018. Disponível em: &lt;https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709.htm&gt;",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Ética, privacidade e governança</span>"
     ]
   },
   {
     "objectID": "reproducibilidade.html",
     "href": "reproducibilidade.html",
-    "title": "12  Reprodutibilidade",
+    "title": "13  Reprodutibilidade",
     "section": "",
-    "text": "12.1 Elementos mínimos\nUma análise é reprodutível quando outra pessoa consegue compreender seus dados, métodos e decisões a ponto de refazer o cálculo e obter resultados equivalentes. Em livros, painéis e relatórios de indicadores, a reprodutibilidade aumenta a confiança nos resultados e facilita atualizações futuras.\nReprodutibilidade não significa apenas disponibilizar código. Também exige que as fontes, versões, parâmetros e decisões analíticas estejam documentados. Sem isso, duas pessoas podem usar a mesma fórmula e chegar a resultados diferentes.\nUm projeto reprodutível deve registrar:",
+    "text": "13.1 Elementos mínimos\nUma análise é reprodutível quando outra pessoa consegue compreender seus dados, métodos e decisões a ponto de refazer o cálculo e obter resultados equivalentes. Em livros, painéis e relatórios de indicadores, a reprodutibilidade aumenta a confiança nos resultados e facilita atualizações futuras.\nReprodutibilidade não significa apenas disponibilizar código. Também exige que as fontes, versões, parâmetros e decisões analíticas estejam documentados. Sem isso, duas pessoas podem usar a mesma fórmula e chegar a resultados diferentes.\nUm projeto reprodutível deve registrar:",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Reprodutibilidade</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Reprodutibilidade</span>"
     ]
   },
   {
     "objectID": "reproducibilidade.html#elementos-mínimos",
     "href": "reproducibilidade.html#elementos-mínimos",
-    "title": "12  Reprodutibilidade",
+    "title": "13  Reprodutibilidade",
     "section": "",
     "text": "Fontes de dados.\nData de extração.\nVersão dos arquivos.\nCódigo usado para baixar, limpar e calcular indicadores.\nPacotes e versões utilizados.\nCritérios de inclusão e exclusão.\nTratamento de dados faltantes e ignorados.\nFórmulas de cálculo.\nEscalas espaciais e temporais.\nResponsável pela atualização.\n\n\nExemplo de registro mínimo para reprodução de um indicador\n\n\n\n\n\n\nElemento\nExemplo de registro\n\n\n\n\nFonte\nSIM/DATASUS, extração em 2026-04-30\n\n\nUnidade territorial\nMunicípio de residência, código IBGE de 7 dígitos\n\n\nPeríodo\nAno de ocorrência\n\n\nNumerador\nÓbitos por causa X\n\n\nDenominador\nPopulação residente estimada\n\n\nFiltros\nExcluídos registros sem município de residência\n\n\nPacotes\ndplyr, arrow, ggplot2\n\n\nSaída\nTabela municipal em formato parquet",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Reprodutibilidade</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Reprodutibilidade</span>"
     ]
   },
   {
     "objectID": "reproducibilidade.html#pacotes-usados-nos-exemplos",
     "href": "reproducibilidade.html#pacotes-usados-nos-exemplos",
-    "title": "12  Reprodutibilidade",
-    "section": "12.2 Pacotes usados nos exemplos",
-    "text": "12.2 Pacotes usados nos exemplos\nOs exemplos em R deste livro utilizam principalmente:\n\ndplyr\nggplot2\narrow\ntibble\nzendown\n\nAlguns exemplos acessam arquivos em repositórios Zenodo. Para renderizar o livro em um ambiente novo, é necessário ter os pacotes instalados e acesso à internet, salvo quando os resultados já estiverem congelados pelo mecanismo de execução do Quarto.\nUm trecho inicial de preparação do ambiente pode ser documentado da seguinte forma:\ninstall.packages(c(\n  \"arrow\",\n  \"dplyr\",\n  \"ggplot2\",\n  \"tibble\",\n  \"zendown\"\n))\nEsse código não precisa ser executado dentro do livro, mas ajuda o leitor a entender as dependências.",
+    "title": "13  Reprodutibilidade",
+    "section": "13.2 Pacotes usados nos exemplos",
+    "text": "13.2 Pacotes usados nos exemplos\nOs exemplos em R deste livro utilizam principalmente:\n\ndplyr\nggplot2\narrow\ntibble\nzendown\n\nAlguns exemplos acessam arquivos em repositórios Zenodo. Para renderizar o livro em um ambiente novo, é necessário ter os pacotes instalados e acesso à internet, salvo quando os resultados já estiverem congelados pelo mecanismo de execução do Quarto.\nUm trecho inicial de preparação do ambiente pode ser documentado da seguinte forma:\ninstall.packages(c(\n  \"arrow\",\n  \"dplyr\",\n  \"ggplot2\",\n  \"tibble\",\n  \"zendown\"\n))\nEsse código não precisa ser executado dentro do livro, mas ajuda o leitor a entender as dependências.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Reprodutibilidade</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Reprodutibilidade</span>"
     ]
   },
   {
     "objectID": "reproducibilidade.html#execução-congelada",
     "href": "reproducibilidade.html#execução-congelada",
-    "title": "12  Reprodutibilidade",
-    "section": "12.3 Execução congelada",
-    "text": "12.3 Execução congelada\nEste projeto usa freeze: auto no arquivo _quarto.yml. Isso permite reutilizar resultados já calculados quando o código não foi modificado. Essa estratégia é útil para exemplos que dependem de downloads grandes, APIs ou arquivos remotos.\n\n\n\n\n\n\nDica\n\n\n\nMesmo com execução congelada, mantenha o código executável. O congelamento ajuda a renderizar o livro, mas não substitui documentação, versionamento e testes ocasionais dos exemplos.",
+    "title": "13  Reprodutibilidade",
+    "section": "13.3 Execução congelada",
+    "text": "13.3 Execução congelada\nEste projeto usa freeze: auto no arquivo _quarto.yml. Isso permite reutilizar resultados já calculados quando o código não foi modificado. Essa estratégia é útil para exemplos que dependem de downloads grandes, APIs ou arquivos remotos.\n\n\n\n\n\n\nDica\n\n\n\nMesmo com execução congelada, mantenha o código executável. O congelamento ajuda a renderizar o livro, mas não substitui documentação, versionamento e testes ocasionais dos exemplos.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Reprodutibilidade</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Reprodutibilidade</span>"
     ]
   },
   {
     "objectID": "reproducibilidade.html#controle-de-versões",
     "href": "reproducibilidade.html#controle-de-versões",
-    "title": "12  Reprodutibilidade",
-    "section": "12.4 Controle de versões",
-    "text": "12.4 Controle de versões\nAlém do versionamento do texto, é importante versionar decisões analíticas. Mudanças pequenas podem alterar resultados:\n\nNova versão de uma base.\nCorreção de código territorial.\nAtualização de população.\nMudança no filtro de idade.\nAlteração em uma lista de causas.\nInclusão ou exclusão de registros ignorados.\n\nUm histórico de mudanças deve registrar o que mudou, por que mudou e quais indicadores foram afetados.",
+    "title": "13  Reprodutibilidade",
+    "section": "13.4 Controle de versões",
+    "text": "13.4 Controle de versões\nAlém do versionamento do texto, é importante versionar decisões analíticas. Mudanças pequenas podem alterar resultados:\n\nNova versão de uma base.\nCorreção de código territorial.\nAtualização de população.\nMudança no filtro de idade.\nAlteração em uma lista de causas.\nInclusão ou exclusão de registros ignorados.\n\nUm histórico de mudanças deve registrar o que mudou, por que mudou e quais indicadores foram afetados.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Reprodutibilidade</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Reprodutibilidade</span>"
     ]
   },
   {
     "objectID": "reproducibilidade.html#versionamento-de-dados",
     "href": "reproducibilidade.html#versionamento-de-dados",
-    "title": "12  Reprodutibilidade",
-    "section": "12.5 Versionamento de dados",
-    "text": "12.5 Versionamento de dados\nSempre que possível, use fontes com identificadores persistentes, como DOI, versão de repositório ou data de extração. Ao citar um conjunto de dados, registre:\n\nNome do conjunto.\nResponsável.\nURL ou DOI.\nVersão ou data de acesso.\nArquivo específico usado.\nTransformações aplicadas.\n\nQuando uma base não possui DOI ou versão formal, registre pelo menos a data de download, URL, filtros usados e nome do arquivo original. Se a base for atualizada frequentemente, a data de extração passa a ser parte essencial da referência.",
+    "title": "13  Reprodutibilidade",
+    "section": "13.5 Versionamento de dados",
+    "text": "13.5 Versionamento de dados\nSempre que possível, use fontes com identificadores persistentes, como DOI, versão de repositório ou data de extração. Ao citar um conjunto de dados, registre:\n\nNome do conjunto.\nResponsável.\nURL ou DOI.\nVersão ou data de acesso.\nArquivo específico usado.\nTransformações aplicadas.\n\nQuando uma base não possui DOI ou versão formal, registre pelo menos a data de download, URL, filtros usados e nome do arquivo original. Se a base for atualizada frequentemente, a data de extração passa a ser parte essencial da referência.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Reprodutibilidade</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Reprodutibilidade</span>"
+    ]
+  },
+  {
+    "objectID": "reproducibilidade.html#como-citar-conjuntos-de-dados",
+    "href": "reproducibilidade.html#como-citar-conjuntos-de-dados",
+    "title": "13  Reprodutibilidade",
+    "section": "13.6 Como citar conjuntos de dados",
+    "text": "13.6 Como citar conjuntos de dados\nConjuntos de dados devem ser citados como produtos próprios, não apenas como links. Quando houver DOI, ele deve ser preferido, pois identifica uma versão persistente. Quando houver uma página de documentação do conjunto, ela também deve ser indicada para que o leitor compreenda método, variáveis e escopo. Ao usar os conjuntos disponibilizados na página de datasets, cite tanto a página descritiva do projeto quanto o DOI do depósito correspondente, quando disponível.\nUma citação mínima deve incluir:\n\nAutor ou responsável pelo conjunto.\nNome do conjunto de dados.\nVersão, data ou ano de referência.\nRepositório ou página de documentação.\nDOI, quando disponível.\nData de acesso, quando o conteúdo puder mudar.\n\nExemplo de formulação:\n\nSALDANHA, Raphael de Freitas. Médias de poluentes atmosféricos para municípios brasileiros. Zenodo, versão consultada em 30 abr. 2026. DOI: 10.5281/zenodo.16374139.\n\n\n\n\n\n\n\nDica\n\n\n\nQuando o indicador foi calculado a partir de um arquivo específico, cite também o nome do arquivo usado, como pm25_max_mean.parquet, ndvi_mean.parquet ou tmax_mean_mean.parquet.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Reprodutibilidade</span>"
     ]
   },
   {
     "objectID": "reproducibilidade.html#separação-entre-dado-bruto-e-dado-tratado",
     "href": "reproducibilidade.html#separação-entre-dado-bruto-e-dado-tratado",
-    "title": "12  Reprodutibilidade",
-    "section": "12.6 Separação entre dado bruto e dado tratado",
-    "text": "12.6 Separação entre dado bruto e dado tratado\nO dado bruto deve ser preservado sempre que possível. As transformações devem gerar novos arquivos, mantendo rastreabilidade entre origem e produto final. Isso permite revisar decisões e corrigir erros sem reconstruir todo o processo manualmente.\n\nCamadas recomendadas de dados em projetos reprodutíveis\n\n\n\n\n\n\n\nCamada\nConteúdo\nDeve ser editada manualmente?\n\n\n\n\nBruta\nArquivo original baixado ou recebido\nNão\n\n\nIntermediária\nDados padronizados e limpos\nApenas por código\n\n\nAnalítica\nBase pronta para indicadores\nApenas por código\n\n\nProduto\nTabelas, gráficos, mapas, livro\nGerado automaticamente quando possível",
+    "title": "13  Reprodutibilidade",
+    "section": "13.7 Separação entre dado bruto e dado tratado",
+    "text": "13.7 Separação entre dado bruto e dado tratado\nO dado bruto deve ser preservado sempre que possível. As transformações devem gerar novos arquivos, mantendo rastreabilidade entre origem e produto final. Isso permite revisar decisões e corrigir erros sem reconstruir todo o processo manualmente.\n\nCamadas recomendadas de dados em projetos reprodutíveis\n\n\n\n\n\n\n\nCamada\nConteúdo\nDeve ser editada manualmente?\n\n\n\n\nBruta\nArquivo original baixado ou recebido\nNão\n\n\nIntermediária\nDados padronizados e limpos\nApenas por código\n\n\nAnalítica\nBase pronta para indicadores\nApenas por código\n\n\nProduto\nTabelas, gráficos, mapas, livro\nGerado automaticamente quando possível",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Reprodutibilidade</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Reprodutibilidade</span>"
     ]
   },
   {
     "objectID": "reproducibilidade.html#organização-sugerida",
     "href": "reproducibilidade.html#organização-sugerida",
-    "title": "12  Reprodutibilidade",
-    "section": "12.7 Organização sugerida",
-    "text": "12.7 Organização sugerida\nUma estrutura simples para projetos de indicadores pode separar:\n\ndata_raw/: dados originais, sem edição.\ndata_processed/: dados limpos ou harmonizados.\nR/ ou scripts/: funções e rotinas.\ndocs/: saída renderizada.\nassets/: imagens e materiais estáticos.\nreferences.bib: referências bibliográficas.",
+    "title": "13  Reprodutibilidade",
+    "section": "13.8 Organização sugerida",
+    "text": "13.8 Organização sugerida\nUma estrutura simples para projetos de indicadores pode separar:\n\ndata_raw/: dados originais, sem edição.\ndata_processed/: dados limpos ou harmonizados.\nR/ ou scripts/: funções e rotinas.\ndocs/: saída renderizada.\nassets/: imagens e materiais estáticos.\nreferences.bib: referências bibliográficas.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Reprodutibilidade</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Reprodutibilidade</span>"
     ]
   },
   {
     "objectID": "reproducibilidade.html#nomes-e-metadados",
     "href": "reproducibilidade.html#nomes-e-metadados",
-    "title": "12  Reprodutibilidade",
-    "section": "12.8 Nomes e metadados",
-    "text": "12.8 Nomes e metadados\nNomes de arquivos devem ajudar a identificar conteúdo, território, período e versão. Exemplos:\n\nsim_obitos_municipio_2024_raw.csv\npop_municipal_2024_ibge.parquet\ntaxa_mortalidade_respiratoria_municipio_2024.parquet\n\nEvite nomes como base_final.xlsx, base_final2.xlsx ou nova_base_corrigida.xlsx, pois eles não informam origem, versão ou finalidade.",
+    "title": "13  Reprodutibilidade",
+    "section": "13.9 Nomes e metadados",
+    "text": "13.9 Nomes e metadados\nNomes de arquivos devem ajudar a identificar conteúdo, território, período e versão. Exemplos:\n\nsim_obitos_municipio_2024_raw.csv\npop_municipal_2024_ibge.parquet\ntaxa_mortalidade_respiratoria_municipio_2024.parquet\n\nEvite nomes como base_final.xlsx, base_final2.xlsx ou nova_base_corrigida.xlsx, pois eles não informam origem, versão ou finalidade.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Reprodutibilidade</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Reprodutibilidade</span>"
     ]
   },
   {
     "objectID": "reproducibilidade.html#checklist",
     "href": "reproducibilidade.html#checklist",
-    "title": "12  Reprodutibilidade",
-    "section": "12.9 Checklist",
-    "text": "12.9 Checklist\nAntes de publicar, verifique:\n\nO livro renderiza em um ambiente limpo.\nAs referências bibliográficas são resolvidas.\nOs links principais funcionam.\nAs imagens existem.\nOs exemplos têm dependências documentadas.\nO código não contém caminhos locais privados.\nAs bases usadas têm fonte e versão identificáveis.",
+    "title": "13  Reprodutibilidade",
+    "section": "13.10 Checklist",
+    "text": "13.10 Checklist\nAntes de publicar, verifique:\n\nO livro renderiza em um ambiente limpo.\nAs referências bibliográficas são resolvidas.\nOs links principais funcionam.\nAs imagens existem.\nOs exemplos têm dependências documentadas.\nO código não contém caminhos locais privados.\nAs bases usadas têm fonte e versão identificáveis.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Reprodutibilidade</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Reprodutibilidade</span>"
     ]
   },
   {
     "objectID": "reproducibilidade.html#reprodutibilidade-computacional-e-analítica",
     "href": "reproducibilidade.html#reprodutibilidade-computacional-e-analítica",
-    "title": "12  Reprodutibilidade",
-    "section": "12.10 Reprodutibilidade computacional e analítica",
-    "text": "12.10 Reprodutibilidade computacional e analítica\nUma análise pode ser computacionalmente reprodutível, mas analiticamente frágil. Por exemplo, o código pode rodar perfeitamente, mas usar um denominador inadequado. Por isso, a revisão deve verificar tanto a execução quanto o sentido epidemiológico e territorial do indicador.\nPerguntas úteis:\n\nO código executa?\nO resultado faz sentido?\nO numerador está contido no denominador quando se trata de proporção?\nA população sob risco foi definida corretamente?\nTaxas foram recalculadas a partir de contagens, e não por média simples?\nA escala espacial e temporal é compatível com a pergunta?",
+    "title": "13  Reprodutibilidade",
+    "section": "13.11 Reprodutibilidade computacional e analítica",
+    "text": "13.11 Reprodutibilidade computacional e analítica\nUma análise pode ser computacionalmente reprodutível, mas analiticamente frágil. Por exemplo, o código pode rodar perfeitamente, mas usar um denominador inadequado. Por isso, a revisão deve verificar tanto a execução quanto o sentido epidemiológico e territorial do indicador.\nPerguntas úteis:\n\nO código executa?\nO resultado faz sentido?\nO numerador está contido no denominador quando se trata de proporção?\nA população sob risco foi definida corretamente?\nTaxas foram recalculadas a partir de contagens, e não por média simples?\nA escala espacial e temporal é compatível com a pergunta?",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Reprodutibilidade</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Reprodutibilidade</span>"
     ]
   },
   {
     "objectID": "estudo_caso.html",
     "href": "estudo_caso.html",
-    "title": "13  Estudo de caso integrado",
+    "title": "14  Estudo de caso integrado",
     "section": "",
-    "text": "13.1 Pergunta orientadora\nEste capítulo apresenta um roteiro para combinar indicadores sociodemográficos, de saúde, ambientais e climáticos em uma análise territorial. O objetivo não é definir um único modelo obrigatório, mas demonstrar como os capítulos anteriores podem ser articulados em uma investigação aplicada.\nO exemplo é apresentado como um desenho de análise. Em um projeto real, cada etapa deve ser ajustada ao agravo, território, período, fontes disponíveis e finalidade da decisão.\nUma pergunta possível seria:\nEssa pergunta combina quatro dimensões:\nTambém é possível formular a pergunta em termos de vigilância:\nNesse caso, o objetivo deixa de ser apenas descrever associação e passa a apoiar priorização.",
+    "text": "14.1 Pergunta orientadora\nEste capítulo apresenta um roteiro para combinar indicadores sociodemográficos, de saúde, ambientais e climáticos em uma análise territorial. O objetivo não é definir um único modelo obrigatório, mas demonstrar como os capítulos anteriores podem ser articulados em uma investigação aplicada.\nO exemplo é apresentado como um desenho de análise. Em um projeto real, cada etapa deve ser ajustada ao agravo, território, período, fontes disponíveis e finalidade da decisão.\nUma pergunta possível seria:\nEssa pergunta combina quatro dimensões:\nTambém é possível formular a pergunta em termos de vigilância:\nNesse caso, o objetivo deixa de ser apenas descrever associação e passa a apoiar priorização.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
     ]
   },
   {
     "objectID": "estudo_caso.html#pergunta-orientadora",
     "href": "estudo_caso.html#pergunta-orientadora",
-    "title": "13  Estudo de caso integrado",
+    "title": "14  Estudo de caso integrado",
     "section": "",
     "text": "Quais municípios apresentam maior vulnerabilidade socioambiental a eventos de calor e maior carga de agravos respiratórios?\n\n\n\nCondições sociodemográficas.\nSituação de saúde.\nExposição ambiental.\nExposição climática.\n\n\n\nQuais territórios deveriam ser priorizados para ações preventivas durante períodos de calor extremo e piora da qualidade do ar?",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
     ]
   },
   {
     "objectID": "estudo_caso.html#unidade-de-análise",
     "href": "estudo_caso.html#unidade-de-análise",
-    "title": "13  Estudo de caso integrado",
-    "section": "13.2 Unidade de análise",
-    "text": "13.2 Unidade de análise\nA unidade de análise deve ser definida antes da seleção dos indicadores. Uma escolha frequente é o município, pois muitos dados públicos brasileiros são divulgados nessa escala. No entanto, a escolha deve considerar o mecanismo analisado.\nPara eventos de calor, médias municipais podem ocultar microclimas urbanos. Para internações, o município de residência pode ser mais adequado do que o município de atendimento. Para indicadores sociais, dados censitários podem exigir atenção ao ano de referência.\n\nDecisões iniciais de desenho analítico\n\n\n\n\n\n\n\nEscolha\nDecisão recomendada no exemplo\nJustificativa\n\n\n\n\nTerritório\nMunicípio de residência\nPermite integrar saúde, população e exposições harmonizadas\n\n\nPeríodo\nAno ou estação quente\nCompatível com eventos de calor e internações\n\n\nPopulação\nResidentes\nDenominador das taxas de saúde\n\n\nDefasagem\nSemanas anteriores ao desfecho, se houver dados semanais\nExposições podem anteceder internações",
+    "title": "14  Estudo de caso integrado",
+    "section": "14.2 Unidade de análise",
+    "text": "14.2 Unidade de análise\nA unidade de análise deve ser definida antes da seleção dos indicadores. Uma escolha frequente é o município, pois muitos dados públicos brasileiros são divulgados nessa escala. No entanto, a escolha deve considerar o mecanismo analisado.\nPara eventos de calor, médias municipais podem ocultar microclimas urbanos. Para internações, o município de residência pode ser mais adequado do que o município de atendimento. Para indicadores sociais, dados censitários podem exigir atenção ao ano de referência.\n\nDecisões iniciais de desenho analítico\n\n\n\n\n\n\n\nEscolha\nDecisão recomendada no exemplo\nJustificativa\n\n\n\n\nTerritório\nMunicípio de residência\nPermite integrar saúde, população e exposições harmonizadas\n\n\nPeríodo\nAno ou estação quente\nCompatível com eventos de calor e internações\n\n\nPopulação\nResidentes\nDenominador das taxas de saúde\n\n\nDefasagem\nSemanas anteriores ao desfecho, se houver dados semanais\nExposições podem anteceder internações",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
     ]
   },
   {
     "objectID": "estudo_caso.html#indicadores-selecionados",
     "href": "estudo_caso.html#indicadores-selecionados",
-    "title": "13  Estudo de caso integrado",
-    "section": "13.3 Indicadores selecionados",
-    "text": "13.3 Indicadores selecionados\n\nExemplo de seleção de indicadores para análise integrada\n\n\n\n\n\n\n\n\nDimensão\nIndicador\nPapel analítico\nFonte possível\n\n\n\n\nSaúde\nTaxa de internação por doenças respiratórias\nDesfecho\nSIH/SUS\n\n\nSociodemográfica\nProporção de idosos\nVulnerabilidade\nIBGE\n\n\nSociodemográfica\nProporção de pobres ou IVS\nVulnerabilidade social\nIpea, IBGE\n\n\nAmbiental\nPM2,5 médio\nExposição ambiental\nMédias de poluentes atmosféricos para municípios brasileiros\n\n\nAmbiental\nNDVI médio\nProteção ou contexto ambiental\nMédias de NDVI para municípios brasileiros\n\n\nClimática\nDias quentes ou ondas de calor\nExposição climática\nIndicadores climáticos baseados em eventos para análise em Saúde Pública\n\n\n\nOs indicadores podem ser separados em três papéis analíticos:\n\nDesfecho: evento de saúde a ser explicado, monitorado ou priorizado.\nExposição: condição ambiental ou climática potencialmente relacionada ao desfecho.\nVulnerabilidade: característica social, demográfica ou territorial que pode aumentar risco ou dificultar resposta.",
+    "title": "14  Estudo de caso integrado",
+    "section": "14.3 Indicadores selecionados",
+    "text": "14.3 Indicadores selecionados\n\nExemplo de seleção de indicadores para análise integrada\n\n\n\n\n\n\n\n\nDimensão\nIndicador\nPapel analítico\nFonte possível\n\n\n\n\nSaúde\nTaxa de internação por doenças respiratórias\nDesfecho\nSIH/SUS\n\n\nSociodemográfica\nProporção de idosos\nVulnerabilidade\nIBGE\n\n\nSociodemográfica\nProporção de pobres ou IVS\nVulnerabilidade social\nIpea, IBGE\n\n\nAmbiental\nPM2,5 médio\nExposição ambiental\nMédias de poluentes atmosféricos para municípios brasileiros\n\n\nAmbiental\nNDVI médio\nProteção ou contexto ambiental\nMédias de NDVI para municípios brasileiros\n\n\nClimática\nDias quentes ou ondas de calor\nExposição climática\nIndicadores climáticos baseados em eventos para análise em Saúde Pública\n\n\n\nOs indicadores podem ser separados em três papéis analíticos:\n\nDesfecho: evento de saúde a ser explicado, monitorado ou priorizado.\nExposição: condição ambiental ou climática potencialmente relacionada ao desfecho.\nVulnerabilidade: característica social, demográfica ou territorial que pode aumentar risco ou dificultar resposta.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
     ]
   },
   {
     "objectID": "estudo_caso.html#fontes-e-preparação",
     "href": "estudo_caso.html#fontes-e-preparação",
-    "title": "13  Estudo de caso integrado",
-    "section": "13.4 Fontes e preparação",
-    "text": "13.4 Fontes e preparação\nUm fluxo mínimo de preparação inclui:\n\nObter internações por município de residência, causa e período.\nObter população residente para o mesmo território e período.\nCalcular a taxa de internação.\nIntegrar indicadores sociodemográficos.\nIntegrar indicadores ambientais, como PM2,5 e NDVI.\nIntegrar indicadores climáticos, como dias quentes ou ondas de calor.\nVerificar completude, duplicidades e consistência territorial.\nAvaliar pequenos números e necessidade de agregação.",
+    "title": "14  Estudo de caso integrado",
+    "section": "14.4 Fontes e preparação",
+    "text": "14.4 Fontes e preparação\nUm fluxo mínimo de preparação inclui:\n\nObter internações por município de residência, causa e período.\nObter população residente para o mesmo território e período.\nCalcular a taxa de internação.\nIntegrar indicadores sociodemográficos.\nIntegrar indicadores ambientais, como PM2,5 e NDVI.\nIntegrar indicadores climáticos, como dias quentes ou ondas de calor.\nVerificar completude, duplicidades e consistência territorial.\nAvaliar pequenos números e necessidade de agregação.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
     ]
   },
   {
     "objectID": "estudo_caso.html#harmonização",
     "href": "estudo_caso.html#harmonização",
-    "title": "13  Estudo de caso integrado",
-    "section": "13.5 Harmonização",
-    "text": "13.5 Harmonização\nApós selecionar os indicadores, é necessário harmonizar:\n\nPeríodo: todos os indicadores devem se referir ao mesmo ano, mês, semana ou janela analítica.\nTerritório: os códigos territoriais devem ser compatíveis.\nPopulação: denominadores devem representar a população sob risco.\nDefasagem: exposições climáticas e ambientais podem anteceder o desfecho em saúde.\nEscala: indicadores muito agregados podem ocultar heterogeneidades importantes.\n\n\n\n\n\n\n\nAviso\n\n\n\nNão combine indicadores de períodos incompatíveis sem explicitar a decisão. Um IVS censitário, uma taxa de internação anual e um indicador climático mensal podem ser integrados, mas a interpretação deve reconhecer que cada um representa uma janela temporal diferente.",
+    "title": "14  Estudo de caso integrado",
+    "section": "14.5 Harmonização",
+    "text": "14.5 Harmonização\nApós selecionar os indicadores, é necessário harmonizar:\n\nPeríodo: todos os indicadores devem se referir ao mesmo ano, mês, semana ou janela analítica.\nTerritório: os códigos territoriais devem ser compatíveis.\nPopulação: denominadores devem representar a população sob risco.\nDefasagem: exposições climáticas e ambientais podem anteceder o desfecho em saúde.\nEscala: indicadores muito agregados podem ocultar heterogeneidades importantes.\n\n\n\n\n\n\n\nAviso\n\n\n\nNão combine indicadores de períodos incompatíveis sem explicitar a decisão. Um IVS censitário, uma taxa de internação anual e um indicador climático mensal podem ser integrados, mas a interpretação deve reconhecer que cada um representa uma janela temporal diferente.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
     ]
   },
   {
     "objectID": "estudo_caso.html#construção-da-base-analítica",
     "href": "estudo_caso.html#construção-da-base-analítica",
-    "title": "13  Estudo de caso integrado",
-    "section": "13.6 Construção da base analítica",
-    "text": "13.6 Construção da base analítica\nUma base integrada mínima poderia conter:\n\nEstrutura ilustrativa de base integrada\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncode_muni\nano\ninternacoes_resp\npop\ntaxa_internacao\nprop_idosos\nivs\npm25\nndvi\ndias_quentes\n\n\n\n\n0000000\n2024\n120\n100000\n120,0\n12,5\n0,31\n8,2\n0,44\n18",
+    "title": "14  Estudo de caso integrado",
+    "section": "14.6 Construção da base analítica",
+    "text": "14.6 Construção da base analítica\nUma base integrada mínima poderia conter:\n\nEstrutura ilustrativa de base integrada\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncode_muni\nano\ninternacoes_resp\npop\ntaxa_internacao\nprop_idosos\nivs\npm25\nndvi\ndias_quentes\n\n\n\n\n0000000\n2024\n120\n100000\n120,0\n12,5\n0,31\n8,2\n0,44\n18",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
     ]
   },
   {
     "objectID": "estudo_caso.html#indicador-composto-de-priorização",
     "href": "estudo_caso.html#indicador-composto-de-priorização",
-    "title": "13  Estudo de caso integrado",
-    "section": "13.7 Indicador composto de priorização",
-    "text": "13.7 Indicador composto de priorização\nQuando o objetivo é priorizar territórios, pode-se construir uma classificação simples por dimensões, sem necessariamente criar um índice sintético complexo. Por exemplo:\n\nExemplo de regras simples para priorização territorial\n\n\nDimensão\nCritério de alto risco\n\n\n\n\nSaúde\nTaxa de internação respiratória no tercil superior\n\n\nVulnerabilidade\nProporção de idosos no tercil superior ou IVS alto\n\n\nAmbiente\nPM2,5 no tercil superior\n\n\nProteção ambiental\nNDVI no tercil inferior\n\n\nClima\nDias quentes no tercil superior\n\n\n\nUm município poderia ser classificado como prioritário quando apresenta três ou mais critérios de alto risco. Essa abordagem é transparente, mas depende da escolha dos pontos de corte. Por isso, deve ser acompanhada de análise de sensibilidade.",
+    "title": "14  Estudo de caso integrado",
+    "section": "14.7 Indicador composto de priorização",
+    "text": "14.7 Indicador composto de priorização\nQuando o objetivo é priorizar territórios, pode-se construir uma classificação simples por dimensões, sem necessariamente criar um índice sintético complexo. Por exemplo:\n\nExemplo de regras simples para priorização territorial\n\n\nDimensão\nCritério de alto risco\n\n\n\n\nSaúde\nTaxa de internação respiratória no tercil superior\n\n\nVulnerabilidade\nProporção de idosos no tercil superior ou IVS alto\n\n\nAmbiente\nPM2,5 no tercil superior\n\n\nProteção ambiental\nNDVI no tercil inferior\n\n\nClima\nDias quentes no tercil superior\n\n\n\nUm município poderia ser classificado como prioritário quando apresenta três ou mais critérios de alto risco. Essa abordagem é transparente, mas depende da escolha dos pontos de corte. Por isso, deve ser acompanhada de análise de sensibilidade.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
     ]
   },
   {
     "objectID": "estudo_caso.html#análises-descritivas",
     "href": "estudo_caso.html#análises-descritivas",
-    "title": "13  Estudo de caso integrado",
-    "section": "13.8 Análises descritivas",
-    "text": "13.8 Análises descritivas\nAntes de modelos estatísticos, recomenda-se produzir:\n\nDistribuição dos indicadores.\nMapas de cada dimensão.\nTabela de municípios com valores extremos.\nCorrelação entre indicadores.\nSérie temporal do desfecho e das exposições.\nAvaliação de pequenos números.\n\nEssas etapas ajudam a identificar erros, padrões inesperados e limitações da base integrada.",
+    "title": "14  Estudo de caso integrado",
+    "section": "14.8 Análises descritivas",
+    "text": "14.8 Análises descritivas\nAntes de modelos estatísticos, recomenda-se produzir:\n\nDistribuição dos indicadores.\nMapas de cada dimensão.\nTabela de municípios com valores extremos.\nCorrelação entre indicadores.\nSérie temporal do desfecho e das exposições.\nAvaliação de pequenos números.\n\nEssas etapas ajudam a identificar erros, padrões inesperados e limitações da base integrada.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
     ]
   },
   {
     "objectID": "estudo_caso.html#interpretação",
     "href": "estudo_caso.html#interpretação",
-    "title": "13  Estudo de caso integrado",
-    "section": "13.9 Interpretação",
-    "text": "13.9 Interpretação\nA interpretação deve evitar conclusões causais apressadas. Uma associação entre calor, poluição e internações pode refletir mecanismos reais, mas também pode estar relacionada a idade, renda, acesso a serviços, sazonalidade, cobertura hospitalar, epidemias respiratórias e qualidade dos registros.\nUma leitura responsável deve distinguir:\n\nPadrão descritivo.\nHipótese explicativa.\nEvidência estatística.\nImplicação para vigilância ou gestão.\n\nExemplo de interpretação cautelosa:\n\nMunicípios com maior frequência de dias quentes, maior concentração de PM2,5 e maior proporção de idosos apresentaram maior taxa de internações respiratórias no período analisado. Esse padrão sugere territórios prioritários para vigilância e prevenção, mas não permite concluir causalidade sem análise adicional de confundimento, sazonalidade, acesso aos serviços e qualidade dos registros.",
+    "title": "14  Estudo de caso integrado",
+    "section": "14.9 Interpretação",
+    "text": "14.9 Interpretação\nA interpretação deve evitar conclusões causais apressadas. Uma associação entre calor, poluição e internações pode refletir mecanismos reais, mas também pode estar relacionada a idade, renda, acesso a serviços, sazonalidade, cobertura hospitalar, epidemias respiratórias e qualidade dos registros.\nUma leitura responsável deve distinguir:\n\nPadrão descritivo.\nHipótese explicativa.\nEvidência estatística.\nImplicação para vigilância ou gestão.\n\nExemplo de interpretação cautelosa:\n\nMunicípios com maior frequência de dias quentes, maior concentração de PM2,5 e maior proporção de idosos apresentaram maior taxa de internações respiratórias no período analisado. Esse padrão sugere territórios prioritários para vigilância e prevenção, mas não permite concluir causalidade sem análise adicional de confundimento, sazonalidade, acesso aos serviços e qualidade dos registros.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
     ]
   },
   {
     "objectID": "estudo_caso.html#limitações-esperadas",
     "href": "estudo_caso.html#limitações-esperadas",
-    "title": "13  Estudo de caso integrado",
-    "section": "13.10 Limitações esperadas",
-    "text": "13.10 Limitações esperadas\nUm estudo integrado desse tipo costuma enfrentar:\n\nDiferenças de escala entre indicadores.\nDefasagens temporais difíceis de definir.\nInstabilidade em municípios pequenos.\nPossível subregistro ou mudança de cobertura.\nDificuldade de separar efeito de calor, poluição e vulnerabilidade social.\nUso de exposição territorial como aproximação da exposição individual.",
+    "title": "14  Estudo de caso integrado",
+    "section": "14.10 Limitações esperadas",
+    "text": "14.10 Limitações esperadas\nUm estudo integrado desse tipo costuma enfrentar:\n\nDiferenças de escala entre indicadores.\nDefasagens temporais difíceis de definir.\nInstabilidade em municípios pequenos.\nPossível subregistro ou mudança de cobertura.\nDificuldade de separar efeito de calor, poluição e vulnerabilidade social.\nUso de exposição territorial como aproximação da exposição individual.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
     ]
   },
   {
     "objectID": "estudo_caso.html#produtos-possíveis",
     "href": "estudo_caso.html#produtos-possíveis",
-    "title": "13  Estudo de caso integrado",
-    "section": "13.11 Produtos possíveis",
-    "text": "13.11 Produtos possíveis\nO estudo integrado pode gerar:\n\nMapas de risco ou vulnerabilidade.\nTabelas de priorização territorial.\nSéries temporais de alerta.\nRelatórios para vigilância em saúde ambiental.\nPainéis de monitoramento.\nSubsídios para planos de adaptação climática.",
+    "title": "14  Estudo de caso integrado",
+    "section": "14.11 Produtos possíveis",
+    "text": "14.11 Produtos possíveis\nO estudo integrado pode gerar:\n\nMapas de risco ou vulnerabilidade.\nTabelas de priorização territorial.\nSéries temporais de alerta.\nRelatórios para vigilância em saúde ambiental.\nPainéis de monitoramento.\nSubsídios para planos de adaptação climática.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
     ]
   },
   {
     "objectID": "estudo_caso.html#roteiro-de-comunicação",
     "href": "estudo_caso.html#roteiro-de-comunicação",
-    "title": "13  Estudo de caso integrado",
-    "section": "13.12 Roteiro de comunicação",
-    "text": "13.12 Roteiro de comunicação\nUm produto final pode ser organizado em quatro blocos:\n\nSituação observada: onde estão os maiores valores do desfecho.\nContexto de vulnerabilidade: quais territórios combinam maior fragilidade social e demográfica.\nExposições ambientais e climáticas: onde há maior carga de calor, poluição ou baixa proteção ambiental.\nPrioridades e cautelas: quais territórios merecem atenção e quais limitações devem acompanhar a leitura.",
+    "title": "14  Estudo de caso integrado",
+    "section": "14.12 Roteiro de comunicação",
+    "text": "14.12 Roteiro de comunicação\nUm produto final pode ser organizado em quatro blocos:\n\nSituação observada: onde estão os maiores valores do desfecho.\nContexto de vulnerabilidade: quais territórios combinam maior fragilidade social e demográfica.\nExposições ambientais e climáticas: onde há maior carga de calor, poluição ou baixa proteção ambiental.\nPrioridades e cautelas: quais territórios merecem atenção e quais limitações devem acompanhar a leitura.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
     ]
   },
   {
     "objectID": "estudo_caso.html#checklist-do-estudo",
     "href": "estudo_caso.html#checklist-do-estudo",
-    "title": "13  Estudo de caso integrado",
-    "section": "13.13 Checklist do estudo",
-    "text": "13.13 Checklist do estudo\nAntes de divulgar o resultado, verifique:\n\nA pergunta está clara.\nOs indicadores têm fichas técnicas.\nNumeradores e denominadores estão corretos.\nOs períodos foram harmonizados.\nAs fontes foram citadas.\nA incerteza foi considerada.\nPequenos números foram tratados com cuidado.\nA comunicação evita estigmatizar territórios.",
+    "title": "14  Estudo de caso integrado",
+    "section": "14.13 Checklist do estudo",
+    "text": "14.13 Checklist do estudo\nAntes de divulgar o resultado, verifique:\n\nA pergunta está clara.\nOs indicadores têm fichas técnicas.\nNumeradores e denominadores estão corretos.\nOs períodos foram harmonizados.\nAs fontes foram citadas.\nA incerteza foi considerada.\nPequenos números foram tratados com cuidado.\nA comunicação evita estigmatizar territórios.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
     ]
   },
   {
     "objectID": "estudo_caso.html#possíveis-extensões",
     "href": "estudo_caso.html#possíveis-extensões",
-    "title": "13  Estudo de caso integrado",
-    "section": "13.14 Possíveis extensões",
-    "text": "13.14 Possíveis extensões\nO estudo pode ser ampliado com:\n\nModelos temporais com defasagens climáticas.\nPadronização por idade.\nEstratificação por grupos vulneráveis.\nIndicadores de capacidade dos serviços.\nCenários de alerta para ondas de calor.\nComparação antes e depois de uma intervenção.",
+    "title": "14  Estudo de caso integrado",
+    "section": "14.14 Possíveis extensões",
+    "text": "14.14 Possíveis extensões\nO estudo pode ser ampliado com:\n\nModelos temporais com defasagens climáticas.\nPadronização por idade.\nEstratificação por grupos vulneráveis.\nIndicadores de capacidade dos serviços.\nCenários de alerta para ondas de calor.\nComparação antes e depois de uma intervenção.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Estudo de caso integrado</span>"
     ]
   },
   {
@@ -1017,6 +1097,116 @@
     "text": "BRASIL. Lei nº 8.080, de 19 de setembro de 1990: dispõe sobre as\ncondições para a promoção, proteção e recuperação da saúde, a\norganização e o funcionamento dos serviços correspondentes e dá outras\nprovidências., 1990. Disponível em: &lt;https://www.planalto.gov.br/ccivil_03/leis/l8080.htm&gt;\n\n\nBRASIL. Lei n. 13.709, de 14 de agosto de 2018: Lei Geral de\nProteção de Dados Pessoais (LGPD)., 2018. Disponível em: &lt;https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709.htm&gt;\n\n\nBREILH, J. Epidemiologia crı́tica:\nCiência emancipadora e interculturalidade. Rio de\nJaneiro: Fiocruz, 2006.\n\n\nBUSS, P. M.; PELLEGRINI FILHO, A. A saúde e seus\ndeterminantes sociais. Physis: Revista de Saúde\nColetiva, v. 17, n. 1, p. 77–93, 2007.\n\n\nCOMMISSION ON SOCIAL DETERMINANTS OF HEALTH. Closing the Gap in a\nGeneration: Health Equity through Action on the Social Determinants of\nHealth. Geneva: World Health Organization, 2008.\n\n\nCONFERÊNCIA NACIONAL DE SAÚDE. Relatório Final da 8ª Conferência\nNacional de Saúde. Brasília, DF: Ministério da Saúde, 1986.\nDisponível em: &lt;https://bvsms.saude.gov.br/bvs/publicacoes/8_conferencia_nacional_saude_relatorio_final.pdf&gt;.\n\n\nCOSTA, M. A. et al. Vulnerabilidade social no Brasil: Conceitos,\nmétodos e primeiros resultados para municípios e regiões metropolitanas\nbrasileiras. Rio de Janeiro: Ipea, 2018.\n\n\nDATASUS. Informações de Saúde (TABNET)., 2026.\nDisponível em: &lt;https://datasus.saude.gov.br/informacoes-de-saude-tabnet/&gt;\n\n\nFRANCESCHINI, F.; GALETTO, M.; MAISANO, D. From\nMeasurement Theory to Indicator Theory.\nEm: FRANCESCHINI, F.; GALETTO, M.; MAISANO, D. (Eds.). Designing\nPerformance Measurement Systems. Cham: Springer\nInternational Publishing, 2019. p. 49–83.\n\n\nFRØNES, I. Theorizing Indicators:\nOn Indicators, Signs and\nTrends. Social Indicators Research, v.\n83, n. 1, p. 5–23, ago. 2007.\n\n\nINTERGOVERNMENTAL PANEL ON CLIMATE CHANGE. Fact Sheet —\nHealth. AR6 Working Group II: Impacts, Adaptation and\nVulnerability, 2023. Disponível em: &lt;https://www.ipcc.ch/report/ar6/wg2/downloads/outreach/IPCC_AR6_WGII_FactSheet_Health.pdf&gt;\n\n\nIPS BRASIL. Índice de Progresso Social Brasil 2025:\nQualidade de Vida Nos 5.570 Municípios Do\nBrasil. Belém: Instituto do Homem e Meio Ambiente\nda Amazônia, 2025.\n\n\nJANNUZZI, P. DE M. Indicadores Sociais No Brasil:\nConceitos, Fontes de Dados e Aplicações. 3. ed. [s.l.] Alínea,\n2006.\n\n\nJANNUZZI, P. DE M. Indicadores sociais no Brasil: conceitos,\nfontes de dados e aplicações. 6. ed. Campinas, SP: Editora\nAlínea, 2017.\n\n\nLAWSON, A. B. Bayesian Disease Mapping: Hierarchical Modeling in\nSpatial Epidemiology. 3. ed. Boca Raton: CRC Press, 2018.\n\n\nMCKEE, T. B.; DOESKEN, N. J.; KLEIST, J. The Relationship of\nDrought Frequency and Duration to Time Scales. Proceedings of\nthe 8th Conference on Applied Climatology.\nAnais...Anaheim, CA: American Meteorological Society,\n1993.\n\n\nMEDRONHO, R. et al. (EDS.). Epidemiologia. 2. ed. São\nPaulo: Atheneu, 2009.\n\n\nMINISTÉRIO DA SAÚDE. Abordagens Espaciais Na Saúde\nPública. [s.l: s.n.]. v. 1\n\n\nOPENSHAW, S. The Modifiable Areal Unit Problem.\nNorwich: Geo Books, 1984.\n\n\nPALMER, W. C. Meteorological Drought. Washington, D.C.:\nU.S. Weather Bureau, 1965. Disponível em: &lt;https://www.droughtmanagement.info/literature/USWB_Meteorological_Drought_1965.pdf&gt;.\nAcesso em: 28 maio. 2025.\n\n\nPAN AMERICAN HEALTH ORGANIZATION. Intersectoral Action / Health\nin All Policies., 2026. Disponível em: &lt;https://www.paho.org/en/topics/intersectoral-action-health-all-policies&gt;\n\n\nREDE INTERAGENCIAL DE INFORMAÇÃO PARA A SAÚDE. Indicadores\nBásicos Para a Saúde No Brasil: Conceitos e\nAplicações. Brasília: Organização Pan-Americana da Saúde, 2008.\n\n\nSALDANHA, R. et al. Zonal\nStatistics Datasets of Climate Indicators for Brazilian\nMunicipalities. Environmental Data Science, v. 3,\np. e2, 2024.\n\n\nTUCKER, C. J. Red\nand Photographic Infrared Linear Combinations for Monitoring\nVegetation. Remote Sensing of Environment, v. 8, n.\n2, p. 127–150, 1979.\n\n\nWHO Global\nAir Quality Guidelines: Particulate matter (PM2.5 and\nPM10), ozone, nitrogen dioxide, sulfur dioxide and carbon\nmonoxide. Geneva: World Health Organization, 2021.\n\n\nWORLD HEALTH ORGANIZATION. Constitution of the World Health\nOrganization., 1948. Disponível em: &lt;https://www.who.int/about/governance/constitution&gt;\n\n\nWORLD HEALTH ORGANIZATION. Ottawa Charter for Health\nPromotion. First International Conference on Health Promotion,\nOttawa, 21 November 1986, 1986. Disponível em: &lt;https://www.afro.who.int/sites/default/files/2017-06/hpr%20ottawa_charter.pdf&gt;\n\n\nWORLD HEALTH ORGANIZATION. Operational Framework for Building\nClimate Resilient and Low Carbon Health Systems., 2023.\nDisponível em: &lt;https://www.who.int/publications/i/item/9789240081888&gt;\n\n\nWORLD HEALTH ORGANIZATION; WORLD METEOROLOGICAL ORGANIZATION. Heatwaves\nand Health: Guidance on Warning-System Development. Geneva:\nWorld Health Organization, 2015.",
     "crumbs": [
       "Referências"
+    ]
+  },
+  {
+    "objectID": "glossario.html",
+    "href": "glossario.html",
+    "title": "Glossário",
+    "section": "",
+    "text": "Agregação: combinação de dados em unidades maiores, como somar casos municipais para obter total estadual.\nCompletude: grau de preenchimento de uma variável ou conjunto de variáveis.\nDenominador: população, total de eventos ou base de referência usada para relativizar um numerador.\nDado: registro bruto ou processado sobre uma unidade, evento, pessoa, território ou período.\nFonte de dados: sistema, pesquisa, repositório, arquivo ou base de onde os dados são obtidos.\nHarmonização: processo de tornar dados ou indicadores comparáveis no espaço, no tempo, nas categorias ou nas definições.\nIncidência: ocorrência de casos novos em uma população sob risco durante um período.\nIndicador: medida construída para representar um fenômeno de interesse, geralmente com definição, fonte e método de cálculo explícitos.\nIncerteza: grau de imprecisão ou instabilidade associado a uma estimativa, indicador ou interpretação.\nLetalidade: proporção de casos de uma doença ou agravo que evoluem para óbito.\nNumerador: quantidade principal observada em um indicador, como casos, óbitos, internações ou domicílios com determinada condição.\nPadronização: ajuste de um indicador para permitir comparação entre populações com estruturas diferentes, como idade ou sexo.\nPrevalência: proporção de pessoas com uma doença, condição ou característica em um ponto ou período.\nProporção: medida em que o numerador está contido no denominador.\nRazão: comparação entre duas grandezas, grupos ou quantidades que não necessariamente têm relação parte-todo.\nReprodutibilidade: possibilidade de refazer uma análise com os mesmos dados e métodos, obtendo resultados equivalentes.\nSuavização: técnica para reduzir instabilidade aleatória em indicadores, especialmente em áreas pequenas ou séries temporais ruidosas.\nTaxa: medida que relaciona eventos a uma população de referência e, frequentemente, a um período.\nUnidade de análise: unidade sobre a qual o indicador é calculado ou interpretado, como pessoa, domicílio, município, mês ou ano.\nVigilância em saúde: conjunto de ações voltadas ao conhecimento, detecção, prevenção e controle de riscos, agravos e determinantes da saúde.",
+    "crumbs": [
+      "Apêndices",
+      "Glossário"
+    ]
+  },
+  {
+    "objectID": "checklist.html",
+    "href": "checklist.html",
+    "title": "Checklist para construção de indicadores",
+    "section": "",
+    "text": "Definição\nEste checklist resume etapas práticas para construir, revisar e publicar indicadores de interesse para a Saúde Pública.",
+    "crumbs": [
+      "Apêndices",
+      "Checklist para construção de indicadores"
+    ]
+  },
+  {
+    "objectID": "checklist.html#definição",
+    "href": "checklist.html#definição",
+    "title": "Checklist para construção de indicadores",
+    "section": "",
+    "text": "A pergunta analítica está clara?\nO fenômeno de interesse foi definido?\nO indicador responde diretamente à pergunta?\nO público-alvo da análise está definido?\nA unidade de análise está definida?",
+    "crumbs": [
+      "Apêndices",
+      "Checklist para construção de indicadores"
+    ]
+  },
+  {
+    "objectID": "checklist.html#fonte",
+    "href": "checklist.html#fonte",
+    "title": "Checklist para construção de indicadores",
+    "section": "Fonte",
+    "text": "Fonte\n\nA fonte de dados é conhecida e documentada?\nA data de extração foi registrada?\nA versão da base foi registrada?\nA cobertura da fonte é adequada?\nHá mudanças metodológicas no período analisado?",
+    "crumbs": [
+      "Apêndices",
+      "Checklist para construção de indicadores"
+    ]
+  },
+  {
+    "objectID": "checklist.html#numerador-e-denominador",
+    "href": "checklist.html#numerador-e-denominador",
+    "title": "Checklist para construção de indicadores",
+    "section": "Numerador e denominador",
+    "text": "Numerador e denominador\n\nO numerador está claramente definido?\nO denominador representa a população sob risco?\nO numerador está contido no denominador quando se trata de proporção?\nA constante de multiplicação foi definida?\nO período do numerador e do denominador é compatível?",
+    "crumbs": [
+      "Apêndices",
+      "Checklist para construção de indicadores"
+    ]
+  },
+  {
+    "objectID": "checklist.html#qualidade",
+    "href": "checklist.html#qualidade",
+    "title": "Checklist para construção de indicadores",
+    "section": "Qualidade",
+    "text": "Qualidade\n\nA completude dos campos essenciais foi avaliada?\nRegistros duplicados foram verificados?\nCódigos territoriais foram validados?\nDatas e categorias foram verificadas?\nIgnorados e faltantes foram tratados de forma documentada?",
+    "crumbs": [
+      "Apêndices",
+      "Checklist para construção de indicadores"
+    ]
+  },
+  {
+    "objectID": "checklist.html#harmonização",
+    "href": "checklist.html#harmonização",
+    "title": "Checklist para construção de indicadores",
+    "section": "Harmonização",
+    "text": "Harmonização\n\nA escala territorial é compatível entre fontes?\nA escala temporal é compatível entre fontes?\nMudanças de malha territorial foram consideradas?\nTaxas foram recalculadas a partir de numeradores e denominadores?\nDefasagens temporais foram avaliadas quando necessárias?",
+    "crumbs": [
+      "Apêndices",
+      "Checklist para construção de indicadores"
+    ]
+  },
+  {
+    "objectID": "checklist.html#incerteza",
+    "href": "checklist.html#incerteza",
+    "title": "Checklist para construção de indicadores",
+    "section": "Incerteza",
+    "text": "Incerteza\n\nO número absoluto de eventos foi observado?\nIndicadores com pequenos números foram identificados?\nHá necessidade de agregação temporal ou espacial?\nIntervalos de confiança ou outras medidas de incerteza são necessários?\nRankings e mapas foram interpretados com cautela?",
+    "crumbs": [
+      "Apêndices",
+      "Checklist para construção de indicadores"
+    ]
+  },
+  {
+    "objectID": "checklist.html#ética-e-comunicação",
+    "href": "checklist.html#ética-e-comunicação",
+    "title": "Checklist para construção de indicadores",
+    "section": "Ética e comunicação",
+    "text": "Ética e comunicação\n\nHá risco de identificação direta ou indireta?\nCélulas pequenas foram suprimidas ou agregadas quando necessário?\nA comunicação evita estigmatizar territórios ou grupos?\nLimitações foram apresentadas?\nA interpretação separa descrição, hipótese e recomendação?",
+    "crumbs": [
+      "Apêndices",
+      "Checklist para construção de indicadores"
+    ]
+  },
+  {
+    "objectID": "checklist.html#reprodutibilidade",
+    "href": "checklist.html#reprodutibilidade",
+    "title": "Checklist para construção de indicadores",
+    "section": "Reprodutibilidade",
+    "text": "Reprodutibilidade\n\nA fórmula está documentada?\nO código usado no cálculo está preservado?\nOs pacotes e versões principais foram registrados?\nA saída pode ser reproduzida?\nA ficha técnica do indicador está completa?",
+    "crumbs": [
+      "Apêndices",
+      "Checklist para construção de indicadores"
     ]
   }
 ]

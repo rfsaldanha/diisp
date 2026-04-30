@@ -105,6 +105,9 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -405,20 +408,26 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./inter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Internet, redes sociais e outras mídias</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./etica.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ética, privacidade e governança</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Ética, privacidade e governança</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./reproducibilidade.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Reprodutibilidade</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Reprodutibilidade</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./estudo_caso.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Estudo de caso integrado</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estudo de caso integrado</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -427,6 +436,29 @@ window.Quarto = {
  <span class="menu-text">Referências</span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apêndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glossario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossário</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./checklist.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Checklist para construção de indicadores</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -476,6 +508,23 @@ window.Quarto = {
 
 <p>Indicadores em Saúde Pública frequentemente são calculados para áreas pequenas, grupos populacionais específicos ou períodos curtos. Nessas situações, pequenas variações no número de eventos podem produzir grandes oscilações em taxas e proporções. A interpretação deve considerar a incerteza estatística e a instabilidade dos indicadores.</p>
 <p>A incerteza não é um problema restrito a modelos estatísticos. Ela aparece em contagens, taxas, proporções, estimativas populacionais, classificações territoriais e medidas ambientais. Reconhecer essa incerteza é parte da boa prática de análise.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Poucos eventos] --&gt; B[Taxa instável]
+  B --&gt; C{Objetivo da análise}
+  C --&gt;|Monitoramento local| D[Mostrar contagem e taxa]
+  C --&gt;|Comparação territorial| E[Agregar ou suavizar]
+  C --&gt;|Publicação sensível| F[Suprimir ou categorizar]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <section id="instabilidade-de-taxas" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="instabilidade-de-taxas"><span class="header-section-number">6.1</span> Instabilidade de taxas</h2>
 <p>Uma taxa baseada em poucos eventos pode variar muito de um período para outro, mesmo quando o risco subjacente não mudou. Por exemplo, em um município pequeno, a ocorrência de um óbito adicional pode duplicar a taxa de mortalidade por uma causa específica.</p>
