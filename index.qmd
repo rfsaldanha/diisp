@@ -6,19 +6,29 @@ format:
 
 # Bem-vindo {.unnumbered}
 
-Este *e-book* busca apresentar e discutir diferentes dados e indicadores de interesse para a saúde pública, englobando aspectos sociodemográficos, ambientais e climáticos, entre outros.
+Este *e-book* apresenta conceitos, métodos, fontes de dados e exemplos de uso de indicadores de interesse para a Saúde Pública, com ênfase em análises territoriais, sociais, ambientais e climáticas.
 
-# Como citar este material?
+O material foi pensado para estudantes, pesquisadores, profissionais de Saúde Pública e equipes técnicas que trabalham com vigilância, planejamento, avaliação de políticas públicas ou análise de situação de saúde.
+
+# Como usar este livro? {.unnumbered}
+
+Os capítulos iniciais discutem conceitos fundamentais sobre dados, indicadores e harmonização espacial e temporal. Os capítulos temáticos podem ser consultados como referência para identificar indicadores, compreender sua interpretação, reconhecer limitações e localizar fontes de dados.
+
+Sempre que possível, são apresentados exemplos práticos em R, fórmulas de cálculo e indicações de bases públicas disponíveis.
+
+# Como citar este material? {.unnumbered}
 
 > SALDANHA, Raphael de Freitas. **Dados e Indicadores de Interesse para a Saúde Pública**. E-book. Disponível em <https://rfsaldanha.github.io/diisp/>.
 
-*ISBN requerido e em análise*
+*ISBN em solicitação.*
 
-# Sobre o autor
+# Sobre o autor {.unnumbered}
 
 Raphael Saldanha é geógrafo, especialista em Métodos Estatísticos Computacionais, Mestre em Saúde Coletiva pela Universidade Federal de Juiz de Fora e Doutor em Informação e Comunicação em Saúde pela Fundação Oswaldo Cruz.
 
-# Sugestões e contato
+# Sugestões e contato {.unnumbered}
+
+Sugestões, correções e comentários são bem-vindos.
 
 ```
 raphael.saldanha@fiocruz.br
