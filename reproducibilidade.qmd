@@ -1,0 +1,152 @@
+# Reprodutibilidade
+
+Uma análise é reprodutível quando outra pessoa consegue compreender seus dados, métodos e decisões a ponto de refazer o cálculo e obter resultados equivalentes. Em livros, painéis e relatórios de indicadores, a reprodutibilidade aumenta a confiança nos resultados e facilita atualizações futuras.
+
+Reprodutibilidade não significa apenas disponibilizar código. Também exige que as fontes, versões, parâmetros e decisões analíticas estejam documentados. Sem isso, duas pessoas podem usar a mesma fórmula e chegar a resultados diferentes.
+
+## Elementos mínimos
+
+Um projeto reprodutível deve registrar:
+
+-   Fontes de dados.
+-   Data de extração.
+-   Versão dos arquivos.
+-   Código usado para baixar, limpar e calcular indicadores.
+-   Pacotes e versões utilizados.
+-   Critérios de inclusão e exclusão.
+-   Tratamento de dados faltantes e ignorados.
+-   Fórmulas de cálculo.
+-   Escalas espaciais e temporais.
+-   Responsável pela atualização.
+
+| Elemento | Exemplo de registro |
+|---|---|
+| Fonte | SIM/DATASUS, extração em 2026-04-30 |
+| Unidade territorial | Município de residência, código IBGE de 7 dígitos |
+| Período | Ano de ocorrência |
+| Numerador | Óbitos por causa X |
+| Denominador | População residente estimada |
+| Filtros | Excluídos registros sem município de residência |
+| Pacotes | `dplyr`, `arrow`, `ggplot2` |
+| Saída | Tabela municipal em formato parquet |
+
+: Exemplo de registro mínimo para reprodução de um indicador
+
+## Pacotes usados nos exemplos
+
+Os exemplos em R deste livro utilizam principalmente:
+
+-   `dplyr`
+-   `ggplot2`
+-   `arrow`
+-   `tibble`
+-   `zendown`
+
+Alguns exemplos acessam arquivos em repositórios Zenodo. Para renderizar o livro em um ambiente novo, é necessário ter os pacotes instalados e acesso à internet, salvo quando os resultados já estiverem congelados pelo mecanismo de execução do Quarto.
+
+Um trecho inicial de preparação do ambiente pode ser documentado da seguinte forma:
+
+```r
+install.packages(c(
+  "arrow",
+  "dplyr",
+  "ggplot2",
+  "tibble",
+  "zendown"
+))
+```
+
+Esse código não precisa ser executado dentro do livro, mas ajuda o leitor a entender as dependências.
+
+## Execução congelada
+
+Este projeto usa `freeze: auto` no arquivo `_quarto.yml`. Isso permite reutilizar resultados já calculados quando o código não foi modificado. Essa estratégia é útil para exemplos que dependem de downloads grandes, APIs ou arquivos remotos.
+
+::: callout-tip
+Mesmo com execução congelada, mantenha o código executável. O congelamento ajuda a renderizar o livro, mas não substitui documentação, versionamento e testes ocasionais dos exemplos.
+:::
+
+## Controle de versões
+
+Além do versionamento do texto, é importante versionar decisões analíticas. Mudanças pequenas podem alterar resultados:
+
+-   Nova versão de uma base.
+-   Correção de código territorial.
+-   Atualização de população.
+-   Mudança no filtro de idade.
+-   Alteração em uma lista de causas.
+-   Inclusão ou exclusão de registros ignorados.
+
+Um histórico de mudanças deve registrar o que mudou, por que mudou e quais indicadores foram afetados.
+
+## Versionamento de dados
+
+Sempre que possível, use fontes com identificadores persistentes, como DOI, versão de repositório ou data de extração. Ao citar um conjunto de dados, registre:
+
+-   Nome do conjunto.
+-   Responsável.
+-   URL ou DOI.
+-   Versão ou data de acesso.
+-   Arquivo específico usado.
+-   Transformações aplicadas.
+
+Quando uma base não possui DOI ou versão formal, registre pelo menos a data de download, URL, filtros usados e nome do arquivo original. Se a base for atualizada frequentemente, a data de extração passa a ser parte essencial da referência.
+
+## Separação entre dado bruto e dado tratado
+
+O dado bruto deve ser preservado sempre que possível. As transformações devem gerar novos arquivos, mantendo rastreabilidade entre origem e produto final. Isso permite revisar decisões e corrigir erros sem reconstruir todo o processo manualmente.
+
+| Camada | Conteúdo | Deve ser editada manualmente? |
+|---|---|---|
+| Bruta | Arquivo original baixado ou recebido | Não |
+| Intermediária | Dados padronizados e limpos | Apenas por código |
+| Analítica | Base pronta para indicadores | Apenas por código |
+| Produto | Tabelas, gráficos, mapas, livro | Gerado automaticamente quando possível |
+
+: Camadas recomendadas de dados em projetos reprodutíveis
+
+## Organização sugerida
+
+Uma estrutura simples para projetos de indicadores pode separar:
+
+-   `data_raw/`: dados originais, sem edição.
+-   `data_processed/`: dados limpos ou harmonizados.
+-   `R/` ou `scripts/`: funções e rotinas.
+-   `docs/`: saída renderizada.
+-   `assets/`: imagens e materiais estáticos.
+-   `references.bib`: referências bibliográficas.
+
+## Nomes e metadados
+
+Nomes de arquivos devem ajudar a identificar conteúdo, território, período e versão. Exemplos:
+
+-   `sim_obitos_municipio_2024_raw.csv`
+-   `pop_municipal_2024_ibge.parquet`
+-   `taxa_mortalidade_respiratoria_municipio_2024.parquet`
+
+Evite nomes como `base_final.xlsx`, `base_final2.xlsx` ou `nova_base_corrigida.xlsx`, pois eles não informam origem, versão ou finalidade.
+
+## Checklist
+
+Antes de publicar, verifique:
+
+-   O livro renderiza em um ambiente limpo.
+-   As referências bibliográficas são resolvidas.
+-   Os links principais funcionam.
+-   As imagens existem.
+-   Os exemplos têm dependências documentadas.
+-   O código não contém caminhos locais privados.
+-   As bases usadas têm fonte e versão identificáveis.
+
+## Reprodutibilidade computacional e analítica
+
+Uma análise pode ser computacionalmente reprodutível, mas analiticamente frágil. Por exemplo, o código pode rodar perfeitamente, mas usar um denominador inadequado. Por isso, a revisão deve verificar tanto a execução quanto o sentido epidemiológico e territorial do indicador.
+
+Perguntas úteis:
+
+-   O código executa?
+-   O resultado faz sentido?
+-   O numerador está contido no denominador quando se trata de proporção?
+-   A população sob risco foi definida corretamente?
+-   Taxas foram recalculadas a partir de contagens, e não por média simples?
+-   A escala espacial e temporal é compatível com a pergunta?

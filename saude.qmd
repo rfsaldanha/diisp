@@ -1,0 +1,657 @@
+# Indicadores de saúde
+
+Indicadores de saúde sintetizam eventos, condições, necessidades, riscos e respostas relacionadas ao processo saúde-doença em uma população. Eles podem descrever mortalidade, morbidade, ocorrência de agravos, uso de serviços, cobertura de ações, qualidade da atenção e capacidade de resposta do sistema de saúde [@OPAS2008; @medronhoEpidemiologia2009].
+
+No Brasil, muitas informações podem ser obtidas em sistemas disponibilizados pelo DATASUS, incluindo estatísticas vitais, morbidade hospitalar, notificações, assistência à saúde, imunizações, rede assistencial, inquéritos e dados demográficos [@datasusTabnet].
+
+| Domínio | Indicadores apresentados | Fontes frequentes |
+|---|---|---|
+| Mortalidade | Taxa bruta de mortalidade, mortalidade infantil, mortalidade materna, mortalidade específica | SIM, SINASC, estimativas populacionais |
+| Morbidade | Incidência, prevalência, internação hospitalar | SINAN, SIH/SUS, inquéritos, registros clínicos |
+| Vigilância | Letalidade, positividade, taxa de notificação, detecção | Sistemas de notificação e laboratoriais |
+| Serviços e cobertura | Cobertura vacinal, abandono vacinal, cobertura APS, internações sensíveis à APS | Sistemas de imunização, APS, CNES, SIH/SUS |
+
+: Domínios comuns de indicadores de saúde
+
+::: callout-warning
+Indicadores de saúde dependem da definição do evento e da população sob risco. O mesmo numerador pode gerar interpretações diferentes quando dividido por população residente, nascidos vivos, casos notificados, pessoas testadas ou população-alvo.
+:::
+
+## Mortalidade
+
+### Taxa bruta de mortalidade
+
+#### Conceituação {.unnumbered}
+
+Número de óbitos ocorridos em uma população, em determinado período, dividido pela população residente no mesmo período.
+
+#### Interpretação {.unnumbered}
+
+Expressa a frequência geral de óbitos em uma população. Deve ser interpretada com cautela, pois é fortemente influenciada pela estrutura etária.
+
+#### Usos {.unnumbered}
+
+-   Monitorar o nível geral de mortalidade.
+-   Comparar tendências temporais em uma mesma população.
+-   Apoiar análises iniciais da situação de saúde.
+
+#### Limitações {.unnumbered}
+
+-   Não controla diferenças de idade entre populações.
+-   Pode mascarar causas específicas de morte.
+-   Depende da cobertura e qualidade do Sistema de Informações sobre Mortalidade.
+
+#### Fontes de dados {.unnumbered}
+
+Sistema de Informações sobre Mortalidade (SIM) e estimativas populacionais.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Taxa bruta de mortalidade} =
+\frac{\text{Óbitos no período}}{\text{População residente no período}} \times 1.000
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Município, região de saúde, unidade da federação, sexo, faixa etária, causa básica, ano ou mês.
+
+### Taxa de mortalidade infantil
+
+#### Conceituação {.unnumbered}
+
+Número de óbitos de menores de um ano de idade, em determinado período, dividido pelo número de nascidos vivos no mesmo período.
+
+#### Interpretação {.unnumbered}
+
+Indica condições de vida, atenção pré-natal, parto, cuidado neonatal, saneamento, nutrição e acesso aos serviços de saúde.
+
+#### Usos {.unnumbered}
+
+-   Monitorar condições de saúde materno-infantil.
+-   Avaliar desigualdades territoriais.
+-   Acompanhar políticas de atenção à gestante, ao parto e à criança.
+
+#### Limitações {.unnumbered}
+
+-   Pode ser instável em municípios pequenos.
+-   Depende da qualidade do registro de óbitos infantis e nascidos vivos.
+-   A comparação requer atenção ao período e ao local de residência.
+
+#### Fontes de dados {.unnumbered}
+
+SIM, Sistema de Informações sobre Nascidos Vivos (SINASC) e estimativas de correção quando aplicáveis.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Mortalidade infantil} =
+\frac{\text{Óbitos de menores de 1 ano}}{\text{Nascidos vivos}} \times 1.000
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Município, região de saúde, unidade da federação, sexo, idade neonatal/pós-neonatal, escolaridade materna, raça/cor, ano.
+
+### Razão de mortalidade materna
+
+#### Conceituação {.unnumbered}
+
+Número de óbitos maternos, em determinado período, dividido pelo número de nascidos vivos no mesmo período.
+
+#### Interpretação {.unnumbered}
+
+Expressa risco relacionado à gestação, parto e puerpério, além de refletir acesso, oportunidade e qualidade da atenção à saúde.
+
+#### Usos {.unnumbered}
+
+-   Monitorar saúde materna.
+-   Identificar desigualdades no cuidado obstétrico.
+-   Avaliar políticas de atenção à gestação e ao parto.
+
+#### Limitações {.unnumbered}
+
+-   Evento raro, sujeito a grande instabilidade em pequenas populações.
+-   Depende de investigação e classificação adequada do óbito materno.
+-   Pode exigir agregação temporal ou territorial.
+
+#### Fontes de dados {.unnumbered}
+
+SIM e SINASC.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Razão de mortalidade materna} =
+\frac{\text{Óbitos maternos}}{\text{Nascidos vivos}} \times 100.000
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Município, região de saúde, unidade da federação, faixa etária, raça/cor, causa, ano.
+
+### Taxa de mortalidade específica por causa
+
+#### Conceituação {.unnumbered}
+
+Número de óbitos por uma causa ou grupo de causas em uma população, em determinado período, dividido pela população residente.
+
+#### Interpretação {.unnumbered}
+
+Expressa a magnitude da mortalidade atribuída a uma causa específica. Pode ser calculada para doenças cardiovasculares, neoplasias, causas externas, doenças respiratórias, doenças infecciosas ou outros agrupamentos definidos pela Classificação Internacional de Doenças.
+
+#### Usos {.unnumbered}
+
+-   Monitorar causas prioritárias de morte.
+-   Comparar perfis de mortalidade entre territórios.
+-   Avaliar tendências de causas evitáveis ou sensíveis a políticas públicas.
+
+#### Limitações {.unnumbered}
+
+-   Depende da qualidade da declaração da causa básica.
+-   Causas mal definidas podem distorcer a interpretação.
+-   A comparação entre populações com estruturas etárias distintas pode exigir padronização por idade.
+
+#### Fontes de dados {.unnumbered}
+
+SIM e estimativas populacionais.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Mortalidade específica} =
+\frac{\text{Óbitos por causa específica}}{\text{População residente}} \times k
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Causa básica, capítulo CID, faixa etária, sexo, raça/cor, município, região de saúde, ano.
+
+### Mortalidade proporcional
+
+#### Conceituação {.unnumbered}
+
+Proporção de óbitos por uma causa, grupo de causas ou faixa etária em relação ao total de óbitos.
+
+#### Interpretação {.unnumbered}
+
+Descreve a composição da mortalidade, mas não mede risco populacional. Uma causa pode representar grande proporção dos óbitos mesmo quando sua taxa populacional não é alta, dependendo do perfil de mortalidade das demais causas.
+
+#### Usos {.unnumbered}
+
+-   Caracterizar o perfil de causas de morte.
+-   Identificar mudanças na composição da mortalidade.
+-   Apoiar análises descritivas iniciais.
+
+#### Limitações {.unnumbered}
+
+-   Não usa população como denominador.
+-   Aumento proporcional pode ocorrer mesmo sem aumento absoluto da causa.
+-   Deve ser interpretada junto com taxas específicas.
+
+#### Fontes de dados {.unnumbered}
+
+SIM.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Mortalidade proporcional} =
+\frac{\text{Óbitos por causa ou grupo}}{\text{Total de óbitos}} \times 100
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Causa, faixa etária, sexo, raça/cor, local de residência, período.
+
+## Morbidade
+
+### Taxa de incidência
+
+#### Conceituação {.unnumbered}
+
+Número de casos novos de uma doença ou agravo em uma população sob risco, em determinado período.
+
+#### Interpretação {.unnumbered}
+
+Expressa a velocidade de ocorrência de novos casos. É especialmente útil para doenças transmissíveis, agravos de notificação e eventos agudos.
+
+#### Usos {.unnumbered}
+
+-   Monitorar surtos, epidemias e tendências.
+-   Comparar risco entre territórios ou grupos.
+-   Avaliar intervenções de vigilância e controle.
+
+#### Limitações {.unnumbered}
+
+-   Depende da capacidade de detecção, diagnóstico e notificação.
+-   Mudanças no acesso ao serviço podem alterar a incidência registrada.
+-   Requer definição clara de caso novo.
+
+#### Fontes de dados {.unnumbered}
+
+Sistemas de notificação, como SINAN, sistemas laboratoriais, registros clínicos e estimativas populacionais.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Incidência} =
+\frac{\text{Casos novos no período}}{\text{População sob risco no período}} \times k
+$$
+
+em que $k$ é uma constante, como 1.000, 10.000 ou 100.000 habitantes.
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Município de residência, semana epidemiológica, faixa etária, sexo, raça/cor, agravo, classificação final.
+
+### Prevalência
+
+#### Conceituação {.unnumbered}
+
+Proporção de pessoas que apresentam uma doença, condição ou característica em determinado ponto ou período.
+
+#### Interpretação {.unnumbered}
+
+Expressa a carga existente de uma condição na população. É influenciada tanto pela incidência quanto pela duração da condição.
+
+#### Usos {.unnumbered}
+
+-   Estimar demanda por cuidado.
+-   Monitorar condições crônicas.
+-   Planejar serviços e políticas de atenção contínua.
+
+#### Limitações {.unnumbered}
+
+-   Pode ser afetada por sobrevida, acesso ao diagnóstico e duração da doença.
+-   Inquéritos podem ter viés de resposta ou cobertura.
+-   Registros administrativos podem captar apenas usuários do serviço.
+
+#### Fontes de dados {.unnumbered}
+
+Inquéritos populacionais, registros clínicos, sistemas de informação e bases administrativas.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Prevalência} =
+\frac{\text{Casos existentes}}{\text{População avaliada}} \times 100
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Sexo, idade, raça/cor, escolaridade, território, condição de saúde, período.
+
+### Taxa de internação hospitalar
+
+#### Conceituação {.unnumbered}
+
+Número de internações hospitalares de residentes em determinado território e período, dividido pela população residente.
+
+#### Interpretação {.unnumbered}
+
+Indica uso de serviços hospitalares, mas não deve ser interpretada diretamente como incidência da doença. É influenciada por acesso, oferta, regulação, práticas clínicas e organização da rede.
+
+#### Usos {.unnumbered}
+
+-   Monitorar carga hospitalar.
+-   Analisar internações por causas específicas.
+-   Avaliar condições sensíveis à atenção primária.
+
+#### Limitações {.unnumbered}
+
+-   Mede internações, não pessoas.
+-   Pode haver múltiplas internações da mesma pessoa.
+-   Depende da cobertura do sistema analisado.
+
+#### Fontes de dados {.unnumbered}
+
+Sistema de Informações Hospitalares do SUS (SIH/SUS) e estimativas populacionais.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Taxa de internação} =
+\frac{\text{Internações no período}}{\text{População residente}} \times k
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Município de residência, causa, faixa etária, sexo, estabelecimento, mês, ano.
+
+### Taxa de atendimentos ou procedimentos ambulatoriais
+
+#### Conceituação {.unnumbered}
+
+Número de atendimentos, consultas, exames ou procedimentos ambulatoriais em determinado período, dividido pela população de referência.
+
+#### Interpretação {.unnumbered}
+
+Expressa volume de produção ou uso de serviços ambulatoriais. Não mede diretamente necessidade de saúde, pois depende da oferta, acesso, registro e organização dos serviços.
+
+#### Usos {.unnumbered}
+
+-   Monitorar produção ambulatorial.
+-   Avaliar acesso e uso de serviços.
+-   Planejar oferta de procedimentos e consultas.
+
+#### Limitações {.unnumbered}
+
+-   Mede procedimentos, não indivíduos.
+-   Pode ser influenciada por mudanças de financiamento, registro ou organização da rede.
+-   Não informa, isoladamente, qualidade ou resolutividade.
+
+#### Fontes de dados {.unnumbered}
+
+Sistema de Informações Ambulatoriais do SUS (SIA/SUS), sistemas locais e estimativas populacionais.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Taxa ambulatorial} =
+\frac{\text{Atendimentos ou procedimentos}}{\text{População residente}} \times k
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Município, estabelecimento, procedimento, faixa etária, sexo, mês, ano.
+
+## Vigilância
+
+### Letalidade
+
+#### Conceituação {.unnumbered}
+
+Proporção de casos diagnosticados de uma doença ou agravo que evoluem para óbito.
+
+#### Interpretação {.unnumbered}
+
+Expressa a gravidade observada entre os casos registrados e a capacidade de diagnóstico e cuidado. Não deve ser confundida com mortalidade na população.
+
+#### Usos {.unnumbered}
+
+-   Monitorar gravidade de surtos e epidemias.
+-   Comparar evolução de casos entre períodos.
+-   Apoiar avaliação da atenção aos casos graves.
+
+#### Limitações {.unnumbered}
+
+-   Depende da detecção dos casos leves e graves.
+-   Pode ser superestimada quando há subdiagnóstico de casos leves.
+-   Requer seguimento adequado do desfecho.
+
+#### Fontes de dados {.unnumbered}
+
+Sistemas de notificação, registros laboratoriais, SIM e bases integradas.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Letalidade} =
+\frac{\text{Óbitos pela doença entre os casos}}{\text{Casos da doença}} \times 100
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Agravo, faixa etária, sexo, raça/cor, território, período, classificação de risco.
+
+### Positividade
+
+#### Conceituação {.unnumbered}
+
+Proporção de testes com resultado positivo entre os testes realizados.
+
+#### Interpretação {.unnumbered}
+
+Pode indicar intensidade de transmissão, focalização da testagem ou mudanças no acesso ao diagnóstico. Deve ser interpretada junto com o volume de testes.
+
+#### Usos {.unnumbered}
+
+-   Monitorar doenças infecciosas com diagnóstico laboratorial.
+-   Avaliar suficiência e focalização da testagem.
+-   Apoiar decisões de vigilância.
+
+#### Limitações {.unnumbered}
+
+-   Depende do critério de testagem.
+-   Pode aumentar quando poucos testes são realizados apenas em casos graves.
+-   Não substitui incidência populacional.
+
+#### Fontes de dados {.unnumbered}
+
+Sistemas laboratoriais, sistemas de vigilância e registros de testagem.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Positividade} =
+\frac{\text{Testes positivos}}{\text{Testes realizados}} \times 100
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Território, semana epidemiológica, tipo de teste, faixa etária, sexo, população testada.
+
+### Taxa de notificação
+
+#### Conceituação {.unnumbered}
+
+Número de notificações de determinado agravo em uma população, em um período definido.
+
+#### Interpretação {.unnumbered}
+
+Expressa a frequência de registros notificados, não necessariamente a ocorrência real do agravo. É influenciada por acesso aos serviços, sensibilidade da vigilância e critérios de notificação.
+
+#### Usos {.unnumbered}
+
+-   Monitorar agravos de notificação compulsória.
+-   Identificar mudanças na atividade de vigilância.
+-   Apoiar investigação de surtos e eventos incomuns.
+
+#### Limitações {.unnumbered}
+
+-   Pode refletir aumento de notificação, e não aumento real da ocorrência.
+-   Depende da oportunidade e completude do sistema.
+-   Pode incluir casos suspeitos, confirmados ou descartados, conforme o filtro utilizado.
+
+#### Fontes de dados {.unnumbered}
+
+SINAN e outros sistemas de vigilância.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Taxa de notificação} =
+\frac{\text{Notificações no período}}{\text{População residente}} \times k
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Agravo, classificação final, critério de confirmação, semana epidemiológica, município, faixa etária, sexo.
+
+### Taxa de detecção
+
+#### Conceituação {.unnumbered}
+
+Número de casos detectados de uma condição em uma população, em determinado período.
+
+#### Interpretação {.unnumbered}
+
+É usada quando a ocorrência observada depende fortemente da capacidade de busca, diagnóstico ou rastreamento. Valores maiores podem representar maior risco, melhor detecção ou ambos.
+
+#### Usos {.unnumbered}
+
+-   Monitorar doenças com subdiagnóstico relevante.
+-   Avaliar ações de busca ativa.
+-   Acompanhar programas de rastreamento ou vigilância.
+
+#### Limitações {.unnumbered}
+
+-   Não separa risco real de intensidade de detecção.
+-   Depende de acesso ao diagnóstico.
+-   Deve ser interpretada com informações sobre cobertura de testagem ou busca ativa.
+
+#### Fontes de dados {.unnumbered}
+
+Sistemas de vigilância, registros de programas, laboratórios e estimativas populacionais.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Taxa de detecção} =
+\frac{\text{Casos detectados}}{\text{População de referência}} \times k
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Território, faixa etária, sexo, raça/cor, grupo de risco, período.
+
+## Serviços e cobertura
+
+### Cobertura vacinal
+
+#### Conceituação {.unnumbered}
+
+Proporção da população-alvo que recebeu determinado imunobiológico ou esquema vacinal.
+
+#### Interpretação {.unnumbered}
+
+Indica alcance das ações de imunização na população-alvo. Coberturas baixas podem sinalizar risco de reintrodução ou manutenção de doenças imunopreveníveis.
+
+#### Usos {.unnumbered}
+
+-   Monitorar o Programa Nacional de Imunizações.
+-   Identificar bolsões de baixa cobertura.
+-   Apoiar busca ativa e planejamento de campanhas.
+
+#### Limitações {.unnumbered}
+
+-   Depende da estimativa correta da população-alvo.
+-   Pode exceder 100% quando o denominador está subestimado ou há registro por local de vacinação.
+-   Mudanças no sistema de informação podem afetar séries históricas.
+
+#### Fontes de dados {.unnumbered}
+
+Sistemas do Programa Nacional de Imunizações e estimativas populacionais.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Cobertura vacinal} =
+\frac{\text{Doses aplicadas válidas}}{\text{População-alvo}} \times 100
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Imunobiológico, dose, município, faixa etária, ano, população-alvo.
+
+### Taxa de abandono vacinal
+
+#### Conceituação {.unnumbered}
+
+Proporção de pessoas que iniciaram um esquema vacinal de múltiplas doses, mas não completaram as doses recomendadas.
+
+#### Interpretação {.unnumbered}
+
+Indica dificuldade de continuidade do esquema vacinal. Valores elevados podem sinalizar barreiras de acesso, problemas de registro, hesitação vacinal ou falhas de busca ativa.
+
+#### Usos {.unnumbered}
+
+-   Monitorar continuidade dos esquemas vacinais.
+-   Identificar territórios com necessidade de busca ativa.
+-   Avaliar organização local da imunização.
+
+#### Limitações {.unnumbered}
+
+-   Depende da qualidade do registro nominal ou agregado.
+-   Pode ser afetada por migração, doses aplicadas fora do território e atraso vacinal.
+-   Requer definição clara das doses comparadas.
+
+#### Fontes de dados {.unnumbered}
+
+Sistemas de imunização e estimativas da população-alvo.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Abandono vacinal} =
+\frac{\text{Primeira dose} - \text{Dose final}}{\text{Primeira dose}} \times 100
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Imunobiológico, esquema, município, faixa etária, ano.
+
+### Cobertura da Atenção Primária à Saúde
+
+#### Conceituação {.unnumbered}
+
+Proporção da população estimada coberta por equipes ou serviços de Atenção Primária à Saúde.
+
+#### Interpretação {.unnumbered}
+
+Indica capacidade potencial de acesso territorial à atenção primária, mas não mede diretamente qualidade, continuidade ou uso efetivo dos serviços.
+
+#### Usos {.unnumbered}
+
+-   Planejamento da rede de atenção.
+-   Monitoramento da expansão de equipes.
+-   Análise de associação com internações evitáveis e desfechos sensíveis à atenção primária.
+
+#### Limitações {.unnumbered}
+
+-   Mede cobertura potencial, não acesso efetivo.
+-   Pode não refletir composição, carga de trabalho ou qualidade das equipes.
+-   Depende de cadastro e atualização dos sistemas.
+
+#### Fontes de dados {.unnumbered}
+
+Sistemas de informação da Atenção Primária, CNES e estimativas populacionais.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Cobertura APS} =
+\frac{\text{População potencialmente coberta}}{\text{População residente}} \times 100
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Município, região de saúde, equipe, tipo de equipe, mês, ano.
+
+### Internações por condições sensíveis à Atenção Primária
+
+#### Conceituação {.unnumbered}
+
+Internações por causas que, em parte, poderiam ser reduzidas por ações oportunas e efetivas da Atenção Primária à Saúde.
+
+#### Interpretação {.unnumbered}
+
+Valores elevados podem indicar problemas de acesso, continuidade, qualidade ou resolutividade da atenção primária, mas também refletem perfil epidemiológico, vulnerabilidade social, disponibilidade hospitalar e práticas de internação.
+
+#### Usos {.unnumbered}
+
+-   Avaliar indiretamente desempenho da rede de atenção.
+-   Monitorar condições crônicas e agudas sensíveis ao cuidado primário.
+-   Identificar territórios prioritários para fortalecimento da APS.
+
+#### Limitações {.unnumbered}
+
+-   Não mede diretamente qualidade da APS.
+-   É influenciada por oferta hospitalar e regulação.
+-   Requer lista de causas previamente definida.
+
+#### Fontes de dados {.unnumbered}
+
+SIH/SUS, listas oficiais de condições sensíveis à APS e estimativas populacionais.
+
+#### Método de cálculo {.unnumbered}
+
+$$
+\text{Taxa ICSAP} =
+\frac{\text{Internações por condições sensíveis à APS}}{\text{População residente}} \times k
+$$
+
+#### Categorias sugeridas para análise {.unnumbered}
+
+Município de residência, causa, faixa etária, sexo, mês, ano, região de saúde.

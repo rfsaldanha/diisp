@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Introdução – Dados e Indicadores de Interesse para a Saúde Pública</title>
+<title>6&nbsp; Incerteza e pequenos números – Dados e Indicadores de Interesse para a Saúde Pública</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -53,8 +53,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./indi.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./socio.html" rel="next">
+<link href="./qualidade.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -106,6 +106,35 @@ gtag('js', new Date());
 gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -280,7 +309,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./incerteza.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Incerteza e pequenos números</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -316,7 +345,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
   </div>
 </li>
@@ -346,7 +375,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./incerteza.html" class="sidebar-item-text sidebar-link">
+  <a href="./incerteza.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Incerteza e pequenos números</span></span></a>
   </div>
 </li>
@@ -403,8 +432,18 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#instabilidade-de-taxas" id="toc-instabilidade-de-taxas" class="nav-link active" data-scroll-target="#instabilidade-de-taxas"><span class="header-section-number">6.1</span> Instabilidade de taxas</a></li>
+  <li><a href="#intervalos-de-confiança" id="toc-intervalos-de-confiança" class="nav-link" data-scroll-target="#intervalos-de-confiança"><span class="header-section-number">6.2</span> Intervalos de confiança</a></li>
+  <li><a href="#suavização" id="toc-suavização" class="nav-link" data-scroll-target="#suavização"><span class="header-section-number">6.3</span> Suavização</a></li>
+  <li><a href="#supressão-e-agregação" id="toc-supressão-e-agregação" class="nav-link" data-scroll-target="#supressão-e-agregação"><span class="header-section-number">6.4</span> Supressão e agregação</a></li>
+  <li><a href="#comunicação-da-incerteza" id="toc-comunicação-da-incerteza" class="nav-link" data-scroll-target="#comunicação-da-incerteza"><span class="header-section-number">6.5</span> Comunicação da incerteza</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -412,7 +451,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Incerteza e pequenos números</span></h1>
 </div>
 
 
@@ -429,51 +468,66 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </header>
 
 
-<p>O conceito de saúde ampliada desloca-se da compreensão biomédica que reduz a saúde à ausência de doença e a inscreve no campo do bem-estar, dos direitos e das condições concretas de vida. Nessa perspectiva, a saúde não se limita ao controle de agravos, mas envolve dimensões físicas, mentais e sociais, além dos contextos políticos, econômicos, culturais e ambientais que moldam a experiência de viver e adoecer <span class="citation" data-cites="who1948 ottawa1986">(<a href="referencias.html#ref-who1948" role="doc-biblioref">WORLD HEALTH ORGANIZATION, 1948</a>, <a href="referencias.html#ref-ottawa1986" role="doc-biblioref">1986</a>)</span>.</p>
-<p>No Brasil, essa concepção ganhou densidade política com o movimento da Reforma Sanitária e consolidou-se com a criação do Sistema Único de Saúde (SUS). A legislação do SUS reconhece explicitamente que a saúde da população também está relacionada com a organização social e econômica do país e depende de fatores como alimentação, moradia, saneamento, meio ambiente, trabalho, renda, educação, transporte, lazer e acesso a bens e serviços essenciais <span class="citation" data-cites="cns2024 brasil1990">(<a href="referencias.html#ref-brasil1990" role="doc-biblioref">BRASIL, 1990</a>; <a href="referencias.html#ref-cns2024" role="doc-biblioref">CONFERÊNCIA NACIONAL DE SAÚDE, 1986</a>)</span>. Trata-se, portanto, de uma concepção de saúde inseparável da cidadania, da justiça social e da garantia de direitos.</p>
-<p>Sob esse enfoque, a análise da situação de saúde requer uma leitura territorializada e intersetorial da realidade. A saúde é produzida em contextos concretos, marcados por desigualdades, vulnerabilidades e capacidades de proteção distribuídas de forma heterogênea nos territórios. A literatura sobre determinantes sociais e ambientais da saúde destaca que as iniquidades em saúde não decorrem apenas de características individuais ou do acesso aos serviços, mas também das condições de vida, trabalho, participação social e proteção pública <span class="citation" data-cites="buss2007 csdh2008">(<a href="referencias.html#ref-buss2007" role="doc-biblioref">BUSS; PELLEGRINI FILHO, 2007</a>; <a href="referencias.html#ref-csdh2008" role="doc-biblioref">COMMISSION ON SOCIAL DETERMINANTS OF HEALTH, 2008</a>)</span>. Isso implica reconhecer que decisões tomadas em setores como educação, mobilidade, habitação, proteção social, planejamento urbano e meio ambiente produzem efeitos diretos e indiretos sobre a saúde das populações <span class="citation" data-cites="pahoHiAP">(<a href="referencias.html#ref-pahoHiAP" role="doc-biblioref">PAN AMERICAN HEALTH ORGANIZATION, 2026</a>)</span>.</p>
-<p>Nesse quadro, dados e indicadores assumem papel estratégico. A vigilância em saúde e o planejamento das ações sanitárias não podem restringir-se aos indicadores epidemiológicos tradicionais, embora estes permaneçam fundamentais. É necessário incorporar medidas capazes de revelar as condições de vida da população, as desigualdades sociais, os contextos territoriais de vulnerabilidade e as exposições ambientais e climáticas que condicionam riscos, danos e possibilidades de resposta.</p>
-<p>Os indicadores sociais, por exemplo, sintetizam dimensões estruturais dos territórios, como escolaridade, renda, composição etária, inserção no trabalho, densidade populacional e padrões de urbanização, permitindo reconhecer contextos de pobreza, segregação e exclusão com repercussões relevantes para a saúde <span class="citation" data-cites="buss2007 csdh2008 jannuzzi2017">(<a href="referencias.html#ref-buss2007" role="doc-biblioref">BUSS; PELLEGRINI FILHO, 2007</a>; <a href="referencias.html#ref-csdh2008" role="doc-biblioref">COMMISSION ON SOCIAL DETERMINANTS OF HEALTH, 2008</a>; <a href="referencias.html#ref-jannuzzi2017" role="doc-biblioref">JANNUZZI, 2017</a>)</span>.</p>
-<p>De modo complementar, os indicadores ambientais e climáticos ampliam a análise ao incorporar os efeitos das condições ecológicas, da variabilidade climática e das mudanças climáticas sobre o bem-estar humano. Variáveis como temperatura, umidade, precipitação, qualidade do ar, uso e cobertura da terra e ocorrência de eventos extremos influenciam a dinâmica de doenças infecciosas, respiratórias e cardiovasculares, afetam a segurança alimentar e hídrica e agravam desigualdades preexistentes. O IPCC destaca que a mudança do clima já afeta negativamente a saúde física e mental, e a Organização Mundial da Saúde (OMS) recomenda que os sistemas de saúde fortaleçam sua resiliência climática por meio de abordagens integradas, multissetoriais e capazes de antecipar, prevenir, preparar e responder aos riscos relacionados ao clima <span class="citation" data-cites="ipcc2023health who2023climate">(<a href="referencias.html#ref-ipcc2023health" role="doc-biblioref">INTERGOVERNMENTAL PANEL ON CLIMATE CHANGE, 2023</a>; <a href="referencias.html#ref-who2023climate" role="doc-biblioref">WORLD HEALTH ORGANIZATION, 2023</a>)</span>.</p>
-<p>Indicadores, contudo, não são retratos neutros ou completos da realidade. Eles dependem de escolhas conceituais, fontes de dados, métodos de cálculo, escalas espaciais e temporais, além de critérios de interpretação <span class="citation" data-cites="jannuzzi2017 franceschiniMeasurementTheoryIndicator2019">(<a href="referencias.html#ref-franceschiniMeasurementTheoryIndicator2019" role="doc-biblioref">FRANCESCHINI; GALETTO; MAISANO, 2019</a>; <a href="referencias.html#ref-jannuzzi2017" role="doc-biblioref">JANNUZZI, 2017</a>)</span>. Por isso, seu uso em Saúde Pública exige atenção tanto ao fenômeno que se deseja representar quanto às limitações dos dados disponíveis.</p>
-<p>Este livro tem como objetivo apresentar conceitos, fontes de dados e indicadores de interesse para a Saúde Pública, com ênfase em dimensões sociodemográficas, ambientais e climáticas. Os capítulos seguintes partem da distinção conceitual entre dado e indicador e avançam para questões de harmonização, interpretação, cálculo e uso aplicado em análises territoriais de saúde.</p>
+<p>Indicadores em Saúde Pública frequentemente são calculados para áreas pequenas, grupos populacionais específicos ou períodos curtos. Nessas situações, pequenas variações no número de eventos podem produzir grandes oscilações em taxas e proporções. A interpretação deve considerar a incerteza estatística e a instabilidade dos indicadores.</p>
+<section id="instabilidade-de-taxas" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="instabilidade-de-taxas"><span class="header-section-number">6.1</span> Instabilidade de taxas</h2>
+<p>Uma taxa baseada em poucos eventos pode variar muito de um período para outro, mesmo quando o risco subjacente não mudou. Por exemplo, em um município pequeno, a ocorrência de um óbito adicional pode duplicar a taxa de mortalidade por uma causa específica.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Aviso
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Taxas calculadas com numeradores pequenos não devem ser interpretadas isoladamente. Sempre que possível, apresente também o número absoluto de eventos e o denominador utilizado.</p>
+</div>
+</div>
+</section>
+<section id="intervalos-de-confiança" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="intervalos-de-confiança"><span class="header-section-number">6.2</span> Intervalos de confiança</h2>
+<p>Intervalos de confiança ajudam a expressar a incerteza associada a uma estimativa. Para proporções, uma forma simples de aproximação é:</p>
+<p><span class="math display">\[
+IC_{95\%} = p \pm 1{,}96 \sqrt{\frac{p(1-p)}{n}}
+\]</span></p>
+<p>em que <span class="math inline">\(p\)</span> é a proporção observada e <span class="math inline">\(n\)</span> é o denominador. Para taxas baseadas em eventos raros, aproximações baseadas na distribuição de Poisson podem ser mais adequadas.</p>
+</section>
+<section id="suavização" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="suavização"><span class="header-section-number">6.3</span> Suavização</h2>
+<p>Quando o objetivo é identificar padrões espaciais ou temporais, pode ser útil suavizar indicadores instáveis. Estratégias comuns incluem:</p>
+<ul>
+<li>Médias móveis temporais.</li>
+<li>Agrupamento de anos.</li>
+<li>Agregação de áreas vizinhas.</li>
+<li>Modelos estatísticos com estrutura hierárquica.</li>
+<li>Modelos bayesianos para mapeamento de doenças <span class="citation" data-cites="lawson2018bayesian">(<a href="referencias.html#ref-lawson2018bayesian" role="doc-biblioref">LAWSON, 2018</a>)</span>.</li>
+</ul>
+<p>Essas técnicas reduzem variações aleatórias, mas também podem ocultar mudanças abruptas ou heterogeneidades locais. A escolha deve ser justificada pelo objetivo da análise.</p>
+</section>
+<section id="supressão-e-agregação" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="supressão-e-agregação"><span class="header-section-number">6.4</span> Supressão e agregação</h2>
+<p>Em algumas situações, indicadores com numeradores muito pequenos devem ser suprimidos ou apresentados em áreas/períodos agregados. Isso pode ser necessário tanto por instabilidade estatística quanto por proteção de privacidade.</p>
+<p>Exemplos de estratégias:</p>
+<ul>
+<li>Não publicar taxas com menos de um número mínimo de eventos.</li>
+<li>Agregar anos consecutivos.</li>
+<li>Usar regiões de saúde em vez de municípios.</li>
+<li>Apresentar apenas contagens ou categorias amplas.</li>
+</ul>
+</section>
+<section id="comunicação-da-incerteza" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="comunicação-da-incerteza"><span class="header-section-number">6.5</span> Comunicação da incerteza</h2>
+<p>A comunicação deve evitar falsa precisão. Em vez de destacar pequenas diferenças entre municípios ou grupos, é preferível indicar quando os valores são estatisticamente instáveis ou quando a diferença observada pode estar dentro da variação esperada.</p>
 
 
 <div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list" style="display: none">
-<div id="ref-brasil1990" class="csl-entry" role="listitem">
-BRASIL. <strong>Lei nº 8.080, de 19 de setembro de 1990: dispõe sobre as condições para a promoção, proteção e recuperação da saúde, a organização e o funcionamento dos serviços correspondentes e dá outras providências</strong>., 1990. Disponível em: &lt;<a href="https://www.planalto.gov.br/ccivil_03/leis/l8080.htm">https://www.planalto.gov.br/ccivil_03/leis/l8080.htm</a>&gt;
-</div>
-<div id="ref-buss2007" class="csl-entry" role="listitem">
-BUSS, P. M.; PELLEGRINI FILHO, A. <a href="https://doi.org/10.1590/S0103-73312007000100006">A saúde e seus determinantes sociais</a>. <strong>Physis: Revista de Saúde Coletiva</strong>, v. 17, n. 1, p. 77–93, 2007.
-</div>
-<div id="ref-csdh2008" class="csl-entry" role="listitem">
-COMMISSION ON SOCIAL DETERMINANTS OF HEALTH. <strong><a href="https://iris.who.int/handle/10665/43943">Closing the Gap in a Generation: Health Equity through Action on the Social Determinants of Health</a></strong>. Geneva: World Health Organization, 2008.
-</div>
-<div id="ref-cns2024" class="csl-entry" role="listitem">
-CONFERÊNCIA NACIONAL DE SAÚDE. <strong>Relatório Final da 8ª Conferência Nacional de Saúde</strong>. Brasília, DF: Ministério da Saúde, 1986. Disponível em: &lt;<a href="https://bvsms.saude.gov.br/bvs/publicacoes/8_conferencia_nacional_saude_relatorio_final.pdf">https://bvsms.saude.gov.br/bvs/publicacoes/8_conferencia_nacional_saude_relatorio_final.pdf</a>&gt;.
-</div>
-<div id="ref-franceschiniMeasurementTheoryIndicator2019" class="csl-entry" role="listitem">
-FRANCESCHINI, F.; GALETTO, M.; MAISANO, D. <a href="https://doi.org/10.1007/978-3-030-01192-5_3">From <span>Measurement Theory</span> to <span>Indicator Theory</span></a>. Em: FRANCESCHINI, F.; GALETTO, M.; MAISANO, D. <strong>Designing <span>Performance Measurement Systems</span></strong>. Cham: Springer International Publishing, 2019. p. 49–83.
-</div>
-<div id="ref-ipcc2023health" class="csl-entry" role="listitem">
-INTERGOVERNMENTAL PANEL ON CLIMATE CHANGE. <strong>Fact Sheet — Health</strong>. AR6 Working Group II: Impacts, Adaptation and Vulnerability, 2023. Disponível em: &lt;<a href="https://www.ipcc.ch/report/ar6/wg2/downloads/outreach/IPCC_AR6_WGII_FactSheet_Health.pdf">https://www.ipcc.ch/report/ar6/wg2/downloads/outreach/IPCC_AR6_WGII_FactSheet_Health.pdf</a>&gt;
-</div>
-<div id="ref-jannuzzi2017" class="csl-entry" role="listitem">
-JANNUZZI, P. DE M. <strong>Indicadores sociais no Brasil: conceitos, fontes de dados e aplicações</strong>. 6. ed. Campinas, SP: Editora Alínea, 2017.
-</div>
-<div id="ref-pahoHiAP" class="csl-entry" role="listitem">
-PAN AMERICAN HEALTH ORGANIZATION. <strong>Intersectoral Action / Health in All Policies</strong>., 2026. Disponível em: &lt;<a href="https://www.paho.org/en/topics/intersectoral-action-health-all-policies">https://www.paho.org/en/topics/intersectoral-action-health-all-policies</a>&gt;
-</div>
-<div id="ref-who1948" class="csl-entry" role="listitem">
-WORLD HEALTH ORGANIZATION. <strong>Constitution of the World Health Organization</strong>., 1948. Disponível em: &lt;<a href="https://www.who.int/about/governance/constitution">https://www.who.int/about/governance/constitution</a>&gt;
-</div>
-<div id="ref-ottawa1986" class="csl-entry" role="listitem">
-WORLD HEALTH ORGANIZATION. <strong>Ottawa Charter for Health Promotion</strong>. First International Conference on Health Promotion, Ottawa, 21 November 1986, 1986. Disponível em: &lt;<a href="https://www.afro.who.int/sites/default/files/2017-06/hpr%20ottawa_charter.pdf">https://www.afro.who.int/sites/default/files/2017-06/hpr%20ottawa_charter.pdf</a>&gt;
-</div>
-<div id="ref-who2023climate" class="csl-entry" role="listitem">
-WORLD HEALTH ORGANIZATION. <strong>Operational Framework for Building Climate Resilient and Low Carbon Health Systems</strong>., 2023. Disponível em: &lt;<a href="https://www.who.int/publications/i/item/9789240081888">https://www.who.int/publications/i/item/9789240081888</a>&gt;
+<div id="ref-lawson2018bayesian" class="csl-entry" role="listitem">
+LAWSON, A. B. <strong>Bayesian Disease Mapping: Hierarchical Modeling in Spatial Epidemiology</strong>. 3. ed. Boca Raton: CRC Press, 2018.
 </div>
 </div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -891,13 +945,13 @@ WORLD HEALTH ORGANIZATION. <strong>Operational Framework for Building Climate Re
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Bem-vindo">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Bem-vindo</span>
+      <a href="./qualidade.html" class="pagination-link" aria-label="Qualidade de dados">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Qualidade de dados</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./indi.html" class="pagination-link" aria-label="Dados e indicadores">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Dados e indicadores</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./socio.html" class="pagination-link" aria-label="Indicadores Sociodemográficos">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Indicadores Sociodemográficos</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

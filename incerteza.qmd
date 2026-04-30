@@ -1,0 +1,110 @@
+# Incerteza e pequenos números
+
+Indicadores em Saúde Pública frequentemente são calculados para áreas pequenas, grupos populacionais específicos ou períodos curtos. Nessas situações, pequenas variações no número de eventos podem produzir grandes oscilações em taxas e proporções. A interpretação deve considerar a incerteza estatística e a instabilidade dos indicadores.
+
+A incerteza não é um problema restrito a modelos estatísticos. Ela aparece em contagens, taxas, proporções, estimativas populacionais, classificações territoriais e medidas ambientais. Reconhecer essa incerteza é parte da boa prática de análise.
+
+## Instabilidade de taxas
+
+Uma taxa baseada em poucos eventos pode variar muito de um período para outro, mesmo quando o risco subjacente não mudou. Por exemplo, em um município pequeno, a ocorrência de um óbito adicional pode duplicar a taxa de mortalidade por uma causa específica.
+
+::: callout-warning
+Taxas calculadas com numeradores pequenos não devem ser interpretadas isoladamente. Sempre que possível, apresente também o número absoluto de eventos e o denominador utilizado.
+:::
+
+Um exemplo simples ilustra o problema. Se um município com 5.000 habitantes registra 1 óbito por determinada causa, a taxa é 20 por 100.000 habitantes. Se no ano seguinte registra 2 óbitos, a taxa passa para 40 por 100.000 habitantes. A taxa dobrou, mas a diferença absoluta foi de apenas um evento.
+
+| Óbitos | População | Taxa por 100.000 |
+|---:|---:|---:|
+| 1 | 5.000 | 20 |
+| 2 | 5.000 | 40 |
+| 3 | 5.000 | 60 |
+
+: Instabilidade de taxas com pequenos numeradores
+
+## Intervalos de confiança
+
+Intervalos de confiança ajudam a expressar a incerteza associada a uma estimativa. Para proporções, uma forma simples de aproximação é:
+
+$$
+IC_{95\%} = p \pm 1{,}96 \sqrt{\frac{p(1-p)}{n}}
+$$
+
+em que $p$ é a proporção observada e $n$ é o denominador. Para taxas baseadas em eventos raros, aproximações baseadas na distribuição de Poisson podem ser mais adequadas.
+
+Em relatórios de gestão, nem sempre é necessário apresentar todos os intervalos de confiança, mas é importante reconhecer a incerteza quando se comparam áreas pequenas ou grupos com poucos eventos. Uma diferença aparente no mapa pode não representar uma diferença estatisticamente ou substantivamente relevante.
+
+## Erro aleatório e viés
+
+Erro aleatório e viés são problemas distintos. O erro aleatório decorre da variação esperada em torno de uma estimativa. O viés ocorre quando a medida se afasta sistematicamente do fenômeno real.
+
+| Problema | Exemplo | Estratégia |
+|---|---|---|
+| Erro aleatório | Poucos óbitos em município pequeno | Agregar anos, suavizar ou apresentar incerteza |
+| Viés de cobertura | Subnotificação em determinado território | Avaliar cobertura e interpretar com cautela |
+| Viés de seleção | Testagem concentrada em casos graves | Apresentar volume de testes e critério de testagem |
+| Erro de classificação | Causa básica mal definida | Investigar qualidade do registro e categorias mal definidas |
+
+: Diferença entre erro aleatório e viés
+
+## Suavização
+
+Quando o objetivo é identificar padrões espaciais ou temporais, pode ser útil suavizar indicadores instáveis. Estratégias comuns incluem:
+
+-   Médias móveis temporais.
+-   Agrupamento de anos.
+-   Agregação de áreas vizinhas.
+-   Modelos estatísticos com estrutura hierárquica.
+-   Modelos bayesianos para mapeamento de doenças [@lawson2018bayesian].
+
+Essas técnicas reduzem variações aleatórias, mas também podem ocultar mudanças abruptas ou heterogeneidades locais. A escolha deve ser justificada pelo objetivo da análise.
+
+### Médias móveis
+
+Uma média móvel temporal substitui o valor de um período por uma média de períodos vizinhos.
+
+$$
+\bar{x}_t = \frac{x_{t-1} + x_t + x_{t+1}}{3}
+$$
+
+Essa técnica pode reduzir oscilações pontuais em séries temporais. Porém, quando usada em vigilância, pode atrasar a identificação de mudanças recentes.
+
+### Agregação temporal
+
+Outra estratégia é agregar anos ou meses. Em vez de calcular a taxa anual por município, pode-se calcular uma taxa trienal:
+
+$$
+\text{Taxa trienal} =
+\frac{\text{Eventos em 3 anos}}{\text{População média ou pessoa-tempo no período}} \times k
+$$
+
+A agregação aumenta a estabilidade, mas reduz a resolução temporal.
+
+## Supressão e agregação
+
+Em algumas situações, indicadores com numeradores muito pequenos devem ser suprimidos ou apresentados em áreas/períodos agregados. Isso pode ser necessário tanto por instabilidade estatística quanto por proteção de privacidade.
+
+Exemplos de estratégias:
+
+-   Não publicar taxas com menos de um número mínimo de eventos.
+-   Agregar anos consecutivos.
+-   Usar regiões de saúde em vez de municípios.
+-   Apresentar apenas contagens ou categorias amplas.
+
+Uma regra de supressão deve ser definida antes da divulgação. Por exemplo, pode-se optar por não publicar taxas quando o numerador for menor que 5 ou 10 eventos. O ponto de corte depende do tema, da finalidade, da sensibilidade dos dados e do risco de identificação.
+
+## Mapas e ranqueamentos
+
+Mapas e rankings podem sugerir diferenças mais claras do que os dados sustentam. Em áreas pequenas, municípios podem aparecer no topo ou na base de um ranking por flutuação aleatória. Por isso, mapas de taxas devem ser acompanhados por:
+
+-   Número absoluto de eventos.
+-   Denominador.
+-   Indicação de instabilidade.
+-   Classes de incerteza ou supressão quando necessário.
+-   Comentário metodológico sobre pequenos números.
+
+## Comunicação da incerteza
+
+A comunicação deve evitar falsa precisão. Em vez de destacar pequenas diferenças entre municípios ou grupos, é preferível indicar quando os valores são estatisticamente instáveis ou quando a diferença observada pode estar dentro da variação esperada.
+
+Frases como "o município A tem risco duas vezes maior" devem ser usadas com cuidado quando os números absolutos são pequenos. Em muitos casos, é mais adequado escrever: "o município apresentou taxa elevada no período, mas o indicador é instável devido ao pequeno número de eventos".

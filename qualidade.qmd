@@ -1,0 +1,153 @@
+# Qualidade de dados
+
+A qualidade dos indicadores depende diretamente da qualidade dos dados utilizados. Erros de registro, atrasos, duplicidades, mudanças de definição e subnotificação podem alterar a interpretação de uma taxa, proporção ou série temporal. Por isso, a avaliação da qualidade deve ser parte explícita da análise, e não uma etapa secundária.
+
+Em bases de saúde, a qualidade deve ser avaliada antes e depois da construção do indicador. Antes, porque problemas no dado bruto podem inviabilizar o cálculo; depois, porque o próprio indicador pode revelar inconsistências, como taxas impossíveis, valores acima de 100% ou quebras abruptas na série.
+
+## Dimensões da qualidade
+
+As principais dimensões de qualidade em bases de interesse para a Saúde Pública incluem:
+
+-   Completude: proporção de campos preenchidos.
+-   Consistência: compatibilidade lógica entre variáveis.
+-   Validade: aderência dos valores aos domínios esperados.
+-   Oportunidade: intervalo entre ocorrência, registro, processamento e disponibilização.
+-   Duplicidade: presença de registros repetidos para o mesmo evento ou pessoa.
+-   Cobertura: grau em que a base representa a população ou evento de interesse.
+-   Comparabilidade: estabilidade dos conceitos, formulários, classificações e métodos ao longo do tempo.
+
+| Dimensão | Pergunta prática | Exemplo de problema |
+|---|---|---|
+| Completude | Os campos essenciais estão preenchidos? | Município de residência ignorado |
+| Consistência | As variáveis são compatíveis entre si? | Idade negativa ou data impossível |
+| Validade | Os valores pertencem a categorias esperadas? | Código de município inexistente |
+| Oportunidade | O dado chega a tempo de orientar ação? | Notificações inseridas com atraso |
+| Duplicidade | O mesmo evento aparece mais de uma vez? | Duas notificações para o mesmo caso |
+| Cobertura | A base capta todos os eventos esperados? | Sub-registro de óbitos ou casos |
+| Comparabilidade | A definição se manteve no tempo? | Mudança de formulário ou critério de caso |
+
+: Dimensões práticas da qualidade dos dados
+
+## Completude
+
+A completude pode ser calculada como a proporção de registros com informação válida em determinado campo.
+
+$$
+\text{Completude} = \frac{\text{Registros preenchidos}}{\text{Total de registros esperados}} \times 100
+$$
+
+Campos essenciais, como município de residência, idade, sexo, data de ocorrência e classificação diagnóstica, devem ser avaliados antes do cálculo de indicadores. Baixa completude pode comprometer análises por território, grupo populacional ou período.
+
+A completude deve ser avaliada por variável e por estratos relevantes. Uma base pode ter boa completude geral, mas baixa completude em um estado, ano, município, raça/cor ou campo específico. Por isso, é útil apresentar a completude em tabelas ou mapas antes de interpretar diferenças territoriais.
+
+| Classificação operacional | Completude |
+|---|---:|
+| Excelente | 95% ou mais |
+| Boa | 90% a 94,9% |
+| Regular | 70% a 89,9% |
+| Baixa | Menos de 70% |
+
+: Exemplo de classificação operacional da completude
+
+## Consistência
+
+A consistência avalia se os valores registrados fazem sentido em conjunto. Exemplos:
+
+-   Data de óbito anterior à data de nascimento.
+-   Idade incompatível com tipo de evento.
+-   Município inexistente ou código territorial inválido.
+-   Sexo incompatível com determinada condição registrada.
+-   Procedimento hospitalar incompatível com idade ou diagnóstico.
+
+Algumas inconsistências podem ser corrigidas com regras documentadas, como padronização de códigos territoriais. Outras devem ser tratadas como exclusões ou incertezas, especialmente quando não há informação suficiente para recuperar o valor correto.
+
+## Validade e padronização
+
+Validade operacional significa que os valores registrados seguem formatos, domínios e classificações esperadas. Exemplos incluem códigos IBGE de municípios, códigos CID, datas válidas, categorias padronizadas de sexo, raça/cor e escolaridade.
+
+Problemas comuns:
+
+-   Códigos territoriais antigos misturados com códigos atuais.
+-   Categorias textuais escritas de formas diferentes.
+-   Datas em formatos distintos.
+-   Valores fora de faixa.
+-   Unidades de medida misturadas.
+
+::: callout-tip
+Sempre que possível, use tabelas oficiais de referência para validar códigos territoriais, classificações diagnósticas e categorias padronizadas.
+:::
+
+## Subnotificação e cobertura
+
+Nem todos os eventos observáveis são registrados. A subnotificação pode variar entre territórios, grupos sociais, períodos e tipos de evento. Um aumento em uma taxa pode refletir aumento real da ocorrência, melhora da vigilância, mudança no acesso aos serviços ou alteração no processo de registro.
+
+::: callout-warning
+Antes de interpretar uma tendência como aumento ou redução real do risco, é necessário avaliar mudanças na cobertura, nas definições do evento, no acesso ao diagnóstico e nas rotinas de registro.
+:::
+
+## Oportunidade
+
+A oportunidade é especialmente importante para vigilância. Um dado pode ser correto, mas chegar tarde demais para orientar uma ação. Pode-se medir a oportunidade como o intervalo entre a ocorrência do evento e sua entrada no sistema.
+
+$$
+\text{Atraso de notificação} = \text{Data de registro} - \text{Data de ocorrência}
+$$
+
+Esse atraso pode ser resumido por média, mediana, percentis ou proporção de registros dentro de um prazo aceitável.
+
+## Duplicidades
+
+Duplicidades podem ocorrer quando um mesmo evento é registrado mais de uma vez. A identificação depende de chaves fortes ou probabilísticas. Em bases de saúde, podem ser usadas combinações de campos como nome, data de nascimento, sexo, município, data do evento, número de cartão ou identificadores do sistema, quando disponíveis e permitidos.
+
+Após identificar possíveis duplicidades, é necessário decidir:
+
+-   Qual registro será mantido.
+-   Quais campos serão combinados.
+-   Quais registros serão excluídos.
+-   Como documentar a decisão.
+
+## Indicadores de qualidade da base
+
+Além dos indicadores substantivos, é útil calcular indicadores de qualidade:
+
+| Indicador de qualidade | Método de cálculo |
+|---|---|
+| Completude de campo essencial | Registros preenchidos / total de registros |
+| Proporção de registros inconsistentes | Registros com erro lógico / total de registros |
+| Proporção de duplicidades | Duplicidades prováveis / total de registros |
+| Oportunidade da notificação | Registros dentro do prazo / total de registros |
+| Percentual de ignorados | Registros ignorados / total de registros |
+
+: Exemplos de indicadores de qualidade da base
+
+## Auditoria mínima
+
+Antes de publicar ou utilizar um indicador, recomenda-se verificar:
+
+-   Fonte e versão da base.
+-   Data de extração.
+-   Critérios de inclusão e exclusão.
+-   Campos usados no numerador e denominador.
+-   Percentual de dados ausentes em variáveis essenciais.
+-   Possíveis duplicidades.
+-   Mudanças metodológicas no período.
+-   Consistência territorial e temporal.
+
+## Decisões de tratamento
+
+Problemas de qualidade exigem decisões explícitas. Algumas possibilidades são:
+
+-   Manter o registro como está e sinalizar limitação.
+-   Corrigir com base em fonte auxiliar confiável.
+-   Reclassificar como ignorado.
+-   Excluir do numerador.
+-   Excluir da análise estratificada, mas manter no total.
+-   Redistribuir ignorados segundo critério estatístico.
+
+Não existe uma única regra universal. A decisão depende do indicador, da fonte, do volume de registros afetados e do risco de viés.
+
+## Documentação
+
+Todo indicador deve ser acompanhado de uma ficha técnica. A ficha deve permitir que outra pessoa compreenda e reproduza o cálculo. Quando houver decisões analíticas, como exclusão de registros, redistribuição de ignorados ou uso de estimativas populacionais, essas decisões devem ser explicitadas.
+
+Uma boa documentação deve incluir uma seção específica de qualidade, informando problemas encontrados, proporção de registros afetados e tratamento adotado. Isso evita que o indicador pareça mais preciso do que realmente é.

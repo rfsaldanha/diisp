@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Introdução – Dados e Indicadores de Interesse para a Saúde Pública</title>
+<title>8&nbsp; Indicadores de saúde – Dados e Indicadores de Interesse para a Saúde Pública</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -53,8 +53,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./indi.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./ambi.html" rel="next">
+<link href="./socio.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -106,6 +106,35 @@ gtag('js', new Date());
 gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -280,7 +309,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./saude.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Indicadores de saúde</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -316,7 +345,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
   </div>
 </li>
@@ -358,7 +387,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./saude.html" class="sidebar-item-text sidebar-link">
+  <a href="./saude.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Indicadores de saúde</span></span></a>
   </div>
 </li>
@@ -403,8 +432,35 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#mortalidade" id="toc-mortalidade" class="nav-link active" data-scroll-target="#mortalidade"><span class="header-section-number">8.1</span> Mortalidade</a>
+  <ul class="collapse">
+  <li><a href="#taxa-bruta-de-mortalidade" id="toc-taxa-bruta-de-mortalidade" class="nav-link" data-scroll-target="#taxa-bruta-de-mortalidade"><span class="header-section-number">8.1.1</span> Taxa bruta de mortalidade</a></li>
+  <li><a href="#taxa-de-mortalidade-infantil" id="toc-taxa-de-mortalidade-infantil" class="nav-link" data-scroll-target="#taxa-de-mortalidade-infantil"><span class="header-section-number">8.1.2</span> Taxa de mortalidade infantil</a></li>
+  <li><a href="#razão-de-mortalidade-materna" id="toc-razão-de-mortalidade-materna" class="nav-link" data-scroll-target="#razão-de-mortalidade-materna"><span class="header-section-number">8.1.3</span> Razão de mortalidade materna</a></li>
+  </ul></li>
+  <li><a href="#morbidade" id="toc-morbidade" class="nav-link" data-scroll-target="#morbidade"><span class="header-section-number">8.2</span> Morbidade</a>
+  <ul class="collapse">
+  <li><a href="#taxa-de-incidência" id="toc-taxa-de-incidência" class="nav-link" data-scroll-target="#taxa-de-incidência"><span class="header-section-number">8.2.1</span> Taxa de incidência</a></li>
+  <li><a href="#prevalência" id="toc-prevalência" class="nav-link" data-scroll-target="#prevalência"><span class="header-section-number">8.2.2</span> Prevalência</a></li>
+  <li><a href="#taxa-de-internação-hospitalar" id="toc-taxa-de-internação-hospitalar" class="nav-link" data-scroll-target="#taxa-de-internação-hospitalar"><span class="header-section-number">8.2.3</span> Taxa de internação hospitalar</a></li>
+  </ul></li>
+  <li><a href="#vigilância" id="toc-vigilância" class="nav-link" data-scroll-target="#vigilância"><span class="header-section-number">8.3</span> Vigilância</a>
+  <ul class="collapse">
+  <li><a href="#letalidade" id="toc-letalidade" class="nav-link" data-scroll-target="#letalidade"><span class="header-section-number">8.3.1</span> Letalidade</a></li>
+  <li><a href="#positividade" id="toc-positividade" class="nav-link" data-scroll-target="#positividade"><span class="header-section-number">8.3.2</span> Positividade</a></li>
+  </ul></li>
+  <li><a href="#serviços-e-cobertura" id="toc-serviços-e-cobertura" class="nav-link" data-scroll-target="#serviços-e-cobertura"><span class="header-section-number">8.4</span> Serviços e cobertura</a>
+  <ul class="collapse">
+  <li><a href="#cobertura-vacinal" id="toc-cobertura-vacinal" class="nav-link" data-scroll-target="#cobertura-vacinal"><span class="header-section-number">8.4.1</span> Cobertura vacinal</a></li>
+  <li><a href="#cobertura-da-atenção-primária-à-saúde" id="toc-cobertura-da-atenção-primária-à-saúde" class="nav-link" data-scroll-target="#cobertura-da-atenção-primária-à-saúde"><span class="header-section-number">8.4.2</span> Cobertura da Atenção Primária à Saúde</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -412,7 +468,7 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Indicadores de saúde</span></h1>
 </div>
 
 
@@ -429,51 +485,454 @@ gtag('config', 'G-2M7VLSRDCB', { 'anonymize_ip': false});
 </header>
 
 
-<p>O conceito de saúde ampliada desloca-se da compreensão biomédica que reduz a saúde à ausência de doença e a inscreve no campo do bem-estar, dos direitos e das condições concretas de vida. Nessa perspectiva, a saúde não se limita ao controle de agravos, mas envolve dimensões físicas, mentais e sociais, além dos contextos políticos, econômicos, culturais e ambientais que moldam a experiência de viver e adoecer <span class="citation" data-cites="who1948 ottawa1986">(<a href="referencias.html#ref-who1948" role="doc-biblioref">WORLD HEALTH ORGANIZATION, 1948</a>, <a href="referencias.html#ref-ottawa1986" role="doc-biblioref">1986</a>)</span>.</p>
-<p>No Brasil, essa concepção ganhou densidade política com o movimento da Reforma Sanitária e consolidou-se com a criação do Sistema Único de Saúde (SUS). A legislação do SUS reconhece explicitamente que a saúde da população também está relacionada com a organização social e econômica do país e depende de fatores como alimentação, moradia, saneamento, meio ambiente, trabalho, renda, educação, transporte, lazer e acesso a bens e serviços essenciais <span class="citation" data-cites="cns2024 brasil1990">(<a href="referencias.html#ref-brasil1990" role="doc-biblioref">BRASIL, 1990</a>; <a href="referencias.html#ref-cns2024" role="doc-biblioref">CONFERÊNCIA NACIONAL DE SAÚDE, 1986</a>)</span>. Trata-se, portanto, de uma concepção de saúde inseparável da cidadania, da justiça social e da garantia de direitos.</p>
-<p>Sob esse enfoque, a análise da situação de saúde requer uma leitura territorializada e intersetorial da realidade. A saúde é produzida em contextos concretos, marcados por desigualdades, vulnerabilidades e capacidades de proteção distribuídas de forma heterogênea nos territórios. A literatura sobre determinantes sociais e ambientais da saúde destaca que as iniquidades em saúde não decorrem apenas de características individuais ou do acesso aos serviços, mas também das condições de vida, trabalho, participação social e proteção pública <span class="citation" data-cites="buss2007 csdh2008">(<a href="referencias.html#ref-buss2007" role="doc-biblioref">BUSS; PELLEGRINI FILHO, 2007</a>; <a href="referencias.html#ref-csdh2008" role="doc-biblioref">COMMISSION ON SOCIAL DETERMINANTS OF HEALTH, 2008</a>)</span>. Isso implica reconhecer que decisões tomadas em setores como educação, mobilidade, habitação, proteção social, planejamento urbano e meio ambiente produzem efeitos diretos e indiretos sobre a saúde das populações <span class="citation" data-cites="pahoHiAP">(<a href="referencias.html#ref-pahoHiAP" role="doc-biblioref">PAN AMERICAN HEALTH ORGANIZATION, 2026</a>)</span>.</p>
-<p>Nesse quadro, dados e indicadores assumem papel estratégico. A vigilância em saúde e o planejamento das ações sanitárias não podem restringir-se aos indicadores epidemiológicos tradicionais, embora estes permaneçam fundamentais. É necessário incorporar medidas capazes de revelar as condições de vida da população, as desigualdades sociais, os contextos territoriais de vulnerabilidade e as exposições ambientais e climáticas que condicionam riscos, danos e possibilidades de resposta.</p>
-<p>Os indicadores sociais, por exemplo, sintetizam dimensões estruturais dos territórios, como escolaridade, renda, composição etária, inserção no trabalho, densidade populacional e padrões de urbanização, permitindo reconhecer contextos de pobreza, segregação e exclusão com repercussões relevantes para a saúde <span class="citation" data-cites="buss2007 csdh2008 jannuzzi2017">(<a href="referencias.html#ref-buss2007" role="doc-biblioref">BUSS; PELLEGRINI FILHO, 2007</a>; <a href="referencias.html#ref-csdh2008" role="doc-biblioref">COMMISSION ON SOCIAL DETERMINANTS OF HEALTH, 2008</a>; <a href="referencias.html#ref-jannuzzi2017" role="doc-biblioref">JANNUZZI, 2017</a>)</span>.</p>
-<p>De modo complementar, os indicadores ambientais e climáticos ampliam a análise ao incorporar os efeitos das condições ecológicas, da variabilidade climática e das mudanças climáticas sobre o bem-estar humano. Variáveis como temperatura, umidade, precipitação, qualidade do ar, uso e cobertura da terra e ocorrência de eventos extremos influenciam a dinâmica de doenças infecciosas, respiratórias e cardiovasculares, afetam a segurança alimentar e hídrica e agravam desigualdades preexistentes. O IPCC destaca que a mudança do clima já afeta negativamente a saúde física e mental, e a Organização Mundial da Saúde (OMS) recomenda que os sistemas de saúde fortaleçam sua resiliência climática por meio de abordagens integradas, multissetoriais e capazes de antecipar, prevenir, preparar e responder aos riscos relacionados ao clima <span class="citation" data-cites="ipcc2023health who2023climate">(<a href="referencias.html#ref-ipcc2023health" role="doc-biblioref">INTERGOVERNMENTAL PANEL ON CLIMATE CHANGE, 2023</a>; <a href="referencias.html#ref-who2023climate" role="doc-biblioref">WORLD HEALTH ORGANIZATION, 2023</a>)</span>.</p>
-<p>Indicadores, contudo, não são retratos neutros ou completos da realidade. Eles dependem de escolhas conceituais, fontes de dados, métodos de cálculo, escalas espaciais e temporais, além de critérios de interpretação <span class="citation" data-cites="jannuzzi2017 franceschiniMeasurementTheoryIndicator2019">(<a href="referencias.html#ref-franceschiniMeasurementTheoryIndicator2019" role="doc-biblioref">FRANCESCHINI; GALETTO; MAISANO, 2019</a>; <a href="referencias.html#ref-jannuzzi2017" role="doc-biblioref">JANNUZZI, 2017</a>)</span>. Por isso, seu uso em Saúde Pública exige atenção tanto ao fenômeno que se deseja representar quanto às limitações dos dados disponíveis.</p>
-<p>Este livro tem como objetivo apresentar conceitos, fontes de dados e indicadores de interesse para a Saúde Pública, com ênfase em dimensões sociodemográficas, ambientais e climáticas. Os capítulos seguintes partem da distinção conceitual entre dado e indicador e avançam para questões de harmonização, interpretação, cálculo e uso aplicado em análises territoriais de saúde.</p>
+<p>Indicadores de saúde sintetizam eventos, condições, necessidades, riscos e respostas relacionadas ao processo saúde-doença em uma população. Eles podem descrever mortalidade, morbidade, ocorrência de agravos, uso de serviços, cobertura de ações, qualidade da atenção e capacidade de resposta do sistema de saúde <span class="citation" data-cites="OPAS2008 medronhoEpidemiologia2009">(<a href="referencias.html#ref-medronhoEpidemiologia2009" role="doc-biblioref">MEDRONHO et al., 2009</a>; <a href="referencias.html#ref-OPAS2008" role="doc-biblioref">REDE INTERAGENCIAL DE INFORMAÇÃO PARA A SAÚDE, 2008</a>)</span>.</p>
+<p>No Brasil, muitas informações podem ser obtidas em sistemas disponibilizados pelo DATASUS, incluindo estatísticas vitais, morbidade hospitalar, notificações, assistência à saúde, imunizações, rede assistencial, inquéritos e dados demográficos <span class="citation" data-cites="datasusTabnet">(<a href="referencias.html#ref-datasusTabnet" role="doc-biblioref">DATASUS, 2026</a>)</span>.</p>
+<section id="mortalidade" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="mortalidade"><span class="header-section-number">8.1</span> Mortalidade</h2>
+<section id="taxa-bruta-de-mortalidade" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="taxa-bruta-de-mortalidade"><span class="header-section-number">8.1.1</span> Taxa bruta de mortalidade</h3>
+<section id="conceituação" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação">Conceituação</h4>
+<p>Número de óbitos ocorridos em uma população, em determinado período, dividido pela população residente no mesmo período.</p>
+</section>
+<section id="interpretação" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação">Interpretação</h4>
+<p>Expressa a frequência geral de óbitos em uma população. Deve ser interpretada com cautela, pois é fortemente influenciada pela estrutura etária.</p>
+</section>
+<section id="usos" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos">Usos</h4>
+<ul>
+<li>Monitorar o nível geral de mortalidade.</li>
+<li>Comparar tendências temporais em uma mesma população.</li>
+<li>Apoiar análises iniciais da situação de saúde.</li>
+</ul>
+</section>
+<section id="limitações" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações">Limitações</h4>
+<ul>
+<li>Não controla diferenças de idade entre populações.</li>
+<li>Pode mascarar causas específicas de morte.</li>
+<li>Depende da cobertura e qualidade do Sistema de Informações sobre Mortalidade.</li>
+</ul>
+</section>
+<section id="fontes-de-dados" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados">Fontes de dados</h4>
+<p>Sistema de Informações sobre Mortalidade (SIM) e estimativas populacionais.</p>
+</section>
+<section id="método-de-cálculo" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo">Método de cálculo</h4>
+<p><span class="math display">\[
+\text{Taxa bruta de mortalidade} =
+\frac{\text{Óbitos no período}}{\text{População residente no período}} \times 1.000
+\]</span></p>
+</section>
+<section id="categorias-sugeridas-para-análise" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise">Categorias sugeridas para análise</h4>
+<p>Município, região de saúde, unidade da federação, sexo, faixa etária, causa básica, ano ou mês.</p>
+</section>
+</section>
+<section id="taxa-de-mortalidade-infantil" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="taxa-de-mortalidade-infantil"><span class="header-section-number">8.1.2</span> Taxa de mortalidade infantil</h3>
+<section id="conceituação-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-1">Conceituação</h4>
+<p>Número de óbitos de menores de um ano de idade, em determinado período, dividido pelo número de nascidos vivos no mesmo período.</p>
+</section>
+<section id="interpretação-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-1">Interpretação</h4>
+<p>Indica condições de vida, atenção pré-natal, parto, cuidado neonatal, saneamento, nutrição e acesso aos serviços de saúde.</p>
+</section>
+<section id="usos-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-1">Usos</h4>
+<ul>
+<li>Monitorar condições de saúde materno-infantil.</li>
+<li>Avaliar desigualdades territoriais.</li>
+<li>Acompanhar políticas de atenção à gestante, ao parto e à criança.</li>
+</ul>
+</section>
+<section id="limitações-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-1">Limitações</h4>
+<ul>
+<li>Pode ser instável em municípios pequenos.</li>
+<li>Depende da qualidade do registro de óbitos infantis e nascidos vivos.</li>
+<li>A comparação requer atenção ao período e ao local de residência.</li>
+</ul>
+</section>
+<section id="fontes-de-dados-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-1">Fontes de dados</h4>
+<p>SIM, Sistema de Informações sobre Nascidos Vivos (SINASC) e estimativas de correção quando aplicáveis.</p>
+</section>
+<section id="método-de-cálculo-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-1">Método de cálculo</h4>
+<p><span class="math display">\[
+\text{Mortalidade infantil} =
+\frac{\text{Óbitos de menores de 1 ano}}{\text{Nascidos vivos}} \times 1.000
+\]</span></p>
+</section>
+<section id="categorias-sugeridas-para-análise-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-1">Categorias sugeridas para análise</h4>
+<p>Município, região de saúde, unidade da federação, sexo, idade neonatal/pós-neonatal, escolaridade materna, raça/cor, ano.</p>
+</section>
+</section>
+<section id="razão-de-mortalidade-materna" class="level3" data-number="8.1.3">
+<h3 data-number="8.1.3" class="anchored" data-anchor-id="razão-de-mortalidade-materna"><span class="header-section-number">8.1.3</span> Razão de mortalidade materna</h3>
+<section id="conceituação-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-2">Conceituação</h4>
+<p>Número de óbitos maternos, em determinado período, dividido pelo número de nascidos vivos no mesmo período.</p>
+</section>
+<section id="interpretação-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-2">Interpretação</h4>
+<p>Expressa risco relacionado à gestação, parto e puerpério, além de refletir acesso, oportunidade e qualidade da atenção à saúde.</p>
+</section>
+<section id="usos-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-2">Usos</h4>
+<ul>
+<li>Monitorar saúde materna.</li>
+<li>Identificar desigualdades no cuidado obstétrico.</li>
+<li>Avaliar políticas de atenção à gestação e ao parto.</li>
+</ul>
+</section>
+<section id="limitações-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-2">Limitações</h4>
+<ul>
+<li>Evento raro, sujeito a grande instabilidade em pequenas populações.</li>
+<li>Depende de investigação e classificação adequada do óbito materno.</li>
+<li>Pode exigir agregação temporal ou territorial.</li>
+</ul>
+</section>
+<section id="fontes-de-dados-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-2">Fontes de dados</h4>
+<p>SIM e SINASC.</p>
+</section>
+<section id="método-de-cálculo-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-2">Método de cálculo</h4>
+<p><span class="math display">\[
+\text{Razão de mortalidade materna} =
+\frac{\text{Óbitos maternos}}{\text{Nascidos vivos}} \times 100.000
+\]</span></p>
+</section>
+<section id="categorias-sugeridas-para-análise-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-2">Categorias sugeridas para análise</h4>
+<p>Município, região de saúde, unidade da federação, faixa etária, raça/cor, causa, ano.</p>
+</section>
+</section>
+</section>
+<section id="morbidade" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="morbidade"><span class="header-section-number">8.2</span> Morbidade</h2>
+<section id="taxa-de-incidência" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="taxa-de-incidência"><span class="header-section-number">8.2.1</span> Taxa de incidência</h3>
+<section id="conceituação-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-3">Conceituação</h4>
+<p>Número de casos novos de uma doença ou agravo em uma população sob risco, em determinado período.</p>
+</section>
+<section id="interpretação-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-3">Interpretação</h4>
+<p>Expressa a velocidade de ocorrência de novos casos. É especialmente útil para doenças transmissíveis, agravos de notificação e eventos agudos.</p>
+</section>
+<section id="usos-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-3">Usos</h4>
+<ul>
+<li>Monitorar surtos, epidemias e tendências.</li>
+<li>Comparar risco entre territórios ou grupos.</li>
+<li>Avaliar intervenções de vigilância e controle.</li>
+</ul>
+</section>
+<section id="limitações-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-3">Limitações</h4>
+<ul>
+<li>Depende da capacidade de detecção, diagnóstico e notificação.</li>
+<li>Mudanças no acesso ao serviço podem alterar a incidência registrada.</li>
+<li>Requer definição clara de caso novo.</li>
+</ul>
+</section>
+<section id="fontes-de-dados-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-3">Fontes de dados</h4>
+<p>Sistemas de notificação, como SINAN, sistemas laboratoriais, registros clínicos e estimativas populacionais.</p>
+</section>
+<section id="método-de-cálculo-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-3">Método de cálculo</h4>
+<p><span class="math display">\[
+\text{Incidência} =
+\frac{\text{Casos novos no período}}{\text{População sob risco no período}} \times k
+\]</span></p>
+<p>em que <span class="math inline">\(k\)</span> é uma constante, como 1.000, 10.000 ou 100.000 habitantes.</p>
+</section>
+<section id="categorias-sugeridas-para-análise-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-3">Categorias sugeridas para análise</h4>
+<p>Município de residência, semana epidemiológica, faixa etária, sexo, raça/cor, agravo, classificação final.</p>
+</section>
+</section>
+<section id="prevalência" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="prevalência"><span class="header-section-number">8.2.2</span> Prevalência</h3>
+<section id="conceituação-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-4">Conceituação</h4>
+<p>Proporção de pessoas que apresentam uma doença, condição ou característica em determinado ponto ou período.</p>
+</section>
+<section id="interpretação-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-4">Interpretação</h4>
+<p>Expressa a carga existente de uma condição na população. É influenciada tanto pela incidência quanto pela duração da condição.</p>
+</section>
+<section id="usos-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-4">Usos</h4>
+<ul>
+<li>Estimar demanda por cuidado.</li>
+<li>Monitorar condições crônicas.</li>
+<li>Planejar serviços e políticas de atenção contínua.</li>
+</ul>
+</section>
+<section id="limitações-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-4">Limitações</h4>
+<ul>
+<li>Pode ser afetada por sobrevida, acesso ao diagnóstico e duração da doença.</li>
+<li>Inquéritos podem ter viés de resposta ou cobertura.</li>
+<li>Registros administrativos podem captar apenas usuários do serviço.</li>
+</ul>
+</section>
+<section id="fontes-de-dados-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-4">Fontes de dados</h4>
+<p>Inquéritos populacionais, registros clínicos, sistemas de informação e bases administrativas.</p>
+</section>
+<section id="método-de-cálculo-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-4">Método de cálculo</h4>
+<p><span class="math display">\[
+\text{Prevalência} =
+\frac{\text{Casos existentes}}{\text{População avaliada}} \times 100
+\]</span></p>
+</section>
+<section id="categorias-sugeridas-para-análise-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-4">Categorias sugeridas para análise</h4>
+<p>Sexo, idade, raça/cor, escolaridade, território, condição de saúde, período.</p>
+</section>
+</section>
+<section id="taxa-de-internação-hospitalar" class="level3" data-number="8.2.3">
+<h3 data-number="8.2.3" class="anchored" data-anchor-id="taxa-de-internação-hospitalar"><span class="header-section-number">8.2.3</span> Taxa de internação hospitalar</h3>
+<section id="conceituação-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-5">Conceituação</h4>
+<p>Número de internações hospitalares de residentes em determinado território e período, dividido pela população residente.</p>
+</section>
+<section id="interpretação-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-5">Interpretação</h4>
+<p>Indica uso de serviços hospitalares, mas não deve ser interpretada diretamente como incidência da doença. É influenciada por acesso, oferta, regulação, práticas clínicas e organização da rede.</p>
+</section>
+<section id="usos-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-5">Usos</h4>
+<ul>
+<li>Monitorar carga hospitalar.</li>
+<li>Analisar internações por causas específicas.</li>
+<li>Avaliar condições sensíveis à atenção primária.</li>
+</ul>
+</section>
+<section id="limitações-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-5">Limitações</h4>
+<ul>
+<li>Mede internações, não pessoas.</li>
+<li>Pode haver múltiplas internações da mesma pessoa.</li>
+<li>Depende da cobertura do sistema analisado.</li>
+</ul>
+</section>
+<section id="fontes-de-dados-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-5">Fontes de dados</h4>
+<p>Sistema de Informações Hospitalares do SUS (SIH/SUS) e estimativas populacionais.</p>
+</section>
+<section id="método-de-cálculo-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-5">Método de cálculo</h4>
+<p><span class="math display">\[
+\text{Taxa de internação} =
+\frac{\text{Internações no período}}{\text{População residente}} \times k
+\]</span></p>
+</section>
+<section id="categorias-sugeridas-para-análise-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-5">Categorias sugeridas para análise</h4>
+<p>Município de residência, causa, faixa etária, sexo, estabelecimento, mês, ano.</p>
+</section>
+</section>
+</section>
+<section id="vigilância" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="vigilância"><span class="header-section-number">8.3</span> Vigilância</h2>
+<section id="letalidade" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="letalidade"><span class="header-section-number">8.3.1</span> Letalidade</h3>
+<section id="conceituação-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-6">Conceituação</h4>
+<p>Proporção de casos diagnosticados de uma doença ou agravo que evoluem para óbito.</p>
+</section>
+<section id="interpretação-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-6">Interpretação</h4>
+<p>Expressa a gravidade observada entre os casos registrados e a capacidade de diagnóstico e cuidado. Não deve ser confundida com mortalidade na população.</p>
+</section>
+<section id="usos-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-6">Usos</h4>
+<ul>
+<li>Monitorar gravidade de surtos e epidemias.</li>
+<li>Comparar evolução de casos entre períodos.</li>
+<li>Apoiar avaliação da atenção aos casos graves.</li>
+</ul>
+</section>
+<section id="limitações-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-6">Limitações</h4>
+<ul>
+<li>Depende da detecção dos casos leves e graves.</li>
+<li>Pode ser superestimada quando há subdiagnóstico de casos leves.</li>
+<li>Requer seguimento adequado do desfecho.</li>
+</ul>
+</section>
+<section id="fontes-de-dados-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-6">Fontes de dados</h4>
+<p>Sistemas de notificação, registros laboratoriais, SIM e bases integradas.</p>
+</section>
+<section id="método-de-cálculo-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-6">Método de cálculo</h4>
+<p><span class="math display">\[
+\text{Letalidade} =
+\frac{\text{Óbitos pela doença entre os casos}}{\text{Casos da doença}} \times 100
+\]</span></p>
+</section>
+<section id="categorias-sugeridas-para-análise-6" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-6">Categorias sugeridas para análise</h4>
+<p>Agravo, faixa etária, sexo, raça/cor, território, período, classificação de risco.</p>
+</section>
+</section>
+<section id="positividade" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="positividade"><span class="header-section-number">8.3.2</span> Positividade</h3>
+<section id="conceituação-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-7">Conceituação</h4>
+<p>Proporção de testes com resultado positivo entre os testes realizados.</p>
+</section>
+<section id="interpretação-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-7">Interpretação</h4>
+<p>Pode indicar intensidade de transmissão, focalização da testagem ou mudanças no acesso ao diagnóstico. Deve ser interpretada junto com o volume de testes.</p>
+</section>
+<section id="usos-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-7">Usos</h4>
+<ul>
+<li>Monitorar doenças infecciosas com diagnóstico laboratorial.</li>
+<li>Avaliar suficiência e focalização da testagem.</li>
+<li>Apoiar decisões de vigilância.</li>
+</ul>
+</section>
+<section id="limitações-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-7">Limitações</h4>
+<ul>
+<li>Depende do critério de testagem.</li>
+<li>Pode aumentar quando poucos testes são realizados apenas em casos graves.</li>
+<li>Não substitui incidência populacional.</li>
+</ul>
+</section>
+<section id="fontes-de-dados-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-7">Fontes de dados</h4>
+<p>Sistemas laboratoriais, sistemas de vigilância e registros de testagem.</p>
+</section>
+<section id="método-de-cálculo-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-7">Método de cálculo</h4>
+<p><span class="math display">\[
+\text{Positividade} =
+\frac{\text{Testes positivos}}{\text{Testes realizados}} \times 100
+\]</span></p>
+</section>
+<section id="categorias-sugeridas-para-análise-7" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-7">Categorias sugeridas para análise</h4>
+<p>Território, semana epidemiológica, tipo de teste, faixa etária, sexo, população testada.</p>
+</section>
+</section>
+</section>
+<section id="serviços-e-cobertura" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="serviços-e-cobertura"><span class="header-section-number">8.4</span> Serviços e cobertura</h2>
+<section id="cobertura-vacinal" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="cobertura-vacinal"><span class="header-section-number">8.4.1</span> Cobertura vacinal</h3>
+<section id="conceituação-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-8">Conceituação</h4>
+<p>Proporção da população-alvo que recebeu determinado imunobiológico ou esquema vacinal.</p>
+</section>
+<section id="interpretação-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-8">Interpretação</h4>
+<p>Indica alcance das ações de imunização na população-alvo. Coberturas baixas podem sinalizar risco de reintrodução ou manutenção de doenças imunopreveníveis.</p>
+</section>
+<section id="usos-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-8">Usos</h4>
+<ul>
+<li>Monitorar o Programa Nacional de Imunizações.</li>
+<li>Identificar bolsões de baixa cobertura.</li>
+<li>Apoiar busca ativa e planejamento de campanhas.</li>
+</ul>
+</section>
+<section id="limitações-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-8">Limitações</h4>
+<ul>
+<li>Depende da estimativa correta da população-alvo.</li>
+<li>Pode exceder 100% quando o denominador está subestimado ou há registro por local de vacinação.</li>
+<li>Mudanças no sistema de informação podem afetar séries históricas.</li>
+</ul>
+</section>
+<section id="fontes-de-dados-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-8">Fontes de dados</h4>
+<p>Sistemas do Programa Nacional de Imunizações e estimativas populacionais.</p>
+</section>
+<section id="método-de-cálculo-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-8">Método de cálculo</h4>
+<p><span class="math display">\[
+\text{Cobertura vacinal} =
+\frac{\text{Doses aplicadas válidas}}{\text{População-alvo}} \times 100
+\]</span></p>
+</section>
+<section id="categorias-sugeridas-para-análise-8" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-8">Categorias sugeridas para análise</h4>
+<p>Imunobiológico, dose, município, faixa etária, ano, população-alvo.</p>
+</section>
+</section>
+<section id="cobertura-da-atenção-primária-à-saúde" class="level3" data-number="8.4.2">
+<h3 data-number="8.4.2" class="anchored" data-anchor-id="cobertura-da-atenção-primária-à-saúde"><span class="header-section-number">8.4.2</span> Cobertura da Atenção Primária à Saúde</h3>
+<section id="conceituação-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conceituação-9">Conceituação</h4>
+<p>Proporção da população estimada coberta por equipes ou serviços de Atenção Primária à Saúde.</p>
+</section>
+<section id="interpretação-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretação-9">Interpretação</h4>
+<p>Indica capacidade potencial de acesso territorial à atenção primária, mas não mede diretamente qualidade, continuidade ou uso efetivo dos serviços.</p>
+</section>
+<section id="usos-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usos-9">Usos</h4>
+<ul>
+<li>Planejamento da rede de atenção.</li>
+<li>Monitoramento da expansão de equipes.</li>
+<li>Análise de associação com internações evitáveis e desfechos sensíveis à atenção primária.</li>
+</ul>
+</section>
+<section id="limitações-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-9">Limitações</h4>
+<ul>
+<li>Mede cobertura potencial, não acesso efetivo.</li>
+<li>Pode não refletir composição, carga de trabalho ou qualidade das equipes.</li>
+<li>Depende de cadastro e atualização dos sistemas.</li>
+</ul>
+</section>
+<section id="fontes-de-dados-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fontes-de-dados-9">Fontes de dados</h4>
+<p>Sistemas de informação da Atenção Primária, CNES e estimativas populacionais.</p>
+</section>
+<section id="método-de-cálculo-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-de-cálculo-9">Método de cálculo</h4>
+<p><span class="math display">\[
+\text{Cobertura APS} =
+\frac{\text{População potencialmente coberta}}{\text{População residente}} \times 100
+\]</span></p>
+</section>
+<section id="categorias-sugeridas-para-análise-9" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="categorias-sugeridas-para-análise-9">Categorias sugeridas para análise</h4>
+<p>Município, região de saúde, equipe, tipo de equipe, mês, ano.</p>
 
 
 <div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list" style="display: none">
-<div id="ref-brasil1990" class="csl-entry" role="listitem">
-BRASIL. <strong>Lei nº 8.080, de 19 de setembro de 1990: dispõe sobre as condições para a promoção, proteção e recuperação da saúde, a organização e o funcionamento dos serviços correspondentes e dá outras providências</strong>., 1990. Disponível em: &lt;<a href="https://www.planalto.gov.br/ccivil_03/leis/l8080.htm">https://www.planalto.gov.br/ccivil_03/leis/l8080.htm</a>&gt;
+<div id="ref-datasusTabnet" class="csl-entry" role="listitem">
+DATASUS. <strong>Informações de Saúde (TABNET)</strong>., 2026. Disponível em: &lt;<a href="https://datasus.saude.gov.br/informacoes-de-saude-tabnet/">https://datasus.saude.gov.br/informacoes-de-saude-tabnet/</a>&gt;
 </div>
-<div id="ref-buss2007" class="csl-entry" role="listitem">
-BUSS, P. M.; PELLEGRINI FILHO, A. <a href="https://doi.org/10.1590/S0103-73312007000100006">A saúde e seus determinantes sociais</a>. <strong>Physis: Revista de Saúde Coletiva</strong>, v. 17, n. 1, p. 77–93, 2007.
+<div id="ref-medronhoEpidemiologia2009" class="csl-entry" role="listitem">
+MEDRONHO, R. et al. (EDS.). <strong>Epidemiologia</strong>. 2. ed. São Paulo: Atheneu, 2009.
 </div>
-<div id="ref-csdh2008" class="csl-entry" role="listitem">
-COMMISSION ON SOCIAL DETERMINANTS OF HEALTH. <strong><a href="https://iris.who.int/handle/10665/43943">Closing the Gap in a Generation: Health Equity through Action on the Social Determinants of Health</a></strong>. Geneva: World Health Organization, 2008.
-</div>
-<div id="ref-cns2024" class="csl-entry" role="listitem">
-CONFERÊNCIA NACIONAL DE SAÚDE. <strong>Relatório Final da 8ª Conferência Nacional de Saúde</strong>. Brasília, DF: Ministério da Saúde, 1986. Disponível em: &lt;<a href="https://bvsms.saude.gov.br/bvs/publicacoes/8_conferencia_nacional_saude_relatorio_final.pdf">https://bvsms.saude.gov.br/bvs/publicacoes/8_conferencia_nacional_saude_relatorio_final.pdf</a>&gt;.
-</div>
-<div id="ref-franceschiniMeasurementTheoryIndicator2019" class="csl-entry" role="listitem">
-FRANCESCHINI, F.; GALETTO, M.; MAISANO, D. <a href="https://doi.org/10.1007/978-3-030-01192-5_3">From <span>Measurement Theory</span> to <span>Indicator Theory</span></a>. Em: FRANCESCHINI, F.; GALETTO, M.; MAISANO, D. <strong>Designing <span>Performance Measurement Systems</span></strong>. Cham: Springer International Publishing, 2019. p. 49–83.
-</div>
-<div id="ref-ipcc2023health" class="csl-entry" role="listitem">
-INTERGOVERNMENTAL PANEL ON CLIMATE CHANGE. <strong>Fact Sheet — Health</strong>. AR6 Working Group II: Impacts, Adaptation and Vulnerability, 2023. Disponível em: &lt;<a href="https://www.ipcc.ch/report/ar6/wg2/downloads/outreach/IPCC_AR6_WGII_FactSheet_Health.pdf">https://www.ipcc.ch/report/ar6/wg2/downloads/outreach/IPCC_AR6_WGII_FactSheet_Health.pdf</a>&gt;
-</div>
-<div id="ref-jannuzzi2017" class="csl-entry" role="listitem">
-JANNUZZI, P. DE M. <strong>Indicadores sociais no Brasil: conceitos, fontes de dados e aplicações</strong>. 6. ed. Campinas, SP: Editora Alínea, 2017.
-</div>
-<div id="ref-pahoHiAP" class="csl-entry" role="listitem">
-PAN AMERICAN HEALTH ORGANIZATION. <strong>Intersectoral Action / Health in All Policies</strong>., 2026. Disponível em: &lt;<a href="https://www.paho.org/en/topics/intersectoral-action-health-all-policies">https://www.paho.org/en/topics/intersectoral-action-health-all-policies</a>&gt;
-</div>
-<div id="ref-who1948" class="csl-entry" role="listitem">
-WORLD HEALTH ORGANIZATION. <strong>Constitution of the World Health Organization</strong>., 1948. Disponível em: &lt;<a href="https://www.who.int/about/governance/constitution">https://www.who.int/about/governance/constitution</a>&gt;
-</div>
-<div id="ref-ottawa1986" class="csl-entry" role="listitem">
-WORLD HEALTH ORGANIZATION. <strong>Ottawa Charter for Health Promotion</strong>. First International Conference on Health Promotion, Ottawa, 21 November 1986, 1986. Disponível em: &lt;<a href="https://www.afro.who.int/sites/default/files/2017-06/hpr%20ottawa_charter.pdf">https://www.afro.who.int/sites/default/files/2017-06/hpr%20ottawa_charter.pdf</a>&gt;
-</div>
-<div id="ref-who2023climate" class="csl-entry" role="listitem">
-WORLD HEALTH ORGANIZATION. <strong>Operational Framework for Building Climate Resilient and Low Carbon Health Systems</strong>., 2023. Disponível em: &lt;<a href="https://www.who.int/publications/i/item/9789240081888">https://www.who.int/publications/i/item/9789240081888</a>&gt;
+<div id="ref-OPAS2008" class="csl-entry" role="listitem">
+REDE INTERAGENCIAL DE INFORMAÇÃO PARA A SAÚDE. <strong>Indicadores Básicos Para a Saúde No <span>Brasil</span>: Conceitos e Aplicações</strong>. Brasília: Organização Pan-Americana da Saúde, 2008.
 </div>
 </div>
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -891,13 +1350,13 @@ WORLD HEALTH ORGANIZATION. <strong>Operational Framework for Building Climate Re
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Bem-vindo">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Bem-vindo</span>
+      <a href="./socio.html" class="pagination-link" aria-label="Indicadores Sociodemográficos">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Indicadores Sociodemográficos</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./indi.html" class="pagination-link" aria-label="Dados e indicadores">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Dados e indicadores</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ambi.html" class="pagination-link" aria-label="Indicadores Ambientais">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Indicadores Ambientais</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

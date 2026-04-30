@@ -1,0 +1,194 @@
+# Estudo de caso integrado
+
+Este capítulo apresenta um roteiro para combinar indicadores sociodemográficos, de saúde, ambientais e climáticos em uma análise territorial. O objetivo não é definir um único modelo obrigatório, mas demonstrar como os capítulos anteriores podem ser articulados em uma investigação aplicada.
+
+O exemplo é apresentado como um desenho de análise. Em um projeto real, cada etapa deve ser ajustada ao agravo, território, período, fontes disponíveis e finalidade da decisão.
+
+## Pergunta orientadora
+
+Uma pergunta possível seria:
+
+> Quais municípios apresentam maior vulnerabilidade socioambiental a eventos de calor e maior carga de agravos respiratórios?
+
+Essa pergunta combina quatro dimensões:
+
+-   Condições sociodemográficas.
+-   Situação de saúde.
+-   Exposição ambiental.
+-   Exposição climática.
+
+Também é possível formular a pergunta em termos de vigilância:
+
+> Quais territórios deveriam ser priorizados para ações preventivas durante períodos de calor extremo e piora da qualidade do ar?
+
+Nesse caso, o objetivo deixa de ser apenas descrever associação e passa a apoiar priorização.
+
+## Unidade de análise
+
+A unidade de análise deve ser definida antes da seleção dos indicadores. Uma escolha frequente é o município, pois muitos dados públicos brasileiros são divulgados nessa escala. No entanto, a escolha deve considerar o mecanismo analisado.
+
+Para eventos de calor, médias municipais podem ocultar microclimas urbanos. Para internações, o município de residência pode ser mais adequado do que o município de atendimento. Para indicadores sociais, dados censitários podem exigir atenção ao ano de referência.
+
+| Escolha | Decisão recomendada no exemplo | Justificativa |
+|---|---|---|
+| Território | Município de residência | Permite integrar saúde, população e exposições harmonizadas |
+| Período | Ano ou estação quente | Compatível com eventos de calor e internações |
+| População | Residentes | Denominador das taxas de saúde |
+| Defasagem | Semanas anteriores ao desfecho, se houver dados semanais | Exposições podem anteceder internações |
+
+: Decisões iniciais de desenho analítico
+
+## Indicadores selecionados
+
+| Dimensão | Indicador | Papel analítico | Fonte possível |
+|---|---|---|---|
+| Saúde | Taxa de internação por doenças respiratórias | Desfecho | SIH/SUS |
+| Sociodemográfica | Proporção de idosos | Vulnerabilidade | IBGE |
+| Sociodemográfica | Proporção de pobres ou IVS | Vulnerabilidade social | Ipea, IBGE |
+| Ambiental | PM~2,5~ médio | Exposição ambiental | Médias de poluentes atmosféricos para municípios brasileiros |
+| Ambiental | NDVI médio | Proteção ou contexto ambiental | Médias de NDVI para municípios brasileiros |
+| Climática | Dias quentes ou ondas de calor | Exposição climática | Indicadores climáticos baseados em eventos para análise em Saúde Pública |
+
+: Exemplo de seleção de indicadores para análise integrada
+
+Os indicadores podem ser separados em três papéis analíticos:
+
+-   Desfecho: evento de saúde a ser explicado, monitorado ou priorizado.
+-   Exposição: condição ambiental ou climática potencialmente relacionada ao desfecho.
+-   Vulnerabilidade: característica social, demográfica ou territorial que pode aumentar risco ou dificultar resposta.
+
+## Fontes e preparação
+
+Um fluxo mínimo de preparação inclui:
+
+1.  Obter internações por município de residência, causa e período.
+2.  Obter população residente para o mesmo território e período.
+3.  Calcular a taxa de internação.
+4.  Integrar indicadores sociodemográficos.
+5.  Integrar indicadores ambientais, como PM~2,5~ e NDVI.
+6.  Integrar indicadores climáticos, como dias quentes ou ondas de calor.
+7.  Verificar completude, duplicidades e consistência territorial.
+8.  Avaliar pequenos números e necessidade de agregação.
+
+## Harmonização
+
+Após selecionar os indicadores, é necessário harmonizar:
+
+-   Período: todos os indicadores devem se referir ao mesmo ano, mês, semana ou janela analítica.
+-   Território: os códigos territoriais devem ser compatíveis.
+-   População: denominadores devem representar a população sob risco.
+-   Defasagem: exposições climáticas e ambientais podem anteceder o desfecho em saúde.
+-   Escala: indicadores muito agregados podem ocultar heterogeneidades importantes.
+
+::: callout-warning
+Não combine indicadores de períodos incompatíveis sem explicitar a decisão. Um IVS censitário, uma taxa de internação anual e um indicador climático mensal podem ser integrados, mas a interpretação deve reconhecer que cada um representa uma janela temporal diferente.
+:::
+
+## Construção da base analítica
+
+Uma base integrada mínima poderia conter:
+
+| code_muni | ano | internacoes_resp | pop | taxa_internacao | prop_idosos | ivs | pm25 | ndvi | dias_quentes |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 0000000 | 2024 | 120 | 100000 | 120,0 | 12,5 | 0,31 | 8,2 | 0,44 | 18 |
+
+: Estrutura ilustrativa de base integrada
+
+## Indicador composto de priorização
+
+Quando o objetivo é priorizar territórios, pode-se construir uma classificação simples por dimensões, sem necessariamente criar um índice sintético complexo. Por exemplo:
+
+| Dimensão | Critério de alto risco |
+|---|---|
+| Saúde | Taxa de internação respiratória no tercil superior |
+| Vulnerabilidade | Proporção de idosos no tercil superior ou IVS alto |
+| Ambiente | PM~2,5~ no tercil superior |
+| Proteção ambiental | NDVI no tercil inferior |
+| Clima | Dias quentes no tercil superior |
+
+: Exemplo de regras simples para priorização territorial
+
+Um município poderia ser classificado como prioritário quando apresenta três ou mais critérios de alto risco. Essa abordagem é transparente, mas depende da escolha dos pontos de corte. Por isso, deve ser acompanhada de análise de sensibilidade.
+
+## Análises descritivas
+
+Antes de modelos estatísticos, recomenda-se produzir:
+
+-   Distribuição dos indicadores.
+-   Mapas de cada dimensão.
+-   Tabela de municípios com valores extremos.
+-   Correlação entre indicadores.
+-   Série temporal do desfecho e das exposições.
+-   Avaliação de pequenos números.
+
+Essas etapas ajudam a identificar erros, padrões inesperados e limitações da base integrada.
+
+## Interpretação
+
+A interpretação deve evitar conclusões causais apressadas. Uma associação entre calor, poluição e internações pode refletir mecanismos reais, mas também pode estar relacionada a idade, renda, acesso a serviços, sazonalidade, cobertura hospitalar, epidemias respiratórias e qualidade dos registros.
+
+Uma leitura responsável deve distinguir:
+
+-   Padrão descritivo.
+-   Hipótese explicativa.
+-   Evidência estatística.
+-   Implicação para vigilância ou gestão.
+
+Exemplo de interpretação cautelosa:
+
+> Municípios com maior frequência de dias quentes, maior concentração de PM~2,5~ e maior proporção de idosos apresentaram maior taxa de internações respiratórias no período analisado. Esse padrão sugere territórios prioritários para vigilância e prevenção, mas não permite concluir causalidade sem análise adicional de confundimento, sazonalidade, acesso aos serviços e qualidade dos registros.
+
+## Limitações esperadas
+
+Um estudo integrado desse tipo costuma enfrentar:
+
+-   Diferenças de escala entre indicadores.
+-   Defasagens temporais difíceis de definir.
+-   Instabilidade em municípios pequenos.
+-   Possível subregistro ou mudança de cobertura.
+-   Dificuldade de separar efeito de calor, poluição e vulnerabilidade social.
+-   Uso de exposição territorial como aproximação da exposição individual.
+
+## Produtos possíveis
+
+O estudo integrado pode gerar:
+
+-   Mapas de risco ou vulnerabilidade.
+-   Tabelas de priorização territorial.
+-   Séries temporais de alerta.
+-   Relatórios para vigilância em saúde ambiental.
+-   Painéis de monitoramento.
+-   Subsídios para planos de adaptação climática.
+
+## Roteiro de comunicação
+
+Um produto final pode ser organizado em quatro blocos:
+
+1.  Situação observada: onde estão os maiores valores do desfecho.
+2.  Contexto de vulnerabilidade: quais territórios combinam maior fragilidade social e demográfica.
+3.  Exposições ambientais e climáticas: onde há maior carga de calor, poluição ou baixa proteção ambiental.
+4.  Prioridades e cautelas: quais territórios merecem atenção e quais limitações devem acompanhar a leitura.
+
+## Checklist do estudo
+
+Antes de divulgar o resultado, verifique:
+
+-   A pergunta está clara.
+-   Os indicadores têm fichas técnicas.
+-   Numeradores e denominadores estão corretos.
+-   Os períodos foram harmonizados.
+-   As fontes foram citadas.
+-   A incerteza foi considerada.
+-   Pequenos números foram tratados com cuidado.
+-   A comunicação evita estigmatizar territórios.
+
+## Possíveis extensões
+
+O estudo pode ser ampliado com:
+
+-   Modelos temporais com defasagens climáticas.
+-   Padronização por idade.
+-   Estratificação por grupos vulneráveis.
+-   Indicadores de capacidade dos serviços.
+-   Cenários de alerta para ondas de calor.
+-   Comparação antes e depois de uma intervenção.

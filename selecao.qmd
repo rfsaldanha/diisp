@@ -1,0 +1,124 @@
+# Seleção de indicadores
+
+A escolha de indicadores é uma etapa analítica e política. Um indicador não deve ser incluído em uma análise apenas porque está disponível: ele precisa representar um conceito relevante, ser tecnicamente defensável, ser compreensível para o público-alvo e ser útil para a decisão ou interpretação pretendida [@jannuzziIndicadoresSociaisNo2006; @OPAS2008].
+
+Em Saúde Pública, a seleção de indicadores deve partir de uma pergunta concreta. A pergunta orienta quais dimensões precisam ser observadas, quais populações devem ser consideradas, qual escala espacial é adequada e qual período de análise faz sentido. Sem essa definição, a seleção tende a se transformar em uma lista extensa de medidas pouco articuladas.
+
+## Do problema ao indicador
+
+Uma forma prática de iniciar a seleção é decompor o problema em componentes mensuráveis.
+
+| Pergunta | Dimensão | Indicador possível | Observação |
+|---|---|---|---|
+| Onde a mortalidade infantil é maior? | Situação de saúde | Taxa de mortalidade infantil | Exige nascidos vivos como denominador |
+| Quais áreas têm maior vulnerabilidade ao calor? | Exposição climática | Dias quentes, ondas de calor | A escala temporal deve captar extremos |
+| Quais populações podem ser mais afetadas? | Vulnerabilidade social | Proporção de idosos, IVS, renda | Pode exigir estratificação territorial |
+| A rede tem capacidade de resposta? | Serviços | Cobertura APS, leitos, equipes | Mede capacidade potencial, não qualidade |
+
+: Exemplo de tradução de uma pergunta de análise em indicadores
+
+## Critérios de seleção
+
+Um conjunto de indicadores deve ser avaliado segundo critérios explícitos. Entre os mais importantes estão:
+
+-   Relevância: o indicador deve estar relacionado ao problema de saúde, ao território ou à política analisada.
+-   Validade: o indicador deve medir, de forma plausível, o fenômeno que pretende representar.
+-   Confiabilidade: o indicador deve produzir resultados consistentes quando calculado com o mesmo método e fonte.
+-   Sensibilidade: o indicador deve ser capaz de refletir mudanças relevantes no fenômeno.
+-   Especificidade: o indicador não deve variar excessivamente por fatores alheios ao fenômeno de interesse.
+-   Disponibilidade: os dados necessários devem existir para a escala espacial, temporal e populacional desejada.
+-   Comparabilidade: o método de cálculo deve permitir comparação entre territórios, períodos ou grupos.
+-   Interpretabilidade: o resultado deve ser compreensível para técnicos, gestores e demais interessados.
+-   Ação: o indicador deve ter alguma relação com possibilidades de intervenção, vigilância, planejamento ou avaliação.
+
+::: callout-tip
+Indicadores simples e interpretáveis costumam ser mais úteis do que indicadores muito sofisticados, principalmente quando o objetivo é comunicação pública, monitoramento rotineiro ou apoio direto à gestão.
+:::
+
+## Matriz de decisão
+
+Uma forma prática de selecionar indicadores é construir uma matriz em que cada indicador candidato seja avaliado por critérios comuns.
+
+| Indicador candidato | Relevância | Validade | Disponibilidade | Comparabilidade | Uso esperado |
+|---|---:|---:|---:|---:|---|
+| Taxa de mortalidade infantil | Alta | Alta | Alta | Alta | Monitoramento de condições de vida e atenção à saúde |
+| NDVI médio municipal | Média | Média | Alta | Alta | Exposição territorial a áreas verdes |
+| Temperatura máxima diária | Alta | Alta | Média | Média | Alerta e análise de eventos de calor |
+
+: Exemplo de matriz para seleção de indicadores
+
+Também é possível atribuir pontuações simples, por exemplo de 0 a 2, para cada critério. O objetivo não é produzir uma nota definitiva, mas tornar explícitas as escolhas. Um indicador com alta relevância e baixa disponibilidade pode ser mantido como desejável para uma etapa futura, enquanto outro com alta disponibilidade e baixa validade deve ser evitado.
+
+## Indicadores centrais e complementares
+
+Nem todos os indicadores têm o mesmo papel. Em um painel ou relatório, é útil separar:
+
+-   Indicadores centrais: respondem diretamente à pergunta principal.
+-   Indicadores de contexto: ajudam a interpretar o cenário social, ambiental ou institucional.
+-   Indicadores de estratificação: permitem observar desigualdades por sexo, idade, raça/cor, território ou condição social.
+-   Indicadores de qualidade: avaliam a confiabilidade da própria base usada.
+-   Indicadores de resposta: descrevem oferta, cobertura, acesso ou intervenção.
+
+::: callout-tip
+Um indicador de contexto não deve ser tratado como desfecho principal. Por exemplo, densidade demográfica pode ajudar a interpretar transmissão ou acesso, mas não substitui indicadores diretos de ocorrência de doença ou uso de serviços.
+:::
+
+## Evitar excesso de indicadores
+
+Um painel com muitos indicadores pode dificultar a interpretação e diluir a atenção sobre os aspectos mais importantes. Em geral, é preferível selecionar poucos indicadores centrais, bem definidos, acompanhados por indicadores complementares usados apenas quando necessários.
+
+Um conjunto equilibrado deve conter indicadores de diferentes dimensões:
+
+-   Situação de saúde.
+-   Condições sociodemográficas.
+-   Exposições ambientais e climáticas.
+-   Oferta e uso de serviços.
+-   Capacidade de resposta institucional.
+
+Uma regra prática é perguntar, para cada indicador: "Que decisão, interpretação ou ação este indicador ajuda a tomar?". Se a resposta não for clara, ele provavelmente deve ser removido, deslocado para material suplementar ou usado apenas em análises exploratórias.
+
+## Escala e população de referência
+
+A escala de análise deve ser compatível com a pergunta. Indicadores municipais são úteis para gestão territorial, mas podem ocultar desigualdades intramunicipais. Indicadores por bairro ou setor censitário podem revelar padrões mais finos, mas aumentam problemas de instabilidade, privacidade e disponibilidade de denominadores.
+
+| Decisão | Pergunta orientadora |
+|---|---|
+| Escala espacial | O fenômeno varia dentro do município? A decisão será municipal, regional ou local? |
+| Escala temporal | O evento ocorre em dias, semanas, meses ou anos? |
+| População de referência | Quem está realmente sob risco? Toda a população ou um grupo específico? |
+| Estratificação | Quais desigualdades precisam ser visíveis? |
+| Fonte | A fonte é estável, documentada e comparável no tempo? |
+
+: Perguntas para adequar indicador, escala e fonte
+
+## Quando não usar um indicador
+
+Um indicador deve ser evitado quando:
+
+-   A definição não está clara.
+-   O denominador não representa a população sob risco.
+-   A fonte mudou de método no meio da série sem documentação.
+-   O indicador é muito instável para a escala escolhida.
+-   A interpretação pode induzir a uma conclusão causal indevida.
+-   O detalhamento aumenta risco de identificação ou estigmatização.
+-   A medida não se conecta ao problema ou à decisão.
+
+## Transparência
+
+Toda seleção de indicadores deve ser documentada. A documentação deve registrar a definição, a fonte, o método de cálculo, a periodicidade, a escala geográfica, as limitações e o motivo da inclusão do indicador no estudo ou sistema de monitoramento.
+
+Uma ficha mínima de seleção pode conter:
+
+| Campo | Conteúdo esperado |
+|---|---|
+| Nome do indicador | Denominação curta e inequívoca |
+| Pergunta associada | Pergunta analítica que o indicador ajuda a responder |
+| Justificativa | Razão da inclusão |
+| Numerador | Evento, população ou medida observada |
+| Denominador | População de referência, quando aplicável |
+| Fonte | Sistema, base, pesquisa ou repositório |
+| Periodicidade | Frequência de atualização |
+| Escala | Unidade territorial e temporal |
+| Limitações | Problemas conhecidos de qualidade, cobertura ou interpretação |
+
+: Campos mínimos para documentar a seleção de um indicador

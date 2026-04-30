@@ -1,0 +1,126 @@
+# Ética, privacidade e governança
+
+O uso de dados em Saúde Pública exige atenção ética mesmo quando os dados são públicos, agregados ou anonimizados. Indicadores podem revelar desigualdades, orientar políticas e fortalecer a transparência, mas também podem expor grupos vulneráveis, reforçar estigmas ou permitir identificação indireta em áreas pequenas.
+
+Ética em dados não se limita à proteção individual. Em Saúde Pública, também envolve efeitos coletivos: a forma como um território é descrito, a maneira como um grupo social é classificado e os usos possíveis de uma informação depois de publicada.
+
+## Dados pessoais e dados sensíveis
+
+A Lei Geral de Proteção de Dados Pessoais (LGPD) estabelece regras para o tratamento de dados pessoais no Brasil e reconhece dados referentes à saúde como dados pessoais sensíveis [@brasilLGPD]. O uso de dados de saúde deve observar finalidade, necessidade, segurança, prevenção, responsabilização e transparência.
+
+| Tipo de dado | Exemplo | Risco principal |
+|---|---|---|
+| Identificado | Nome, CPF, CNS, endereço completo | Identificação direta |
+| Pseudonimizado | Identificador substituído por código | Reidentificação por chave ou combinação |
+| Agregado | Contagens por município, idade e causa | Identificação indireta em células pequenas |
+| Anonimizado | Dados tratados para impedir identificação razoável | Risco residual se houver cruzamentos externos |
+
+: Tipos de dados e riscos de identificação
+
+::: callout-warning
+Dados agregados nem sempre eliminam risco de identificação. Em áreas pequenas, eventos raros ou grupos muito específicos, a combinação entre território, idade, sexo, causa e período pode permitir inferência sobre pessoas ou famílias.
+:::
+
+## Princípios práticos
+
+Ao construir indicadores de saúde, recomenda-se:
+
+-   Usar apenas variáveis necessárias ao objetivo declarado.
+-   Preferir dados agregados quando microdados não forem indispensáveis.
+-   Evitar publicar células com contagens muito pequenas.
+-   Documentar critérios de supressão, agregação ou arredondamento.
+-   Proteger arquivos intermediários que contenham dados identificáveis ou potencialmente identificáveis.
+-   Separar ambientes de análise, publicação e compartilhamento.
+-   Avaliar risco de estigmatização de grupos e territórios.
+
+## Finalidade e minimização
+
+Todo tratamento de dados deve ter finalidade definida. Em um projeto de indicadores, isso significa explicitar por que cada variável é necessária. Se uma análise municipal não usa nome, endereço ou identificador individual, esses campos não devem circular no ambiente analítico.
+
+Minimização não significa empobrecer a análise. Significa usar o nível de detalhe compatível com a pergunta. Por exemplo, idade simples pode ser necessária para calcular faixas etárias corretamente, mas a publicação pode apresentar apenas grupos etários.
+
+## Pequenas áreas e eventos raros
+
+Indicadores em pequenas áreas podem ser úteis para revelar desigualdades, mas exigem cuidado. Uma taxa de mortalidade por causa específica em um município pequeno pode se basear em um ou dois eventos. Além da instabilidade estatística, há risco de exposição indireta.
+
+Nessas situações, alternativas incluem:
+
+-   Agregar anos.
+-   Agregar territórios.
+-   Usar faixas etárias amplas.
+-   Suprimir células com poucos eventos.
+-   Apresentar categorias em vez de valores exatos.
+-   Avaliar se o detalhamento é necessário para o objetivo da análise.
+
+## Matriz de risco de divulgação
+
+Antes de publicar uma tabela, mapa ou painel, é útil avaliar risco de identificação e dano.
+
+| Situação | Risco | Medida possível |
+|---|---|---|
+| Célula com poucos eventos | Identificação indireta | Suprimir ou agregar |
+| Evento sensível em município pequeno | Estigma e identificação | Agregar período ou território |
+| Cruzamento com muitas variáveis | Reidentificação | Reduzir estratificações |
+| Ranking público de territórios | Estigmatização | Contextualizar e evitar leitura punitiva |
+| Microdados compartilhados | Uso indevido | Controlar acesso e documentar finalidade |
+
+: Matriz simplificada de risco de divulgação
+
+## Governança
+
+Governança de dados é o conjunto de regras, responsabilidades e processos que orientam coleta, acesso, tratamento, documentação, publicação e descarte de dados. Em projetos de indicadores, a governança deve responder a perguntas simples:
+
+-   Quem é responsável pela base?
+-   Quem pode acessar os dados?
+-   Qual é a finalidade do uso?
+-   Quais versões foram usadas?
+-   Quais transformações foram realizadas?
+-   Onde os resultados serão publicados?
+-   Há risco de identificação ou dano coletivo?
+
+## Papéis e responsabilidades
+
+Em projetos institucionais, diferentes papéis devem estar claros:
+
+-   Responsável técnico: define método, qualidade e interpretação.
+-   Responsável pela base: controla origem, versão e documentação.
+-   Responsável pela segurança: define permissões, armazenamento e descarte.
+-   Responsável pela comunicação: garante clareza e contextualização.
+-   Gestor ou demandante: explicita finalidade e uso esperado.
+
+Essa divisão evita que decisões técnicas, éticas e comunicacionais fiquem implícitas ou concentradas em uma única etapa final.
+
+## Retenção e descarte
+
+Dados identificáveis ou sensíveis não devem ser mantidos indefinidamente sem justificativa. O projeto deve definir:
+
+-   Onde os dados serão armazenados.
+-   Por quanto tempo serão mantidos.
+-   Quem terá acesso.
+-   Como serão descartados.
+-   Quais produtos agregados poderão permanecer públicos.
+
+## Comunicação responsável
+
+Indicadores podem afetar a imagem de territórios, serviços e populações. A comunicação deve evitar culpabilizar comunidades por problemas estruturais. Sempre que possível, resultados devem ser contextualizados com determinantes sociais, ambientais, históricos e institucionais.
+
+Boas práticas de comunicação incluem:
+
+-   Evitar rankings sem contexto.
+-   Explicar limitações e incertezas.
+-   Indicar que indicadores territoriais não descrevem todos os indivíduos do território.
+-   Evitar termos que culpabilizem populações.
+-   Destacar desigualdades estruturais e capacidade de resposta.
+-   Separar descrição, interpretação e recomendação.
+
+## Checklist ético
+
+Antes da publicação, pergunte:
+
+-   A finalidade da análise está explícita?
+-   O nível de detalhe é necessário?
+-   Há células pequenas ou eventos raros?
+-   A publicação pode estigmatizar grupos ou territórios?
+-   Os dados sensíveis foram protegidos?
+-   As limitações foram comunicadas?
+-   O produto final permite uso indevido previsível?
